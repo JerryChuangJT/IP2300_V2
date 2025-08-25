@@ -1,0 +1,145 @@
+StartTime: 2025-07-29 16:18:10.397
+Wifi_SSID: 4FNN-003_5G
+Wifi_Auth: wpa2
+Wifi_Password: 12345678
+Wifi_BSSID: 48:f8:b3:e3:d0:69
+Schedule: 2,16:18,1
+------------------------------------------------
+[2025-07-29 16:18:10.522] Execute the scripts.
+[2025-07-29 16:18:10.541] sh /storage/emulated/0/Documents/Wifi/Connect_Wifi.sh '4FNN-003_5G' 'wpa2' '12345678' '48:f8:b3:e3:d0:69' &
+[2025-07-29 16:18:10.560] sh /storage/emulated/0/Documents/Wifi/Get_Wifi_IP.sh &
+[2025-07-29 16:18:10.580] sh /storage/emulated/0/Documents/Wifi/Wifi_PingScript.sh 'ipv4' '8.8.8.8' &
+[2025-07-29 16:18:10.600] sh /storage/emulated/0/Documents/Wifi/Wifi_CheckPing.sh &
+[2025-07-29 16:19:00.381] Stop the scripts.
+[2025-07-29 16:19:00.401] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_connect'
+[2025-07-29 16:19:00.420] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_getip'
+[2025-07-29 16:19:00.439] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping_script'
+[2025-07-29 16:19:00.459] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping' '8.8.8.8'
+[2025-07-29 16:19:00.478] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_check_ping'
+[2025-07-29 16:19:00.498] sh /storage/emulated/0/Documents/Wifi/Delete_AllWiFiProfile.sh
+--------------------------------------------------
+StartTime: 2025-07-29 16:27:00.717
+Wifi_SSID: 4FNN-003_5G
+Wifi_Auth: wpa2
+Wifi_Password: 12345678
+Wifi_BSSID: 48:f8:b3:e3:d0:69
+Schedule: 2,16:26,2
+------------------------------------------------
+[2025-07-29 16:27:00.833] Execute the scripts.
+[2025-07-29 16:27:00.853] sh /storage/emulated/0/Documents/Wifi/Connect_Wifi.sh '4FNN-003_5G' 'wpa2' '12345678' '48:f8:b3:e3:d0:69' &
+[2025-07-29 16:27:00.873] sh /storage/emulated/0/Documents/Wifi/Get_Wifi_IP.sh &
+[2025-07-29 16:27:00.893] sh /storage/emulated/0/Documents/Wifi/Wifi_PingScript.sh 'ipv4' '8.8.8.8' &
+[2025-07-29 16:27:00.913] sh /storage/emulated/0/Documents/Wifi/Wifi_CheckPing.sh &
+StartTime: 2025-07-29 16:28:54.508
+Wifi_SSID: 4FNN-003_5G
+Wifi_Auth: wpa2
+Wifi_Password: 12345678
+Wifi_BSSID: 48:f8:b3:e3:d0:69
+Schedule: 2,16:28,2
+------------------------------------------------
+[2025-07-29 16:28:54.624] Execute the scripts.
+[2025-07-29 16:28:54.644] sh /storage/emulated/0/Documents/Wifi/Connect_Wifi.sh '4FNN-003_5G' 'wpa2' '12345678' '48:f8:b3:e3:d0:69' &
+[2025-07-29 16:28:54.663] sh /storage/emulated/0/Documents/Wifi/Get_Wifi_IP.sh &
+[2025-07-29 16:28:54.682] sh /storage/emulated/0/Documents/Wifi/Wifi_PingScript.sh 'ipv4' '8.8.8.8' &
+[2025-07-29 16:28:54.702] sh /storage/emulated/0/Documents/Wifi/Wifi_CheckPing.sh &
+[2025-07-29 16:30:00.812] Stop the scripts.
+[2025-07-29 16:30:00.832] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_connect'
+[2025-07-29 16:30:00.851] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_getip'
+[2025-07-29 16:30:00.871] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping_script'
+[2025-07-29 16:30:00.891] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping' '8.8.8.8'
+[2025-07-29 16:30:00.911] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_check_ping'
+[2025-07-29 16:30:00.933] sh /storage/emulated/0/Documents/Wifi/Delete_AllWiFiProfile.sh
+--------------------------------------------------
+StartTime: 2025-07-29 16:31:26.975
+Wifi_SSID: 4FNN-003_5G
+Wifi_Auth: wpa2
+Wifi_Password: 12345678
+Wifi_BSSID: 48:f8:b3:e3:d0:69
+Schedule: 2,16:31,1/2,16:33,1
+------------------------------------------------
+[2025-07-29 16:31:27.089] Execute the scripts.
+[2025-07-29 16:31:27.109] sh /storage/emulated/0/Documents/Wifi/Connect_Wifi.sh '4FNN-003_5G' 'wpa2' '12345678' '48:f8:b3:e3:d0:69' &
+[2025-07-29 16:31:27.131] sh /storage/emulated/0/Documents/Wifi/Get_Wifi_IP.sh &
+[2025-07-29 16:31:27.152] sh /storage/emulated/0/Documents/Wifi/Wifi_PingScript.sh 'ipv4' '192.168.47.1' &
+[2025-07-29 16:31:27.170] sh /storage/emulated/0/Documents/Wifi/Wifi_CheckPing.sh &
+[2025-07-29 16:32:00.123] Stop the scripts.
+[2025-07-29 16:32:00.143] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_connect'
+[2025-07-29 16:32:00.163] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_getip'
+[2025-07-29 16:32:00.183] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping_script'
+[2025-07-29 16:32:00.203] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping' '192.168.47.1'
+[2025-07-29 16:32:00.222] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_check_ping'
+[2025-07-29 16:32:00.242] sh /storage/emulated/0/Documents/Wifi/Delete_AllWiFiProfile.sh
+--------------------------------------------------
+[2025-07-29 16:33:01.037] Execute the scripts.
+[2025-07-29 16:33:01.056] sh /storage/emulated/0/Documents/Wifi/Connect_Wifi.sh '4FNN-003_5G' 'wpa2' '12345678' '48:f8:b3:e3:d0:69' &
+[2025-07-29 16:33:01.075] sh /storage/emulated/0/Documents/Wifi/Get_Wifi_IP.sh &
+[2025-07-29 16:33:01.094] sh /storage/emulated/0/Documents/Wifi/Wifi_PingScript.sh 'ipv4' '192.168.47.1' &
+[2025-07-29 16:33:01.113] sh /storage/emulated/0/Documents/Wifi/Wifi_CheckPing.sh &
+[2025-07-29 16:34:00.546] Stop the scripts.
+[2025-07-29 16:34:00.568] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_connect'
+[2025-07-29 16:34:00.589] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_getip'
+[2025-07-29 16:34:00.610] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping_script'
+[2025-07-29 16:34:00.630] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping' '192.168.47.1'
+[2025-07-29 16:34:00.650] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_check_ping'
+[2025-07-29 16:34:00.673] sh /storage/emulated/0/Documents/Wifi/Delete_AllWiFiProfile.sh
+--------------------------------------------------
+StartTime: 2025-07-29 16:38:29.394
+Wifi_SSID: 4FNN-003_5G
+Wifi_Auth: wpa2
+Wifi_Password: 12345678
+Wifi_BSSID: 48:f8:b3:e3:d0:69
+Schedule: 2,16:38,1/2,16:40,1
+------------------------------------------------
+[2025-07-29 16:38:29.515] Execute the scripts.
+[2025-07-29 16:38:29.535] sh /storage/emulated/0/Documents/Wifi/Connect_Wifi.sh '4FNN-003_5G' 'wpa2' '12345678' '48:f8:b3:e3:d0:69' &
+[2025-07-29 16:38:29.554] sh /storage/emulated/0/Documents/Wifi/Get_Wifi_IP.sh &
+[2025-07-29 16:38:29.573] sh /storage/emulated/0/Documents/Wifi/Wifi_PingScript.sh 'ipv4' '192.168.47.1' &
+[2025-07-29 16:38:29.592] sh /storage/emulated/0/Documents/Wifi/Wifi_CheckPing.sh &
+[2025-07-29 16:39:00.418] Stop the scripts.
+[2025-07-29 16:39:00.442] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_connect'
+[2025-07-29 16:39:00.461] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_getip'
+[2025-07-29 16:39:00.482] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping_script'
+[2025-07-29 16:39:00.501] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping' '192.168.47.1'
+[2025-07-29 16:39:00.520] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_check_ping'
+[2025-07-29 16:39:00.539] sh /storage/emulated/0/Documents/Wifi/Delete_AllWiFiProfile.sh
+--------------------------------------------------
+[2025-07-29 16:40:01.249] Execute the scripts.
+[2025-07-29 16:40:01.269] sh /storage/emulated/0/Documents/Wifi/Connect_Wifi.sh '4FNN-003_5G' 'wpa2' '12345678' '48:f8:b3:e3:d0:69' &
+[2025-07-29 16:40:01.289] sh /storage/emulated/0/Documents/Wifi/Get_Wifi_IP.sh &
+[2025-07-29 16:40:01.308] sh /storage/emulated/0/Documents/Wifi/Wifi_PingScript.sh 'ipv4' '192.168.47.1' &
+[2025-07-29 16:40:01.326] sh /storage/emulated/0/Documents/Wifi/Wifi_CheckPing.sh &
+[2025-07-29 16:41:00.769] Stop the scripts.
+[2025-07-29 16:41:00.790] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_connect'
+[2025-07-29 16:41:00.809] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_getip'
+[2025-07-29 16:41:00.830] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping_script'
+[2025-07-29 16:41:00.851] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping' '192.168.47.1'
+[2025-07-29 16:41:00.870] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_check_ping'
+[2025-07-29 16:41:00.891] sh /storage/emulated/0/Documents/Wifi/Delete_AllWiFiProfile.sh
+--------------------------------------------------
+StartTime: 2025-07-29 16:43:21.668
+Wifi_SSID: 4FNN-003_5G
+Wifi_Auth: wpa2
+Wifi_Password: 12345678
+Wifi_BSSID: 48:f8:b3:e3:d0:69
+Schedule: 2,16:38,1/2,16:40,1
+------------------------------------------------
+StartTime: 2025-07-29 16:43:42.138
+Wifi_SSID: 4FNN-003_5G
+Wifi_Auth: wpa2
+Wifi_Password: 12345678
+Wifi_BSSID: 48:f8:b3:e3:d0:69
+Schedule: 2,16:38,1/2,16:43,1
+------------------------------------------------
+[2025-07-29 16:43:42.255] Execute the scripts.
+[2025-07-29 16:43:42.274] sh /storage/emulated/0/Documents/Wifi/Connect_Wifi.sh '4FNN-003_5G' 'wpa2' '12345678' '48:f8:b3:e3:d0:69' &
+[2025-07-29 16:43:42.295] sh /storage/emulated/0/Documents/Wifi/Get_Wifi_IP.sh &
+[2025-07-29 16:43:42.314] sh /storage/emulated/0/Documents/Wifi/Wifi_PingScript.sh 'ipv4' '192.168.47.1' &
+[2025-07-29 16:43:42.335] sh /storage/emulated/0/Documents/Wifi/Wifi_CheckPing.sh &
+[2025-07-29 16:44:00.187] Stop the scripts.
+[2025-07-29 16:44:00.207] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_connect'
+[2025-07-29 16:44:00.226] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_getip'
+[2025-07-29 16:44:00.245] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping_script'
+[2025-07-29 16:44:00.263] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_ping' '192.168.47.1'
+[2025-07-29 16:44:00.283] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'wifi_check_ping'
+[2025-07-29 16:44:00.302] sh /storage/emulated/0/Documents/Wifi/Delete_AllWiFiProfile.sh
+--------------------------------------------------

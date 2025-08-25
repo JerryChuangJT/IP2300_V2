@@ -1,0 +1,8 @@
+======================================================================
+======================================================================
+StartTime : 2025-07-24 19:36:16.066
+TestName : Test1
+ErrorTimeResponse_Threshold : 1200
+ErrorConsecutiveTime_TimeResponse : 60
+ErrorConsecutiveTime_PingLost : 10
+[2025-07-24 19:38:01.352] Test Stop

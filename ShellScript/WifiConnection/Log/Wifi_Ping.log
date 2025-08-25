@@ -1,0 +1,368 @@
+------------------------------------------------
+StartTime: 2025-07-29 16:18:10.639
+PingType: ipv4
+Destination: 8.8.8.8
+Executing Command: ping -I wlan0 8.8.8.8
+ping: Warning: source address might be selected on device other than wlan0.
+PING 8.8.8.8 (8.8.8.8) from 192.168.5.158 wlan0: 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=116 time=9.50 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=116 time=11.0 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=116 time=12.4 ms
+From 192.168.5.158: icmp_seq=1 Destination Host Unreachable
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=116 time=10.6 ms
+64 bytes from 8.8.8.8: icmp_seq=6 ttl=116 time=8.77 ms
+64 bytes from 8.8.8.8: icmp_seq=7 ttl=116 time=12.7 ms
+64 bytes from 8.8.8.8: icmp_seq=8 ttl=116 time=17.4 ms
+64 bytes from 8.8.8.8: icmp_seq=9 ttl=116 time=49.0 ms
+64 bytes from 8.8.8.8: icmp_seq=10 ttl=116 time=10.3 ms
+64 bytes from 8.8.8.8: icmp_seq=11 ttl=116 time=8.75 ms
+64 bytes from 8.8.8.8: icmp_seq=12 ttl=116 time=11.4 ms
+64 bytes from 8.8.8.8: icmp_seq=13 ttl=116 time=13.0 ms
+64 bytes from 8.8.8.8: icmp_seq=14 ttl=116 time=14.3 ms
+64 bytes from 8.8.8.8: icmp_seq=15 ttl=116 time=12.7 ms
+64 bytes from 8.8.8.8: icmp_seq=16 ttl=116 time=10.7 ms
+64 bytes from 8.8.8.8: icmp_seq=17 ttl=116 time=14.6 ms
+From 192.168.5.158: icmp_seq=18 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=19 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=20 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=22 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=23 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=25 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=26 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=27 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=28 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=29 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=30 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=31 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=35 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=36 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=38 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=41 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=44 Destination Host Unreachable
+From 192.168.5.158: icmp_seq=47 Destination Host Unreachable
+------------------------------------------------
+StartTime: 2025-07-29 16:27:00.959
+PingType: ipv4
+Destination: 8.8.8.8
+Executing Command: ping -I wlan0 8.8.8.8
+ping: Warning: source address might be selected on device other than wlan0.
+PING 8.8.8.8 (8.8.8.8) from 192.168.5.158 wlan0: 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=116 time=9.50 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=116 time=10.7 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=116 time=7.25 ms
+From 192.168.5.158: icmp_seq=1 Destination Host Unreachable
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=116 time=15.3 ms
+64 bytes from 8.8.8.8: icmp_seq=6 ttl=116 time=8.50 ms
+64 bytes from 8.8.8.8: icmp_seq=7 ttl=116 time=11.7 ms
+64 bytes from 8.8.8.8: icmp_seq=8 ttl=116 time=10.4 ms
+64 bytes from 8.8.8.8: icmp_seq=9 ttl=116 time=33.7 ms
+64 bytes from 8.8.8.8: icmp_seq=10 ttl=116 time=47.5 ms
+64 bytes from 8.8.8.8: icmp_seq=11 ttl=116 time=71.9 ms
+64 bytes from 8.8.8.8: icmp_seq=12 ttl=116 time=13.6 ms
+64 bytes from 8.8.8.8: icmp_seq=13 ttl=116 time=11.5 ms
+64 bytes from 8.8.8.8: icmp_seq=14 ttl=116 time=11.2 ms
+64 bytes from 8.8.8.8: icmp_seq=15 ttl=116 time=20.1 ms
+------------------------------------------------
+StartTime: 2025-07-29 16:28:54.741
+PingType: ipv4
+Destination: 8.8.8.8
+Executing Command: ping -I wlan0 8.8.8.8
+ping: Warning: source address might be selected on device other than wlan0.
+PING 8.8.8.8 (8.8.8.8) from 192.168.5.158 wlan0: 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=116 time=15.8 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=116 time=30.0 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=116 time=14.5 ms
+From 192.168.5.158: icmp_seq=1 Destination Host Unreachable
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=116 time=155 ms
+64 bytes from 8.8.8.8: icmp_seq=6 ttl=116 time=34.3 ms
+64 bytes from 8.8.8.8: icmp_seq=7 ttl=116 time=11.9 ms
+64 bytes from 8.8.8.8: icmp_seq=8 ttl=116 time=10.7 ms
+64 bytes from 8.8.8.8: icmp_seq=9 ttl=116 time=11.8 ms
+64 bytes from 8.8.8.8: icmp_seq=10 ttl=116 time=16.5 ms
+64 bytes from 8.8.8.8: icmp_seq=11 ttl=116 time=14.6 ms
+64 bytes from 8.8.8.8: icmp_seq=12 ttl=116 time=11.0 ms
+64 bytes from 8.8.8.8: icmp_seq=13 ttl=116 time=13.1 ms
+64 bytes from 8.8.8.8: icmp_seq=14 ttl=116 time=12.6 ms
+64 bytes from 8.8.8.8: icmp_seq=15 ttl=116 time=143 ms
+64 bytes from 8.8.8.8: icmp_seq=16 ttl=116 time=53.2 ms
+64 bytes from 8.8.8.8: icmp_seq=17 ttl=116 time=31.4 ms
+64 bytes from 8.8.8.8: icmp_seq=18 ttl=116 time=10.8 ms
+64 bytes from 8.8.8.8: icmp_seq=19 ttl=116 time=11.9 ms
+64 bytes from 8.8.8.8: icmp_seq=20 ttl=116 time=9.06 ms
+64 bytes from 8.8.8.8: icmp_seq=21 ttl=116 time=12.8 ms
+64 bytes from 8.8.8.8: icmp_seq=22 ttl=116 time=11.0 ms
+64 bytes from 8.8.8.8: icmp_seq=23 ttl=116 time=18.1 ms
+64 bytes from 8.8.8.8: icmp_seq=24 ttl=116 time=20.1 ms
+64 bytes from 8.8.8.8: icmp_seq=25 ttl=116 time=141 ms
+64 bytes from 8.8.8.8: icmp_seq=26 ttl=116 time=27.3 ms
+64 bytes from 8.8.8.8: icmp_seq=27 ttl=116 time=54.1 ms
+64 bytes from 8.8.8.8: icmp_seq=28 ttl=116 time=9.91 ms
+64 bytes from 8.8.8.8: icmp_seq=29 ttl=116 time=10.6 ms
+64 bytes from 8.8.8.8: icmp_seq=30 ttl=116 time=11.1 ms
+64 bytes from 8.8.8.8: icmp_seq=31 ttl=116 time=17.7 ms
+64 bytes from 8.8.8.8: icmp_seq=32 ttl=116 time=37.9 ms
+64 bytes from 8.8.8.8: icmp_seq=33 ttl=116 time=19.9 ms
+64 bytes from 8.8.8.8: icmp_seq=34 ttl=116 time=11.7 ms
+64 bytes from 8.8.8.8: icmp_seq=35 ttl=116 time=135 ms
+64 bytes from 8.8.8.8: icmp_seq=36 ttl=116 time=11.5 ms
+64 bytes from 8.8.8.8: icmp_seq=37 ttl=116 time=10.2 ms
+64 bytes from 8.8.8.8: icmp_seq=38 ttl=116 time=8.99 ms
+64 bytes from 8.8.8.8: icmp_seq=39 ttl=116 time=11.5 ms
+64 bytes from 8.8.8.8: icmp_seq=40 ttl=116 time=17.7 ms
+64 bytes from 8.8.8.8: icmp_seq=41 ttl=116 time=11.5 ms
+64 bytes from 8.8.8.8: icmp_seq=42 ttl=116 time=11.0 ms
+64 bytes from 8.8.8.8: icmp_seq=43 ttl=116 time=11.5 ms
+64 bytes from 8.8.8.8: icmp_seq=44 ttl=116 time=14.2 ms
+64 bytes from 8.8.8.8: icmp_seq=45 ttl=116 time=120 ms
+64 bytes from 8.8.8.8: icmp_seq=46 ttl=116 time=65.1 ms
+64 bytes from 8.8.8.8: icmp_seq=47 ttl=116 time=37.5 ms
+64 bytes from 8.8.8.8: icmp_seq=48 ttl=116 time=41.7 ms
+64 bytes from 8.8.8.8: icmp_seq=49 ttl=116 time=13.1 ms
+64 bytes from 8.8.8.8: icmp_seq=50 ttl=116 time=27.4 ms
+64 bytes from 8.8.8.8: icmp_seq=51 ttl=116 time=12.9 ms
+64 bytes from 8.8.8.8: icmp_seq=52 ttl=116 time=13.6 ms
+64 bytes from 8.8.8.8: icmp_seq=53 ttl=116 time=10.5 ms
+64 bytes from 8.8.8.8: icmp_seq=54 ttl=116 time=13.7 ms
+64 bytes from 8.8.8.8: icmp_seq=55 ttl=116 time=116 ms
+64 bytes from 8.8.8.8: icmp_seq=56 ttl=116 time=9.71 ms
+64 bytes from 8.8.8.8: icmp_seq=57 ttl=116 time=21.1 ms
+64 bytes from 8.8.8.8: icmp_seq=58 ttl=116 time=10.6 ms
+64 bytes from 8.8.8.8: icmp_seq=59 ttl=116 time=719 ms
+64 bytes from 8.8.8.8: icmp_seq=60 ttl=116 time=10.9 ms
+64 bytes from 8.8.8.8: icmp_seq=61 ttl=116 time=13.6 ms
+64 bytes from 8.8.8.8: icmp_seq=62 ttl=116 time=12.3 ms
+64 bytes from 8.8.8.8: icmp_seq=63 ttl=116 time=11.9 ms
+64 bytes from 8.8.8.8: icmp_seq=64 ttl=116 time=9.50 ms
+------------------------------------------------
+StartTime: 2025-07-29 16:31:27.210
+PingType: ipv4
+Destination: 192.168.47.1
+Executing Command: ping -I wlan0 192.168.47.1
+ping: Warning: source address might be selected on device other than wlan0.
+PING 192.168.47.1 (192.168.47.1) from 192.168.5.158 wlan0: 56(84) bytes of data.
+From 192.168.5.158: icmp_seq=1 Destination Host Unreachable
+64 bytes from 192.168.47.1: icmp_seq=5 ttl=64 time=54.9 ms
+64 bytes from 192.168.47.1: icmp_seq=6 ttl=64 time=10.7 ms
+64 bytes from 192.168.47.1: icmp_seq=7 ttl=64 time=7.38 ms
+64 bytes from 192.168.47.1: icmp_seq=8 ttl=64 time=8.44 ms
+64 bytes from 192.168.47.1: icmp_seq=9 ttl=64 time=9.53 ms
+64 bytes from 192.168.47.1: icmp_seq=10 ttl=64 time=7.47 ms
+64 bytes from 192.168.47.1: icmp_seq=11 ttl=64 time=8.36 ms
+64 bytes from 192.168.47.1: icmp_seq=12 ttl=64 time=8.74 ms
+64 bytes from 192.168.47.1: icmp_seq=13 ttl=64 time=50.8 ms
+64 bytes from 192.168.47.1: icmp_seq=14 ttl=64 time=3.37 ms
+64 bytes from 192.168.47.1: icmp_seq=15 ttl=64 time=7.84 ms
+64 bytes from 192.168.47.1: icmp_seq=16 ttl=64 time=10.3 ms
+64 bytes from 192.168.47.1: icmp_seq=17 ttl=64 time=9.99 ms
+64 bytes from 192.168.47.1: icmp_seq=18 ttl=64 time=9.13 ms
+64 bytes from 192.168.47.1: icmp_seq=19 ttl=64 time=7.27 ms
+64 bytes from 192.168.47.1: icmp_seq=20 ttl=64 time=8.69 ms
+64 bytes from 192.168.47.1: icmp_seq=21 ttl=64 time=7.88 ms
+64 bytes from 192.168.47.1: icmp_seq=22 ttl=64 time=7.08 ms
+64 bytes from 192.168.47.1: icmp_seq=23 ttl=64 time=42.7 ms
+64 bytes from 192.168.47.1: icmp_seq=24 ttl=64 time=6.80 ms
+64 bytes from 192.168.47.1: icmp_seq=25 ttl=64 time=11.2 ms
+64 bytes from 192.168.47.1: icmp_seq=26 ttl=64 time=10.8 ms
+64 bytes from 192.168.47.1: icmp_seq=27 ttl=64 time=7.34 ms
+64 bytes from 192.168.47.1: icmp_seq=28 ttl=64 time=10.8 ms
+64 bytes from 192.168.47.1: icmp_seq=29 ttl=64 time=9.97 ms
+64 bytes from 192.168.47.1: icmp_seq=30 ttl=64 time=11.3 ms
+64 bytes from 192.168.47.1: icmp_seq=31 ttl=64 time=6.67 ms
+64 bytes from 192.168.47.1: icmp_seq=32 ttl=64 time=9.24 ms
+64 bytes from 192.168.47.1: icmp_seq=33 ttl=64 time=43.6 ms
+64 bytes from 192.168.47.1: icmp_seq=34 ttl=64 time=23.4 ms
+------------------------------------------------
+StartTime: 2025-07-29 16:33:01.176
+PingType: ipv4
+Destination: 192.168.47.1
+Executing Command: ping -I wlan0 192.168.47.1
+ping: Warning: source address might be selected on device other than wlan0.
+PING 192.168.47.1 (192.168.47.1) from 192.168.5.158 wlan0: 56(84) bytes of data.
+64 bytes from 192.168.47.1: icmp_seq=2 ttl=64 time=24.6 ms
+64 bytes from 192.168.47.1: icmp_seq=3 ttl=64 time=4.54 ms
+64 bytes from 192.168.47.1: icmp_seq=4 ttl=64 time=5.07 ms
+64 bytes from 192.168.47.1: icmp_seq=5 ttl=64 time=7.61 ms
+64 bytes from 192.168.47.1: icmp_seq=6 ttl=64 time=4.61 ms
+64 bytes from 192.168.47.1: icmp_seq=7 ttl=64 time=8.10 ms
+64 bytes from 192.168.47.1: icmp_seq=8 ttl=64 time=5.15 ms
+64 bytes from 192.168.47.1: icmp_seq=9 ttl=64 time=75.8 ms
+64 bytes from 192.168.47.1: icmp_seq=10 ttl=64 time=11.0 ms
+64 bytes from 192.168.47.1: icmp_seq=11 ttl=64 time=10.9 ms
+64 bytes from 192.168.47.1: icmp_seq=12 ttl=64 time=9.48 ms
+64 bytes from 192.168.47.1: icmp_seq=13 ttl=64 time=15.1 ms
+64 bytes from 192.168.47.1: icmp_seq=14 ttl=64 time=11.2 ms
+64 bytes from 192.168.47.1: icmp_seq=15 ttl=64 time=9.95 ms
+64 bytes from 192.168.47.1: icmp_seq=16 ttl=64 time=8.39 ms
+64 bytes from 192.168.47.1: icmp_seq=17 ttl=64 time=9.99 ms
+64 bytes from 192.168.47.1: icmp_seq=18 ttl=64 time=5.81 ms
+64 bytes from 192.168.47.1: icmp_seq=19 ttl=64 time=59.0 ms
+64 bytes from 192.168.47.1: icmp_seq=20 ttl=64 time=5.86 ms
+64 bytes from 192.168.47.1: icmp_seq=21 ttl=64 time=5.10 ms
+64 bytes from 192.168.47.1: icmp_seq=22 ttl=64 time=8.87 ms
+64 bytes from 192.168.47.1: icmp_seq=23 ttl=64 time=7.68 ms
+64 bytes from 192.168.47.1: icmp_seq=24 ttl=64 time=8.01 ms
+64 bytes from 192.168.47.1: icmp_seq=25 ttl=64 time=9.85 ms
+64 bytes from 192.168.47.1: icmp_seq=26 ttl=64 time=16.4 ms
+64 bytes from 192.168.47.1: icmp_seq=27 ttl=64 time=7.41 ms
+64 bytes from 192.168.47.1: icmp_seq=28 ttl=64 time=7.42 ms
+64 bytes from 192.168.47.1: icmp_seq=29 ttl=64 time=49.7 ms
+64 bytes from 192.168.47.1: icmp_seq=30 ttl=64 time=65.3 ms
+64 bytes from 192.168.47.1: icmp_seq=31 ttl=64 time=60.4 ms
+64 bytes from 192.168.47.1: icmp_seq=32 ttl=64 time=9.90 ms
+64 bytes from 192.168.47.1: icmp_seq=33 ttl=64 time=8.66 ms
+64 bytes from 192.168.47.1: icmp_seq=34 ttl=64 time=4.68 ms
+64 bytes from 192.168.47.1: icmp_seq=35 ttl=64 time=8.22 ms
+64 bytes from 192.168.47.1: icmp_seq=36 ttl=64 time=6.94 ms
+64 bytes from 192.168.47.1: icmp_seq=37 ttl=64 time=10.5 ms
+64 bytes from 192.168.47.1: icmp_seq=38 ttl=64 time=9.14 ms
+64 bytes from 192.168.47.1: icmp_seq=39 ttl=64 time=43.6 ms
+64 bytes from 192.168.47.1: icmp_seq=40 ttl=64 time=5.91 ms
+64 bytes from 192.168.47.1: icmp_seq=41 ttl=64 time=80.8 ms
+64 bytes from 192.168.47.1: icmp_seq=42 ttl=64 time=13.5 ms
+64 bytes from 192.168.47.1: icmp_seq=43 ttl=64 time=11.6 ms
+64 bytes from 192.168.47.1: icmp_seq=44 ttl=64 time=7.70 ms
+64 bytes from 192.168.47.1: icmp_seq=45 ttl=64 time=10.7 ms
+64 bytes from 192.168.47.1: icmp_seq=46 ttl=64 time=7.83 ms
+64 bytes from 192.168.47.1: icmp_seq=47 ttl=64 time=7.26 ms
+64 bytes from 192.168.47.1: icmp_seq=48 ttl=64 time=7.82 ms
+64 bytes from 192.168.47.1: icmp_seq=49 ttl=64 time=59.2 ms
+64 bytes from 192.168.47.1: icmp_seq=50 ttl=64 time=216 ms
+64 bytes from 192.168.47.1: icmp_seq=51 ttl=64 time=103 ms
+64 bytes from 192.168.47.1: icmp_seq=52 ttl=64 time=7.57 ms
+64 bytes from 192.168.47.1: icmp_seq=53 ttl=64 time=6.69 ms
+64 bytes from 192.168.47.1: icmp_seq=54 ttl=64 time=9.86 ms
+64 bytes from 192.168.47.1: icmp_seq=55 ttl=64 time=8.63 ms
+64 bytes from 192.168.47.1: icmp_seq=56 ttl=64 time=23.5 ms
+64 bytes from 192.168.47.1: icmp_seq=57 ttl=64 time=9.22 ms
+64 bytes from 192.168.47.1: icmp_seq=58 ttl=64 time=5.74 ms
+64 bytes from 192.168.47.1: icmp_seq=59 ttl=64 time=26.2 ms
+64 bytes from 192.168.47.1: icmp_seq=60 ttl=64 time=81.4 ms
+------------------------------------------------
+StartTime: 2025-07-29 16:38:29.629
+PingType: ipv4
+Destination: 192.168.47.1
+Executing Command: ping -I wlan0 192.168.47.1
+ping: Warning: source address might be selected on device other than wlan0.
+PING 192.168.47.1 (192.168.47.1) from 192.168.5.158 wlan0: 56(84) bytes of data.
+64 bytes from 192.168.47.1: icmp_seq=2 ttl=64 time=56.9 ms
+64 bytes from 192.168.47.1: icmp_seq=3 ttl=64 time=21.9 ms
+64 bytes from 192.168.47.1: icmp_seq=4 ttl=64 time=4.67 ms
+64 bytes from 192.168.47.1: icmp_seq=5 ttl=64 time=26.6 ms
+64 bytes from 192.168.47.1: icmp_seq=6 ttl=64 time=16.7 ms
+64 bytes from 192.168.47.1: icmp_seq=7 ttl=64 time=8.94 ms
+64 bytes from 192.168.47.1: icmp_seq=8 ttl=64 time=38.8 ms
+64 bytes from 192.168.47.1: icmp_seq=9 ttl=64 time=7.49 ms
+64 bytes from 192.168.47.1: icmp_seq=10 ttl=64 time=65.3 ms
+64 bytes from 192.168.47.1: icmp_seq=11 ttl=64 time=7.64 ms
+64 bytes from 192.168.47.1: icmp_seq=12 ttl=64 time=265 ms
+64 bytes from 192.168.47.1: icmp_seq=13 ttl=64 time=391 ms
+64 bytes from 192.168.47.1: icmp_seq=14 ttl=64 time=72.7 ms
+64 bytes from 192.168.47.1: icmp_seq=15 ttl=64 time=21.0 ms
+64 bytes from 192.168.47.1: icmp_seq=16 ttl=64 time=121 ms
+64 bytes from 192.168.47.1: icmp_seq=17 ttl=64 time=42.6 ms
+64 bytes from 192.168.47.1: icmp_seq=18 ttl=64 time=11.9 ms
+64 bytes from 192.168.47.1: icmp_seq=19 ttl=64 time=10.7 ms
+64 bytes from 192.168.47.1: icmp_seq=20 ttl=64 time=9.91 ms
+64 bytes from 192.168.47.1: icmp_seq=21 ttl=64 time=12.8 ms
+64 bytes from 192.168.47.1: icmp_seq=22 ttl=64 time=4.17 ms
+64 bytes from 192.168.47.1: icmp_seq=23 ttl=64 time=123 ms
+64 bytes from 192.168.47.1: icmp_seq=24 ttl=64 time=25.8 ms
+64 bytes from 192.168.47.1: icmp_seq=25 ttl=64 time=12.5 ms
+64 bytes from 192.168.47.1: icmp_seq=26 ttl=64 time=14.9 ms
+64 bytes from 192.168.47.1: icmp_seq=27 ttl=64 time=9.67 ms
+64 bytes from 192.168.47.1: icmp_seq=28 ttl=64 time=8.67 ms
+64 bytes from 192.168.47.1: icmp_seq=29 ttl=64 time=6.81 ms
+64 bytes from 192.168.47.1: icmp_seq=30 ttl=64 time=10.5 ms
+64 bytes from 192.168.47.1: icmp_seq=31 ttl=64 time=7.89 ms
+64 bytes from 192.168.47.1: icmp_seq=32 ttl=64 time=43.7 ms
+------------------------------------------------
+StartTime: 2025-07-29 16:40:01.366
+PingType: ipv4
+Destination: 192.168.47.1
+Executing Command: ping -I wlan0 192.168.47.1
+ping: Warning: source address might be selected on device other than wlan0.
+PING 192.168.47.1 (192.168.47.1) from 192.168.5.158 wlan0: 56(84) bytes of data.
+64 bytes from 192.168.47.1: icmp_seq=2 ttl=64 time=14.7 ms
+64 bytes from 192.168.47.1: icmp_seq=3 ttl=64 time=5.20 ms
+64 bytes from 192.168.47.1: icmp_seq=4 ttl=64 time=2.99 ms
+64 bytes from 192.168.47.1: icmp_seq=5 ttl=64 time=17.7 ms
+64 bytes from 192.168.47.1: icmp_seq=6 ttl=64 time=4.75 ms
+64 bytes from 192.168.47.1: icmp_seq=7 ttl=64 time=3.46 ms
+64 bytes from 192.168.47.1: icmp_seq=8 ttl=64 time=7.55 ms
+64 bytes from 192.168.47.1: icmp_seq=9 ttl=64 time=97.4 ms
+64 bytes from 192.168.47.1: icmp_seq=10 ttl=64 time=41.9 ms
+64 bytes from 192.168.47.1: icmp_seq=11 ttl=64 time=3.50 ms
+64 bytes from 192.168.47.1: icmp_seq=12 ttl=64 time=9.51 ms
+64 bytes from 192.168.47.1: icmp_seq=13 ttl=64 time=7.06 ms
+64 bytes from 192.168.47.1: icmp_seq=14 ttl=64 time=12.3 ms
+64 bytes from 192.168.47.1: icmp_seq=15 ttl=64 time=10.4 ms
+64 bytes from 192.168.47.1: icmp_seq=16 ttl=64 time=9.97 ms
+64 bytes from 192.168.47.1: icmp_seq=17 ttl=64 time=10.5 ms
+64 bytes from 192.168.47.1: icmp_seq=18 ttl=64 time=6.75 ms
+64 bytes from 192.168.47.1: icmp_seq=19 ttl=64 time=93.9 ms
+64 bytes from 192.168.47.1: icmp_seq=20 ttl=64 time=56.3 ms
+64 bytes from 192.168.47.1: icmp_seq=21 ttl=64 time=21.9 ms
+64 bytes from 192.168.47.1: icmp_seq=22 ttl=64 time=12.2 ms
+64 bytes from 192.168.47.1: icmp_seq=23 ttl=64 time=10.2 ms
+64 bytes from 192.168.47.1: icmp_seq=24 ttl=64 time=8.96 ms
+64 bytes from 192.168.47.1: icmp_seq=25 ttl=64 time=7.91 ms
+64 bytes from 192.168.47.1: icmp_seq=26 ttl=64 time=11.8 ms
+64 bytes from 192.168.47.1: icmp_seq=27 ttl=64 time=8.25 ms
+64 bytes from 192.168.47.1: icmp_seq=28 ttl=64 time=8.31 ms
+64 bytes from 192.168.47.1: icmp_seq=29 ttl=64 time=81.4 ms
+64 bytes from 192.168.47.1: icmp_seq=30 ttl=64 time=3.61 ms
+64 bytes from 192.168.47.1: icmp_seq=31 ttl=64 time=122 ms
+64 bytes from 192.168.47.1: icmp_seq=32 ttl=64 time=7.06 ms
+64 bytes from 192.168.47.1: icmp_seq=33 ttl=64 time=7.78 ms
+64 bytes from 192.168.47.1: icmp_seq=34 ttl=64 time=4.58 ms
+64 bytes from 192.168.47.1: icmp_seq=35 ttl=64 time=42.2 ms
+64 bytes from 192.168.47.1: icmp_seq=36 ttl=64 time=9.08 ms
+64 bytes from 192.168.47.1: icmp_seq=37 ttl=64 time=11.4 ms
+64 bytes from 192.168.47.1: icmp_seq=38 ttl=64 time=7.73 ms
+64 bytes from 192.168.47.1: icmp_seq=39 ttl=64 time=81.0 ms
+64 bytes from 192.168.47.1: icmp_seq=40 ttl=64 time=5.53 ms
+64 bytes from 192.168.47.1: icmp_seq=41 ttl=64 time=8.38 ms
+64 bytes from 192.168.47.1: icmp_seq=42 ttl=64 time=15.8 ms
+64 bytes from 192.168.47.1: icmp_seq=43 ttl=64 time=15.7 ms
+64 bytes from 192.168.47.1: icmp_seq=44 ttl=64 time=8.71 ms
+64 bytes from 192.168.47.1: icmp_seq=45 ttl=64 time=10.5 ms
+64 bytes from 192.168.47.1: icmp_seq=46 ttl=64 time=15.9 ms
+64 bytes from 192.168.47.1: icmp_seq=47 ttl=64 time=7.50 ms
+64 bytes from 192.168.47.1: icmp_seq=48 ttl=64 time=5.74 ms
+64 bytes from 192.168.47.1: icmp_seq=49 ttl=64 time=72.8 ms
+64 bytes from 192.168.47.1: icmp_seq=50 ttl=64 time=21.5 ms
+64 bytes from 192.168.47.1: icmp_seq=51 ttl=64 time=30.4 ms
+64 bytes from 192.168.47.1: icmp_seq=52 ttl=64 time=4.71 ms
+64 bytes from 192.168.47.1: icmp_seq=53 ttl=64 time=7.89 ms
+64 bytes from 192.168.47.1: icmp_seq=54 ttl=64 time=10.1 ms
+64 bytes from 192.168.47.1: icmp_seq=55 ttl=64 time=10.4 ms
+64 bytes from 192.168.47.1: icmp_seq=56 ttl=64 time=8.17 ms
+64 bytes from 192.168.47.1: icmp_seq=57 ttl=64 time=8.03 ms
+64 bytes from 192.168.47.1: icmp_seq=58 ttl=64 time=8.20 ms
+64 bytes from 192.168.47.1: icmp_seq=59 ttl=64 time=65.1 ms
+64 bytes from 192.168.47.1: icmp_seq=60 ttl=64 time=26.3 ms
+------------------------------------------------
+StartTime: 2025-07-29 16:43:42.377
+PingType: ipv4
+Destination: 192.168.47.1
+Executing Command: ping -I wlan0 192.168.47.1
+ping: Warning: source address might be selected on device other than wlan0.
+PING 192.168.47.1 (192.168.47.1) from 192.168.5.158 wlan0: 56(84) bytes of data.
+64 bytes from 192.168.47.1: icmp_seq=2 ttl=64 time=13.1 ms
+64 bytes from 192.168.47.1: icmp_seq=3 ttl=64 time=7.31 ms
+64 bytes from 192.168.47.1: icmp_seq=4 ttl=64 time=6.56 ms
+64 bytes from 192.168.47.1: icmp_seq=5 ttl=64 time=9.16 ms
+64 bytes from 192.168.47.1: icmp_seq=6 ttl=64 time=17.3 ms
+64 bytes from 192.168.47.1: icmp_seq=7 ttl=64 time=4.03 ms
+64 bytes from 192.168.47.1: icmp_seq=8 ttl=64 time=10.6 ms
+64 bytes from 192.168.47.1: icmp_seq=9 ttl=64 time=51.1 ms
+64 bytes from 192.168.47.1: icmp_seq=10 ttl=64 time=33.5 ms
+64 bytes from 192.168.47.1: icmp_seq=11 ttl=64 time=10.5 ms
+64 bytes from 192.168.47.1: icmp_seq=12 ttl=64 time=8.55 ms
+64 bytes from 192.168.47.1: icmp_seq=13 ttl=64 time=7.93 ms
+64 bytes from 192.168.47.1: icmp_seq=14 ttl=64 time=10.8 ms
+64 bytes from 192.168.47.1: icmp_seq=15 ttl=64 time=10.4 ms
+64 bytes from 192.168.47.1: icmp_seq=16 ttl=64 time=4.04 ms
+64 bytes from 192.168.47.1: icmp_seq=17 ttl=64 time=10.7 ms
+64 bytes from 192.168.47.1: icmp_seq=18 ttl=64 time=5.52 ms
+64 bytes from 192.168.47.1: icmp_seq=19 ttl=64 time=75.5 ms

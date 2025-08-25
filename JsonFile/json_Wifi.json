@@ -1,0 +1,95 @@
+{
+    "Wifi": [
+        {
+            "WifiID": "AW1000_5G_11ax_36_20",
+            "PingType": "ipv4",
+            "DUTIP": "192.168.47.1",
+            "SSID": "TelstraBA76B1-5G",
+            "Security": "wpa2",
+            "Password": "5wserz4hxz",
+            "BSSID": "ec:6c:9a:ba:76:b2",
+            "Driver_Band": "5G",
+            "Driver_Standard": "11ax",
+            "Driver_Channel": "36",
+            "Driver_Bandwidth": "20"
+        },
+        {
+            "WifiID": "Jerry_VR_Z3_2G",
+            "PingType": "ipv4",
+            "DUTIP": "192.168.47.1",
+            "SSID": "1111_Verizon_2G",
+            "Security": "wpa2",
+            "Password": "12345678",
+            "BSSID": "88:5a:85:fb:0f:4c",
+            "Driver_Band": "2G",
+            "Driver_Standard": "11b",
+            "Driver_Channel": "7",
+            "Driver_Bandwidth": "20"
+        },
+        {
+            "WifiID": "Jerry_VR_Z3_5G",
+            "PingType": "ipv4",
+            "DUTIP": "192.168.47.1",
+            "SSID": "1111_Verizon_5G",
+            "Security": "wpa2",
+            "Password": "12345678",
+            "BSSID": "88:5a:85:fb:0f:4d",
+            "Driver_Band": "5G",
+            "Driver_Standard": "11ax",
+            "Driver_Channel": "36",
+            "Driver_Bandwidth": "20"
+        },
+        {
+            "WifiID": "LH1000",
+            "PingType": "ipv4",
+            "DUTIP": "192.168.47.1",
+            "SSID": "TelstraCAB710",
+            "Security": "wpa2",
+            "Password": "cfft6ea25b",
+            "BSSID": "bc:30:d9:ca:b7:11",
+            "Driver_Band": "5G",
+            "Driver_Standard": "11ax",
+            "Driver_Channel": "36",
+            "Driver_Bandwidth": "20"
+        },
+        {
+            "WifiID": "Meteor2",
+            "PingType": "ipv4",
+            "DUTIP": "192.168.47.1",
+            "SSID": "Multi-Wireless",
+            "Security": "wpa2",
+            "Password": "!abcd1234",
+            "BSSID": "c8:99:b2:fb:d8:cb",
+            "Driver_Band": "5G",
+            "Driver_Standard": "11ax",
+            "Driver_Channel": "36",
+            "Driver_Bandwidth": "20"
+        },
+        {
+            "WifiID": "AW1000_5G_Auto_36_Auto",
+            "PingType": "ipv4",
+            "DUTIP": "192.168.47.1",
+            "SSID": "TelstraBA76B1-5G",
+            "Security": "wpa2",
+            "Password": "5wserz4hxz",
+            "BSSID": "ec:6c:9a:ba:76:b2",
+            "Driver_Band": "5G",
+            "Driver_Standard": "Auto",
+            "Driver_Channel": "36",
+            "Driver_Bandwidth": "Auto"
+        },
+        {
+            "WifiID": "Jerry_4F_AT5G_5G_11ac_Auto_Auto",
+            "PingType": "ipv4",
+            "DUTIP": "192.168.47.1",
+            "SSID": "4FNN-003_5G",
+            "Security": "wpa2",
+            "Password": "12345678",
+            "BSSID": "48:f8:b3:e3:d0:69",
+            "Driver_Band": "5G",
+            "Driver_Standard": "11ac",
+            "Driver_Channel": "Auto",
+            "Driver_Bandwidth": "Auto"
+        }
+    ]
+}

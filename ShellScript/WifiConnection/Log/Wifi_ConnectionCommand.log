@@ -1,0 +1,74 @@
+======================================================================
+StartTime : 2025-07-29 16:18:10.640
+Wifi_SSID : 4FNN-003_5G
+Wifi_Auth : wpa2
+Wifi_Password : 12345678
+Wifi_BSSID : 48:f8:b3:e3:d0:69
+[2025-07-29 16:18:10.788] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:18:35.546] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:18:42.178] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:18:48.773] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:19:00.640] Test Stop
+======================================================================
+StartTime : 2025-07-29 16:27:00.951
+Wifi_SSID : 4FNN-003_5G
+Wifi_Auth : wpa2
+Wifi_Password : 12345678
+Wifi_BSSID : 48:f8:b3:e3:d0:69
+[2025-07-29 16:27:01.095] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:27:16.288] Test Stop
+======================================================================
+StartTime : 2025-07-29 16:28:54.741
+Wifi_SSID : 4FNN-003_5G
+Wifi_Auth : wpa2
+Wifi_Password : 12345678
+Wifi_BSSID : 48:f8:b3:e3:d0:69
+[2025-07-29 16:28:54.879] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:29:45.049] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:29:48.522] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:30:01.418] Test Stop
+======================================================================
+StartTime : 2025-07-29 16:31:27.209
+Wifi_SSID : 4FNN-003_5G
+Wifi_Auth : wpa2
+Wifi_Password : 12345678
+Wifi_BSSID : 48:f8:b3:e3:d0:69
+[2025-07-29 16:31:27.341] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:31:33.090] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:32:00.759] Test Stop
+======================================================================
+StartTime : 2025-07-29 16:33:01.153
+Wifi_SSID : 4FNN-003_5G
+Wifi_Auth : wpa2
+Wifi_Password : 12345678
+Wifi_BSSID : 48:f8:b3:e3:d0:69
+[2025-07-29 16:33:01.293] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:33:32.451] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:33:53.861] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:34:01.456] Test Stop
+======================================================================
+StartTime : 2025-07-29 16:38:29.633
+Wifi_SSID : 4FNN-003_5G
+Wifi_Auth : wpa2
+Wifi_Password : 12345678
+Wifi_BSSID : 48:f8:b3:e3:d0:69
+[2025-07-29 16:38:29.761] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:39:00.769] Test Stop
+======================================================================
+StartTime : 2025-07-29 16:40:01.370
+Wifi_SSID : 4FNN-003_5G
+Wifi_Auth : wpa2
+Wifi_Password : 12345678
+Wifi_BSSID : 48:f8:b3:e3:d0:69
+[2025-07-29 16:40:01.503] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:40:10.390] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:41:01.452] Test Stop
+======================================================================
+StartTime : 2025-07-29 16:43:42.376
+Wifi_SSID : 4FNN-003_5G
+Wifi_Auth : wpa2
+Wifi_Password : 12345678
+Wifi_BSSID : 48:f8:b3:e3:d0:69
+[2025-07-29 16:43:42.588] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:43:48.345] cmd wifi connect-network '4FNN-003_5G' 'wpa2' '12345678' -b '48:f8:b3:e3:d0:69'
+[2025-07-29 16:44:01.253] Test Stop

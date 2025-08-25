@@ -1,0 +1,12 @@
+StartTime: 2025-07-24 19:32:43.871
+list_YoutubeURL: https://www.youtube.com/watch?v=m_dhMSvUCIc,https://www.youtube.com/watch?v=V1p33hqPrUk
+PlayVideo_Interval_Time: 1
+Schedule: 4,19:32,2
+------------------------------------------------
+[2025-07-24 19:32:44.002] Execute the scripts.
+[2025-07-24 19:32:44.021] sh /storage/emulated/0/Documents/Youtube/Youtube.sh https://www.youtube.com/watch?v=m_dhMSvUCIc,https://www.youtube.com/watch?v=V1p33hqPrUk 1 &
+[2025-07-24 19:32:44.040] sh /storage/emulated/0/Documents/Youtube/Check_YoutubeStatus.sh 100 5 &
+[2025-07-24 19:34:01.011] Stop the scripts.
+[2025-07-24 19:34:01.037] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'youtube'
+[2025-07-24 19:34:01.062] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'youtube_monitor'
+--------------------------------------------------

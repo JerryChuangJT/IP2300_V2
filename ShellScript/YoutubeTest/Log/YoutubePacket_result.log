@@ -1,0 +1,4 @@
+Time : 2025-07-24 19:34:05.180
+DiffPackets_ErrorThreshold : 100
+ErrorConsecutiveTimes_FailThreshold : 5
+Result : Wait

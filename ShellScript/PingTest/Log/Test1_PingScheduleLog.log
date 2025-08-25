@@ -1,0 +1,15 @@
+================================================
+StartTime: 2025-07-24 19:36:15.876
+PingTestName: Test1
+PingType: ipv4
+Destination: 8.8.8.8
+Schedule: 4,19:36,2
+------------------------------------------------
+[2025-07-24 19:36:15.991] Execute the scripts.
+[2025-07-24 19:36:16.011] sh /storage/emulated/0/Documents/Ping/Ping_Script.sh Test1 ipv4 8.8.8.8 &
+[2025-07-24 19:36:16.029] sh /storage/emulated/0/Documents/Ping/Monitor_PingResponseLost.sh Test1 1200 60 10 &
+[2025-07-24 19:38:00.117] Stop the scripts.
+[2025-07-24 19:38:00.137] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'ping_script' 'Test1'
+[2025-07-24 19:38:00.159] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'ping' '8.8.8.8'
+[2025-07-24 19:38:00.179] sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh 'ping_monitor' 'Test1'
+--------------------------------------------------

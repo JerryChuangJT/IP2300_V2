@@ -1,0 +1,3668 @@
+StartTime: 2025-07-29 16:19:01.053
+[2025-07-29 16:19:01.074] cmd wifi list-networks
+[2025-07-29 16:19:01.074] 
+20           4FNN-003_5G                      wpa2-psk
+20           4FNN-003_5G                      wpa3-sae^
+[2025-07-29 16:19:01.074] cmd wifi forget-network 20
+[2025-07-29 16:19:01.074] Forget successful
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:02.893
+[2025-07-29 16:19:02.913] cmd wifi list-networks
+[2025-07-29 16:19:02.913] 
+
+[2025-07-29 16:19:02.913] cmd wifi forget-network 
+[2025-07-29 16:19:02.913] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:04.622
+[2025-07-29 16:19:04.641] cmd wifi list-networks
+[2025-07-29 16:19:04.641] 
+
+[2025-07-29 16:19:04.641] cmd wifi forget-network 
+[2025-07-29 16:19:04.641] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:06.344
+[2025-07-29 16:19:06.364] cmd wifi list-networks
+[2025-07-29 16:19:06.364] 
+
+[2025-07-29 16:19:06.364] cmd wifi forget-network 
+[2025-07-29 16:19:06.364] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:08.064
+[2025-07-29 16:19:08.084] cmd wifi list-networks
+[2025-07-29 16:19:08.084] 
+
+[2025-07-29 16:19:08.084] cmd wifi forget-network 
+[2025-07-29 16:19:08.084] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:09.801
+[2025-07-29 16:19:09.821] cmd wifi list-networks
+[2025-07-29 16:19:09.821] 
+
+[2025-07-29 16:19:09.821] cmd wifi forget-network 
+[2025-07-29 16:19:09.821] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:11.547
+[2025-07-29 16:19:11.569] cmd wifi list-networks
+[2025-07-29 16:19:11.569] 
+
+[2025-07-29 16:19:11.569] cmd wifi forget-network 
+[2025-07-29 16:19:11.569] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:13.360
+[2025-07-29 16:19:13.380] cmd wifi list-networks
+[2025-07-29 16:19:13.380] 
+
+[2025-07-29 16:19:13.380] cmd wifi forget-network 
+[2025-07-29 16:19:13.380] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:15.080
+[2025-07-29 16:19:15.099] cmd wifi list-networks
+[2025-07-29 16:19:15.099] 
+
+[2025-07-29 16:19:15.099] cmd wifi forget-network 
+[2025-07-29 16:19:15.099] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:16.807
+[2025-07-29 16:19:16.826] cmd wifi list-networks
+[2025-07-29 16:19:16.826] 
+
+[2025-07-29 16:19:16.826] cmd wifi forget-network 
+[2025-07-29 16:19:16.826] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:18.532
+[2025-07-29 16:19:18.552] cmd wifi list-networks
+[2025-07-29 16:19:18.552] 
+
+[2025-07-29 16:19:18.552] cmd wifi forget-network 
+[2025-07-29 16:19:18.552] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:20.257
+[2025-07-29 16:19:20.276] cmd wifi list-networks
+[2025-07-29 16:19:20.276] 
+
+[2025-07-29 16:19:20.276] cmd wifi forget-network 
+[2025-07-29 16:19:20.276] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:22.062
+[2025-07-29 16:19:22.090] cmd wifi list-networks
+[2025-07-29 16:19:22.090] 
+
+[2025-07-29 16:19:22.090] cmd wifi forget-network 
+[2025-07-29 16:19:22.090] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:23.835
+[2025-07-29 16:19:23.854] cmd wifi list-networks
+[2025-07-29 16:19:23.854] 
+
+[2025-07-29 16:19:23.854] cmd wifi forget-network 
+[2025-07-29 16:19:23.854] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:25.569
+[2025-07-29 16:19:25.589] cmd wifi list-networks
+[2025-07-29 16:19:25.589] 
+
+[2025-07-29 16:19:25.589] cmd wifi forget-network 
+[2025-07-29 16:19:25.589] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:27.295
+[2025-07-29 16:19:27.313] cmd wifi list-networks
+[2025-07-29 16:19:27.313] 
+
+[2025-07-29 16:19:27.313] cmd wifi forget-network 
+[2025-07-29 16:19:27.313] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:29.038
+[2025-07-29 16:19:29.057] cmd wifi list-networks
+[2025-07-29 16:19:29.057] 
+
+[2025-07-29 16:19:29.057] cmd wifi forget-network 
+[2025-07-29 16:19:29.057] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:30.751
+[2025-07-29 16:19:30.770] cmd wifi list-networks
+[2025-07-29 16:19:30.770] 
+
+[2025-07-29 16:19:30.770] cmd wifi forget-network 
+[2025-07-29 16:19:30.770] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:32.487
+[2025-07-29 16:19:32.506] cmd wifi list-networks
+[2025-07-29 16:19:32.506] 
+
+[2025-07-29 16:19:32.506] cmd wifi forget-network 
+[2025-07-29 16:19:32.506] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:34.205
+[2025-07-29 16:19:34.223] cmd wifi list-networks
+[2025-07-29 16:19:34.223] 
+
+[2025-07-29 16:19:34.223] cmd wifi forget-network 
+[2025-07-29 16:19:34.223] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:35.933
+[2025-07-29 16:19:35.952] cmd wifi list-networks
+[2025-07-29 16:19:35.952] 
+
+[2025-07-29 16:19:35.952] cmd wifi forget-network 
+[2025-07-29 16:19:35.952] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:37.659
+[2025-07-29 16:19:37.678] cmd wifi list-networks
+[2025-07-29 16:19:37.678] 
+
+[2025-07-29 16:19:37.678] cmd wifi forget-network 
+[2025-07-29 16:19:37.678] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:39.388
+[2025-07-29 16:19:39.407] cmd wifi list-networks
+[2025-07-29 16:19:39.407] 
+
+[2025-07-29 16:19:39.407] cmd wifi forget-network 
+[2025-07-29 16:19:39.407] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:41.129
+[2025-07-29 16:19:41.149] cmd wifi list-networks
+[2025-07-29 16:19:41.149] 
+
+[2025-07-29 16:19:41.149] cmd wifi forget-network 
+[2025-07-29 16:19:41.149] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:42.867
+[2025-07-29 16:19:42.886] cmd wifi list-networks
+[2025-07-29 16:19:42.886] 
+
+[2025-07-29 16:19:42.886] cmd wifi forget-network 
+[2025-07-29 16:19:42.886] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:44.598
+[2025-07-29 16:19:44.618] cmd wifi list-networks
+[2025-07-29 16:19:44.618] 
+
+[2025-07-29 16:19:44.618] cmd wifi forget-network 
+[2025-07-29 16:19:44.618] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:46.318
+[2025-07-29 16:19:46.337] cmd wifi list-networks
+[2025-07-29 16:19:46.337] 
+
+[2025-07-29 16:19:46.337] cmd wifi forget-network 
+[2025-07-29 16:19:46.337] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:48.044
+[2025-07-29 16:19:48.063] cmd wifi list-networks
+[2025-07-29 16:19:48.063] 
+
+[2025-07-29 16:19:48.063] cmd wifi forget-network 
+[2025-07-29 16:19:48.063] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:49.792
+[2025-07-29 16:19:49.812] cmd wifi list-networks
+[2025-07-29 16:19:49.812] 
+
+[2025-07-29 16:19:49.812] cmd wifi forget-network 
+[2025-07-29 16:19:49.812] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:51.528
+[2025-07-29 16:19:51.549] cmd wifi list-networks
+[2025-07-29 16:19:51.549] 
+
+[2025-07-29 16:19:51.549] cmd wifi forget-network 
+[2025-07-29 16:19:51.549] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:53.270
+[2025-07-29 16:19:53.290] cmd wifi list-networks
+[2025-07-29 16:19:53.290] 
+
+[2025-07-29 16:19:53.290] cmd wifi forget-network 
+[2025-07-29 16:19:53.290] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:54.996
+[2025-07-29 16:19:55.017] cmd wifi list-networks
+[2025-07-29 16:19:55.017] 
+
+[2025-07-29 16:19:55.017] cmd wifi forget-network 
+[2025-07-29 16:19:55.017] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:56.721
+[2025-07-29 16:19:56.742] cmd wifi list-networks
+[2025-07-29 16:19:56.742] 
+
+[2025-07-29 16:19:56.742] cmd wifi forget-network 
+[2025-07-29 16:19:56.742] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:19:58.443
+[2025-07-29 16:19:58.461] cmd wifi list-networks
+[2025-07-29 16:19:58.461] 
+
+[2025-07-29 16:19:58.461] cmd wifi forget-network 
+[2025-07-29 16:19:58.461] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:00.179
+[2025-07-29 16:20:00.200] cmd wifi list-networks
+[2025-07-29 16:20:00.200] 
+
+[2025-07-29 16:20:00.200] cmd wifi forget-network 
+[2025-07-29 16:20:00.200] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:01.947
+[2025-07-29 16:20:01.971] cmd wifi list-networks
+[2025-07-29 16:20:01.971] 
+
+[2025-07-29 16:20:01.971] cmd wifi forget-network 
+[2025-07-29 16:20:01.971] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:03.722
+[2025-07-29 16:20:03.742] cmd wifi list-networks
+[2025-07-29 16:20:03.742] 
+
+[2025-07-29 16:20:03.742] cmd wifi forget-network 
+[2025-07-29 16:20:03.742] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:05.460
+[2025-07-29 16:20:05.479] cmd wifi list-networks
+[2025-07-29 16:20:05.479] 
+
+[2025-07-29 16:20:05.479] cmd wifi forget-network 
+[2025-07-29 16:20:05.479] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:07.183
+[2025-07-29 16:20:07.203] cmd wifi list-networks
+[2025-07-29 16:20:07.203] 
+
+[2025-07-29 16:20:07.203] cmd wifi forget-network 
+[2025-07-29 16:20:07.203] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:08.915
+[2025-07-29 16:20:08.934] cmd wifi list-networks
+[2025-07-29 16:20:08.934] 
+
+[2025-07-29 16:20:08.934] cmd wifi forget-network 
+[2025-07-29 16:20:08.934] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:10.654
+[2025-07-29 16:20:10.673] cmd wifi list-networks
+[2025-07-29 16:20:10.673] 
+
+[2025-07-29 16:20:10.673] cmd wifi forget-network 
+[2025-07-29 16:20:10.673] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:12.438
+[2025-07-29 16:20:12.456] cmd wifi list-networks
+[2025-07-29 16:20:12.456] 
+
+[2025-07-29 16:20:12.456] cmd wifi forget-network 
+[2025-07-29 16:20:12.456] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:14.165
+[2025-07-29 16:20:14.185] cmd wifi list-networks
+[2025-07-29 16:20:14.185] 
+
+[2025-07-29 16:20:14.185] cmd wifi forget-network 
+[2025-07-29 16:20:14.185] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:15.896
+[2025-07-29 16:20:15.917] cmd wifi list-networks
+[2025-07-29 16:20:15.917] 
+
+[2025-07-29 16:20:15.917] cmd wifi forget-network 
+[2025-07-29 16:20:15.917] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:17.627
+[2025-07-29 16:20:17.647] cmd wifi list-networks
+[2025-07-29 16:20:17.647] 
+
+[2025-07-29 16:20:17.647] cmd wifi forget-network 
+[2025-07-29 16:20:17.647] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:19.358
+[2025-07-29 16:20:19.378] cmd wifi list-networks
+[2025-07-29 16:20:19.378] 
+
+[2025-07-29 16:20:19.378] cmd wifi forget-network 
+[2025-07-29 16:20:19.378] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:21.101
+[2025-07-29 16:20:21.121] cmd wifi list-networks
+[2025-07-29 16:20:21.121] 
+
+[2025-07-29 16:20:21.121] cmd wifi forget-network 
+[2025-07-29 16:20:21.121] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:22.836
+[2025-07-29 16:20:22.856] cmd wifi list-networks
+[2025-07-29 16:20:22.856] 
+
+[2025-07-29 16:20:22.856] cmd wifi forget-network 
+[2025-07-29 16:20:22.856] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:24.595
+[2025-07-29 16:20:24.616] cmd wifi list-networks
+[2025-07-29 16:20:24.616] 
+
+[2025-07-29 16:20:24.616] cmd wifi forget-network 
+[2025-07-29 16:20:24.616] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:26.329
+[2025-07-29 16:20:26.348] cmd wifi list-networks
+[2025-07-29 16:20:26.348] 
+
+[2025-07-29 16:20:26.348] cmd wifi forget-network 
+[2025-07-29 16:20:26.348] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:28.125
+[2025-07-29 16:20:28.143] cmd wifi list-networks
+[2025-07-29 16:20:28.143] 
+
+[2025-07-29 16:20:28.143] cmd wifi forget-network 
+[2025-07-29 16:20:28.143] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:29.855
+[2025-07-29 16:20:29.876] cmd wifi list-networks
+[2025-07-29 16:20:29.876] 
+
+[2025-07-29 16:20:29.876] cmd wifi forget-network 
+[2025-07-29 16:20:29.876] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:31.594
+[2025-07-29 16:20:31.614] cmd wifi list-networks
+[2025-07-29 16:20:31.614] 
+
+[2025-07-29 16:20:31.614] cmd wifi forget-network 
+[2025-07-29 16:20:31.614] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:33.340
+[2025-07-29 16:20:33.359] cmd wifi list-networks
+[2025-07-29 16:20:33.359] 
+
+[2025-07-29 16:20:33.359] cmd wifi forget-network 
+[2025-07-29 16:20:33.359] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:35.072
+[2025-07-29 16:20:35.091] cmd wifi list-networks
+[2025-07-29 16:20:35.091] 
+
+[2025-07-29 16:20:35.091] cmd wifi forget-network 
+[2025-07-29 16:20:35.091] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:36.802
+[2025-07-29 16:20:36.821] cmd wifi list-networks
+[2025-07-29 16:20:36.821] 
+
+[2025-07-29 16:20:36.821] cmd wifi forget-network 
+[2025-07-29 16:20:36.821] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:38.525
+[2025-07-29 16:20:38.545] cmd wifi list-networks
+[2025-07-29 16:20:38.545] 
+
+[2025-07-29 16:20:38.545] cmd wifi forget-network 
+[2025-07-29 16:20:38.545] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:40.250
+[2025-07-29 16:20:40.268] cmd wifi list-networks
+[2025-07-29 16:20:40.268] 
+
+[2025-07-29 16:20:40.268] cmd wifi forget-network 
+[2025-07-29 16:20:40.268] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:42.023
+[2025-07-29 16:20:42.062] cmd wifi list-networks
+[2025-07-29 16:20:42.062] 
+
+[2025-07-29 16:20:42.062] cmd wifi forget-network 
+[2025-07-29 16:20:42.062] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:43.783
+[2025-07-29 16:20:43.803] cmd wifi list-networks
+[2025-07-29 16:20:43.803] 
+
+[2025-07-29 16:20:43.803] cmd wifi forget-network 
+[2025-07-29 16:20:43.803] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:45.514
+[2025-07-29 16:20:45.535] cmd wifi list-networks
+[2025-07-29 16:20:45.535] 
+
+[2025-07-29 16:20:45.535] cmd wifi forget-network 
+[2025-07-29 16:20:45.535] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:47.238
+[2025-07-29 16:20:47.256] cmd wifi list-networks
+[2025-07-29 16:20:47.256] 
+
+[2025-07-29 16:20:47.256] cmd wifi forget-network 
+[2025-07-29 16:20:47.256] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:48.968
+[2025-07-29 16:20:48.988] cmd wifi list-networks
+[2025-07-29 16:20:48.988] 
+
+[2025-07-29 16:20:48.988] cmd wifi forget-network 
+[2025-07-29 16:20:48.988] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:50.691
+[2025-07-29 16:20:50.711] cmd wifi list-networks
+[2025-07-29 16:20:50.711] 
+
+[2025-07-29 16:20:50.711] cmd wifi forget-network 
+[2025-07-29 16:20:50.711] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:52.578
+[2025-07-29 16:20:52.601] cmd wifi list-networks
+[2025-07-29 16:20:52.601] 
+
+[2025-07-29 16:20:52.601] cmd wifi forget-network 
+[2025-07-29 16:20:52.601] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:54.301
+[2025-07-29 16:20:54.320] cmd wifi list-networks
+[2025-07-29 16:20:54.320] 
+
+[2025-07-29 16:20:54.320] cmd wifi forget-network 
+[2025-07-29 16:20:54.320] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:56.030
+[2025-07-29 16:20:56.051] cmd wifi list-networks
+[2025-07-29 16:20:56.051] 
+
+[2025-07-29 16:20:56.051] cmd wifi forget-network 
+[2025-07-29 16:20:56.051] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:57.761
+[2025-07-29 16:20:57.781] cmd wifi list-networks
+[2025-07-29 16:20:57.781] 
+
+[2025-07-29 16:20:57.781] cmd wifi forget-network 
+[2025-07-29 16:20:57.781] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:20:59.497
+[2025-07-29 16:20:59.517] cmd wifi list-networks
+[2025-07-29 16:20:59.517] 
+
+[2025-07-29 16:20:59.517] cmd wifi forget-network 
+[2025-07-29 16:20:59.517] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:01.229
+[2025-07-29 16:21:01.249] cmd wifi list-networks
+[2025-07-29 16:21:01.249] 
+
+[2025-07-29 16:21:01.249] cmd wifi forget-network 
+[2025-07-29 16:21:01.249] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:03.014
+[2025-07-29 16:21:03.033] cmd wifi list-networks
+[2025-07-29 16:21:03.033] 
+
+[2025-07-29 16:21:03.033] cmd wifi forget-network 
+[2025-07-29 16:21:03.033] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:04.734
+[2025-07-29 16:21:04.752] cmd wifi list-networks
+[2025-07-29 16:21:04.752] 
+
+[2025-07-29 16:21:04.752] cmd wifi forget-network 
+[2025-07-29 16:21:04.752] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:06.450
+[2025-07-29 16:21:06.470] cmd wifi list-networks
+[2025-07-29 16:21:06.470] 
+
+[2025-07-29 16:21:06.470] cmd wifi forget-network 
+[2025-07-29 16:21:06.470] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:08.160
+[2025-07-29 16:21:08.180] cmd wifi list-networks
+[2025-07-29 16:21:08.180] 
+
+[2025-07-29 16:21:08.180] cmd wifi forget-network 
+[2025-07-29 16:21:08.180] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:09.893
+[2025-07-29 16:21:09.912] cmd wifi list-networks
+[2025-07-29 16:21:09.912] 
+
+[2025-07-29 16:21:09.912] cmd wifi forget-network 
+[2025-07-29 16:21:09.912] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:11.623
+[2025-07-29 16:21:11.643] cmd wifi list-networks
+[2025-07-29 16:21:11.643] 
+
+[2025-07-29 16:21:11.643] cmd wifi forget-network 
+[2025-07-29 16:21:11.643] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:13.365
+[2025-07-29 16:21:13.384] cmd wifi list-networks
+[2025-07-29 16:21:13.384] 
+
+[2025-07-29 16:21:13.384] cmd wifi forget-network 
+[2025-07-29 16:21:13.384] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:15.087
+[2025-07-29 16:21:15.106] cmd wifi list-networks
+[2025-07-29 16:21:15.106] 
+
+[2025-07-29 16:21:15.106] cmd wifi forget-network 
+[2025-07-29 16:21:15.106] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:16.813
+[2025-07-29 16:21:16.832] cmd wifi list-networks
+[2025-07-29 16:21:16.832] 
+
+[2025-07-29 16:21:16.832] cmd wifi forget-network 
+[2025-07-29 16:21:16.832] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:18.536
+[2025-07-29 16:21:18.555] cmd wifi list-networks
+[2025-07-29 16:21:18.555] 
+
+[2025-07-29 16:21:18.555] cmd wifi forget-network 
+[2025-07-29 16:21:18.555] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:20.252
+[2025-07-29 16:21:20.272] cmd wifi list-networks
+[2025-07-29 16:21:20.272] 
+
+[2025-07-29 16:21:20.272] cmd wifi forget-network 
+[2025-07-29 16:21:20.272] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:22.033
+[2025-07-29 16:21:22.056] cmd wifi list-networks
+[2025-07-29 16:21:22.056] 
+
+[2025-07-29 16:21:22.056] cmd wifi forget-network 
+[2025-07-29 16:21:22.056] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:23.767
+[2025-07-29 16:21:23.786] cmd wifi list-networks
+[2025-07-29 16:21:23.786] 
+
+[2025-07-29 16:21:23.786] cmd wifi forget-network 
+[2025-07-29 16:21:23.786] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:25.500
+[2025-07-29 16:21:25.519] cmd wifi list-networks
+[2025-07-29 16:21:25.519] 
+
+[2025-07-29 16:21:25.519] cmd wifi forget-network 
+[2025-07-29 16:21:25.519] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:27.225
+[2025-07-29 16:21:27.245] cmd wifi list-networks
+[2025-07-29 16:21:27.245] 
+
+[2025-07-29 16:21:27.245] cmd wifi forget-network 
+[2025-07-29 16:21:27.245] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:28.961
+[2025-07-29 16:21:28.982] cmd wifi list-networks
+[2025-07-29 16:21:28.982] 
+
+[2025-07-29 16:21:28.982] cmd wifi forget-network 
+[2025-07-29 16:21:28.982] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:30.688
+[2025-07-29 16:21:30.708] cmd wifi list-networks
+[2025-07-29 16:21:30.708] 
+
+[2025-07-29 16:21:30.708] cmd wifi forget-network 
+[2025-07-29 16:21:30.708] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:32.447
+[2025-07-29 16:21:32.467] cmd wifi list-networks
+[2025-07-29 16:21:32.467] 
+
+[2025-07-29 16:21:32.467] cmd wifi forget-network 
+[2025-07-29 16:21:32.467] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:34.168
+[2025-07-29 16:21:34.187] cmd wifi list-networks
+[2025-07-29 16:21:34.187] 
+
+[2025-07-29 16:21:34.187] cmd wifi forget-network 
+[2025-07-29 16:21:34.187] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:35.885
+[2025-07-29 16:21:35.905] cmd wifi list-networks
+[2025-07-29 16:21:35.905] 
+
+[2025-07-29 16:21:35.905] cmd wifi forget-network 
+[2025-07-29 16:21:35.905] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:37.639
+[2025-07-29 16:21:37.658] cmd wifi list-networks
+[2025-07-29 16:21:37.658] 
+
+[2025-07-29 16:21:37.658] cmd wifi forget-network 
+[2025-07-29 16:21:37.658] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:39.368
+[2025-07-29 16:21:39.388] cmd wifi list-networks
+[2025-07-29 16:21:39.388] 
+
+[2025-07-29 16:21:39.388] cmd wifi forget-network 
+[2025-07-29 16:21:39.388] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:41.091
+[2025-07-29 16:21:41.111] cmd wifi list-networks
+[2025-07-29 16:21:41.111] 
+
+[2025-07-29 16:21:41.111] cmd wifi forget-network 
+[2025-07-29 16:21:41.111] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:42.877
+[2025-07-29 16:21:42.897] cmd wifi list-networks
+[2025-07-29 16:21:42.897] 
+
+[2025-07-29 16:21:42.897] cmd wifi forget-network 
+[2025-07-29 16:21:42.897] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:44.611
+[2025-07-29 16:21:44.631] cmd wifi list-networks
+[2025-07-29 16:21:44.631] 
+
+[2025-07-29 16:21:44.631] cmd wifi forget-network 
+[2025-07-29 16:21:44.631] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:46.342
+[2025-07-29 16:21:46.361] cmd wifi list-networks
+[2025-07-29 16:21:46.361] 
+
+[2025-07-29 16:21:46.361] cmd wifi forget-network 
+[2025-07-29 16:21:46.361] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:48.064
+[2025-07-29 16:21:48.084] cmd wifi list-networks
+[2025-07-29 16:21:48.084] 
+
+[2025-07-29 16:21:48.084] cmd wifi forget-network 
+[2025-07-29 16:21:48.084] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:49.801
+[2025-07-29 16:21:49.821] cmd wifi list-networks
+[2025-07-29 16:21:49.821] 
+
+[2025-07-29 16:21:49.821] cmd wifi forget-network 
+[2025-07-29 16:21:49.821] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:51.533
+[2025-07-29 16:21:51.553] cmd wifi list-networks
+[2025-07-29 16:21:51.553] 
+
+[2025-07-29 16:21:51.553] cmd wifi forget-network 
+[2025-07-29 16:21:51.553] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:53.283
+[2025-07-29 16:21:53.302] cmd wifi list-networks
+[2025-07-29 16:21:53.302] 
+
+[2025-07-29 16:21:53.302] cmd wifi forget-network 
+[2025-07-29 16:21:53.302] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:55.013
+[2025-07-29 16:21:55.033] cmd wifi list-networks
+[2025-07-29 16:21:55.033] 
+
+[2025-07-29 16:21:55.033] cmd wifi forget-network 
+[2025-07-29 16:21:55.033] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:56.740
+[2025-07-29 16:21:56.759] cmd wifi list-networks
+[2025-07-29 16:21:56.759] 
+
+[2025-07-29 16:21:56.759] cmd wifi forget-network 
+[2025-07-29 16:21:56.759] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:21:58.463
+[2025-07-29 16:21:58.483] cmd wifi list-networks
+[2025-07-29 16:21:58.483] 
+
+[2025-07-29 16:21:58.483] cmd wifi forget-network 
+[2025-07-29 16:21:58.483] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:00.203
+[2025-07-29 16:22:00.222] cmd wifi list-networks
+[2025-07-29 16:22:00.222] 
+
+[2025-07-29 16:22:00.222] cmd wifi forget-network 
+[2025-07-29 16:22:00.222] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:02.010
+[2025-07-29 16:22:02.031] cmd wifi list-networks
+[2025-07-29 16:22:02.031] 
+
+[2025-07-29 16:22:02.031] cmd wifi forget-network 
+[2025-07-29 16:22:02.031] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:03.774
+[2025-07-29 16:22:03.793] cmd wifi list-networks
+[2025-07-29 16:22:03.793] 
+
+[2025-07-29 16:22:03.793] cmd wifi forget-network 
+[2025-07-29 16:22:03.793] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:05.503
+[2025-07-29 16:22:05.523] cmd wifi list-networks
+[2025-07-29 16:22:05.523] 
+
+[2025-07-29 16:22:05.523] cmd wifi forget-network 
+[2025-07-29 16:22:05.523] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:07.225
+[2025-07-29 16:22:07.244] cmd wifi list-networks
+[2025-07-29 16:22:07.244] 
+
+[2025-07-29 16:22:07.244] cmd wifi forget-network 
+[2025-07-29 16:22:07.244] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:08.947
+[2025-07-29 16:22:08.967] cmd wifi list-networks
+[2025-07-29 16:22:08.967] 
+
+[2025-07-29 16:22:08.967] cmd wifi forget-network 
+[2025-07-29 16:22:08.967] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:10.670
+[2025-07-29 16:22:10.689] cmd wifi list-networks
+[2025-07-29 16:22:10.689] 
+
+[2025-07-29 16:22:10.689] cmd wifi forget-network 
+[2025-07-29 16:22:10.689] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:12.437
+[2025-07-29 16:22:12.457] cmd wifi list-networks
+[2025-07-29 16:22:12.457] 
+
+[2025-07-29 16:22:12.457] cmd wifi forget-network 
+[2025-07-29 16:22:12.457] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:14.164
+[2025-07-29 16:22:14.184] cmd wifi list-networks
+[2025-07-29 16:22:14.184] 
+
+[2025-07-29 16:22:14.184] cmd wifi forget-network 
+[2025-07-29 16:22:14.184] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:15.886
+[2025-07-29 16:22:15.905] cmd wifi list-networks
+[2025-07-29 16:22:15.905] 
+
+[2025-07-29 16:22:15.905] cmd wifi forget-network 
+[2025-07-29 16:22:15.905] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:17.610
+[2025-07-29 16:22:17.629] cmd wifi list-networks
+[2025-07-29 16:22:17.629] 
+
+[2025-07-29 16:22:17.629] cmd wifi forget-network 
+[2025-07-29 16:22:17.629] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:19.342
+[2025-07-29 16:22:19.360] cmd wifi list-networks
+[2025-07-29 16:22:19.360] 
+
+[2025-07-29 16:22:19.360] cmd wifi forget-network 
+[2025-07-29 16:22:19.360] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:21.080
+[2025-07-29 16:22:21.100] cmd wifi list-networks
+[2025-07-29 16:22:21.100] 
+
+[2025-07-29 16:22:21.100] cmd wifi forget-network 
+[2025-07-29 16:22:21.100] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:22.809
+[2025-07-29 16:22:22.828] cmd wifi list-networks
+[2025-07-29 16:22:22.828] 
+
+[2025-07-29 16:22:22.828] cmd wifi forget-network 
+[2025-07-29 16:22:22.828] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:24.536
+[2025-07-29 16:22:24.555] cmd wifi list-networks
+[2025-07-29 16:22:24.555] 
+
+[2025-07-29 16:22:24.555] cmd wifi forget-network 
+[2025-07-29 16:22:24.555] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:26.253
+[2025-07-29 16:22:26.274] cmd wifi list-networks
+[2025-07-29 16:22:26.274] 
+
+[2025-07-29 16:22:26.274] cmd wifi forget-network 
+[2025-07-29 16:22:26.274] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:27.973
+[2025-07-29 16:22:27.993] cmd wifi list-networks
+[2025-07-29 16:22:27.993] 
+
+[2025-07-29 16:22:27.993] cmd wifi forget-network 
+[2025-07-29 16:22:27.993] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:29.706
+[2025-07-29 16:22:29.726] cmd wifi list-networks
+[2025-07-29 16:22:29.726] 
+
+[2025-07-29 16:22:29.726] cmd wifi forget-network 
+[2025-07-29 16:22:29.726] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:31.431
+[2025-07-29 16:22:31.451] cmd wifi list-networks
+[2025-07-29 16:22:31.451] 
+
+[2025-07-29 16:22:31.451] cmd wifi forget-network 
+[2025-07-29 16:22:31.451] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:33.153
+[2025-07-29 16:22:33.173] cmd wifi list-networks
+[2025-07-29 16:22:33.173] 
+
+[2025-07-29 16:22:33.173] cmd wifi forget-network 
+[2025-07-29 16:22:33.173] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:34.878
+[2025-07-29 16:22:34.898] cmd wifi list-networks
+[2025-07-29 16:22:34.898] 
+
+[2025-07-29 16:22:34.898] cmd wifi forget-network 
+[2025-07-29 16:22:34.898] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:36.607
+[2025-07-29 16:22:36.627] cmd wifi list-networks
+[2025-07-29 16:22:36.627] 
+
+[2025-07-29 16:22:36.627] cmd wifi forget-network 
+[2025-07-29 16:22:36.627] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:38.331
+[2025-07-29 16:22:38.351] cmd wifi list-networks
+[2025-07-29 16:22:38.351] 
+
+[2025-07-29 16:22:38.351] cmd wifi forget-network 
+[2025-07-29 16:22:38.351] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:40.052
+[2025-07-29 16:22:40.072] cmd wifi list-networks
+[2025-07-29 16:22:40.072] 
+
+[2025-07-29 16:22:40.072] cmd wifi forget-network 
+[2025-07-29 16:22:40.072] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:41.818
+[2025-07-29 16:22:41.851] cmd wifi list-networks
+[2025-07-29 16:22:41.851] 
+
+[2025-07-29 16:22:41.851] cmd wifi forget-network 
+[2025-07-29 16:22:41.851] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:43.580
+[2025-07-29 16:22:43.599] cmd wifi list-networks
+[2025-07-29 16:22:43.599] 
+
+[2025-07-29 16:22:43.599] cmd wifi forget-network 
+[2025-07-29 16:22:43.599] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:45.307
+[2025-07-29 16:22:45.326] cmd wifi list-networks
+[2025-07-29 16:22:45.326] 
+
+[2025-07-29 16:22:45.326] cmd wifi forget-network 
+[2025-07-29 16:22:45.326] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:47.032
+[2025-07-29 16:22:47.051] cmd wifi list-networks
+[2025-07-29 16:22:47.051] 
+
+[2025-07-29 16:22:47.051] cmd wifi forget-network 
+[2025-07-29 16:22:47.051] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:48.769
+[2025-07-29 16:22:48.788] cmd wifi list-networks
+[2025-07-29 16:22:48.788] 
+
+[2025-07-29 16:22:48.788] cmd wifi forget-network 
+[2025-07-29 16:22:48.788] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:50.503
+[2025-07-29 16:22:50.524] cmd wifi list-networks
+[2025-07-29 16:22:50.524] 
+
+[2025-07-29 16:22:50.524] cmd wifi forget-network 
+[2025-07-29 16:22:50.524] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:52.308
+[2025-07-29 16:22:52.328] cmd wifi list-networks
+[2025-07-29 16:22:52.328] 
+
+[2025-07-29 16:22:52.328] cmd wifi forget-network 
+[2025-07-29 16:22:52.328] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:54.044
+[2025-07-29 16:22:54.064] cmd wifi list-networks
+[2025-07-29 16:22:54.064] 
+
+[2025-07-29 16:22:54.064] cmd wifi forget-network 
+[2025-07-29 16:22:54.064] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:55.764
+[2025-07-29 16:22:55.783] cmd wifi list-networks
+[2025-07-29 16:22:55.783] 
+
+[2025-07-29 16:22:55.783] cmd wifi forget-network 
+[2025-07-29 16:22:55.783] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:57.489
+[2025-07-29 16:22:57.509] cmd wifi list-networks
+[2025-07-29 16:22:57.509] 
+
+[2025-07-29 16:22:57.509] cmd wifi forget-network 
+[2025-07-29 16:22:57.509] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:22:59.222
+[2025-07-29 16:22:59.241] cmd wifi list-networks
+[2025-07-29 16:22:59.241] 
+
+[2025-07-29 16:22:59.241] cmd wifi forget-network 
+[2025-07-29 16:22:59.241] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:00.951
+[2025-07-29 16:23:00.970] cmd wifi list-networks
+[2025-07-29 16:23:00.970] 
+
+[2025-07-29 16:23:00.970] cmd wifi forget-network 
+[2025-07-29 16:23:00.970] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:02.677
+[2025-07-29 16:23:02.697] cmd wifi list-networks
+[2025-07-29 16:23:02.697] 
+
+[2025-07-29 16:23:02.697] cmd wifi forget-network 
+[2025-07-29 16:23:02.697] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:04.405
+[2025-07-29 16:23:04.425] cmd wifi list-networks
+[2025-07-29 16:23:04.425] 
+
+[2025-07-29 16:23:04.425] cmd wifi forget-network 
+[2025-07-29 16:23:04.425] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:06.129
+[2025-07-29 16:23:06.149] cmd wifi list-networks
+[2025-07-29 16:23:06.149] 
+
+[2025-07-29 16:23:06.149] cmd wifi forget-network 
+[2025-07-29 16:23:06.149] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:07.857
+[2025-07-29 16:23:07.877] cmd wifi list-networks
+[2025-07-29 16:23:07.877] 
+
+[2025-07-29 16:23:07.877] cmd wifi forget-network 
+[2025-07-29 16:23:07.877] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:09.583
+[2025-07-29 16:23:09.602] cmd wifi list-networks
+[2025-07-29 16:23:09.602] 
+
+[2025-07-29 16:23:09.602] cmd wifi forget-network 
+[2025-07-29 16:23:09.602] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:11.322
+[2025-07-29 16:23:11.342] cmd wifi list-networks
+[2025-07-29 16:23:11.342] 
+
+[2025-07-29 16:23:11.342] cmd wifi forget-network 
+[2025-07-29 16:23:11.342] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:13.042
+[2025-07-29 16:23:13.062] cmd wifi list-networks
+[2025-07-29 16:23:13.062] 
+
+[2025-07-29 16:23:13.062] cmd wifi forget-network 
+[2025-07-29 16:23:13.062] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:14.766
+[2025-07-29 16:23:14.786] cmd wifi list-networks
+[2025-07-29 16:23:14.786] 
+
+[2025-07-29 16:23:14.786] cmd wifi forget-network 
+[2025-07-29 16:23:14.786] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:16.490
+[2025-07-29 16:23:16.509] cmd wifi list-networks
+[2025-07-29 16:23:16.509] 
+
+[2025-07-29 16:23:16.509] cmd wifi forget-network 
+[2025-07-29 16:23:16.509] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:18.218
+[2025-07-29 16:23:18.237] cmd wifi list-networks
+[2025-07-29 16:23:18.237] 
+
+[2025-07-29 16:23:18.237] cmd wifi forget-network 
+[2025-07-29 16:23:18.237] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:19.948
+[2025-07-29 16:23:19.967] cmd wifi list-networks
+[2025-07-29 16:23:19.967] 
+
+[2025-07-29 16:23:19.967] cmd wifi forget-network 
+[2025-07-29 16:23:19.967] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:21.682
+[2025-07-29 16:23:21.706] cmd wifi list-networks
+[2025-07-29 16:23:21.706] 
+
+[2025-07-29 16:23:21.706] cmd wifi forget-network 
+[2025-07-29 16:23:21.706] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:23.419
+[2025-07-29 16:23:23.438] cmd wifi list-networks
+[2025-07-29 16:23:23.438] 
+
+[2025-07-29 16:23:23.438] cmd wifi forget-network 
+[2025-07-29 16:23:23.438] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:25.144
+[2025-07-29 16:23:25.163] cmd wifi list-networks
+[2025-07-29 16:23:25.163] 
+
+[2025-07-29 16:23:25.163] cmd wifi forget-network 
+[2025-07-29 16:23:25.163] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:26.869
+[2025-07-29 16:23:26.888] cmd wifi list-networks
+[2025-07-29 16:23:26.888] 
+
+[2025-07-29 16:23:26.888] cmd wifi forget-network 
+[2025-07-29 16:23:26.888] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:28.587
+[2025-07-29 16:23:28.607] cmd wifi list-networks
+[2025-07-29 16:23:28.607] 
+
+[2025-07-29 16:23:28.607] cmd wifi forget-network 
+[2025-07-29 16:23:28.607] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:30.321
+[2025-07-29 16:23:30.340] cmd wifi list-networks
+[2025-07-29 16:23:30.340] 
+
+[2025-07-29 16:23:30.340] cmd wifi forget-network 
+[2025-07-29 16:23:30.340] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:32.108
+[2025-07-29 16:23:32.131] cmd wifi list-networks
+[2025-07-29 16:23:32.131] 
+
+[2025-07-29 16:23:32.131] cmd wifi forget-network 
+[2025-07-29 16:23:32.131] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:33.837
+[2025-07-29 16:23:33.856] cmd wifi list-networks
+[2025-07-29 16:23:33.856] 
+
+[2025-07-29 16:23:33.856] cmd wifi forget-network 
+[2025-07-29 16:23:33.856] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:35.552
+[2025-07-29 16:23:35.571] cmd wifi list-networks
+[2025-07-29 16:23:35.571] 
+
+[2025-07-29 16:23:35.571] cmd wifi forget-network 
+[2025-07-29 16:23:35.571] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:37.270
+[2025-07-29 16:23:37.289] cmd wifi list-networks
+[2025-07-29 16:23:37.289] 
+
+[2025-07-29 16:23:37.289] cmd wifi forget-network 
+[2025-07-29 16:23:37.289] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:38.993
+[2025-07-29 16:23:39.012] cmd wifi list-networks
+[2025-07-29 16:23:39.012] 
+
+[2025-07-29 16:23:39.012] cmd wifi forget-network 
+[2025-07-29 16:23:39.012] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:40.715
+[2025-07-29 16:23:40.735] cmd wifi list-networks
+[2025-07-29 16:23:40.735] 
+
+[2025-07-29 16:23:40.735] cmd wifi forget-network 
+[2025-07-29 16:23:40.735] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:42.462
+[2025-07-29 16:23:42.482] cmd wifi list-networks
+[2025-07-29 16:23:42.482] 
+
+[2025-07-29 16:23:42.482] cmd wifi forget-network 
+[2025-07-29 16:23:42.482] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:44.175
+[2025-07-29 16:23:44.195] cmd wifi list-networks
+[2025-07-29 16:23:44.195] 
+
+[2025-07-29 16:23:44.195] cmd wifi forget-network 
+[2025-07-29 16:23:44.195] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:45.895
+[2025-07-29 16:23:45.913] cmd wifi list-networks
+[2025-07-29 16:23:45.913] 
+
+[2025-07-29 16:23:45.913] cmd wifi forget-network 
+[2025-07-29 16:23:45.913] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:47.633
+[2025-07-29 16:23:47.653] cmd wifi list-networks
+[2025-07-29 16:23:47.653] 
+
+[2025-07-29 16:23:47.653] cmd wifi forget-network 
+[2025-07-29 16:23:47.653] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:49.353
+[2025-07-29 16:23:49.373] cmd wifi list-networks
+[2025-07-29 16:23:49.373] 
+
+[2025-07-29 16:23:49.373] cmd wifi forget-network 
+[2025-07-29 16:23:49.373] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:51.075
+[2025-07-29 16:23:51.094] cmd wifi list-networks
+[2025-07-29 16:23:51.094] 
+
+[2025-07-29 16:23:51.094] cmd wifi forget-network 
+[2025-07-29 16:23:51.094] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:52.789
+[2025-07-29 16:23:52.809] cmd wifi list-networks
+[2025-07-29 16:23:52.809] 
+
+[2025-07-29 16:23:52.809] cmd wifi forget-network 
+[2025-07-29 16:23:52.809] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:54.509
+[2025-07-29 16:23:54.528] cmd wifi list-networks
+[2025-07-29 16:23:54.528] 
+
+[2025-07-29 16:23:54.528] cmd wifi forget-network 
+[2025-07-29 16:23:54.528] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:56.221
+[2025-07-29 16:23:56.240] cmd wifi list-networks
+[2025-07-29 16:23:56.240] 
+
+[2025-07-29 16:23:56.240] cmd wifi forget-network 
+[2025-07-29 16:23:56.240] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:57.951
+[2025-07-29 16:23:57.971] cmd wifi list-networks
+[2025-07-29 16:23:57.971] 
+
+[2025-07-29 16:23:57.971] cmd wifi forget-network 
+[2025-07-29 16:23:57.971] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:23:59.683
+[2025-07-29 16:23:59.701] cmd wifi list-networks
+[2025-07-29 16:23:59.701] 
+
+[2025-07-29 16:23:59.701] cmd wifi forget-network 
+[2025-07-29 16:23:59.701] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:01.403
+[2025-07-29 16:24:01.423] cmd wifi list-networks
+[2025-07-29 16:24:01.423] 
+
+[2025-07-29 16:24:01.423] cmd wifi forget-network 
+[2025-07-29 16:24:01.423] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:03.136
+[2025-07-29 16:24:03.156] cmd wifi list-networks
+[2025-07-29 16:24:03.156] 
+
+[2025-07-29 16:24:03.156] cmd wifi forget-network 
+[2025-07-29 16:24:03.156] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:04.861
+[2025-07-29 16:24:04.880] cmd wifi list-networks
+[2025-07-29 16:24:04.880] 
+
+[2025-07-29 16:24:04.880] cmd wifi forget-network 
+[2025-07-29 16:24:04.880] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:06.580
+[2025-07-29 16:24:06.599] cmd wifi list-networks
+[2025-07-29 16:24:06.599] 
+
+[2025-07-29 16:24:06.599] cmd wifi forget-network 
+[2025-07-29 16:24:06.599] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:08.296
+[2025-07-29 16:24:08.316] cmd wifi list-networks
+[2025-07-29 16:24:08.316] 
+
+[2025-07-29 16:24:08.316] cmd wifi forget-network 
+[2025-07-29 16:24:08.316] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:10.028
+[2025-07-29 16:24:10.047] cmd wifi list-networks
+[2025-07-29 16:24:10.047] 
+
+[2025-07-29 16:24:10.047] cmd wifi forget-network 
+[2025-07-29 16:24:10.047] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:11.753
+[2025-07-29 16:24:11.773] cmd wifi list-networks
+[2025-07-29 16:24:11.773] 
+
+[2025-07-29 16:24:11.773] cmd wifi forget-network 
+[2025-07-29 16:24:11.773] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:13.542
+[2025-07-29 16:24:13.561] cmd wifi list-networks
+[2025-07-29 16:24:13.561] 
+
+[2025-07-29 16:24:13.561] cmd wifi forget-network 
+[2025-07-29 16:24:13.561] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:15.257
+[2025-07-29 16:24:15.277] cmd wifi list-networks
+[2025-07-29 16:24:15.277] 
+
+[2025-07-29 16:24:15.277] cmd wifi forget-network 
+[2025-07-29 16:24:15.277] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:16.994
+[2025-07-29 16:24:17.013] cmd wifi list-networks
+[2025-07-29 16:24:17.013] 
+
+[2025-07-29 16:24:17.013] cmd wifi forget-network 
+[2025-07-29 16:24:17.013] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:18.711
+[2025-07-29 16:24:18.731] cmd wifi list-networks
+[2025-07-29 16:24:18.731] 
+
+[2025-07-29 16:24:18.731] cmd wifi forget-network 
+[2025-07-29 16:24:18.731] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:20.425
+[2025-07-29 16:24:20.444] cmd wifi list-networks
+[2025-07-29 16:24:20.444] 
+
+[2025-07-29 16:24:20.444] cmd wifi forget-network 
+[2025-07-29 16:24:20.444] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:22.334
+[2025-07-29 16:24:22.354] cmd wifi list-networks
+[2025-07-29 16:24:22.354] 
+
+[2025-07-29 16:24:22.354] cmd wifi forget-network 
+[2025-07-29 16:24:22.354] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:24.070
+[2025-07-29 16:24:24.088] cmd wifi list-networks
+[2025-07-29 16:24:24.088] 
+
+[2025-07-29 16:24:24.088] cmd wifi forget-network 
+[2025-07-29 16:24:24.088] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:25.793
+[2025-07-29 16:24:25.811] cmd wifi list-networks
+[2025-07-29 16:24:25.811] 
+
+[2025-07-29 16:24:25.811] cmd wifi forget-network 
+[2025-07-29 16:24:25.811] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:27.509
+[2025-07-29 16:24:27.528] cmd wifi list-networks
+[2025-07-29 16:24:27.528] 
+
+[2025-07-29 16:24:27.528] cmd wifi forget-network 
+[2025-07-29 16:24:27.528] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:29.236
+[2025-07-29 16:24:29.256] cmd wifi list-networks
+[2025-07-29 16:24:29.256] 
+
+[2025-07-29 16:24:29.256] cmd wifi forget-network 
+[2025-07-29 16:24:29.256] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:30.964
+[2025-07-29 16:24:30.984] cmd wifi list-networks
+[2025-07-29 16:24:30.984] 
+
+[2025-07-29 16:24:30.984] cmd wifi forget-network 
+[2025-07-29 16:24:30.984] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:32.678
+[2025-07-29 16:24:32.697] cmd wifi list-networks
+[2025-07-29 16:24:32.697] 
+
+[2025-07-29 16:24:32.697] cmd wifi forget-network 
+[2025-07-29 16:24:32.697] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:34.408
+[2025-07-29 16:24:34.430] cmd wifi list-networks
+[2025-07-29 16:24:34.430] 
+
+[2025-07-29 16:24:34.430] cmd wifi forget-network 
+[2025-07-29 16:24:34.430] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:36.136
+[2025-07-29 16:24:36.155] cmd wifi list-networks
+[2025-07-29 16:24:36.155] 
+
+[2025-07-29 16:24:36.155] cmd wifi forget-network 
+[2025-07-29 16:24:36.155] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:37.862
+[2025-07-29 16:24:37.881] cmd wifi list-networks
+[2025-07-29 16:24:37.881] 
+
+[2025-07-29 16:24:37.881] cmd wifi forget-network 
+[2025-07-29 16:24:37.881] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:39.589
+[2025-07-29 16:24:39.609] cmd wifi list-networks
+[2025-07-29 16:24:39.609] 
+
+[2025-07-29 16:24:39.609] cmd wifi forget-network 
+[2025-07-29 16:24:39.609] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:41.317
+[2025-07-29 16:24:41.337] cmd wifi list-networks
+[2025-07-29 16:24:41.337] 
+
+[2025-07-29 16:24:41.337] cmd wifi forget-network 
+[2025-07-29 16:24:41.337] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:43.037
+[2025-07-29 16:24:43.056] cmd wifi list-networks
+[2025-07-29 16:24:43.056] 
+
+[2025-07-29 16:24:43.056] cmd wifi forget-network 
+[2025-07-29 16:24:43.056] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:44.769
+[2025-07-29 16:24:44.789] cmd wifi list-networks
+[2025-07-29 16:24:44.789] 
+
+[2025-07-29 16:24:44.789] cmd wifi forget-network 
+[2025-07-29 16:24:44.789] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:46.486
+[2025-07-29 16:24:46.506] cmd wifi list-networks
+[2025-07-29 16:24:46.506] 
+
+[2025-07-29 16:24:46.506] cmd wifi forget-network 
+[2025-07-29 16:24:46.506] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:48.216
+[2025-07-29 16:24:48.236] cmd wifi list-networks
+[2025-07-29 16:24:48.236] 
+
+[2025-07-29 16:24:48.236] cmd wifi forget-network 
+[2025-07-29 16:24:48.236] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:49.946
+[2025-07-29 16:24:49.965] cmd wifi list-networks
+[2025-07-29 16:24:49.965] 
+
+[2025-07-29 16:24:49.965] cmd wifi forget-network 
+[2025-07-29 16:24:49.965] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:51.679
+[2025-07-29 16:24:51.698] cmd wifi list-networks
+[2025-07-29 16:24:51.698] 
+
+[2025-07-29 16:24:51.698] cmd wifi forget-network 
+[2025-07-29 16:24:51.698] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:53.408
+[2025-07-29 16:24:53.427] cmd wifi list-networks
+[2025-07-29 16:24:53.427] 
+
+[2025-07-29 16:24:53.427] cmd wifi forget-network 
+[2025-07-29 16:24:53.427] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:55.128
+[2025-07-29 16:24:55.148] cmd wifi list-networks
+[2025-07-29 16:24:55.148] 
+
+[2025-07-29 16:24:55.148] cmd wifi forget-network 
+[2025-07-29 16:24:55.148] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:56.844
+[2025-07-29 16:24:56.864] cmd wifi list-networks
+[2025-07-29 16:24:56.864] 
+
+[2025-07-29 16:24:56.864] cmd wifi forget-network 
+[2025-07-29 16:24:56.864] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:24:58.566
+[2025-07-29 16:24:58.586] cmd wifi list-networks
+[2025-07-29 16:24:58.586] 
+
+[2025-07-29 16:24:58.586] cmd wifi forget-network 
+[2025-07-29 16:24:58.586] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:00.302
+[2025-07-29 16:25:00.321] cmd wifi list-networks
+[2025-07-29 16:25:00.321] 
+
+[2025-07-29 16:25:00.321] cmd wifi forget-network 
+[2025-07-29 16:25:00.321] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:02.071
+[2025-07-29 16:25:02.090] cmd wifi list-networks
+[2025-07-29 16:25:02.090] 
+
+[2025-07-29 16:25:02.090] cmd wifi forget-network 
+[2025-07-29 16:25:02.090] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:03.812
+[2025-07-29 16:25:03.832] cmd wifi list-networks
+[2025-07-29 16:25:03.832] 
+
+[2025-07-29 16:25:03.832] cmd wifi forget-network 
+[2025-07-29 16:25:03.832] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:05.529
+[2025-07-29 16:25:05.550] cmd wifi list-networks
+[2025-07-29 16:25:05.550] 
+
+[2025-07-29 16:25:05.550] cmd wifi forget-network 
+[2025-07-29 16:25:05.550] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:07.257
+[2025-07-29 16:25:07.277] cmd wifi list-networks
+[2025-07-29 16:25:07.277] 
+
+[2025-07-29 16:25:07.277] cmd wifi forget-network 
+[2025-07-29 16:25:07.277] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:08.978
+[2025-07-29 16:25:08.999] cmd wifi list-networks
+[2025-07-29 16:25:08.999] 
+
+[2025-07-29 16:25:08.999] cmd wifi forget-network 
+[2025-07-29 16:25:08.999] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:10.704
+[2025-07-29 16:25:10.723] cmd wifi list-networks
+[2025-07-29 16:25:10.723] 
+
+[2025-07-29 16:25:10.723] cmd wifi forget-network 
+[2025-07-29 16:25:10.723] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:12.579
+[2025-07-29 16:25:12.607] cmd wifi list-networks
+[2025-07-29 16:25:12.607] 
+
+[2025-07-29 16:25:12.607] cmd wifi forget-network 
+[2025-07-29 16:25:12.607] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:14.339
+[2025-07-29 16:25:14.359] cmd wifi list-networks
+[2025-07-29 16:25:14.359] 
+
+[2025-07-29 16:25:14.359] cmd wifi forget-network 
+[2025-07-29 16:25:14.359] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:16.053
+[2025-07-29 16:25:16.072] cmd wifi list-networks
+[2025-07-29 16:25:16.072] 
+
+[2025-07-29 16:25:16.072] cmd wifi forget-network 
+[2025-07-29 16:25:16.072] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:17.777
+[2025-07-29 16:25:17.796] cmd wifi list-networks
+[2025-07-29 16:25:17.796] 
+
+[2025-07-29 16:25:17.796] cmd wifi forget-network 
+[2025-07-29 16:25:17.796] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:19.511
+[2025-07-29 16:25:19.531] cmd wifi list-networks
+[2025-07-29 16:25:19.531] 
+
+[2025-07-29 16:25:19.531] cmd wifi forget-network 
+[2025-07-29 16:25:19.531] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:21.255
+[2025-07-29 16:25:21.275] cmd wifi list-networks
+[2025-07-29 16:25:21.275] 
+
+[2025-07-29 16:25:21.275] cmd wifi forget-network 
+[2025-07-29 16:25:21.275] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:23.038
+[2025-07-29 16:25:23.057] cmd wifi list-networks
+[2025-07-29 16:25:23.057] 
+
+[2025-07-29 16:25:23.057] cmd wifi forget-network 
+[2025-07-29 16:25:23.057] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:24.767
+[2025-07-29 16:25:24.786] cmd wifi list-networks
+[2025-07-29 16:25:24.786] 
+
+[2025-07-29 16:25:24.786] cmd wifi forget-network 
+[2025-07-29 16:25:24.786] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:26.491
+[2025-07-29 16:25:26.510] cmd wifi list-networks
+[2025-07-29 16:25:26.510] 
+
+[2025-07-29 16:25:26.510] cmd wifi forget-network 
+[2025-07-29 16:25:26.510] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:28.212
+[2025-07-29 16:25:28.231] cmd wifi list-networks
+[2025-07-29 16:25:28.231] 
+
+[2025-07-29 16:25:28.231] cmd wifi forget-network 
+[2025-07-29 16:25:28.231] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:29.931
+[2025-07-29 16:25:29.950] cmd wifi list-networks
+[2025-07-29 16:25:29.950] 
+
+[2025-07-29 16:25:29.950] cmd wifi forget-network 
+[2025-07-29 16:25:29.950] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:31.655
+[2025-07-29 16:25:31.674] cmd wifi list-networks
+[2025-07-29 16:25:31.674] 
+
+[2025-07-29 16:25:31.674] cmd wifi forget-network 
+[2025-07-29 16:25:31.674] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:33.401
+[2025-07-29 16:25:33.420] cmd wifi list-networks
+[2025-07-29 16:25:33.420] 
+
+[2025-07-29 16:25:33.420] cmd wifi forget-network 
+[2025-07-29 16:25:33.420] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:35.124
+[2025-07-29 16:25:35.142] cmd wifi list-networks
+[2025-07-29 16:25:35.142] 
+
+[2025-07-29 16:25:35.142] cmd wifi forget-network 
+[2025-07-29 16:25:35.142] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:36.862
+[2025-07-29 16:25:36.881] cmd wifi list-networks
+[2025-07-29 16:25:36.881] 
+
+[2025-07-29 16:25:36.881] cmd wifi forget-network 
+[2025-07-29 16:25:36.881] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:38.599
+[2025-07-29 16:25:38.618] cmd wifi list-networks
+[2025-07-29 16:25:38.618] 
+
+[2025-07-29 16:25:38.618] cmd wifi forget-network 
+[2025-07-29 16:25:38.618] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:40.337
+[2025-07-29 16:25:40.357] cmd wifi list-networks
+[2025-07-29 16:25:40.357] 
+
+[2025-07-29 16:25:40.357] cmd wifi forget-network 
+[2025-07-29 16:25:40.357] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:42.163
+[2025-07-29 16:25:42.187] cmd wifi list-networks
+[2025-07-29 16:25:42.187] 
+
+[2025-07-29 16:25:42.187] cmd wifi forget-network 
+[2025-07-29 16:25:42.187] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:43.922
+[2025-07-29 16:25:43.942] cmd wifi list-networks
+[2025-07-29 16:25:43.942] 
+
+[2025-07-29 16:25:43.942] cmd wifi forget-network 
+[2025-07-29 16:25:43.942] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:45.638
+[2025-07-29 16:25:45.657] cmd wifi list-networks
+[2025-07-29 16:25:45.657] 
+
+[2025-07-29 16:25:45.657] cmd wifi forget-network 
+[2025-07-29 16:25:45.657] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:47.352
+[2025-07-29 16:25:47.372] cmd wifi list-networks
+[2025-07-29 16:25:47.372] 
+
+[2025-07-29 16:25:47.372] cmd wifi forget-network 
+[2025-07-29 16:25:47.372] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:49.078
+[2025-07-29 16:25:49.096] cmd wifi list-networks
+[2025-07-29 16:25:49.096] 
+
+[2025-07-29 16:25:49.096] cmd wifi forget-network 
+[2025-07-29 16:25:49.096] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:50.800
+[2025-07-29 16:25:50.820] cmd wifi list-networks
+[2025-07-29 16:25:50.820] 
+
+[2025-07-29 16:25:50.820] cmd wifi forget-network 
+[2025-07-29 16:25:50.820] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:52.562
+[2025-07-29 16:25:52.582] cmd wifi list-networks
+[2025-07-29 16:25:52.582] 
+
+[2025-07-29 16:25:52.582] cmd wifi forget-network 
+[2025-07-29 16:25:52.582] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:54.285
+[2025-07-29 16:25:54.304] cmd wifi list-networks
+[2025-07-29 16:25:54.304] 
+
+[2025-07-29 16:25:54.304] cmd wifi forget-network 
+[2025-07-29 16:25:54.304] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:56.009
+[2025-07-29 16:25:56.029] cmd wifi list-networks
+[2025-07-29 16:25:56.029] 
+
+[2025-07-29 16:25:56.029] cmd wifi forget-network 
+[2025-07-29 16:25:56.029] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:57.738
+[2025-07-29 16:25:57.757] cmd wifi list-networks
+[2025-07-29 16:25:57.757] 
+
+[2025-07-29 16:25:57.757] cmd wifi forget-network 
+[2025-07-29 16:25:57.757] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:25:59.469
+[2025-07-29 16:25:59.488] cmd wifi list-networks
+[2025-07-29 16:25:59.488] 
+
+[2025-07-29 16:25:59.488] cmd wifi forget-network 
+[2025-07-29 16:25:59.488] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:01.206
+[2025-07-29 16:26:01.226] cmd wifi list-networks
+[2025-07-29 16:26:01.226] 
+
+[2025-07-29 16:26:01.226] cmd wifi forget-network 
+[2025-07-29 16:26:01.226] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:03.000
+[2025-07-29 16:26:03.019] cmd wifi list-networks
+[2025-07-29 16:26:03.019] 
+
+[2025-07-29 16:26:03.019] cmd wifi forget-network 
+[2025-07-29 16:26:03.019] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:04.732
+[2025-07-29 16:26:04.752] cmd wifi list-networks
+[2025-07-29 16:26:04.752] 
+
+[2025-07-29 16:26:04.752] cmd wifi forget-network 
+[2025-07-29 16:26:04.752] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:06.452
+[2025-07-29 16:26:06.472] cmd wifi list-networks
+[2025-07-29 16:26:06.472] 
+
+[2025-07-29 16:26:06.472] cmd wifi forget-network 
+[2025-07-29 16:26:06.472] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:08.171
+[2025-07-29 16:26:08.190] cmd wifi list-networks
+[2025-07-29 16:26:08.190] 
+
+[2025-07-29 16:26:08.190] cmd wifi forget-network 
+[2025-07-29 16:26:08.190] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:09.908
+[2025-07-29 16:26:09.929] cmd wifi list-networks
+[2025-07-29 16:26:09.929] 
+
+[2025-07-29 16:26:09.929] cmd wifi forget-network 
+[2025-07-29 16:26:09.929] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:11.629
+[2025-07-29 16:26:11.648] cmd wifi list-networks
+[2025-07-29 16:26:11.648] 
+
+[2025-07-29 16:26:11.648] cmd wifi forget-network 
+[2025-07-29 16:26:11.648] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:13.347
+[2025-07-29 16:26:13.367] cmd wifi list-networks
+[2025-07-29 16:26:13.367] 
+
+[2025-07-29 16:26:13.367] cmd wifi forget-network 
+[2025-07-29 16:26:13.367] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:15.077
+[2025-07-29 16:26:15.097] cmd wifi list-networks
+[2025-07-29 16:26:15.097] 
+
+[2025-07-29 16:26:15.097] cmd wifi forget-network 
+[2025-07-29 16:26:15.097] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:16.811
+[2025-07-29 16:26:16.830] cmd wifi list-networks
+[2025-07-29 16:26:16.830] 
+
+[2025-07-29 16:26:16.830] cmd wifi forget-network 
+[2025-07-29 16:26:16.830] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:18.534
+[2025-07-29 16:26:18.555] cmd wifi list-networks
+[2025-07-29 16:26:18.555] 
+
+[2025-07-29 16:26:18.555] cmd wifi forget-network 
+[2025-07-29 16:26:18.555] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:20.277
+[2025-07-29 16:26:20.297] cmd wifi list-networks
+[2025-07-29 16:26:20.297] 
+
+[2025-07-29 16:26:20.297] cmd wifi forget-network 
+[2025-07-29 16:26:20.297] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:22.036
+[2025-07-29 16:26:22.060] cmd wifi list-networks
+[2025-07-29 16:26:22.060] 
+
+[2025-07-29 16:26:22.060] cmd wifi forget-network 
+[2025-07-29 16:26:22.060] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:23.789
+[2025-07-29 16:26:23.808] cmd wifi list-networks
+[2025-07-29 16:26:23.808] 
+
+[2025-07-29 16:26:23.808] cmd wifi forget-network 
+[2025-07-29 16:26:23.808] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:25.504
+[2025-07-29 16:26:25.522] cmd wifi list-networks
+[2025-07-29 16:26:25.522] 
+
+[2025-07-29 16:26:25.522] cmd wifi forget-network 
+[2025-07-29 16:26:25.522] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:27.220
+[2025-07-29 16:26:27.240] cmd wifi list-networks
+[2025-07-29 16:26:27.240] 
+
+[2025-07-29 16:26:27.240] cmd wifi forget-network 
+[2025-07-29 16:26:27.240] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:28.946
+[2025-07-29 16:26:28.966] cmd wifi list-networks
+[2025-07-29 16:26:28.966] 
+
+[2025-07-29 16:26:28.966] cmd wifi forget-network 
+[2025-07-29 16:26:28.966] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:30.677
+[2025-07-29 16:26:30.696] cmd wifi list-networks
+[2025-07-29 16:26:30.696] 
+
+[2025-07-29 16:26:30.696] cmd wifi forget-network 
+[2025-07-29 16:26:30.696] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:26:32.450
+[2025-07-29 16:26:32.470] cmd wifi list-networks
+[2025-07-29 16:26:32.470] 
+
+[2025-07-29 16:26:32.470] cmd wifi forget-network 
+[2025-07-29 16:26:32.470] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:01.489
+[2025-07-29 16:30:01.508] cmd wifi list-networks
+[2025-07-29 16:30:01.508] 
+21           4FNN-003_5G                      wpa2-psk
+21           4FNN-003_5G                      wpa3-sae^
+[2025-07-29 16:30:01.508] cmd wifi forget-network 21
+[2025-07-29 16:30:01.508] Forget successful
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:03.299
+[2025-07-29 16:30:03.319] cmd wifi list-networks
+[2025-07-29 16:30:03.319] 
+
+[2025-07-29 16:30:03.319] cmd wifi forget-network 
+[2025-07-29 16:30:03.319] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:05.084
+[2025-07-29 16:30:05.103] cmd wifi list-networks
+[2025-07-29 16:30:05.103] 
+
+[2025-07-29 16:30:05.103] cmd wifi forget-network 
+[2025-07-29 16:30:05.103] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:06.806
+[2025-07-29 16:30:06.825] cmd wifi list-networks
+[2025-07-29 16:30:06.825] 
+
+[2025-07-29 16:30:06.825] cmd wifi forget-network 
+[2025-07-29 16:30:06.825] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:08.522
+[2025-07-29 16:30:08.542] cmd wifi list-networks
+[2025-07-29 16:30:08.542] 
+
+[2025-07-29 16:30:08.542] cmd wifi forget-network 
+[2025-07-29 16:30:08.542] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:10.252
+[2025-07-29 16:30:10.272] cmd wifi list-networks
+[2025-07-29 16:30:10.272] 
+
+[2025-07-29 16:30:10.272] cmd wifi forget-network 
+[2025-07-29 16:30:10.272] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:11.995
+[2025-07-29 16:30:12.015] cmd wifi list-networks
+[2025-07-29 16:30:12.015] 
+
+[2025-07-29 16:30:12.015] cmd wifi forget-network 
+[2025-07-29 16:30:12.015] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:13.732
+[2025-07-29 16:30:13.752] cmd wifi list-networks
+[2025-07-29 16:30:13.752] 
+
+[2025-07-29 16:30:13.752] cmd wifi forget-network 
+[2025-07-29 16:30:13.752] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:15.468
+[2025-07-29 16:30:15.487] cmd wifi list-networks
+[2025-07-29 16:30:15.487] 
+
+[2025-07-29 16:30:15.487] cmd wifi forget-network 
+[2025-07-29 16:30:15.487] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:17.189
+[2025-07-29 16:30:17.208] cmd wifi list-networks
+[2025-07-29 16:30:17.208] 
+
+[2025-07-29 16:30:17.208] cmd wifi forget-network 
+[2025-07-29 16:30:17.208] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:18.928
+[2025-07-29 16:30:18.948] cmd wifi list-networks
+[2025-07-29 16:30:18.948] 
+
+[2025-07-29 16:30:18.948] cmd wifi forget-network 
+[2025-07-29 16:30:18.948] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:20.652
+[2025-07-29 16:30:20.671] cmd wifi list-networks
+[2025-07-29 16:30:20.671] 
+
+[2025-07-29 16:30:20.671] cmd wifi forget-network 
+[2025-07-29 16:30:20.671] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:22.446
+[2025-07-29 16:30:22.476] cmd wifi list-networks
+[2025-07-29 16:30:22.476] 
+
+[2025-07-29 16:30:22.476] cmd wifi forget-network 
+[2025-07-29 16:30:22.476] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:24.229
+[2025-07-29 16:30:24.249] cmd wifi list-networks
+[2025-07-29 16:30:24.249] 
+
+[2025-07-29 16:30:24.249] cmd wifi forget-network 
+[2025-07-29 16:30:24.249] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:25.952
+[2025-07-29 16:30:25.971] cmd wifi list-networks
+[2025-07-29 16:30:25.971] 
+
+[2025-07-29 16:30:25.971] cmd wifi forget-network 
+[2025-07-29 16:30:25.971] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:27.666
+[2025-07-29 16:30:27.685] cmd wifi list-networks
+[2025-07-29 16:30:27.685] 
+
+[2025-07-29 16:30:27.685] cmd wifi forget-network 
+[2025-07-29 16:30:27.685] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:29.390
+[2025-07-29 16:30:29.408] cmd wifi list-networks
+[2025-07-29 16:30:29.408] 
+
+[2025-07-29 16:30:29.408] cmd wifi forget-network 
+[2025-07-29 16:30:29.408] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:31.111
+[2025-07-29 16:30:31.131] cmd wifi list-networks
+[2025-07-29 16:30:31.131] 
+
+[2025-07-29 16:30:31.131] cmd wifi forget-network 
+[2025-07-29 16:30:31.131] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:32.837
+[2025-07-29 16:30:32.856] cmd wifi list-networks
+[2025-07-29 16:30:32.856] 
+
+[2025-07-29 16:30:32.856] cmd wifi forget-network 
+[2025-07-29 16:30:32.856] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:34.598
+[2025-07-29 16:30:34.618] cmd wifi list-networks
+[2025-07-29 16:30:34.618] 
+
+[2025-07-29 16:30:34.618] cmd wifi forget-network 
+[2025-07-29 16:30:34.618] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:36.329
+[2025-07-29 16:30:36.350] cmd wifi list-networks
+[2025-07-29 16:30:36.350] 
+
+[2025-07-29 16:30:36.350] cmd wifi forget-network 
+[2025-07-29 16:30:36.350] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:38.144
+[2025-07-29 16:30:38.165] cmd wifi list-networks
+[2025-07-29 16:30:38.165] 
+
+[2025-07-29 16:30:38.165] cmd wifi forget-network 
+[2025-07-29 16:30:38.165] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:39.861
+[2025-07-29 16:30:39.881] cmd wifi list-networks
+[2025-07-29 16:30:39.881] 
+
+[2025-07-29 16:30:39.881] cmd wifi forget-network 
+[2025-07-29 16:30:39.881] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:41.593
+[2025-07-29 16:30:41.612] cmd wifi list-networks
+[2025-07-29 16:30:41.612] 
+
+[2025-07-29 16:30:41.612] cmd wifi forget-network 
+[2025-07-29 16:30:41.612] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:43.316
+[2025-07-29 16:30:43.335] cmd wifi list-networks
+[2025-07-29 16:30:43.335] 
+
+[2025-07-29 16:30:43.335] cmd wifi forget-network 
+[2025-07-29 16:30:43.335] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:45.034
+[2025-07-29 16:30:45.054] cmd wifi list-networks
+[2025-07-29 16:30:45.054] 
+
+[2025-07-29 16:30:45.054] cmd wifi forget-network 
+[2025-07-29 16:30:45.054] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:46.760
+[2025-07-29 16:30:46.779] cmd wifi list-networks
+[2025-07-29 16:30:46.779] 
+
+[2025-07-29 16:30:46.779] cmd wifi forget-network 
+[2025-07-29 16:30:46.779] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:48.495
+[2025-07-29 16:30:48.514] cmd wifi list-networks
+[2025-07-29 16:30:48.514] 
+
+[2025-07-29 16:30:48.514] cmd wifi forget-network 
+[2025-07-29 16:30:48.514] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:50.236
+[2025-07-29 16:30:50.255] cmd wifi list-networks
+[2025-07-29 16:30:50.255] 
+
+[2025-07-29 16:30:50.255] cmd wifi forget-network 
+[2025-07-29 16:30:50.255] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:51.964
+[2025-07-29 16:30:51.984] cmd wifi list-networks
+[2025-07-29 16:30:51.984] 
+
+[2025-07-29 16:30:51.984] cmd wifi forget-network 
+[2025-07-29 16:30:51.984] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:53.697
+[2025-07-29 16:30:53.717] cmd wifi list-networks
+[2025-07-29 16:30:53.717] 
+
+[2025-07-29 16:30:53.717] cmd wifi forget-network 
+[2025-07-29 16:30:53.717] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:30:55.423
+[2025-07-29 16:30:55.442] cmd wifi list-networks
+[2025-07-29 16:30:55.442] 
+
+[2025-07-29 16:30:55.442] cmd wifi forget-network 
+[2025-07-29 16:30:55.442] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:00.769
+[2025-07-29 16:32:00.790] cmd wifi list-networks
+[2025-07-29 16:32:00.790] 
+22           4FNN-003_5G                      wpa2-psk
+22           4FNN-003_5G                      wpa3-sae^
+[2025-07-29 16:32:00.790] cmd wifi forget-network 22
+[2025-07-29 16:32:00.790] Forget successful
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:02.562
+[2025-07-29 16:32:02.581] cmd wifi list-networks
+[2025-07-29 16:32:02.581] 
+
+[2025-07-29 16:32:02.581] cmd wifi forget-network 
+[2025-07-29 16:32:02.581] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:04.297
+[2025-07-29 16:32:04.317] cmd wifi list-networks
+[2025-07-29 16:32:04.317] 
+
+[2025-07-29 16:32:04.317] cmd wifi forget-network 
+[2025-07-29 16:32:04.317] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:06.034
+[2025-07-29 16:32:06.054] cmd wifi list-networks
+[2025-07-29 16:32:06.054] 
+
+[2025-07-29 16:32:06.054] cmd wifi forget-network 
+[2025-07-29 16:32:06.054] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:07.768
+[2025-07-29 16:32:07.786] cmd wifi list-networks
+[2025-07-29 16:32:07.786] 
+
+[2025-07-29 16:32:07.786] cmd wifi forget-network 
+[2025-07-29 16:32:07.786] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:09.495
+[2025-07-29 16:32:09.514] cmd wifi list-networks
+[2025-07-29 16:32:09.514] 
+
+[2025-07-29 16:32:09.514] cmd wifi forget-network 
+[2025-07-29 16:32:09.514] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:11.220
+[2025-07-29 16:32:11.239] cmd wifi list-networks
+[2025-07-29 16:32:11.239] 
+
+[2025-07-29 16:32:11.239] cmd wifi forget-network 
+[2025-07-29 16:32:11.239] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:12.960
+[2025-07-29 16:32:12.978] cmd wifi list-networks
+[2025-07-29 16:32:12.978] 
+
+[2025-07-29 16:32:12.978] cmd wifi forget-network 
+[2025-07-29 16:32:12.978] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:14.687
+[2025-07-29 16:32:14.707] cmd wifi list-networks
+[2025-07-29 16:32:14.707] 
+
+[2025-07-29 16:32:14.707] cmd wifi forget-network 
+[2025-07-29 16:32:14.707] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:16.432
+[2025-07-29 16:32:16.452] cmd wifi list-networks
+[2025-07-29 16:32:16.452] 
+
+[2025-07-29 16:32:16.452] cmd wifi forget-network 
+[2025-07-29 16:32:16.452] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:18.161
+[2025-07-29 16:32:18.181] cmd wifi list-networks
+[2025-07-29 16:32:18.181] 
+
+[2025-07-29 16:32:18.181] cmd wifi forget-network 
+[2025-07-29 16:32:18.181] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:19.897
+[2025-07-29 16:32:19.917] cmd wifi list-networks
+[2025-07-29 16:32:19.917] 
+
+[2025-07-29 16:32:19.917] cmd wifi forget-network 
+[2025-07-29 16:32:19.917] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:21.629
+[2025-07-29 16:32:21.649] cmd wifi list-networks
+[2025-07-29 16:32:21.649] 
+
+[2025-07-29 16:32:21.649] cmd wifi forget-network 
+[2025-07-29 16:32:21.649] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:23.358
+[2025-07-29 16:32:23.377] cmd wifi list-networks
+[2025-07-29 16:32:23.377] 
+
+[2025-07-29 16:32:23.377] cmd wifi forget-network 
+[2025-07-29 16:32:23.377] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:25.092
+[2025-07-29 16:32:25.112] cmd wifi list-networks
+[2025-07-29 16:32:25.112] 
+
+[2025-07-29 16:32:25.112] cmd wifi forget-network 
+[2025-07-29 16:32:25.112] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:26.816
+[2025-07-29 16:32:26.836] cmd wifi list-networks
+[2025-07-29 16:32:26.836] 
+
+[2025-07-29 16:32:26.836] cmd wifi forget-network 
+[2025-07-29 16:32:26.836] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:28.568
+[2025-07-29 16:32:28.587] cmd wifi list-networks
+[2025-07-29 16:32:28.587] 
+
+[2025-07-29 16:32:28.587] cmd wifi forget-network 
+[2025-07-29 16:32:28.587] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:30.289
+[2025-07-29 16:32:30.308] cmd wifi list-networks
+[2025-07-29 16:32:30.308] 
+
+[2025-07-29 16:32:30.308] cmd wifi forget-network 
+[2025-07-29 16:32:30.308] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:32.024
+[2025-07-29 16:32:32.046] cmd wifi list-networks
+[2025-07-29 16:32:32.046] 
+
+[2025-07-29 16:32:32.046] cmd wifi forget-network 
+[2025-07-29 16:32:32.046] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:33.841
+[2025-07-29 16:32:33.861] cmd wifi list-networks
+[2025-07-29 16:32:33.861] 
+
+[2025-07-29 16:32:33.861] cmd wifi forget-network 
+[2025-07-29 16:32:33.861] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:35.577
+[2025-07-29 16:32:35.595] cmd wifi list-networks
+[2025-07-29 16:32:35.595] 
+
+[2025-07-29 16:32:35.595] cmd wifi forget-network 
+[2025-07-29 16:32:35.595] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:37.299
+[2025-07-29 16:32:37.318] cmd wifi list-networks
+[2025-07-29 16:32:37.318] 
+
+[2025-07-29 16:32:37.318] cmd wifi forget-network 
+[2025-07-29 16:32:37.318] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:39.027
+[2025-07-29 16:32:39.046] cmd wifi list-networks
+[2025-07-29 16:32:39.046] 
+
+[2025-07-29 16:32:39.046] cmd wifi forget-network 
+[2025-07-29 16:32:39.046] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:40.749
+[2025-07-29 16:32:40.768] cmd wifi list-networks
+[2025-07-29 16:32:40.768] 
+
+[2025-07-29 16:32:40.768] cmd wifi forget-network 
+[2025-07-29 16:32:40.768] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:42.465
+[2025-07-29 16:32:42.485] cmd wifi list-networks
+[2025-07-29 16:32:42.485] 
+
+[2025-07-29 16:32:42.485] cmd wifi forget-network 
+[2025-07-29 16:32:42.485] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:44.193
+[2025-07-29 16:32:44.212] cmd wifi list-networks
+[2025-07-29 16:32:44.212] 
+
+[2025-07-29 16:32:44.212] cmd wifi forget-network 
+[2025-07-29 16:32:44.212] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:45.912
+[2025-07-29 16:32:45.931] cmd wifi list-networks
+[2025-07-29 16:32:45.931] 
+
+[2025-07-29 16:32:45.931] cmd wifi forget-network 
+[2025-07-29 16:32:45.931] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:47.630
+[2025-07-29 16:32:47.650] cmd wifi list-networks
+[2025-07-29 16:32:47.650] 
+
+[2025-07-29 16:32:47.650] cmd wifi forget-network 
+[2025-07-29 16:32:47.650] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:49.347
+[2025-07-29 16:32:49.368] cmd wifi list-networks
+[2025-07-29 16:32:49.368] 
+
+[2025-07-29 16:32:49.368] cmd wifi forget-network 
+[2025-07-29 16:32:49.368] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:51.089
+[2025-07-29 16:32:51.110] cmd wifi list-networks
+[2025-07-29 16:32:51.110] 
+
+[2025-07-29 16:32:51.110] cmd wifi forget-network 
+[2025-07-29 16:32:51.110] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:52.873
+[2025-07-29 16:32:52.892] cmd wifi list-networks
+[2025-07-29 16:32:52.892] 
+
+[2025-07-29 16:32:52.892] cmd wifi forget-network 
+[2025-07-29 16:32:52.892] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:54.610
+[2025-07-29 16:32:54.629] cmd wifi list-networks
+[2025-07-29 16:32:54.629] 
+
+[2025-07-29 16:32:54.629] cmd wifi forget-network 
+[2025-07-29 16:32:54.629] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:56.344
+[2025-07-29 16:32:56.363] cmd wifi list-networks
+[2025-07-29 16:32:56.363] 
+
+[2025-07-29 16:32:56.363] cmd wifi forget-network 
+[2025-07-29 16:32:56.363] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:58.065
+[2025-07-29 16:32:58.086] cmd wifi list-networks
+[2025-07-29 16:32:58.086] 
+
+[2025-07-29 16:32:58.086] cmd wifi forget-network 
+[2025-07-29 16:32:58.086] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:32:59.789
+[2025-07-29 16:32:59.808] cmd wifi list-networks
+[2025-07-29 16:32:59.808] 
+
+[2025-07-29 16:32:59.808] cmd wifi forget-network 
+[2025-07-29 16:32:59.808] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:01.242
+[2025-07-29 16:34:01.261] cmd wifi list-networks
+[2025-07-29 16:34:01.261] 
+23           4FNN-003_5G                      wpa2-psk
+23           4FNN-003_5G                      wpa3-sae^
+[2025-07-29 16:34:01.261] cmd wifi forget-network 23
+[2025-07-29 16:34:01.261] Forget successful
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:03.024
+[2025-07-29 16:34:03.044] cmd wifi list-networks
+[2025-07-29 16:34:03.044] 
+
+[2025-07-29 16:34:03.044] cmd wifi forget-network 
+[2025-07-29 16:34:03.044] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:04.751
+[2025-07-29 16:34:04.771] cmd wifi list-networks
+[2025-07-29 16:34:04.771] 
+
+[2025-07-29 16:34:04.771] cmd wifi forget-network 
+[2025-07-29 16:34:04.771] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:06.484
+[2025-07-29 16:34:06.504] cmd wifi list-networks
+[2025-07-29 16:34:06.504] 
+
+[2025-07-29 16:34:06.504] cmd wifi forget-network 
+[2025-07-29 16:34:06.504] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:08.216
+[2025-07-29 16:34:08.236] cmd wifi list-networks
+[2025-07-29 16:34:08.236] 
+
+[2025-07-29 16:34:08.236] cmd wifi forget-network 
+[2025-07-29 16:34:08.236] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:09.944
+[2025-07-29 16:34:09.964] cmd wifi list-networks
+[2025-07-29 16:34:09.964] 
+
+[2025-07-29 16:34:09.964] cmd wifi forget-network 
+[2025-07-29 16:34:09.964] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:11.674
+[2025-07-29 16:34:11.694] cmd wifi list-networks
+[2025-07-29 16:34:11.694] 
+
+[2025-07-29 16:34:11.694] cmd wifi forget-network 
+[2025-07-29 16:34:11.694] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:13.411
+[2025-07-29 16:34:13.431] cmd wifi list-networks
+[2025-07-29 16:34:13.431] 
+
+[2025-07-29 16:34:13.431] cmd wifi forget-network 
+[2025-07-29 16:34:13.431] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:15.144
+[2025-07-29 16:34:15.163] cmd wifi list-networks
+[2025-07-29 16:34:15.163] 
+
+[2025-07-29 16:34:15.163] cmd wifi forget-network 
+[2025-07-29 16:34:15.163] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:16.864
+[2025-07-29 16:34:16.882] cmd wifi list-networks
+[2025-07-29 16:34:16.882] 
+
+[2025-07-29 16:34:16.882] cmd wifi forget-network 
+[2025-07-29 16:34:16.882] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:18.582
+[2025-07-29 16:34:18.601] cmd wifi list-networks
+[2025-07-29 16:34:18.601] 
+
+[2025-07-29 16:34:18.601] cmd wifi forget-network 
+[2025-07-29 16:34:18.601] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:20.319
+[2025-07-29 16:34:20.339] cmd wifi list-networks
+[2025-07-29 16:34:20.339] 
+
+[2025-07-29 16:34:20.339] cmd wifi forget-network 
+[2025-07-29 16:34:20.339] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:22.061
+[2025-07-29 16:34:22.080] cmd wifi list-networks
+[2025-07-29 16:34:22.080] 
+
+[2025-07-29 16:34:22.080] cmd wifi forget-network 
+[2025-07-29 16:34:22.080] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:23.796
+[2025-07-29 16:34:23.816] cmd wifi list-networks
+[2025-07-29 16:34:23.816] 
+
+[2025-07-29 16:34:23.816] cmd wifi forget-network 
+[2025-07-29 16:34:23.816] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:25.532
+[2025-07-29 16:34:25.550] cmd wifi list-networks
+[2025-07-29 16:34:25.550] 
+
+[2025-07-29 16:34:25.550] cmd wifi forget-network 
+[2025-07-29 16:34:25.550] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:27.260
+[2025-07-29 16:34:27.280] cmd wifi list-networks
+[2025-07-29 16:34:27.280] 
+
+[2025-07-29 16:34:27.280] cmd wifi forget-network 
+[2025-07-29 16:34:27.280] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:28.989
+[2025-07-29 16:34:29.008] cmd wifi list-networks
+[2025-07-29 16:34:29.008] 
+
+[2025-07-29 16:34:29.008] cmd wifi forget-network 
+[2025-07-29 16:34:29.008] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:30.719
+[2025-07-29 16:34:30.739] cmd wifi list-networks
+[2025-07-29 16:34:30.739] 
+
+[2025-07-29 16:34:30.739] cmd wifi forget-network 
+[2025-07-29 16:34:30.739] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:32.512
+[2025-07-29 16:34:32.534] cmd wifi list-networks
+[2025-07-29 16:34:32.534] 
+
+[2025-07-29 16:34:32.534] cmd wifi forget-network 
+[2025-07-29 16:34:32.534] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:34.269
+[2025-07-29 16:34:34.288] cmd wifi list-networks
+[2025-07-29 16:34:34.288] 
+
+[2025-07-29 16:34:34.288] cmd wifi forget-network 
+[2025-07-29 16:34:34.288] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:35.989
+[2025-07-29 16:34:36.009] cmd wifi list-networks
+[2025-07-29 16:34:36.009] 
+
+[2025-07-29 16:34:36.009] cmd wifi forget-network 
+[2025-07-29 16:34:36.009] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:37.715
+[2025-07-29 16:34:37.735] cmd wifi list-networks
+[2025-07-29 16:34:37.735] 
+
+[2025-07-29 16:34:37.735] cmd wifi forget-network 
+[2025-07-29 16:34:37.735] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:39.449
+[2025-07-29 16:34:39.469] cmd wifi list-networks
+[2025-07-29 16:34:39.469] 
+
+[2025-07-29 16:34:39.469] cmd wifi forget-network 
+[2025-07-29 16:34:39.469] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:41.176
+[2025-07-29 16:34:41.195] cmd wifi list-networks
+[2025-07-29 16:34:41.195] 
+
+[2025-07-29 16:34:41.195] cmd wifi forget-network 
+[2025-07-29 16:34:41.195] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:42.892
+[2025-07-29 16:34:42.911] cmd wifi list-networks
+[2025-07-29 16:34:42.911] 
+
+[2025-07-29 16:34:42.911] cmd wifi forget-network 
+[2025-07-29 16:34:42.911] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:44.611
+[2025-07-29 16:34:44.631] cmd wifi list-networks
+[2025-07-29 16:34:44.631] 
+
+[2025-07-29 16:34:44.631] cmd wifi forget-network 
+[2025-07-29 16:34:44.631] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:46.328
+[2025-07-29 16:34:46.348] cmd wifi list-networks
+[2025-07-29 16:34:46.348] 
+
+[2025-07-29 16:34:46.348] cmd wifi forget-network 
+[2025-07-29 16:34:46.348] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:48.048
+[2025-07-29 16:34:48.068] cmd wifi list-networks
+[2025-07-29 16:34:48.068] 
+
+[2025-07-29 16:34:48.068] cmd wifi forget-network 
+[2025-07-29 16:34:48.068] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:49.784
+[2025-07-29 16:34:49.804] cmd wifi list-networks
+[2025-07-29 16:34:49.804] 
+
+[2025-07-29 16:34:49.804] cmd wifi forget-network 
+[2025-07-29 16:34:49.804] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:51.521
+[2025-07-29 16:34:51.541] cmd wifi list-networks
+[2025-07-29 16:34:51.541] 
+
+[2025-07-29 16:34:51.541] cmd wifi forget-network 
+[2025-07-29 16:34:51.541] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:53.244
+[2025-07-29 16:34:53.263] cmd wifi list-networks
+[2025-07-29 16:34:53.263] 
+
+[2025-07-29 16:34:53.263] cmd wifi forget-network 
+[2025-07-29 16:34:53.263] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:54.960
+[2025-07-29 16:34:54.980] cmd wifi list-networks
+[2025-07-29 16:34:54.980] 
+
+[2025-07-29 16:34:54.980] cmd wifi forget-network 
+[2025-07-29 16:34:54.980] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:56.679
+[2025-07-29 16:34:56.699] cmd wifi list-networks
+[2025-07-29 16:34:56.699] 
+
+[2025-07-29 16:34:56.699] cmd wifi forget-network 
+[2025-07-29 16:34:56.699] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:34:58.402
+[2025-07-29 16:34:58.421] cmd wifi list-networks
+[2025-07-29 16:34:58.421] 
+
+[2025-07-29 16:34:58.421] cmd wifi forget-network 
+[2025-07-29 16:34:58.421] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:00.128
+[2025-07-29 16:35:00.147] cmd wifi list-networks
+[2025-07-29 16:35:00.147] 
+
+[2025-07-29 16:35:00.147] cmd wifi forget-network 
+[2025-07-29 16:35:00.147] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:01.852
+[2025-07-29 16:35:01.872] cmd wifi list-networks
+[2025-07-29 16:35:01.872] 
+
+[2025-07-29 16:35:01.872] cmd wifi forget-network 
+[2025-07-29 16:35:01.872] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:03.587
+[2025-07-29 16:35:03.605] cmd wifi list-networks
+[2025-07-29 16:35:03.605] 
+
+[2025-07-29 16:35:03.605] cmd wifi forget-network 
+[2025-07-29 16:35:03.605] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:05.320
+[2025-07-29 16:35:05.339] cmd wifi list-networks
+[2025-07-29 16:35:05.339] 
+
+[2025-07-29 16:35:05.339] cmd wifi forget-network 
+[2025-07-29 16:35:05.339] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:07.038
+[2025-07-29 16:35:07.057] cmd wifi list-networks
+[2025-07-29 16:35:07.057] 
+
+[2025-07-29 16:35:07.057] cmd wifi forget-network 
+[2025-07-29 16:35:07.057] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:08.765
+[2025-07-29 16:35:08.784] cmd wifi list-networks
+[2025-07-29 16:35:08.784] 
+
+[2025-07-29 16:35:08.784] cmd wifi forget-network 
+[2025-07-29 16:35:08.784] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:10.532
+[2025-07-29 16:35:10.551] cmd wifi list-networks
+[2025-07-29 16:35:10.551] 
+
+[2025-07-29 16:35:10.551] cmd wifi forget-network 
+[2025-07-29 16:35:10.551] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:12.262
+[2025-07-29 16:35:12.285] cmd wifi list-networks
+[2025-07-29 16:35:12.285] 
+
+[2025-07-29 16:35:12.285] cmd wifi forget-network 
+[2025-07-29 16:35:12.285] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:14.075
+[2025-07-29 16:35:14.095] cmd wifi list-networks
+[2025-07-29 16:35:14.095] 
+
+[2025-07-29 16:35:14.095] cmd wifi forget-network 
+[2025-07-29 16:35:14.095] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:15.802
+[2025-07-29 16:35:15.822] cmd wifi list-networks
+[2025-07-29 16:35:15.822] 
+
+[2025-07-29 16:35:15.822] cmd wifi forget-network 
+[2025-07-29 16:35:15.822] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:17.528
+[2025-07-29 16:35:17.549] cmd wifi list-networks
+[2025-07-29 16:35:17.549] 
+
+[2025-07-29 16:35:17.549] cmd wifi forget-network 
+[2025-07-29 16:35:17.549] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:19.272
+[2025-07-29 16:35:19.291] cmd wifi list-networks
+[2025-07-29 16:35:19.291] 
+
+[2025-07-29 16:35:19.291] cmd wifi forget-network 
+[2025-07-29 16:35:19.291] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:20.998
+[2025-07-29 16:35:21.018] cmd wifi list-networks
+[2025-07-29 16:35:21.018] 
+
+[2025-07-29 16:35:21.018] cmd wifi forget-network 
+[2025-07-29 16:35:21.018] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:22.831
+[2025-07-29 16:35:22.851] cmd wifi list-networks
+[2025-07-29 16:35:22.851] 
+
+[2025-07-29 16:35:22.851] cmd wifi forget-network 
+[2025-07-29 16:35:22.851] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:24.553
+[2025-07-29 16:35:24.573] cmd wifi list-networks
+[2025-07-29 16:35:24.573] 
+
+[2025-07-29 16:35:24.573] cmd wifi forget-network 
+[2025-07-29 16:35:24.573] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:26.278
+[2025-07-29 16:35:26.298] cmd wifi list-networks
+[2025-07-29 16:35:26.298] 
+
+[2025-07-29 16:35:26.298] cmd wifi forget-network 
+[2025-07-29 16:35:26.298] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:27.998
+[2025-07-29 16:35:28.018] cmd wifi list-networks
+[2025-07-29 16:35:28.018] 
+
+[2025-07-29 16:35:28.018] cmd wifi forget-network 
+[2025-07-29 16:35:28.018] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:29.725
+[2025-07-29 16:35:29.745] cmd wifi list-networks
+[2025-07-29 16:35:29.745] 
+
+[2025-07-29 16:35:29.745] cmd wifi forget-network 
+[2025-07-29 16:35:29.745] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:31.459
+[2025-07-29 16:35:31.479] cmd wifi list-networks
+[2025-07-29 16:35:31.479] 
+
+[2025-07-29 16:35:31.479] cmd wifi forget-network 
+[2025-07-29 16:35:31.479] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:33.179
+[2025-07-29 16:35:33.199] cmd wifi list-networks
+[2025-07-29 16:35:33.199] 
+
+[2025-07-29 16:35:33.199] cmd wifi forget-network 
+[2025-07-29 16:35:33.199] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:34.915
+[2025-07-29 16:35:34.935] cmd wifi list-networks
+[2025-07-29 16:35:34.935] 
+
+[2025-07-29 16:35:34.935] cmd wifi forget-network 
+[2025-07-29 16:35:34.935] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:36.642
+[2025-07-29 16:35:36.662] cmd wifi list-networks
+[2025-07-29 16:35:36.662] 
+
+[2025-07-29 16:35:36.662] cmd wifi forget-network 
+[2025-07-29 16:35:36.662] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:38.368
+[2025-07-29 16:35:38.389] cmd wifi list-networks
+[2025-07-29 16:35:38.389] 
+
+[2025-07-29 16:35:38.389] cmd wifi forget-network 
+[2025-07-29 16:35:38.389] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:40.087
+[2025-07-29 16:35:40.107] cmd wifi list-networks
+[2025-07-29 16:35:40.107] 
+
+[2025-07-29 16:35:40.107] cmd wifi forget-network 
+[2025-07-29 16:35:40.107] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:41.822
+[2025-07-29 16:35:41.842] cmd wifi list-networks
+[2025-07-29 16:35:41.842] 
+
+[2025-07-29 16:35:41.842] cmd wifi forget-network 
+[2025-07-29 16:35:41.842] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:43.549
+[2025-07-29 16:35:43.568] cmd wifi list-networks
+[2025-07-29 16:35:43.568] 
+
+[2025-07-29 16:35:43.568] cmd wifi forget-network 
+[2025-07-29 16:35:43.568] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:45.274
+[2025-07-29 16:35:45.293] cmd wifi list-networks
+[2025-07-29 16:35:45.293] 
+
+[2025-07-29 16:35:45.293] cmd wifi forget-network 
+[2025-07-29 16:35:45.293] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:47.019
+[2025-07-29 16:35:47.039] cmd wifi list-networks
+[2025-07-29 16:35:47.039] 
+
+[2025-07-29 16:35:47.039] cmd wifi forget-network 
+[2025-07-29 16:35:47.039] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:48.746
+[2025-07-29 16:35:48.767] cmd wifi list-networks
+[2025-07-29 16:35:48.767] 
+
+[2025-07-29 16:35:48.767] cmd wifi forget-network 
+[2025-07-29 16:35:48.767] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:50.526
+[2025-07-29 16:35:50.546] cmd wifi list-networks
+[2025-07-29 16:35:50.546] 
+
+[2025-07-29 16:35:50.546] cmd wifi forget-network 
+[2025-07-29 16:35:50.546] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:52.250
+[2025-07-29 16:35:52.269] cmd wifi list-networks
+[2025-07-29 16:35:52.269] 
+
+[2025-07-29 16:35:52.269] cmd wifi forget-network 
+[2025-07-29 16:35:52.269] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:53.969
+[2025-07-29 16:35:53.988] cmd wifi list-networks
+[2025-07-29 16:35:53.988] 
+
+[2025-07-29 16:35:53.988] cmd wifi forget-network 
+[2025-07-29 16:35:53.988] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:55.689
+[2025-07-29 16:35:55.708] cmd wifi list-networks
+[2025-07-29 16:35:55.708] 
+
+[2025-07-29 16:35:55.708] cmd wifi forget-network 
+[2025-07-29 16:35:55.708] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:57.402
+[2025-07-29 16:35:57.421] cmd wifi list-networks
+[2025-07-29 16:35:57.421] 
+
+[2025-07-29 16:35:57.421] cmd wifi forget-network 
+[2025-07-29 16:35:57.421] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:35:59.128
+[2025-07-29 16:35:59.147] cmd wifi list-networks
+[2025-07-29 16:35:59.147] 
+
+[2025-07-29 16:35:59.147] cmd wifi forget-network 
+[2025-07-29 16:35:59.147] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:00.856
+[2025-07-29 16:36:00.875] cmd wifi list-networks
+[2025-07-29 16:36:00.875] 
+
+[2025-07-29 16:36:00.875] cmd wifi forget-network 
+[2025-07-29 16:36:00.875] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:02.728
+[2025-07-29 16:36:02.754] cmd wifi list-networks
+[2025-07-29 16:36:02.754] 
+
+[2025-07-29 16:36:02.754] cmd wifi forget-network 
+[2025-07-29 16:36:02.754] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:04.491
+[2025-07-29 16:36:04.511] cmd wifi list-networks
+[2025-07-29 16:36:04.511] 
+
+[2025-07-29 16:36:04.511] cmd wifi forget-network 
+[2025-07-29 16:36:04.511] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:06.210
+[2025-07-29 16:36:06.229] cmd wifi list-networks
+[2025-07-29 16:36:06.229] 
+
+[2025-07-29 16:36:06.229] cmd wifi forget-network 
+[2025-07-29 16:36:06.229] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:07.940
+[2025-07-29 16:36:07.959] cmd wifi list-networks
+[2025-07-29 16:36:07.959] 
+
+[2025-07-29 16:36:07.959] cmd wifi forget-network 
+[2025-07-29 16:36:07.959] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:09.673
+[2025-07-29 16:36:09.692] cmd wifi list-networks
+[2025-07-29 16:36:09.692] 
+
+[2025-07-29 16:36:09.692] cmd wifi forget-network 
+[2025-07-29 16:36:09.692] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:11.426
+[2025-07-29 16:36:11.445] cmd wifi list-networks
+[2025-07-29 16:36:11.445] 
+
+[2025-07-29 16:36:11.445] cmd wifi forget-network 
+[2025-07-29 16:36:11.445] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:13.236
+[2025-07-29 16:36:13.255] cmd wifi list-networks
+[2025-07-29 16:36:13.255] 
+
+[2025-07-29 16:36:13.255] cmd wifi forget-network 
+[2025-07-29 16:36:13.255] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:14.951
+[2025-07-29 16:36:14.971] cmd wifi list-networks
+[2025-07-29 16:36:14.971] 
+
+[2025-07-29 16:36:14.971] cmd wifi forget-network 
+[2025-07-29 16:36:14.971] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:16.670
+[2025-07-29 16:36:16.689] cmd wifi list-networks
+[2025-07-29 16:36:16.689] 
+
+[2025-07-29 16:36:16.689] cmd wifi forget-network 
+[2025-07-29 16:36:16.689] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:18.390
+[2025-07-29 16:36:18.409] cmd wifi list-networks
+[2025-07-29 16:36:18.409] 
+
+[2025-07-29 16:36:18.409] cmd wifi forget-network 
+[2025-07-29 16:36:18.409] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:20.118
+[2025-07-29 16:36:20.138] cmd wifi list-networks
+[2025-07-29 16:36:20.138] 
+
+[2025-07-29 16:36:20.138] cmd wifi forget-network 
+[2025-07-29 16:36:20.138] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:21.850
+[2025-07-29 16:36:21.870] cmd wifi list-networks
+[2025-07-29 16:36:21.870] 
+
+[2025-07-29 16:36:21.870] cmd wifi forget-network 
+[2025-07-29 16:36:21.870] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:23.571
+[2025-07-29 16:36:23.591] cmd wifi list-networks
+[2025-07-29 16:36:23.591] 
+
+[2025-07-29 16:36:23.591] cmd wifi forget-network 
+[2025-07-29 16:36:23.591] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:25.294
+[2025-07-29 16:36:25.314] cmd wifi list-networks
+[2025-07-29 16:36:25.314] 
+
+[2025-07-29 16:36:25.314] cmd wifi forget-network 
+[2025-07-29 16:36:25.314] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:27.015
+[2025-07-29 16:36:27.034] cmd wifi list-networks
+[2025-07-29 16:36:27.034] 
+
+[2025-07-29 16:36:27.034] cmd wifi forget-network 
+[2025-07-29 16:36:27.034] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:28.740
+[2025-07-29 16:36:28.757] cmd wifi list-networks
+[2025-07-29 16:36:28.757] 
+
+[2025-07-29 16:36:28.757] cmd wifi forget-network 
+[2025-07-29 16:36:28.757] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:36:30.468
+[2025-07-29 16:36:30.488] cmd wifi list-networks
+[2025-07-29 16:36:30.488] 
+
+[2025-07-29 16:36:30.488] cmd wifi forget-network 
+[2025-07-29 16:36:30.488] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:01.101
+[2025-07-29 16:39:01.123] cmd wifi list-networks
+[2025-07-29 16:39:01.123] 
+24           4FNN-003_5G                      wpa2-psk
+24           4FNN-003_5G                      wpa3-sae^
+[2025-07-29 16:39:01.123] cmd wifi forget-network 24
+[2025-07-29 16:39:01.123] Forget successful
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:02.901
+[2025-07-29 16:39:02.920] cmd wifi list-networks
+[2025-07-29 16:39:02.920] 
+
+[2025-07-29 16:39:02.920] cmd wifi forget-network 
+[2025-07-29 16:39:02.920] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:04.623
+[2025-07-29 16:39:04.642] cmd wifi list-networks
+[2025-07-29 16:39:04.642] 
+
+[2025-07-29 16:39:04.642] cmd wifi forget-network 
+[2025-07-29 16:39:04.642] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:06.377
+[2025-07-29 16:39:06.396] cmd wifi list-networks
+[2025-07-29 16:39:06.396] 
+
+[2025-07-29 16:39:06.396] cmd wifi forget-network 
+[2025-07-29 16:39:06.396] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:08.107
+[2025-07-29 16:39:08.126] cmd wifi list-networks
+[2025-07-29 16:39:08.126] 
+
+[2025-07-29 16:39:08.126] cmd wifi forget-network 
+[2025-07-29 16:39:08.126] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:09.834
+[2025-07-29 16:39:09.855] cmd wifi list-networks
+[2025-07-29 16:39:09.855] 
+
+[2025-07-29 16:39:09.855] cmd wifi forget-network 
+[2025-07-29 16:39:09.855] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:11.557
+[2025-07-29 16:39:11.576] cmd wifi list-networks
+[2025-07-29 16:39:11.576] 
+
+[2025-07-29 16:39:11.576] cmd wifi forget-network 
+[2025-07-29 16:39:11.576] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:13.343
+[2025-07-29 16:39:13.363] cmd wifi list-networks
+[2025-07-29 16:39:13.363] 
+
+[2025-07-29 16:39:13.363] cmd wifi forget-network 
+[2025-07-29 16:39:13.363] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:15.061
+[2025-07-29 16:39:15.082] cmd wifi list-networks
+[2025-07-29 16:39:15.082] 
+
+[2025-07-29 16:39:15.082] cmd wifi forget-network 
+[2025-07-29 16:39:15.082] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:16.795
+[2025-07-29 16:39:16.814] cmd wifi list-networks
+[2025-07-29 16:39:16.814] 
+
+[2025-07-29 16:39:16.814] cmd wifi forget-network 
+[2025-07-29 16:39:16.814] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:18.524
+[2025-07-29 16:39:18.543] cmd wifi list-networks
+[2025-07-29 16:39:18.543] 
+
+[2025-07-29 16:39:18.543] cmd wifi forget-network 
+[2025-07-29 16:39:18.543] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:20.257
+[2025-07-29 16:39:20.276] cmd wifi list-networks
+[2025-07-29 16:39:20.276] 
+
+[2025-07-29 16:39:20.276] cmd wifi forget-network 
+[2025-07-29 16:39:20.276] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:21.982
+[2025-07-29 16:39:22.003] cmd wifi list-networks
+[2025-07-29 16:39:22.003] 
+
+[2025-07-29 16:39:22.003] cmd wifi forget-network 
+[2025-07-29 16:39:22.003] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:23.716
+[2025-07-29 16:39:23.735] cmd wifi list-networks
+[2025-07-29 16:39:23.735] 
+
+[2025-07-29 16:39:23.735] cmd wifi forget-network 
+[2025-07-29 16:39:23.735] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:25.441
+[2025-07-29 16:39:25.460] cmd wifi list-networks
+[2025-07-29 16:39:25.460] 
+
+[2025-07-29 16:39:25.460] cmd wifi forget-network 
+[2025-07-29 16:39:25.460] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:27.161
+[2025-07-29 16:39:27.181] cmd wifi list-networks
+[2025-07-29 16:39:27.181] 
+
+[2025-07-29 16:39:27.181] cmd wifi forget-network 
+[2025-07-29 16:39:27.181] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:28.884
+[2025-07-29 16:39:28.903] cmd wifi list-networks
+[2025-07-29 16:39:28.903] 
+
+[2025-07-29 16:39:28.903] cmd wifi forget-network 
+[2025-07-29 16:39:28.903] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:30.610
+[2025-07-29 16:39:30.629] cmd wifi list-networks
+[2025-07-29 16:39:30.629] 
+
+[2025-07-29 16:39:30.629] cmd wifi forget-network 
+[2025-07-29 16:39:30.629] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:32.334
+[2025-07-29 16:39:32.357] cmd wifi list-networks
+[2025-07-29 16:39:32.357] 
+
+[2025-07-29 16:39:32.357] cmd wifi forget-network 
+[2025-07-29 16:39:32.357] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:34.092
+[2025-07-29 16:39:34.112] cmd wifi list-networks
+[2025-07-29 16:39:34.112] 
+
+[2025-07-29 16:39:34.112] cmd wifi forget-network 
+[2025-07-29 16:39:34.112] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:35.812
+[2025-07-29 16:39:35.832] cmd wifi list-networks
+[2025-07-29 16:39:35.832] 
+
+[2025-07-29 16:39:35.832] cmd wifi forget-network 
+[2025-07-29 16:39:35.832] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:37.539
+[2025-07-29 16:39:37.559] cmd wifi list-networks
+[2025-07-29 16:39:37.559] 
+
+[2025-07-29 16:39:37.559] cmd wifi forget-network 
+[2025-07-29 16:39:37.559] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:39.268
+[2025-07-29 16:39:39.286] cmd wifi list-networks
+[2025-07-29 16:39:39.286] 
+
+[2025-07-29 16:39:39.286] cmd wifi forget-network 
+[2025-07-29 16:39:39.286] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:41.000
+[2025-07-29 16:39:41.019] cmd wifi list-networks
+[2025-07-29 16:39:41.019] 
+
+[2025-07-29 16:39:41.019] cmd wifi forget-network 
+[2025-07-29 16:39:41.019] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:42.726
+[2025-07-29 16:39:42.746] cmd wifi list-networks
+[2025-07-29 16:39:42.746] 
+
+[2025-07-29 16:39:42.746] cmd wifi forget-network 
+[2025-07-29 16:39:42.746] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:44.453
+[2025-07-29 16:39:44.473] cmd wifi list-networks
+[2025-07-29 16:39:44.473] 
+
+[2025-07-29 16:39:44.473] cmd wifi forget-network 
+[2025-07-29 16:39:44.473] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:46.188
+[2025-07-29 16:39:46.207] cmd wifi list-networks
+[2025-07-29 16:39:46.207] 
+
+[2025-07-29 16:39:46.207] cmd wifi forget-network 
+[2025-07-29 16:39:46.207] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:47.918
+[2025-07-29 16:39:47.938] cmd wifi list-networks
+[2025-07-29 16:39:47.938] 
+
+[2025-07-29 16:39:47.938] cmd wifi forget-network 
+[2025-07-29 16:39:47.938] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:49.645
+[2025-07-29 16:39:49.665] cmd wifi list-networks
+[2025-07-29 16:39:49.665] 
+
+[2025-07-29 16:39:49.665] cmd wifi forget-network 
+[2025-07-29 16:39:49.665] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:51.370
+[2025-07-29 16:39:51.389] cmd wifi list-networks
+[2025-07-29 16:39:51.389] 
+
+[2025-07-29 16:39:51.389] cmd wifi forget-network 
+[2025-07-29 16:39:51.389] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:53.128
+[2025-07-29 16:39:53.146] cmd wifi list-networks
+[2025-07-29 16:39:53.146] 
+
+[2025-07-29 16:39:53.146] cmd wifi forget-network 
+[2025-07-29 16:39:53.146] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:54.852
+[2025-07-29 16:39:54.871] cmd wifi list-networks
+[2025-07-29 16:39:54.871] 
+
+[2025-07-29 16:39:54.871] cmd wifi forget-network 
+[2025-07-29 16:39:54.871] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:56.562
+[2025-07-29 16:39:56.582] cmd wifi list-networks
+[2025-07-29 16:39:56.582] 
+
+[2025-07-29 16:39:56.582] cmd wifi forget-network 
+[2025-07-29 16:39:56.582] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:39:58.282
+[2025-07-29 16:39:58.301] cmd wifi list-networks
+[2025-07-29 16:39:58.301] 
+
+[2025-07-29 16:39:58.301] cmd wifi forget-network 
+[2025-07-29 16:39:58.301] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:40:00.007
+[2025-07-29 16:40:00.028] cmd wifi list-networks
+[2025-07-29 16:40:00.028] 
+
+[2025-07-29 16:40:00.028] cmd wifi forget-network 
+[2025-07-29 16:40:00.028] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:01.472
+[2025-07-29 16:41:01.494] cmd wifi list-networks
+[2025-07-29 16:41:01.494] 
+25           4FNN-003_5G                      wpa2-psk
+25           4FNN-003_5G                      wpa3-sae^
+[2025-07-29 16:41:01.494] cmd wifi forget-network 25
+[2025-07-29 16:41:01.494] Forget successful
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:03.273
+[2025-07-29 16:41:03.292] cmd wifi list-networks
+[2025-07-29 16:41:03.292] 
+
+[2025-07-29 16:41:03.292] cmd wifi forget-network 
+[2025-07-29 16:41:03.292] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:05.013
+[2025-07-29 16:41:05.032] cmd wifi list-networks
+[2025-07-29 16:41:05.032] 
+
+[2025-07-29 16:41:05.032] cmd wifi forget-network 
+[2025-07-29 16:41:05.032] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:06.757
+[2025-07-29 16:41:06.776] cmd wifi list-networks
+[2025-07-29 16:41:06.776] 
+
+[2025-07-29 16:41:06.776] cmd wifi forget-network 
+[2025-07-29 16:41:06.776] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:08.486
+[2025-07-29 16:41:08.504] cmd wifi list-networks
+[2025-07-29 16:41:08.504] 
+
+[2025-07-29 16:41:08.504] cmd wifi forget-network 
+[2025-07-29 16:41:08.504] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:10.217
+[2025-07-29 16:41:10.236] cmd wifi list-networks
+[2025-07-29 16:41:10.236] 
+
+[2025-07-29 16:41:10.236] cmd wifi forget-network 
+[2025-07-29 16:41:10.236] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:11.944
+[2025-07-29 16:41:11.963] cmd wifi list-networks
+[2025-07-29 16:41:11.963] 
+
+[2025-07-29 16:41:11.963] cmd wifi forget-network 
+[2025-07-29 16:41:11.963] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:13.677
+[2025-07-29 16:41:13.695] cmd wifi list-networks
+[2025-07-29 16:41:13.695] 
+
+[2025-07-29 16:41:13.695] cmd wifi forget-network 
+[2025-07-29 16:41:13.695] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:15.398
+[2025-07-29 16:41:15.417] cmd wifi list-networks
+[2025-07-29 16:41:15.417] 
+
+[2025-07-29 16:41:15.417] cmd wifi forget-network 
+[2025-07-29 16:41:15.417] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:17.124
+[2025-07-29 16:41:17.142] cmd wifi list-networks
+[2025-07-29 16:41:17.142] 
+
+[2025-07-29 16:41:17.142] cmd wifi forget-network 
+[2025-07-29 16:41:17.142] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:18.857
+[2025-07-29 16:41:18.876] cmd wifi list-networks
+[2025-07-29 16:41:18.876] 
+
+[2025-07-29 16:41:18.876] cmd wifi forget-network 
+[2025-07-29 16:41:18.876] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:20.588
+[2025-07-29 16:41:20.607] cmd wifi list-networks
+[2025-07-29 16:41:20.607] 
+
+[2025-07-29 16:41:20.607] cmd wifi forget-network 
+[2025-07-29 16:41:20.607] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:22.333
+[2025-07-29 16:41:22.359] cmd wifi list-networks
+[2025-07-29 16:41:22.359] 
+
+[2025-07-29 16:41:22.359] cmd wifi forget-network 
+[2025-07-29 16:41:22.359] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:24.099
+[2025-07-29 16:41:24.118] cmd wifi list-networks
+[2025-07-29 16:41:24.118] 
+
+[2025-07-29 16:41:24.118] cmd wifi forget-network 
+[2025-07-29 16:41:24.118] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:25.819
+[2025-07-29 16:41:25.837] cmd wifi list-networks
+[2025-07-29 16:41:25.837] 
+
+[2025-07-29 16:41:25.837] cmd wifi forget-network 
+[2025-07-29 16:41:25.837] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:27.555
+[2025-07-29 16:41:27.575] cmd wifi list-networks
+[2025-07-29 16:41:27.575] 
+
+[2025-07-29 16:41:27.575] cmd wifi forget-network 
+[2025-07-29 16:41:27.575] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:29.277
+[2025-07-29 16:41:29.295] cmd wifi list-networks
+[2025-07-29 16:41:29.295] 
+
+[2025-07-29 16:41:29.295] cmd wifi forget-network 
+[2025-07-29 16:41:29.295] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:31.000
+[2025-07-29 16:41:31.021] cmd wifi list-networks
+[2025-07-29 16:41:31.021] 
+
+[2025-07-29 16:41:31.021] cmd wifi forget-network 
+[2025-07-29 16:41:31.021] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:32.771
+[2025-07-29 16:41:32.792] cmd wifi list-networks
+[2025-07-29 16:41:32.792] 
+
+[2025-07-29 16:41:32.792] cmd wifi forget-network 
+[2025-07-29 16:41:32.792] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:34.536
+[2025-07-29 16:41:34.556] cmd wifi list-networks
+[2025-07-29 16:41:34.556] 
+
+[2025-07-29 16:41:34.556] cmd wifi forget-network 
+[2025-07-29 16:41:34.556] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:36.268
+[2025-07-29 16:41:36.288] cmd wifi list-networks
+[2025-07-29 16:41:36.288] 
+
+[2025-07-29 16:41:36.288] cmd wifi forget-network 
+[2025-07-29 16:41:36.288] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:38.001
+[2025-07-29 16:41:38.020] cmd wifi list-networks
+[2025-07-29 16:41:38.020] 
+
+[2025-07-29 16:41:38.020] cmd wifi forget-network 
+[2025-07-29 16:41:38.020] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:39.741
+[2025-07-29 16:41:39.759] cmd wifi list-networks
+[2025-07-29 16:41:39.759] 
+
+[2025-07-29 16:41:39.759] cmd wifi forget-network 
+[2025-07-29 16:41:39.759] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:41.468
+[2025-07-29 16:41:41.487] cmd wifi list-networks
+[2025-07-29 16:41:41.487] 
+
+[2025-07-29 16:41:41.487] cmd wifi forget-network 
+[2025-07-29 16:41:41.487] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:43.188
+[2025-07-29 16:41:43.208] cmd wifi list-networks
+[2025-07-29 16:41:43.208] 
+
+[2025-07-29 16:41:43.208] cmd wifi forget-network 
+[2025-07-29 16:41:43.208] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:44.921
+[2025-07-29 16:41:44.941] cmd wifi list-networks
+[2025-07-29 16:41:44.941] 
+
+[2025-07-29 16:41:44.941] cmd wifi forget-network 
+[2025-07-29 16:41:44.941] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:46.651
+[2025-07-29 16:41:46.670] cmd wifi list-networks
+[2025-07-29 16:41:46.670] 
+
+[2025-07-29 16:41:46.670] cmd wifi forget-network 
+[2025-07-29 16:41:46.670] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:48.373
+[2025-07-29 16:41:48.392] cmd wifi list-networks
+[2025-07-29 16:41:48.392] 
+
+[2025-07-29 16:41:48.392] cmd wifi forget-network 
+[2025-07-29 16:41:48.392] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:50.108
+[2025-07-29 16:41:50.128] cmd wifi list-networks
+[2025-07-29 16:41:50.128] 
+
+[2025-07-29 16:41:50.128] cmd wifi forget-network 
+[2025-07-29 16:41:50.128] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:51.835
+[2025-07-29 16:41:51.855] cmd wifi list-networks
+[2025-07-29 16:41:51.855] 
+
+[2025-07-29 16:41:51.855] cmd wifi forget-network 
+[2025-07-29 16:41:51.855] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:53.559
+[2025-07-29 16:41:53.578] cmd wifi list-networks
+[2025-07-29 16:41:53.578] 
+
+[2025-07-29 16:41:53.578] cmd wifi forget-network 
+[2025-07-29 16:41:53.578] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:55.280
+[2025-07-29 16:41:55.299] cmd wifi list-networks
+[2025-07-29 16:41:55.299] 
+
+[2025-07-29 16:41:55.299] cmd wifi forget-network 
+[2025-07-29 16:41:55.299] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:57.010
+[2025-07-29 16:41:57.030] cmd wifi list-networks
+[2025-07-29 16:41:57.030] 
+
+[2025-07-29 16:41:57.030] cmd wifi forget-network 
+[2025-07-29 16:41:57.030] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:41:58.732
+[2025-07-29 16:41:58.750] cmd wifi list-networks
+[2025-07-29 16:41:58.750] 
+
+[2025-07-29 16:41:58.750] cmd wifi forget-network 
+[2025-07-29 16:41:58.750] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:42:00.465
+[2025-07-29 16:42:00.484] cmd wifi list-networks
+[2025-07-29 16:42:00.484] 
+
+[2025-07-29 16:42:00.484] cmd wifi forget-network 
+[2025-07-29 16:42:00.484] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:42:02.208
+[2025-07-29 16:42:02.230] cmd wifi list-networks
+[2025-07-29 16:42:02.230] 
+
+[2025-07-29 16:42:02.230] cmd wifi forget-network 
+[2025-07-29 16:42:02.230] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:42:03.945
+[2025-07-29 16:42:03.965] cmd wifi list-networks
+[2025-07-29 16:42:03.965] 
+
+[2025-07-29 16:42:03.965] cmd wifi forget-network 
+[2025-07-29 16:42:03.965] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:42:05.671
+[2025-07-29 16:42:05.691] cmd wifi list-networks
+[2025-07-29 16:42:05.691] 
+
+[2025-07-29 16:42:05.691] cmd wifi forget-network 
+[2025-07-29 16:42:05.691] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:42:07.406
+[2025-07-29 16:42:07.425] cmd wifi list-networks
+[2025-07-29 16:42:07.425] 
+
+[2025-07-29 16:42:07.425] cmd wifi forget-network 
+[2025-07-29 16:42:07.425] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:42:09.132
+[2025-07-29 16:42:09.152] cmd wifi list-networks
+[2025-07-29 16:42:09.152] 
+
+[2025-07-29 16:42:09.152] cmd wifi forget-network 
+[2025-07-29 16:42:09.152] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:42:10.871
+[2025-07-29 16:42:10.889] cmd wifi list-networks
+[2025-07-29 16:42:10.889] 
+
+[2025-07-29 16:42:10.889] cmd wifi forget-network 
+[2025-07-29 16:42:10.889] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:43:22.274
+[2025-07-29 16:43:22.294] cmd wifi list-networks
+[2025-07-29 16:43:22.294] 
+
+[2025-07-29 16:43:22.294] cmd wifi forget-network 
+[2025-07-29 16:43:22.294] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:43:23.998
+[2025-07-29 16:43:24.018] cmd wifi list-networks
+[2025-07-29 16:43:24.018] 
+
+[2025-07-29 16:43:24.018] cmd wifi forget-network 
+[2025-07-29 16:43:24.018] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:43:25.712
+[2025-07-29 16:43:25.732] cmd wifi list-networks
+[2025-07-29 16:43:25.732] 
+
+[2025-07-29 16:43:25.732] cmd wifi forget-network 
+[2025-07-29 16:43:25.732] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:43:27.452
+[2025-07-29 16:43:27.472] cmd wifi list-networks
+[2025-07-29 16:43:27.472] 
+
+[2025-07-29 16:43:27.472] cmd wifi forget-network 
+[2025-07-29 16:43:27.472] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:43:29.183
+[2025-07-29 16:43:29.202] cmd wifi list-networks
+[2025-07-29 16:43:29.202] 
+
+[2025-07-29 16:43:29.202] cmd wifi forget-network 
+[2025-07-29 16:43:29.202] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:43:30.913
+[2025-07-29 16:43:30.933] cmd wifi list-networks
+[2025-07-29 16:43:30.933] 
+
+[2025-07-29 16:43:30.933] cmd wifi forget-network 
+[2025-07-29 16:43:30.933] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:43:32.696
+[2025-07-29 16:43:32.731] cmd wifi list-networks
+[2025-07-29 16:43:32.731] 
+
+[2025-07-29 16:43:32.731] cmd wifi forget-network 
+[2025-07-29 16:43:32.731] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:43:34.444
+[2025-07-29 16:43:34.464] cmd wifi list-networks
+[2025-07-29 16:43:34.464] 
+
+[2025-07-29 16:43:34.464] cmd wifi forget-network 
+[2025-07-29 16:43:34.464] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:43:36.157
+[2025-07-29 16:43:36.178] cmd wifi list-networks
+[2025-07-29 16:43:36.178] 
+
+[2025-07-29 16:43:36.178] cmd wifi forget-network 
+[2025-07-29 16:43:36.178] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:00.829
+[2025-07-29 16:44:00.849] cmd wifi list-networks
+[2025-07-29 16:44:00.849] 
+26           4FNN-003_5G                      wpa2-psk
+26           4FNN-003_5G                      wpa3-sae^
+[2025-07-29 16:44:00.849] cmd wifi forget-network 26
+[2025-07-29 16:44:00.849] Forget successful
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:02.723
+[2025-07-29 16:44:02.743] cmd wifi list-networks
+[2025-07-29 16:44:02.743] 
+
+[2025-07-29 16:44:02.743] cmd wifi forget-network 
+[2025-07-29 16:44:02.743] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:04.475
+[2025-07-29 16:44:04.498] cmd wifi list-networks
+[2025-07-29 16:44:04.498] 
+
+[2025-07-29 16:44:04.498] cmd wifi forget-network 
+[2025-07-29 16:44:04.498] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:06.237
+[2025-07-29 16:44:06.256] cmd wifi list-networks
+[2025-07-29 16:44:06.256] 
+
+[2025-07-29 16:44:06.256] cmd wifi forget-network 
+[2025-07-29 16:44:06.256] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:07.965
+[2025-07-29 16:44:07.984] cmd wifi list-networks
+[2025-07-29 16:44:07.984] 
+
+[2025-07-29 16:44:07.984] cmd wifi forget-network 
+[2025-07-29 16:44:07.984] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:09.705
+[2025-07-29 16:44:09.724] cmd wifi list-networks
+[2025-07-29 16:44:09.724] 
+
+[2025-07-29 16:44:09.724] cmd wifi forget-network 
+[2025-07-29 16:44:09.724] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:11.453
+[2025-07-29 16:44:11.472] cmd wifi list-networks
+[2025-07-29 16:44:11.472] 
+
+[2025-07-29 16:44:11.472] cmd wifi forget-network 
+[2025-07-29 16:44:11.472] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:13.248
+[2025-07-29 16:44:13.268] cmd wifi list-networks
+[2025-07-29 16:44:13.268] 
+
+[2025-07-29 16:44:13.268] cmd wifi forget-network 
+[2025-07-29 16:44:13.268] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:14.981
+[2025-07-29 16:44:15.000] cmd wifi list-networks
+[2025-07-29 16:44:15.000] 
+
+[2025-07-29 16:44:15.000] cmd wifi forget-network 
+[2025-07-29 16:44:15.000] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:16.705
+[2025-07-29 16:44:16.724] cmd wifi list-networks
+[2025-07-29 16:44:16.724] 
+
+[2025-07-29 16:44:16.724] cmd wifi forget-network 
+[2025-07-29 16:44:16.724] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:18.431
+[2025-07-29 16:44:18.451] cmd wifi list-networks
+[2025-07-29 16:44:18.451] 
+
+[2025-07-29 16:44:18.451] cmd wifi forget-network 
+[2025-07-29 16:44:18.451] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:20.163
+[2025-07-29 16:44:20.184] cmd wifi list-networks
+[2025-07-29 16:44:20.184] 
+
+[2025-07-29 16:44:20.184] cmd wifi forget-network 
+[2025-07-29 16:44:20.184] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:21.902
+[2025-07-29 16:44:21.921] cmd wifi list-networks
+[2025-07-29 16:44:21.921] 
+
+[2025-07-29 16:44:21.921] cmd wifi forget-network 
+[2025-07-29 16:44:21.921] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:23.636
+[2025-07-29 16:44:23.655] cmd wifi list-networks
+[2025-07-29 16:44:23.655] 
+
+[2025-07-29 16:44:23.655] cmd wifi forget-network 
+[2025-07-29 16:44:23.655] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:25.359
+[2025-07-29 16:44:25.379] cmd wifi list-networks
+[2025-07-29 16:44:25.379] 
+
+[2025-07-29 16:44:25.379] cmd wifi forget-network 
+[2025-07-29 16:44:25.379] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:27.080
+[2025-07-29 16:44:27.099] cmd wifi list-networks
+[2025-07-29 16:44:27.099] 
+
+[2025-07-29 16:44:27.099] cmd wifi forget-network 
+[2025-07-29 16:44:27.099] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:28.826
+[2025-07-29 16:44:28.847] cmd wifi list-networks
+[2025-07-29 16:44:28.847] 
+
+[2025-07-29 16:44:28.847] cmd wifi forget-network 
+[2025-07-29 16:44:28.847] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:30.558
+[2025-07-29 16:44:30.578] cmd wifi list-networks
+[2025-07-29 16:44:30.578] 
+
+[2025-07-29 16:44:30.578] cmd wifi forget-network 
+[2025-07-29 16:44:30.578] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:32.374
+[2025-07-29 16:44:32.394] cmd wifi list-networks
+[2025-07-29 16:44:32.394] 
+
+[2025-07-29 16:44:32.394] cmd wifi forget-network 
+[2025-07-29 16:44:32.394] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:34.101
+[2025-07-29 16:44:34.120] cmd wifi list-networks
+[2025-07-29 16:44:34.120] 
+
+[2025-07-29 16:44:34.120] cmd wifi forget-network 
+[2025-07-29 16:44:34.120] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:35.833
+[2025-07-29 16:44:35.853] cmd wifi list-networks
+[2025-07-29 16:44:35.853] 
+
+[2025-07-29 16:44:35.853] cmd wifi forget-network 
+[2025-07-29 16:44:35.853] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:37.558
+[2025-07-29 16:44:37.577] cmd wifi list-networks
+[2025-07-29 16:44:37.577] 
+
+[2025-07-29 16:44:37.577] cmd wifi forget-network 
+[2025-07-29 16:44:37.577] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------
+StartTime: 2025-07-29 16:44:39.301
+[2025-07-29 16:44:39.322] cmd wifi list-networks
+[2025-07-29 16:44:39.322] 
+
+[2025-07-29 16:44:39.322] cmd wifi forget-network 
+[2025-07-29 16:44:39.322] Invalid args for forget-network: java.lang.NumberFormatException: For input string: ""
+----------------------------------------------------------------------

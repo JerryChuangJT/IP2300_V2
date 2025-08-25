@@ -1,0 +1,100 @@
+
+[XXXX_PingScheduleLog.log]
+/storage/emulated/0/Documents/Ping/XXXX_PingScheduleLog.log
+  1. Can't Delete the file. 
+  2. It only add(>>) "StartTime", "PingTestName", "PingType", "Destination", "Schedule" in the Start.
+  3. Using ">>" to append cmds.
+
+[XXXX_ping.log]
+/storage/emulated/0/Documents/Ping/XXXX_ping.log
+  1. Can't Delete the file.
+  2. It only add(>>) "StartTime", "PingTestName", "PingType", "Destination" in the Start.
+  3. Using ">>" to append ping result.
+
+[XXXX_ping_addtime.log]
+/storage/emulated/0/Documents/Ping/XXXX_ping_addtime.log
+  1. Can't Delete the file.   
+  2. It only add(>>) "StartTime", "TestName", "ErrorTimeResponse_Threshold", "ErrorConsecutiveTime_TimeResponse", "ErrorConsecutiveTime_PingLost" in the Start.
+  3. Using ">>" to append logs.
+
+[XXXX_ping_failsummary.log]
+/storage/emulated/0/Documents/Ping/XXXX_ping_failsummary.log
+  1. Can't Delete the file.
+  2. It only add(>>) "StartTime", "TestName", "ErrorTimeResponse_Threshold", "ErrorConsecutiveTime_TimeResponse", "ErrorConsecutiveTime_PingLost" in the Start.
+  3. Using ">>" to append logs.
+
+[XXXX_ping_rate.log]
+/storage/emulated/0/Documents/Ping/XXXX_ping_rate.log
+  1. Can't Delete the file.
+  2. Ping rate count duration is from script start to script end.
+  3. It only add(>>) "StartTime", "TestName", "PassCount", "FailCount", "ResponseTotal", "ResponseAverage" in the Start.
+  4. When XXXX_execute_state != "Start", copy XXXX_pingrate >> MonitorLog_PingRate.
+
+[XXXX_ping_result.log]
+/storage/emulated/0/Documents/Ping/XXXX_ping_result.log
+  1. No need to delete the file.
+  2. It always uses ">" to update information.
+  3. It only contains the latest ping result.
+
+-----------------------------------------
+### temp files. ###
+[XXXX_execute_state]
+/storage/emulated/0/Documents/Ping/XXXX_execute_state
+  1. No need to delete the file.
+  1. It always uses "echo 'start' > XXXX_execute_state" at the start.
+  2. echo "stop" > /storage/emulated/0/Documents/Ping/XXXX_execute_state.
+  3. Then the script will totally stop.
+
+[XXXX_start_line] 
+/storage/emulated/0/Documents/Ping/XXXX_start_line
+  1. It reads old start line before script start.
+  2. Need echo "0" > XXXX_start_line after downloading log files.
+
+[XXXX_pingrate]
+/storage/emulated/0/Documents/Ping/XXXX_pingrate
+  1. It is a temp file for ping rate.
+  2. It will be used to record the ping rate, including pass count, fail count, response total, and response average.
+  3. When excecutestatus_file != "Start", copy temp_pingrate_file >> MonitorLog_PingRate.
+
+=========================================================================================================
+#### What needs to do before downloading logs. ####
+[Move log files to backup folder and reset log files before downloading] 
+==> sh /storage/emulated/0/Documents/Ping/BackupLog_Ping.sh "Test1"
+mv "Test1_PingScheduleLog.log" "/storage/emulated/0/Documents/Log_Backup/Test1_PingScheduleLog.log";
+cat "Test1_ping.log" > "/storage/emulated/0/Documents/Log_Backup/Test1_ping.log" && > "Test1_ping.log";
+mv "$Test1_ping_addtime" "/storage/emulated/0/Documents/Log_Backup/Test1_ping_addtime.log";
+mv "$Test1_ping_failsummary" "/storage/emulated/0/Documents/Log_Backup/Test1_ping_failsummary.log";
+echo "0" > /storage/emulated/0/Documents/Ping/Test1_start_line
+
+#### What to do when downloading log files. ####
+[Download all log files by ADB]
+adb pull "/storage/emulated/0/Documents/Log/Test1_PingScheduleLog.log"
+adb pull "/storage/emulated/0/Documents/Log/Test1_ping.log"
+adb pull "/storage/emulated/0/Documents/Log/Test1_ping_addtime.log"
+abb pull "/storage/emulated/0/Documents/Log/Test1_ping_failsummary.log"
+adb pull "/storage/emulated/0/Documents/Log/Test1_ping_rate.log"
+
+
+
+=========================================================================================================
+[In Controller Part, Stop Schdule & Ping Script.]
+==> sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh "ping_schedule" "Test1"
+  1. Stop ScriptSchedule_Ping.sh
+      sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh "ping_schedule" "Test1"
+    
+  2. Stop Ping_Script.sh
+      sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh "ping_script" "Test1"
+      sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh "ping" "8.8.8.8"
+
+  3. Stop Monitor_PingResponseLost.sh
+      sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh "ping_monitor" "Test1"
+
+
+[In IP2300 Part, Stop Ping Script.]
+  1. Stop Ping_Script.sh
+      sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh "ping_script" "Test1"
+      sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh "ping" "8.8.8.8"
+
+  2. Stop Monitor_PingResponseLost.sh
+      sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh "ping_monitor" "Test1"
+

@@ -1,0 +1,6 @@
+Time : 2025-07-24 19:39:03.938
+TestName : Test1
+ErrorTimeResponse_Threshold : 1200
+ErrorConsecutiveTime_TimeResponse : 60
+ErrorConsecutiveTime_PingLost : 10
+Result : Wait

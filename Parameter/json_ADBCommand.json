@@ -1,0 +1,36 @@
+{
+    "Push":[
+        "shell mkdir /storage/emulated/0/Documents/Ping/",
+        "shell mkdir /storage/emulated/0/Documents/Wifi/",
+        "shell mkdir /storage/emulated/0/Documents/Youtube/",
+        "shell mkdir /storage/emulated/0/Documents/KillProcess/",
+        "shell mkdir /storage/emulated/0/Documents/EtherConnection/",
+        "push ./ShellScript/PingTest/ScriptSchedule_Ping.sh /storage/emulated/0/Documents/Ping/",
+        "push ./ShellScript/PingTest/Ping_Script.sh /storage/emulated/0/Documents/Ping/",
+        "push ./ShellScript/PingTest/Monitor_PingResponseLost.sh /storage/emulated/0/Documents/Ping/",
+		"push ./ShellScript/PingTest/BackupLog_Ping.sh /storage/emulated/0/Documents/Ping/",
+        "push ./ShellScript/PingTest/StopScript_Ping.sh /storage/emulated/0/Documents/Ping/",
+        "push ./ShellScript/YoutubeTest/ScriptSchedule_Youtube.sh /storage/emulated/0/Documents/Youtube/",
+        "push ./ShellScript/YoutubeTest/Youtube.sh /storage/emulated/0/Documents/Youtube/",
+        "push ./ShellScript/YoutubeTest/Check_YoutubeStatus.sh /storage/emulated/0/Documents/Youtube/",
+        "push ./ShellScript/YoutubeTest/BackupLog_Youtube.sh /storage/emulated/0/Documents/Youtube/",
+        "push ./ShellScript/YoutubeTest/StopScript_Youtube.sh /storage/emulated/0/Documents/Youtube/",
+        "push ./ShellScript/WifiConnection/Delete_AllWifiProfile.sh /storage/emulated/0/Documents/Wifi/",
+        "push ./ShellScript/WifiConnection/Set_WifiDriver.sh /storage/emulated/0/Documents/Wifi/",
+        "push ./ShellScript/WifiConnection/ScriptSchedule_Wifi.sh /storage/emulated/0/Documents/Wifi/",
+        "push ./ShellScript/WifiConnection/Wifi_Connection.sh /storage/emulated/0/Documents/Wifi/",
+        "push ./ShellScript/WifiConnection/Wifi_GetIP.sh /storage/emulated/0/Documents/Wifi/",
+        "push ./ShellScript/WifiConnection/Wifi_PingScript.sh /storage/emulated/0/Documents/Wifi/",
+        "push ./ShellScript/WifiConnection/Wifi_CheckPing.sh /storage/emulated/0/Documents/Wifi/",
+        "push ./ShellScript/WifiConnection/BackupLog_Wifi.sh /storage/emulated/0/Documents/Wifi/",
+        "push ./ShellScript/WifiConnection/StopScript_Wifi.sh /storage/emulated/0/Documents/Wifi/",
+        "push ./ShellScript/KillProcess/KillProcess.sh /storage/emulated/0/Documents/KillProcess/",
+        "push ./ShellScript/EtherConnection/Check_EtherConnection.sh /storage/emulated/0/Documents/EtherConnection/",
+        "shell chmod 755 /storage/emulated/0/Documents/**/*.sh"
+    ],
+    "Pull":[
+        "pull /storage/emualted/0/Documents/Log_Backup/Ping/",
+        "pull /storage/emualted/0/Documents/Log_Backup/Youtube/",
+        "pull /storage/emualted/0/Documents/Log_Backup/Wifi/"
+    ]
+}

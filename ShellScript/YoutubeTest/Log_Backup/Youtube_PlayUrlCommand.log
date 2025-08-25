@@ -1,0 +1,8 @@
+=======================================================================
+StartTime : 2025-07-24 19:28:00.804
+YoutubeURLList : https://www.youtube.com/watch?v=m_dhMSvUCIc,https://www.youtube.com/watch?v=V1p33hqPrUk
+Youtube Sequence : https://www.youtube.com/watch?v=m_dhMSvUCIc https://www.youtube.com/watch?v=V1p33hqPrUk
+IntervalTime : 1 min
+[2025-07-24 19:28:00.953] am start -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity -a android.intent.action.VIEW -d https://www.youtube.com/watch?v=m_dhMSvUCIc
+[2025-07-24 19:29:02.253] am start -n com.google.android.youtube.tv/com.google.android.apps.youtube.tv.activity.ShellActivity -a android.intent.action.VIEW -d https://www.youtube.com/watch?v=V1p33hqPrUk
+[2025-07-24 19:29:02.744] am force-stop com.google.android.youtube.tv

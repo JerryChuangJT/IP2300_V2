@@ -1,0 +1,44 @@
+{
+    "Script": [
+        {
+            "TestScriptID": "Script_Ping",
+            "Script": "Ping",
+            "Parameter1": "Test1",
+            "Parameter2": "ipv4",
+            "Parameter3": "8.8.8.8",
+            "Parameter4": "1200",
+            "Parameter5": "60",
+            "Parameter6": "10"
+        },
+        {
+            "TestScriptID": "Script_Ping_10.10.0.5",
+            "Script": "Ping",
+            "Parameter1": "Test2",
+            "Parameter2": "ipv4",
+            "Parameter3": "10.10.0.5",
+            "Parameter4": "1200",
+            "Parameter5": "60",
+            "Parameter6": "10"
+        },
+        {
+            "TestScriptID": "Script_Youtube",
+            "Script": "Youtube",
+            "Parameter1": "D:/Jerry/Project/20250519_AndroidTV/FunctionScript/Controller/Program_V2/JsonFile/youtubeURL.txt",
+            "Parameter2": "1",
+            "Parameter3": "100",
+            "Parameter4": "5",
+            "Parameter5": "None",
+            "Parameter6": "None"
+        },
+        {
+            "TestScriptID": "Script_Youtube2",
+            "Script": "Youtube",
+            "Parameter1": "D:/Jerry/Project/AndroidTV/FunctionScript/Controller/V7/JsonFile/youtubeURL.txt",
+            "Parameter2": "1",
+            "Parameter3": "100",
+            "Parameter4": "5",
+            "Parameter5": "None",
+            "Parameter6": "None"
+        }
+    ]
+}

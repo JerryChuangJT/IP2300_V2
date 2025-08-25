@@ -1,0 +1,326 @@
+----------------------------------------------------------------------
+StartTime : 2025-07-29 16:18:10.661
+[2025-07-29 16:18:12.373] 64 bytes from 8.8.8.8: icmp_seq=2 ttl=116 time=9.50 ms
+[2025-07-29 16:18:13.918] 64 bytes from 8.8.8.8: icmp_seq=3 ttl=116 time=11.0 ms
+[2025-07-29 16:18:14.199] 64 bytes from 8.8.8.8: icmp_seq=4 ttl=116 time=12.4 ms
+[2025-07-29 16:18:14.464] From 192.168.5.158: icmp_seq=1 Destination Host Unreachable
+[2025-07-29 16:18:15.789] 64 bytes from 8.8.8.8: icmp_seq=5 ttl=116 time=10.6 ms
+[2025-07-29 16:18:17.293] 64 bytes from 8.8.8.8: icmp_seq=6 ttl=116 time=8.77 ms
+[2025-07-29 16:18:17.577] 64 bytes from 8.8.8.8: icmp_seq=7 ttl=116 time=12.7 ms
+[2025-07-29 16:18:19.062] 64 bytes from 8.8.8.8: icmp_seq=8 ttl=116 time=17.4 ms
+[2025-07-29 16:18:19.328] 64 bytes from 8.8.8.8: icmp_seq=9 ttl=116 time=49.0 ms
+[2025-07-29 16:18:20.823] 64 bytes from 8.8.8.8: icmp_seq=10 ttl=116 time=10.3 ms
+[2025-07-29 16:18:21.090] 64 bytes from 8.8.8.8: icmp_seq=11 ttl=116 time=8.75 ms
+[2025-07-29 16:18:22.590] 64 bytes from 8.8.8.8: icmp_seq=12 ttl=116 time=11.4 ms
+[2025-07-29 16:18:24.083] 64 bytes from 8.8.8.8: icmp_seq=13 ttl=116 time=13.0 ms
+[2025-07-29 16:18:24.355] 64 bytes from 8.8.8.8: icmp_seq=14 ttl=116 time=14.3 ms
+[2025-07-29 16:18:25.838] 64 bytes from 8.8.8.8: icmp_seq=15 ttl=116 time=12.7 ms
+[2025-07-29 16:18:26.120] 64 bytes from 8.8.8.8: icmp_seq=16 ttl=116 time=10.7 ms
+[2025-07-29 16:18:27.639] 64 bytes from 8.8.8.8: icmp_seq=17 ttl=116 time=14.6 ms
+[2025-07-29 16:18:31.666] From 192.168.5.158: icmp_seq=18 Destination Host Unreachable
+[2025-07-29 16:18:31.790] From 192.168.5.158: icmp_seq=19 Destination Host Unreachable
+[2025-07-29 16:18:31.901] From 192.168.5.158: icmp_seq=20 Destination Host Unreachable
+[2025-07-29 16:18:34.479] From 192.168.5.158: icmp_seq=22 Destination Host Unreachable
+[2025-07-29 16:18:34.742] From 192.168.5.158: icmp_seq=23 Destination Host Unreachable
+[2025-07-29 16:18:37.337] From 192.168.5.158: icmp_seq=25 Destination Host Unreachable
+[2025-07-29 16:18:37.431] From 192.168.5.158: icmp_seq=26 Destination Host Unreachable
+[2025-07-29 16:18:37.523] From 192.168.5.158: icmp_seq=27 Destination Host Unreachable
+[2025-07-29 16:18:41.313] From 192.168.5.158: icmp_seq=28 Destination Host Unreachable
+[2025-07-29 16:18:41.521] From 192.168.5.158: icmp_seq=29 Destination Host Unreachable
+[2025-07-29 16:18:41.636] From 192.168.5.158: icmp_seq=30 Destination Host Unreachable
+[2025-07-29 16:18:45.427] From 192.168.5.158: icmp_seq=31 Destination Host Unreachable
+[2025-07-29 16:18:47.957] From 192.168.5.158: icmp_seq=35 Destination Host Unreachable
+[2025-07-29 16:18:48.047] From 192.168.5.158: icmp_seq=36 Destination Host Unreachable
+[2025-07-29 16:18:50.820] From 192.168.5.158: icmp_seq=38 Destination Host Unreachable
+[2025-07-29 16:18:54.585] From 192.168.5.158: icmp_seq=41 Destination Host Unreachable
+[2025-07-29 16:18:57.145] From 192.168.5.158: icmp_seq=44 Destination Host Unreachable
+[2025-07-29 16:19:00.883] From 192.168.5.158: icmp_seq=47 Destination Host Unreachable
+----------------------------------------------------------------------
+StartTime : 2025-07-29 16:27:00.956
+[2025-07-29 16:27:02.648] 64 bytes from 8.8.8.8: icmp_seq=2 ttl=116 time=9.50 ms
+[2025-07-29 16:27:04.206] 64 bytes from 8.8.8.8: icmp_seq=3 ttl=116 time=10.7 ms
+[2025-07-29 16:27:04.486] 64 bytes from 8.8.8.8: icmp_seq=4 ttl=116 time=7.25 ms
+[2025-07-29 16:27:04.757] From 192.168.5.158: icmp_seq=1 Destination Host Unreachable
+[2025-07-29 16:27:06.083] 64 bytes from 8.8.8.8: icmp_seq=5 ttl=116 time=15.3 ms
+[2025-07-29 16:27:07.585] 64 bytes from 8.8.8.8: icmp_seq=6 ttl=116 time=8.50 ms
+[2025-07-29 16:27:07.860] 64 bytes from 8.8.8.8: icmp_seq=7 ttl=116 time=11.7 ms
+[2025-07-29 16:27:09.348] 64 bytes from 8.8.8.8: icmp_seq=8 ttl=116 time=10.4 ms
+[2025-07-29 16:27:09.625] 64 bytes from 8.8.8.8: icmp_seq=9 ttl=116 time=33.7 ms
+[2025-07-29 16:27:11.115] 64 bytes from 8.8.8.8: icmp_seq=10 ttl=116 time=47.5 ms
+[2025-07-29 16:27:12.605] 64 bytes from 8.8.8.8: icmp_seq=11 ttl=116 time=71.9 ms
+[2025-07-29 16:27:12.867] 64 bytes from 8.8.8.8: icmp_seq=12 ttl=116 time=13.6 ms
+[2025-07-29 16:27:14.369] 64 bytes from 8.8.8.8: icmp_seq=13 ttl=116 time=11.5 ms
+[2025-07-29 16:27:14.657] 64 bytes from 8.8.8.8: icmp_seq=14 ttl=116 time=11.2 ms
+----------------------------------------------------------------------
+StartTime : 2025-07-29 16:28:54.752
+[2025-07-29 16:28:54.996] 64 bytes from 8.8.8.8: icmp_seq=15 ttl=116 time=20.1 ms
+[2025-07-29 16:28:56.744] 64 bytes from 8.8.8.8: icmp_seq=2 ttl=116 time=15.8 ms
+[2025-07-29 16:28:58.326] 64 bytes from 8.8.8.8: icmp_seq=3 ttl=116 time=30.0 ms
+[2025-07-29 16:28:58.571] 64 bytes from 8.8.8.8: icmp_seq=4 ttl=116 time=14.5 ms
+[2025-07-29 16:28:58.826] From 192.168.5.158: icmp_seq=1 Destination Host Unreachable
+[2025-07-29 16:29:00.163] 64 bytes from 8.8.8.8: icmp_seq=5 ttl=116 time=155 ms
+[2025-07-29 16:29:00.414] 64 bytes from 8.8.8.8: icmp_seq=6 ttl=116 time=34.3 ms
+[2025-07-29 16:29:01.891] 64 bytes from 8.8.8.8: icmp_seq=7 ttl=116 time=11.9 ms
+[2025-07-29 16:29:02.184] 64 bytes from 8.8.8.8: icmp_seq=8 ttl=116 time=10.7 ms
+[2025-07-29 16:29:03.667] 64 bytes from 8.8.8.8: icmp_seq=9 ttl=116 time=11.8 ms
+[2025-07-29 16:29:05.133] 64 bytes from 8.8.8.8: icmp_seq=10 ttl=116 time=16.5 ms
+[2025-07-29 16:29:05.379] 64 bytes from 8.8.8.8: icmp_seq=11 ttl=116 time=14.6 ms
+[2025-07-29 16:29:06.855] 64 bytes from 8.8.8.8: icmp_seq=12 ttl=116 time=11.0 ms
+[2025-07-29 16:29:08.324] 64 bytes from 8.8.8.8: icmp_seq=13 ttl=116 time=13.1 ms
+[2025-07-29 16:29:08.577] 64 bytes from 8.8.8.8: icmp_seq=14 ttl=116 time=12.6 ms
+[2025-07-29 16:29:10.060] 64 bytes from 8.8.8.8: icmp_seq=15 ttl=116 time=143 ms
+[2025-07-29 16:29:10.312] 64 bytes from 8.8.8.8: icmp_seq=16 ttl=116 time=53.2 ms
+[2025-07-29 16:29:11.772] 64 bytes from 8.8.8.8: icmp_seq=17 ttl=116 time=31.4 ms
+[2025-07-29 16:29:13.316] 64 bytes from 8.8.8.8: icmp_seq=18 ttl=116 time=10.8 ms
+[2025-07-29 16:29:13.581] 64 bytes from 8.8.8.8: icmp_seq=19 ttl=116 time=11.9 ms
+[2025-07-29 16:29:15.047] 64 bytes from 8.8.8.8: icmp_seq=20 ttl=116 time=9.06 ms
+[2025-07-29 16:29:15.305] 64 bytes from 8.8.8.8: icmp_seq=21 ttl=116 time=12.8 ms
+[2025-07-29 16:29:16.783] 64 bytes from 8.8.8.8: icmp_seq=22 ttl=116 time=11.0 ms
+[2025-07-29 16:29:18.249] 64 bytes from 8.8.8.8: icmp_seq=23 ttl=116 time=18.1 ms
+[2025-07-29 16:29:18.502] 64 bytes from 8.8.8.8: icmp_seq=24 ttl=116 time=20.1 ms
+[2025-07-29 16:29:19.969] 64 bytes from 8.8.8.8: icmp_seq=25 ttl=116 time=141 ms
+[2025-07-29 16:29:20.224] 64 bytes from 8.8.8.8: icmp_seq=26 ttl=116 time=27.3 ms
+[2025-07-29 16:29:21.706] 64 bytes from 8.8.8.8: icmp_seq=27 ttl=116 time=54.1 ms
+[2025-07-29 16:29:23.280] 64 bytes from 8.8.8.8: icmp_seq=28 ttl=116 time=9.91 ms
+[2025-07-29 16:29:23.532] 64 bytes from 8.8.8.8: icmp_seq=29 ttl=116 time=10.6 ms
+[2025-07-29 16:29:25.028] 64 bytes from 8.8.8.8: icmp_seq=30 ttl=116 time=11.1 ms
+[2025-07-29 16:29:25.274] 64 bytes from 8.8.8.8: icmp_seq=31 ttl=116 time=17.7 ms
+[2025-07-29 16:29:26.742] 64 bytes from 8.8.8.8: icmp_seq=32 ttl=116 time=37.9 ms
+[2025-07-29 16:29:28.247] 64 bytes from 8.8.8.8: icmp_seq=33 ttl=116 time=19.9 ms
+[2025-07-29 16:29:28.496] 64 bytes from 8.8.8.8: icmp_seq=34 ttl=116 time=11.7 ms
+[2025-07-29 16:29:29.972] 64 bytes from 8.8.8.8: icmp_seq=35 ttl=116 time=135 ms
+[2025-07-29 16:29:30.242] 64 bytes from 8.8.8.8: icmp_seq=36 ttl=116 time=11.5 ms
+[2025-07-29 16:29:31.728] 64 bytes from 8.8.8.8: icmp_seq=37 ttl=116 time=10.2 ms
+[2025-07-29 16:29:33.265] 64 bytes from 8.8.8.8: icmp_seq=38 ttl=116 time=8.99 ms
+[2025-07-29 16:29:33.549] 64 bytes from 8.8.8.8: icmp_seq=39 ttl=116 time=11.5 ms
+[2025-07-29 16:29:35.010] 64 bytes from 8.8.8.8: icmp_seq=40 ttl=116 time=17.7 ms
+[2025-07-29 16:29:35.258] 64 bytes from 8.8.8.8: icmp_seq=41 ttl=116 time=11.5 ms
+[2025-07-29 16:29:36.729] 64 bytes from 8.8.8.8: icmp_seq=42 ttl=116 time=11.0 ms
+[2025-07-29 16:29:38.193] 64 bytes from 8.8.8.8: icmp_seq=43 ttl=116 time=11.5 ms
+[2025-07-29 16:29:38.440] 64 bytes from 8.8.8.8: icmp_seq=44 ttl=116 time=14.2 ms
+[2025-07-29 16:29:39.921] 64 bytes from 8.8.8.8: icmp_seq=45 ttl=116 time=120 ms
+[2025-07-29 16:29:41.385] 64 bytes from 8.8.8.8: icmp_seq=46 ttl=116 time=65.1 ms
+[2025-07-29 16:29:41.627] 64 bytes from 8.8.8.8: icmp_seq=47 ttl=116 time=37.5 ms
+[2025-07-29 16:29:43.136] 64 bytes from 8.8.8.8: icmp_seq=48 ttl=116 time=41.7 ms
+[2025-07-29 16:29:43.386] 64 bytes from 8.8.8.8: icmp_seq=49 ttl=116 time=13.1 ms
+[2025-07-29 16:29:44.845] 64 bytes from 8.8.8.8: icmp_seq=50 ttl=116 time=27.4 ms
+[2025-07-29 16:29:46.363] 64 bytes from 8.8.8.8: icmp_seq=51 ttl=116 time=12.9 ms
+[2025-07-29 16:29:46.616] 64 bytes from 8.8.8.8: icmp_seq=52 ttl=116 time=13.6 ms
+[2025-07-29 16:29:48.078] 64 bytes from 8.8.8.8: icmp_seq=53 ttl=116 time=10.5 ms
+[2025-07-29 16:29:48.327] 64 bytes from 8.8.8.8: icmp_seq=54 ttl=116 time=13.7 ms
+[2025-07-29 16:29:49.875] 64 bytes from 8.8.8.8: icmp_seq=55 ttl=116 time=116 ms
+[2025-07-29 16:29:51.342] 64 bytes from 8.8.8.8: icmp_seq=56 ttl=116 time=9.71 ms
+[2025-07-29 16:29:51.593] 64 bytes from 8.8.8.8: icmp_seq=57 ttl=116 time=21.1 ms
+[2025-07-29 16:29:53.112] 64 bytes from 8.8.8.8: icmp_seq=58 ttl=116 time=10.6 ms
+[2025-07-29 16:29:54.584] 64 bytes from 8.8.8.8: icmp_seq=59 ttl=116 time=719 ms
+[2025-07-29 16:29:54.833] 64 bytes from 8.8.8.8: icmp_seq=60 ttl=116 time=10.9 ms
+[2025-07-29 16:29:56.308] 64 bytes from 8.8.8.8: icmp_seq=61 ttl=116 time=13.6 ms
+[2025-07-29 16:29:56.561] 64 bytes from 8.8.8.8: icmp_seq=62 ttl=116 time=12.3 ms
+[2025-07-29 16:29:58.019] 64 bytes from 8.8.8.8: icmp_seq=63 ttl=116 time=11.9 ms
+[2025-07-29 16:29:58.270] 64 bytes from 8.8.8.8: icmp_seq=64 ttl=116 time=9.50 ms
+----------------------------------------------------------------------
+StartTime : 2025-07-29 16:31:27.229
+[2025-07-29 16:31:31.430] From 192.168.5.158: icmp_seq=1 Destination Host Unreachable
+[2025-07-29 16:31:32.902] 64 bytes from 192.168.47.1: icmp_seq=5 ttl=64 time=54.9 ms
+[2025-07-29 16:31:33.162] 64 bytes from 192.168.47.1: icmp_seq=6 ttl=64 time=10.7 ms
+[2025-07-29 16:31:34.695] 64 bytes from 192.168.47.1: icmp_seq=7 ttl=64 time=7.38 ms
+[2025-07-29 16:31:34.949] 64 bytes from 192.168.47.1: icmp_seq=8 ttl=64 time=8.44 ms
+[2025-07-29 16:31:36.434] 64 bytes from 192.168.47.1: icmp_seq=9 ttl=64 time=9.53 ms
+[2025-07-29 16:31:37.903] 64 bytes from 192.168.47.1: icmp_seq=10 ttl=64 time=7.47 ms
+[2025-07-29 16:31:38.151] 64 bytes from 192.168.47.1: icmp_seq=11 ttl=64 time=8.36 ms
+[2025-07-29 16:31:39.624] 64 bytes from 192.168.47.1: icmp_seq=12 ttl=64 time=8.74 ms
+[2025-07-29 16:31:39.875] 64 bytes from 192.168.47.1: icmp_seq=13 ttl=64 time=50.8 ms
+[2025-07-29 16:31:41.353] 64 bytes from 192.168.47.1: icmp_seq=14 ttl=64 time=3.37 ms
+[2025-07-29 16:31:42.835] 64 bytes from 192.168.47.1: icmp_seq=15 ttl=64 time=7.84 ms
+[2025-07-29 16:31:43.085] 64 bytes from 192.168.47.1: icmp_seq=16 ttl=64 time=10.3 ms
+[2025-07-29 16:31:44.569] 64 bytes from 192.168.47.1: icmp_seq=17 ttl=64 time=9.99 ms
+[2025-07-29 16:31:44.819] 64 bytes from 192.168.47.1: icmp_seq=18 ttl=64 time=9.13 ms
+[2025-07-29 16:31:46.289] 64 bytes from 192.168.47.1: icmp_seq=19 ttl=64 time=7.27 ms
+[2025-07-29 16:31:47.797] 64 bytes from 192.168.47.1: icmp_seq=20 ttl=64 time=8.69 ms
+[2025-07-29 16:31:48.052] 64 bytes from 192.168.47.1: icmp_seq=21 ttl=64 time=7.88 ms
+[2025-07-29 16:31:49.520] 64 bytes from 192.168.47.1: icmp_seq=22 ttl=64 time=7.08 ms
+[2025-07-29 16:31:49.773] 64 bytes from 192.168.47.1: icmp_seq=23 ttl=64 time=42.7 ms
+[2025-07-29 16:31:51.272] 64 bytes from 192.168.47.1: icmp_seq=24 ttl=64 time=6.80 ms
+[2025-07-29 16:31:52.751] 64 bytes from 192.168.47.1: icmp_seq=25 ttl=64 time=11.2 ms
+[2025-07-29 16:31:53.002] 64 bytes from 192.168.47.1: icmp_seq=26 ttl=64 time=10.8 ms
+[2025-07-29 16:31:54.476] 64 bytes from 192.168.47.1: icmp_seq=27 ttl=64 time=7.34 ms
+[2025-07-29 16:31:54.728] 64 bytes from 192.168.47.1: icmp_seq=28 ttl=64 time=10.8 ms
+[2025-07-29 16:31:56.203] 64 bytes from 192.168.47.1: icmp_seq=29 ttl=64 time=9.97 ms
+[2025-07-29 16:31:57.679] 64 bytes from 192.168.47.1: icmp_seq=30 ttl=64 time=11.3 ms
+[2025-07-29 16:31:57.930] 64 bytes from 192.168.47.1: icmp_seq=31 ttl=64 time=6.67 ms
+[2025-07-29 16:31:59.390] 64 bytes from 192.168.47.1: icmp_seq=32 ttl=64 time=9.24 ms
+----------------------------------------------------------------------
+StartTime : 2025-07-29 16:33:01.162
+[2025-07-29 16:33:01.406] 64 bytes from 192.168.47.1: icmp_seq=33 ttl=64 time=43.6 ms
+[2025-07-29 16:33:01.795] 64 bytes from 192.168.47.1: icmp_seq=34 ttl=64 time=23.4 ms
+[2025-07-29 16:33:03.786] 64 bytes from 192.168.47.1: icmp_seq=2 ttl=64 time=24.6 ms
+[2025-07-29 16:33:04.076] 64 bytes from 192.168.47.1: icmp_seq=3 ttl=64 time=4.54 ms
+[2025-07-29 16:33:05.685] 64 bytes from 192.168.47.1: icmp_seq=4 ttl=64 time=5.07 ms
+[2025-07-29 16:33:05.936] 64 bytes from 192.168.47.1: icmp_seq=5 ttl=64 time=7.61 ms
+[2025-07-29 16:33:07.399] 64 bytes from 192.168.47.1: icmp_seq=6 ttl=64 time=4.61 ms
+[2025-07-29 16:33:07.654] 64 bytes from 192.168.47.1: icmp_seq=7 ttl=64 time=8.10 ms
+[2025-07-29 16:33:09.153] 64 bytes from 192.168.47.1: icmp_seq=8 ttl=64 time=5.15 ms
+[2025-07-29 16:33:10.622] 64 bytes from 192.168.47.1: icmp_seq=9 ttl=64 time=75.8 ms
+[2025-07-29 16:33:10.868] 64 bytes from 192.168.47.1: icmp_seq=10 ttl=64 time=11.0 ms
+[2025-07-29 16:33:12.390] 64 bytes from 192.168.47.1: icmp_seq=11 ttl=64 time=10.9 ms
+[2025-07-29 16:33:12.665] 64 bytes from 192.168.47.1: icmp_seq=12 ttl=64 time=9.48 ms
+[2025-07-29 16:33:14.133] 64 bytes from 192.168.47.1: icmp_seq=13 ttl=64 time=15.1 ms
+[2025-07-29 16:33:15.627] 64 bytes from 192.168.47.1: icmp_seq=14 ttl=64 time=11.2 ms
+[2025-07-29 16:33:15.874] 64 bytes from 192.168.47.1: icmp_seq=15 ttl=64 time=9.95 ms
+[2025-07-29 16:33:17.334] 64 bytes from 192.168.47.1: icmp_seq=16 ttl=64 time=8.39 ms
+[2025-07-29 16:33:17.601] 64 bytes from 192.168.47.1: icmp_seq=17 ttl=64 time=9.99 ms
+[2025-07-29 16:33:19.062] 64 bytes from 192.168.47.1: icmp_seq=18 ttl=64 time=5.81 ms
+[2025-07-29 16:33:20.518] 64 bytes from 192.168.47.1: icmp_seq=19 ttl=64 time=59.0 ms
+[2025-07-29 16:33:20.795] 64 bytes from 192.168.47.1: icmp_seq=20 ttl=64 time=5.86 ms
+[2025-07-29 16:33:22.274] 64 bytes from 192.168.47.1: icmp_seq=21 ttl=64 time=5.10 ms
+[2025-07-29 16:33:23.823] 64 bytes from 192.168.47.1: icmp_seq=22 ttl=64 time=8.87 ms
+[2025-07-29 16:33:24.097] 64 bytes from 192.168.47.1: icmp_seq=23 ttl=64 time=7.68 ms
+[2025-07-29 16:33:25.580] 64 bytes from 192.168.47.1: icmp_seq=24 ttl=64 time=8.01 ms
+[2025-07-29 16:33:25.822] 64 bytes from 192.168.47.1: icmp_seq=25 ttl=64 time=9.85 ms
+[2025-07-29 16:33:27.295] 64 bytes from 192.168.47.1: icmp_seq=26 ttl=64 time=16.4 ms
+[2025-07-29 16:33:28.757] 64 bytes from 192.168.47.1: icmp_seq=27 ttl=64 time=7.41 ms
+[2025-07-29 16:33:29.014] 64 bytes from 192.168.47.1: icmp_seq=28 ttl=64 time=7.42 ms
+[2025-07-29 16:33:30.482] 64 bytes from 192.168.47.1: icmp_seq=29 ttl=64 time=49.7 ms
+[2025-07-29 16:33:30.727] 64 bytes from 192.168.47.1: icmp_seq=30 ttl=64 time=65.3 ms
+[2025-07-29 16:33:32.199] 64 bytes from 192.168.47.1: icmp_seq=31 ttl=64 time=60.4 ms
+[2025-07-29 16:33:33.836] 64 bytes from 192.168.47.1: icmp_seq=32 ttl=64 time=9.90 ms
+[2025-07-29 16:33:34.084] 64 bytes from 192.168.47.1: icmp_seq=33 ttl=64 time=8.66 ms
+[2025-07-29 16:33:35.559] 64 bytes from 192.168.47.1: icmp_seq=34 ttl=64 time=4.68 ms
+[2025-07-29 16:33:35.810] 64 bytes from 192.168.47.1: icmp_seq=35 ttl=64 time=8.22 ms
+[2025-07-29 16:33:37.276] 64 bytes from 192.168.47.1: icmp_seq=36 ttl=64 time=6.94 ms
+[2025-07-29 16:33:38.750] 64 bytes from 192.168.47.1: icmp_seq=37 ttl=64 time=10.5 ms
+[2025-07-29 16:33:39.008] 64 bytes from 192.168.47.1: icmp_seq=38 ttl=64 time=9.14 ms
+[2025-07-29 16:33:40.470] 64 bytes from 192.168.47.1: icmp_seq=39 ttl=64 time=43.6 ms
+[2025-07-29 16:33:40.718] 64 bytes from 192.168.47.1: icmp_seq=40 ttl=64 time=5.91 ms
+[2025-07-29 16:33:42.226] 64 bytes from 192.168.47.1: icmp_seq=41 ttl=64 time=80.8 ms
+[2025-07-29 16:33:43.754] 64 bytes from 192.168.47.1: icmp_seq=42 ttl=64 time=13.5 ms
+[2025-07-29 16:33:44.008] 64 bytes from 192.168.47.1: icmp_seq=43 ttl=64 time=11.6 ms
+[2025-07-29 16:33:45.480] 64 bytes from 192.168.47.1: icmp_seq=44 ttl=64 time=7.70 ms
+[2025-07-29 16:33:45.726] 64 bytes from 192.168.47.1: icmp_seq=45 ttl=64 time=10.7 ms
+[2025-07-29 16:33:47.186] 64 bytes from 192.168.47.1: icmp_seq=46 ttl=64 time=7.83 ms
+[2025-07-29 16:33:48.673] 64 bytes from 192.168.47.1: icmp_seq=47 ttl=64 time=7.26 ms
+[2025-07-29 16:33:48.932] 64 bytes from 192.168.47.1: icmp_seq=48 ttl=64 time=7.82 ms
+[2025-07-29 16:33:50.399] 64 bytes from 192.168.47.1: icmp_seq=49 ttl=64 time=59.2 ms
+[2025-07-29 16:33:51.894] 64 bytes from 192.168.47.1: icmp_seq=50 ttl=64 time=216 ms
+[2025-07-29 16:33:52.194] 64 bytes from 192.168.47.1: icmp_seq=51 ttl=64 time=103 ms
+[2025-07-29 16:33:53.663] 64 bytes from 192.168.47.1: icmp_seq=52 ttl=64 time=7.57 ms
+[2025-07-29 16:33:53.943] 64 bytes from 192.168.47.1: icmp_seq=53 ttl=64 time=6.69 ms
+[2025-07-29 16:33:55.472] 64 bytes from 192.168.47.1: icmp_seq=54 ttl=64 time=9.86 ms
+[2025-07-29 16:33:55.723] 64 bytes from 192.168.47.1: icmp_seq=55 ttl=64 time=8.63 ms
+[2025-07-29 16:33:57.230] 64 bytes from 192.168.47.1: icmp_seq=56 ttl=64 time=23.5 ms
+[2025-07-29 16:33:58.704] 64 bytes from 192.168.47.1: icmp_seq=57 ttl=64 time=9.22 ms
+[2025-07-29 16:33:58.954] 64 bytes from 192.168.47.1: icmp_seq=58 ttl=64 time=5.74 ms
+[2025-07-29 16:34:00.454] 64 bytes from 192.168.47.1: icmp_seq=59 ttl=64 time=26.2 ms
+[2025-07-29 16:34:00.719] 64 bytes from 192.168.47.1: icmp_seq=60 ttl=64 time=81.4 ms
+----------------------------------------------------------------------
+StartTime : 2025-07-29 16:38:29.661
+[2025-07-29 16:38:31.338] 64 bytes from 192.168.47.1: icmp_seq=2 ttl=64 time=56.9 ms
+[2025-07-29 16:38:32.944] 64 bytes from 192.168.47.1: icmp_seq=3 ttl=64 time=21.9 ms
+[2025-07-29 16:38:33.222] 64 bytes from 192.168.47.1: icmp_seq=4 ttl=64 time=4.67 ms
+[2025-07-29 16:38:34.722] 64 bytes from 192.168.47.1: icmp_seq=5 ttl=64 time=26.6 ms
+[2025-07-29 16:38:36.220] 64 bytes from 192.168.47.1: icmp_seq=6 ttl=64 time=16.7 ms
+[2025-07-29 16:38:36.488] 64 bytes from 192.168.47.1: icmp_seq=7 ttl=64 time=8.94 ms
+[2025-07-29 16:38:37.956] 64 bytes from 192.168.47.1: icmp_seq=8 ttl=64 time=38.8 ms
+[2025-07-29 16:38:38.207] 64 bytes from 192.168.47.1: icmp_seq=9 ttl=64 time=7.49 ms
+[2025-07-29 16:38:39.681] 64 bytes from 192.168.47.1: icmp_seq=10 ttl=64 time=65.3 ms
+[2025-07-29 16:38:41.138] 64 bytes from 192.168.47.1: icmp_seq=11 ttl=64 time=7.64 ms
+[2025-07-29 16:38:41.388] 64 bytes from 192.168.47.1: icmp_seq=12 ttl=64 time=265 ms
+[2025-07-29 16:38:42.864] 64 bytes from 192.168.47.1: icmp_seq=13 ttl=64 time=391 ms
+[2025-07-29 16:38:43.112] 64 bytes from 192.168.47.1: icmp_seq=14 ttl=64 time=72.7 ms
+[2025-07-29 16:38:44.578] 64 bytes from 192.168.47.1: icmp_seq=15 ttl=64 time=21.0 ms
+[2025-07-29 16:38:46.047] 64 bytes from 192.168.47.1: icmp_seq=16 ttl=64 time=121 ms
+[2025-07-29 16:38:46.295] 64 bytes from 192.168.47.1: icmp_seq=17 ttl=64 time=42.6 ms
+[2025-07-29 16:38:47.751] 64 bytes from 192.168.47.1: icmp_seq=18 ttl=64 time=11.9 ms
+[2025-07-29 16:38:49.218] 64 bytes from 192.168.47.1: icmp_seq=19 ttl=64 time=10.7 ms
+[2025-07-29 16:38:49.471] 64 bytes from 192.168.47.1: icmp_seq=20 ttl=64 time=9.91 ms
+[2025-07-29 16:38:50.938] 64 bytes from 192.168.47.1: icmp_seq=21 ttl=64 time=12.8 ms
+[2025-07-29 16:38:51.189] 64 bytes from 192.168.47.1: icmp_seq=22 ttl=64 time=4.17 ms
+[2025-07-29 16:38:52.686] 64 bytes from 192.168.47.1: icmp_seq=23 ttl=64 time=123 ms
+[2025-07-29 16:38:54.149] 64 bytes from 192.168.47.1: icmp_seq=24 ttl=64 time=25.8 ms
+[2025-07-29 16:38:54.412] 64 bytes from 192.168.47.1: icmp_seq=25 ttl=64 time=12.5 ms
+[2025-07-29 16:38:55.871] 64 bytes from 192.168.47.1: icmp_seq=26 ttl=64 time=14.9 ms
+[2025-07-29 16:38:56.127] 64 bytes from 192.168.47.1: icmp_seq=27 ttl=64 time=9.67 ms
+[2025-07-29 16:38:57.609] 64 bytes from 192.168.47.1: icmp_seq=28 ttl=64 time=8.67 ms
+[2025-07-29 16:38:59.068] 64 bytes from 192.168.47.1: icmp_seq=29 ttl=64 time=6.81 ms
+[2025-07-29 16:38:59.319] 64 bytes from 192.168.47.1: icmp_seq=30 ttl=64 time=10.5 ms
+[2025-07-29 16:39:00.813] 64 bytes from 192.168.47.1: icmp_seq=31 ttl=64 time=7.89 ms
+----------------------------------------------------------------------
+StartTime : 2025-07-29 16:40:01.371
+[2025-07-29 16:40:01.612] 64 bytes from 192.168.47.1: icmp_seq=32 ttl=64 time=43.7 ms
+[2025-07-29 16:40:03.447] 64 bytes from 192.168.47.1: icmp_seq=2 ttl=64 time=14.7 ms
+[2025-07-29 16:40:05.014] 64 bytes from 192.168.47.1: icmp_seq=3 ttl=64 time=5.20 ms
+[2025-07-29 16:40:05.264] 64 bytes from 192.168.47.1: icmp_seq=4 ttl=64 time=2.99 ms
+[2025-07-29 16:40:06.737] 64 bytes from 192.168.47.1: icmp_seq=5 ttl=64 time=17.7 ms
+[2025-07-29 16:40:06.990] 64 bytes from 192.168.47.1: icmp_seq=6 ttl=64 time=4.75 ms
+[2025-07-29 16:40:08.469] 64 bytes from 192.168.47.1: icmp_seq=7 ttl=64 time=3.46 ms
+[2025-07-29 16:40:09.938] 64 bytes from 192.168.47.1: icmp_seq=8 ttl=64 time=7.55 ms
+[2025-07-29 16:40:10.186] 64 bytes from 192.168.47.1: icmp_seq=9 ttl=64 time=97.4 ms
+[2025-07-29 16:40:11.729] 64 bytes from 192.168.47.1: icmp_seq=10 ttl=64 time=41.9 ms
+[2025-07-29 16:40:11.976] 64 bytes from 192.168.47.1: icmp_seq=11 ttl=64 time=3.50 ms
+[2025-07-29 16:40:13.472] 64 bytes from 192.168.47.1: icmp_seq=12 ttl=64 time=9.51 ms
+[2025-07-29 16:40:14.936] 64 bytes from 192.168.47.1: icmp_seq=13 ttl=64 time=7.06 ms
+[2025-07-29 16:40:15.191] 64 bytes from 192.168.47.1: icmp_seq=14 ttl=64 time=12.3 ms
+[2025-07-29 16:40:16.656] 64 bytes from 192.168.47.1: icmp_seq=15 ttl=64 time=10.4 ms
+[2025-07-29 16:40:16.906] 64 bytes from 192.168.47.1: icmp_seq=16 ttl=64 time=9.97 ms
+[2025-07-29 16:40:18.385] 64 bytes from 192.168.47.1: icmp_seq=17 ttl=64 time=10.5 ms
+[2025-07-29 16:40:19.846] 64 bytes from 192.168.47.1: icmp_seq=18 ttl=64 time=6.75 ms
+[2025-07-29 16:40:20.098] 64 bytes from 192.168.47.1: icmp_seq=19 ttl=64 time=93.9 ms
+[2025-07-29 16:40:21.572] 64 bytes from 192.168.47.1: icmp_seq=20 ttl=64 time=56.3 ms
+[2025-07-29 16:40:21.821] 64 bytes from 192.168.47.1: icmp_seq=21 ttl=64 time=21.9 ms
+[2025-07-29 16:40:23.308] 64 bytes from 192.168.47.1: icmp_seq=22 ttl=64 time=12.2 ms
+[2025-07-29 16:40:24.776] 64 bytes from 192.168.47.1: icmp_seq=23 ttl=64 time=10.2 ms
+[2025-07-29 16:40:25.026] 64 bytes from 192.168.47.1: icmp_seq=24 ttl=64 time=8.96 ms
+[2025-07-29 16:40:26.492] 64 bytes from 192.168.47.1: icmp_seq=25 ttl=64 time=7.91 ms
+[2025-07-29 16:40:27.959] 64 bytes from 192.168.47.1: icmp_seq=26 ttl=64 time=11.8 ms
+[2025-07-29 16:40:28.208] 64 bytes from 192.168.47.1: icmp_seq=27 ttl=64 time=8.25 ms
+[2025-07-29 16:40:29.682] 64 bytes from 192.168.47.1: icmp_seq=28 ttl=64 time=8.31 ms
+[2025-07-29 16:40:29.936] 64 bytes from 192.168.47.1: icmp_seq=29 ttl=64 time=81.4 ms
+[2025-07-29 16:40:31.424] 64 bytes from 192.168.47.1: icmp_seq=30 ttl=64 time=3.61 ms
+[2025-07-29 16:40:32.887] 64 bytes from 192.168.47.1: icmp_seq=31 ttl=64 time=122 ms
+[2025-07-29 16:40:33.131] 64 bytes from 192.168.47.1: icmp_seq=32 ttl=64 time=7.06 ms
+[2025-07-29 16:40:34.623] 64 bytes from 192.168.47.1: icmp_seq=33 ttl=64 time=7.78 ms
+[2025-07-29 16:40:34.870] 64 bytes from 192.168.47.1: icmp_seq=34 ttl=64 time=4.58 ms
+[2025-07-29 16:40:36.341] 64 bytes from 192.168.47.1: icmp_seq=35 ttl=64 time=42.2 ms
+[2025-07-29 16:40:37.831] 64 bytes from 192.168.47.1: icmp_seq=36 ttl=64 time=9.08 ms
+[2025-07-29 16:40:38.080] 64 bytes from 192.168.47.1: icmp_seq=37 ttl=64 time=11.4 ms
+[2025-07-29 16:40:39.548] 64 bytes from 192.168.47.1: icmp_seq=38 ttl=64 time=7.73 ms
+[2025-07-29 16:40:41.058] 64 bytes from 192.168.47.1: icmp_seq=39 ttl=64 time=81.0 ms
+[2025-07-29 16:40:41.316] 64 bytes from 192.168.47.1: icmp_seq=40 ttl=64 time=5.53 ms
+[2025-07-29 16:40:42.788] 64 bytes from 192.168.47.1: icmp_seq=41 ttl=64 time=8.38 ms
+[2025-07-29 16:40:43.032] 64 bytes from 192.168.47.1: icmp_seq=42 ttl=64 time=15.8 ms
+[2025-07-29 16:40:44.533] 64 bytes from 192.168.47.1: icmp_seq=43 ttl=64 time=15.7 ms
+[2025-07-29 16:40:45.994] 64 bytes from 192.168.47.1: icmp_seq=44 ttl=64 time=8.71 ms
+[2025-07-29 16:40:46.239] 64 bytes from 192.168.47.1: icmp_seq=45 ttl=64 time=10.5 ms
+[2025-07-29 16:40:47.735] 64 bytes from 192.168.47.1: icmp_seq=46 ttl=64 time=15.9 ms
+[2025-07-29 16:40:47.983] 64 bytes from 192.168.47.1: icmp_seq=47 ttl=64 time=7.50 ms
+[2025-07-29 16:40:49.449] 64 bytes from 192.168.47.1: icmp_seq=48 ttl=64 time=5.74 ms
+[2025-07-29 16:40:50.951] 64 bytes from 192.168.47.1: icmp_seq=49 ttl=64 time=72.8 ms
+[2025-07-29 16:40:51.196] 64 bytes from 192.168.47.1: icmp_seq=50 ttl=64 time=21.5 ms
+[2025-07-29 16:40:52.683] 64 bytes from 192.168.47.1: icmp_seq=51 ttl=64 time=30.4 ms
+[2025-07-29 16:40:53.010] 64 bytes from 192.168.47.1: icmp_seq=52 ttl=64 time=4.71 ms
+[2025-07-29 16:40:54.511] 64 bytes from 192.168.47.1: icmp_seq=53 ttl=64 time=7.89 ms
+[2025-07-29 16:40:55.970] 64 bytes from 192.168.47.1: icmp_seq=54 ttl=64 time=10.1 ms
+[2025-07-29 16:40:56.245] 64 bytes from 192.168.47.1: icmp_seq=55 ttl=64 time=10.4 ms
+[2025-07-29 16:40:57.722] 64 bytes from 192.168.47.1: icmp_seq=56 ttl=64 time=8.17 ms
+[2025-07-29 16:40:57.976] 64 bytes from 192.168.47.1: icmp_seq=57 ttl=64 time=8.03 ms
+[2025-07-29 16:40:59.450] 64 bytes from 192.168.47.1: icmp_seq=58 ttl=64 time=8.20 ms
+[2025-07-29 16:41:00.929] 64 bytes from 192.168.47.1: icmp_seq=59 ttl=64 time=65.1 ms
+[2025-07-29 16:41:01.203] 64 bytes from 192.168.47.1: icmp_seq=60 ttl=64 time=26.3 ms
+----------------------------------------------------------------------
+StartTime : 2025-07-29 16:43:42.377
+[2025-07-29 16:43:44.182] 64 bytes from 192.168.47.1: icmp_seq=2 ttl=64 time=13.1 ms
+[2025-07-29 16:43:45.966] 64 bytes from 192.168.47.1: icmp_seq=3 ttl=64 time=7.31 ms
+[2025-07-29 16:43:46.303] 64 bytes from 192.168.47.1: icmp_seq=4 ttl=64 time=6.56 ms
+[2025-07-29 16:43:47.892] 64 bytes from 192.168.47.1: icmp_seq=5 ttl=64 time=9.16 ms
+[2025-07-29 16:43:48.148] 64 bytes from 192.168.47.1: icmp_seq=6 ttl=64 time=17.3 ms
+[2025-07-29 16:43:49.671] 64 bytes from 192.168.47.1: icmp_seq=7 ttl=64 time=4.03 ms
+[2025-07-29 16:43:49.924] 64 bytes from 192.168.47.1: icmp_seq=8 ttl=64 time=10.6 ms
+[2025-07-29 16:43:51.403] 64 bytes from 192.168.47.1: icmp_seq=9 ttl=64 time=51.1 ms
+[2025-07-29 16:43:52.871] 64 bytes from 192.168.47.1: icmp_seq=10 ttl=64 time=33.5 ms
+[2025-07-29 16:43:53.122] 64 bytes from 192.168.47.1: icmp_seq=11 ttl=64 time=10.5 ms
+[2025-07-29 16:43:54.584] 64 bytes from 192.168.47.1: icmp_seq=12 ttl=64 time=8.55 ms
+[2025-07-29 16:43:54.836] 64 bytes from 192.168.47.1: icmp_seq=13 ttl=64 time=7.93 ms
+[2025-07-29 16:43:56.299] 64 bytes from 192.168.47.1: icmp_seq=14 ttl=64 time=10.8 ms
+[2025-07-29 16:43:57.777] 64 bytes from 192.168.47.1: icmp_seq=15 ttl=64 time=10.4 ms
+[2025-07-29 16:43:58.034] 64 bytes from 192.168.47.1: icmp_seq=16 ttl=64 time=4.04 ms
+[2025-07-29 16:43:59.506] 64 bytes from 192.168.47.1: icmp_seq=17 ttl=64 time=10.7 ms

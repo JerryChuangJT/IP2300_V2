@@ -9,6 +9,8 @@ from Function.Page_ModifyData_Client import Page_ModifyData_Client
 
 import Function.MyFunction_JsonData as JsonDataFunction
 
+from Class.Class_Button import Button
+
 class Frame_Client():
     def __init__(self, root=None, close_callback=None):
         self.close_callback = close_callback
@@ -20,12 +22,13 @@ class Frame_Client():
                 "Title": ("Arial", 13, "bold"),
                 "Label": ("Arial", 10),
                 "Log": ("Arial", 10)
-            },
-            "Button": {
-                "relief": "flat",
-                "overrelief": "raised",
-                "cursor": "hand2"
             }
+        }
+
+        self.Image_path = {
+            "Button_Edit": "./img/edit.png",
+            "Button_add": "./img/add.png",
+            "Button_Delete": "./img/minus.png"
         }
 
         self.load_json_data()
@@ -50,10 +53,10 @@ class Frame_Client():
 
             ### Create Widgets.
             self.Top_Widgets["Title"] = tk.Label(self.Frame["Top"], text="Client Parameters", font=self.Setting["Font"]["Title"], foreground="blue")
-            self.Top_Widgets["Button"]["Edit"] = tk.Button(self.Frame["Top"], image=self.Image["Button_Edit"], command=self.Button_EditData, **self.Setting["Button"])
-            self.Top_Widgets["Button"]["Add"] = tk.Button(self.Frame["Top"], image=self.Image["Button_add"], command=self.Button_AddData, **self.Setting["Button"])
+            self.Top_Widgets["Button"]["Edit"] = Button(self.Frame["Top"], image_path=self.Image_path["Button_Edit"], size=(30,30), command=self.Button_EditData)
+            self.Top_Widgets["Button"]["Add"] = Button(self.Frame["Top"], image_path=self.Image_path["Button_add"], size=(30,30), command=self.Button_AddData)
             self.Top_Widgets["Label"]["Count"] = tk.Label(self.Frame["Top"], text="Count: 0/0", font=("Arial", 11, "bold"))
-            self.Top_Widgets["Button"]["Delete"] = tk.Button(self.Frame["Top"], image=self.Image["Button_Delete"], command=self.Button_DeleteData, **self.Setting["Button"])
+            self.Top_Widgets["Button"]["Delete"] = Button(self.Frame["Top"], image_path=self.Image_path["Button_Delete"], size=(30,30), command=self.Button_DeleteData)
 
             self.Top_Widgets["TreeView"] = ttk.Treeview(self.Frame["Top"], columns=self.TreeView_Columns, show="headings", selectmode="extended")
             self.Top_Widgets["TreeView"].bind("<ButtonRelease-1>", self.Updating_TreeViewCount)
@@ -68,7 +71,7 @@ class Frame_Client():
             self.Top_Widgets["Scrollerbar"]["Vertical"] = ttk.Scrollbar(self.Frame["Top"], orient=tk.VERTICAL, command=self.Top_Widgets["TreeView"].yview)
             self.Top_Widgets["TreeView"].configure(yscrollcommand=self.Top_Widgets["Scrollerbar"]["Vertical"].set)
             
-            # Title 跨越三個欄位
+            ### Place Widgets.
             self.Top_Widgets["Title"].grid(row=0, column=0, padx=(5,0), pady=(5,0), sticky="w")
             self.Top_Widgets["Button"]["Edit"].grid(row=1, column=0, padx=(5,0), pady=(7,0), sticky="w")
             self.Top_Widgets["Button"]["Add"].grid(row=1, column=0, padx=(50,0), pady=(7,0), sticky="w")
@@ -109,11 +112,6 @@ class Frame_Client():
             for index, (val, item) in enumerate(data):
                 self.Top_Widgets["TreeView"].move(item, '', index)
             self.Top_Widgets["TreeView"].heading(col, command=lambda: sort_by_column(col=col, reverse=not reverse))
-
-        self.Image = {}
-        self.Image["Button_Edit"] = ImageTk.PhotoImage(Image.open("./img/edit.png").resize((30, 30)))
-        self.Image["Button_add"] = ImageTk.PhotoImage(Image.open("./img/add.png").resize((30,30)))
-        self.Image["Button_Delete"] = ImageTk.PhotoImage(Image.open("./img/minus.png").resize((30,30)))
 
         ### Create Frames.
         self.Frame = {}

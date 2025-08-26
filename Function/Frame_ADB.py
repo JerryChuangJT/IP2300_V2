@@ -11,6 +11,8 @@ from Function.Page_ADBDownload import Page_ADBDownloadLog
 import Function.MyFunction_JsonData as JsonDataFunction
 from Function.MyFunction_Telnet import TelNet
 
+from Class.Class_Button import Button
+
 class Frame_ADB:
     def __init__(self, root, close_callback=None):
         self.close_callback = close_callback

@@ -7,6 +7,8 @@ import traceback
 
 import Function.MyFunction_JsonData as JsonDataFunction
 
+from Class.Class_Button import Button
+
 class Page_ModifyData_Client(tk.Frame):
     def __init__(self, root=None, label_title:str=None, default_value:list=None, comfirm_callback=None):
 
@@ -30,11 +32,6 @@ class Page_ModifyData_Client(tk.Frame):
                 "Title": ("Arial", 13, "bold"),
                 "Label": ("Arial", 10),
                 "Log": ("Arial", 10)
-            },
-            "Button": {
-                "relief": "flat",
-                "overrelief": "raised",
-                "cursor": "hand2"
             }
         }
         
@@ -64,9 +61,10 @@ class Page_ModifyData_Client(tk.Frame):
         self.Main_Widget["Combobox"] = {}
         self.Main_Widget["Separator"] = {}
 
-        self.Image = {}
-        self.Image["Button_Comfirm"] = ImageTk.PhotoImage(Image.open("./Img/check.png").resize((40, 40)))
-        self.Image["Button_Cancel"] = ImageTk.PhotoImage(Image.open("./Img/cancel.png").resize((40,40)))
+        self.Image_path = {
+            "Button_Comfirm": "./Img/check.png",
+            "Button_Cancel": "./Img/cancel.png",
+        }
 
         ### Create Elements.
         self.Main_Widget["Label"]["Title"] = tk.Label(self.Frame["Main"], text=self.LabelTitle, font=self.Setting["Font"]["Title"], foreground="blue")
@@ -81,8 +79,8 @@ class Page_ModifyData_Client(tk.Frame):
         self.Main_Widget["Entry"]["Comment"] = tk.Entry(self.Frame["Main"], font=self.Setting["Font"]["Label"])
 
         self.Main_Widget["Separator"]["Low"] = ttk.Separator(self.Frame["Main"], orient='horizontal')
-        self.Main_Widget["Button"]["Comfirm"] = tk.Button(self.Frame["Main"], image=self.Image["Button_Comfirm"], **self.Setting["Button"], command=self.Button_Comfirm)
-        self.Main_Widget["Button"]["Cancel"] = tk.Button(self.Frame["Main"], image=self.Image["Button_Cancel"], **self.Setting["Button"], command=self.Button_Cancel)
+        self.Main_Widget["Button"]["Comfirm"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Comfirm"], size=(40,40), command=self.Button_Comfirm)
+        self.Main_Widget["Button"]["Cancel"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Cancel"], size=(40,40), command=self.Button_Cancel)
 
         ### Layout Elements.
         self.Main_Widget["Label"]["Title"].grid(row=0, column=0, columnspan=2, padx=5, pady=5, sticky="w")

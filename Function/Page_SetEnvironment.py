@@ -9,6 +9,8 @@ import traceback
 
 import Function.MyFunction_JsonData as JsonDataFunction
 
+from Class.Class_Button import Button
+
 class Page_SetEnvironment():
     def __init__(self, root=None, version="V0.0.0", close_callback=None):
         self.JsonPath = "./Parameter/json_PageSetEnvironment.json"
@@ -33,12 +35,13 @@ class Page_SetEnvironment():
             "Entry": {
                 "background": "white",
                 "readonlybackground": "light yellow"  # 使用淺黃色和淺綠色
-            },
-            "Button": {
-                "relief": "flat",
-                "overrelief": "raised",
-                "cursor": "hand2"
             }
+        }
+
+        self.Image_path = {
+            "Button_SelectFolder": "./Img/add_folder.png",
+            "Button_Comfirm": "./Img/check.png",
+            "Button_Exit": "./Img/exit.png",
         }
 
         self.Create_Widgets()
@@ -59,31 +62,26 @@ class Page_SetEnvironment():
         self.Main_Widget["Entry"] = {}
         self.Main_Widget["Button"] = {}
 
-        self.Image = {}
-        self.Image["Button_SelectFolder"] = ImageTk.PhotoImage(Image.open("./Img/add_folder.png").resize((30, 30)))
-        self.Image["Button_Comfirm"] = ImageTk.PhotoImage(Image.open("./Img/comfirm.png").resize((30,30)))
-        self.Image["Button_Exit"] = ImageTk.PhotoImage(Image.open("./Img/exit.png").resize((30,30)))
-        
         ### Create Elements.
         self.Main_Widget["Label"]["Title"] = tk.Label(self.Frame["Main"], text="SETTING", font=self.Setting["Font"]["Title"], foreground="blue")
-        self.Main_Widget["Button"]["Comfirm"] = tk.Button(self.Frame["Main"], image=self.Image["Button_Comfirm"], command=self.Button_Comfirm, **self.Setting["Button"])
-        self.Main_Widget["Button"]["Exit"] = tk.Button(self.Frame["Main"], image=self.Image["Button_Exit"], command=self.Button_Exit, **self.Setting["Button"])
+        self.Main_Widget["Button"]["Comfirm"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Comfirm"], size=(30,30), command=self.Button_Comfirm)
+        self.Main_Widget["Button"]["Exit"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Exit"], size=(30,30), command=self.Button_Exit)
         
         self.Main_Widget["Label"]["JsonFolderPath"] = tk.Label(self.Frame["Main"], text="Json Folder Path :", font=self.Setting["Font"]["Label"] )
         self.Main_Widget["Label"]["ControllerPCIP"] = tk.Label(self.Frame["Main"], text="Controller PC IP :", font=self.Setting["Font"]["Label"] )
         self.Main_Widget["Entry"]["JsonFolderPath"] = tk.Entry(self.Frame["Main"], state="readonly", **self.Setting["Entry"])
         self.Main_Widget["Entry"]["ControllerPCIP"] = tk.Entry(self.Frame["Main"], state="normal", **self.Setting["Entry"])
-        self.Main_Widget["Button"]["JsonFolderPath"] = tk.Button(self.Frame["Main"], image=self.Image["Button_SelectFolder"], command=self.Button_SelectFolder, **self.Setting["Button"])
+        self.Main_Widget["Button"]["JsonFolderPath"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectFolder"], size=(30,30), command=self.Button_SelectFolder)
 
 
         ### Layout Elements.
         self.Main_Widget["Label"]["Title"].grid(row=0, column=0, padx=(5,3), pady=(5,0), sticky="w")
         self.Main_Widget["Button"]["Comfirm"].grid(row=0, column=1, padx=(5,5), pady=(7,0), sticky="se")
-        self.Main_Widget["Button"]["Exit"].grid(row=0, column=2, padx=(5,5), pady=(7,0), sticky="se")
+        self.Main_Widget["Button"]["Exit"].grid(row=0, column=2, padx=(0,5), pady=(7,0), sticky="se")
 
         self.Main_Widget["Label"]["JsonFolderPath"].grid(row=1, column=0, padx=(5,5), pady=(5,0), sticky="w")
         self.Main_Widget["Entry"]["JsonFolderPath"].grid(row=1, column=1, padx=(5,5), pady=(5,0), sticky="ew")
-        self.Main_Widget["Button"]["JsonFolderPath"].grid(row=1, column=2, padx=(5,5), pady=(5,0), sticky="e")  
+        self.Main_Widget["Button"]["JsonFolderPath"].grid(row=1, column=2, padx=(0,5), pady=(5,0), sticky="e")  
 
         self.Main_Widget["Label"]["ControllerPCIP"].grid(row=2, column=0, padx=(5,5), pady=(5,10), sticky="w")
         self.Main_Widget["Entry"]["ControllerPCIP"].grid(row=2, column=1, columnspan=2, padx=(5,5), pady=(5,10), sticky="ew")

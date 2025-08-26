@@ -1,8 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
-from PIL import Image, ImageTk
 from idlelib.tooltip import Hovertip  
-from PIL import ImageEnhance, ImageOps, ImageFilter
 
 import os
 import shutil
@@ -14,6 +12,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import Function.MyFunction_JsonData as JsonDataFunction
 import Function.MyFunction as MyFunction
 from Function.MyFunction_Telnet import TelNet
+
+from Class.Class_Button import Button
 
 class Page_ADBDownloadLog():
     def __init__(self, root):
@@ -27,15 +27,19 @@ class Page_ADBDownloadLog():
         self.root.resizable(True, True)
 
         style = ttk.Style()
-        # style.theme_use('clam')
         style.configure("Title.TLabel", font=("Segoe UI", 13, "bold"), foreground="blue")
         style.configure("Label.TLabel", font=("Segoe UI", 10), foreground="black")
         style.configure("Count.TLabel", font=("Segoe UI", 11, "bold"), foreground="black")
         style.configure("Message.TLabel", font=("Segoe UI", 8), foreground="Red")
-        style.configure("Icon.Toolbutton", padding=0, borderwidth=0, relief="flat")
         style.configure("TEntry", font=("Segoe UI", 8))
 
-
+        self.Image_path = {
+            "Button_SelectFolder": "./img/add_folder.png",
+            "Button_SelectAll": "./img/selectall.png",
+            "Button_DownloadLog": "./img/download.png",
+            "Button_StopThread": "./img/stop.png"
+        }
+        
         self.load_json_data()
         self.Create_widgets()
         self.Updating_SelectedCount()
@@ -51,12 +55,6 @@ class Page_ADBDownloadLog():
         self.JsonData.sort(key=lambda x: x["Index"])
 
     def Create_widgets(self):
-        self.Image = {}
-        self.Image["Button_SelectFolder"] = ImageTk.PhotoImage(Image.open("./img/add_folder.png").resize((20,20)))
-        self.Image["Button_SelectAll"] = ImageTk.PhotoImage(Image.open("./img/selectall.png").resize((30, 30)))
-        self.Image["Button_DownloadLog"] = ImageTk.PhotoImage(Image.open("./img/download.png").resize((30,30)))
-        self.Image["Button_StopThread"] = ImageTk.PhotoImage(Image.open("./img/stop.png").resize((30,30)))
-
         self.Frame = {}
         self.Frame["Main"] = tk.Frame(self.root, borderwidth=1, relief="flat", highlightbackground="#a9a7a7", highlightthickness=1)
         self.Frame["Main"].grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
@@ -73,12 +71,11 @@ class Page_ADBDownloadLog():
         self.Main_Widget["Label"]["Count"] = ttk.Label(self.Frame["Main"], text="Count : 0/0", style="Count.TLabel")
         self.Main_Widget["Label"]["DownloadPath"] = ttk.Label(self.Frame["Main"], text="Download Path :", style="Label.TLabel")
         self.Main_Widget["Entry"]["DownloadPath"] = ttk.Entry(self.Frame["Main"], width=50, state="readonly", style="TEntry")
+        self.Main_Widget["Button"]["SelectFolder"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectFolder"], size=(25,25), command=self.Button_SelectFolder)
 
-        self.Main_Widget["Button"]["SelectFolder"] = ttk.Button(self.Frame["Main"], image=self.Image["Button_SelectFolder"], cursor="hand2", command=self.Button_SelectFolder)
-
-        self.Main_Widget["Button"]["SelectAll"] = ttk.Button(self.Frame["Main"], image=self.Image["Button_SelectAll"], cursor="hand2", command=self.Button_SelectAll)
-        self.Main_Widget["Button"]["Download"] = ttk.Button(self.Frame["Main"], image=self.Image["Button_DownloadLog"], cursor="hand2", command=self.Button_DownloadLogs)
-        self.Main_Widget["Button"]["StopThread"] = ttk.Button(self.Frame["Main"], image=self.Image["Button_StopThread"], cursor="hand2", command=self.Button_StopThread)
+        self.Main_Widget["Button"]["SelectAll"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectAll"], command=self.Button_SelectAll)
+        self.Main_Widget["Button"]["Download"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_DownloadLog"], command=self.Button_DownloadLogs)
+        self.Main_Widget["Button"]["StopThread"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_StopThread"], command=self.Button_StopThread)
         self.Main_Widget["Canvas"] = tk.Canvas(self.Frame["Main"], relief="flat", highlightthickness=1, highlightbackground="#cccccc")
         self.Main_Widget["ScrollBar"] = ttk.Scrollbar(self.Frame["Main"], orient="vertical", command=self.Main_Widget["Canvas"].yview)
         self.Main_Widget["Canvas"].configure(yscrollcommand=self.Main_Widget["ScrollBar"].set)
@@ -88,9 +85,9 @@ class Page_ADBDownloadLog():
         self.Main_Widget["Label"]["Count"].grid(row=0, column=2, columnspan=4, padx=(0, 0), pady=(10, 0), sticky="se")
         self.Main_Widget["Label"]["DownloadPath"].grid(row=1, column=0, padx=(5, 0), pady=(5, 0), sticky="w")
         self.Main_Widget["Entry"]["DownloadPath"].grid(row=1, column=1, padx=(5, 0), pady=(5, 0), sticky="w")
-        self.Main_Widget["Button"]["SelectFolder"].grid(row=1, column=2, padx=(5,0), pady=(5, 0), sticky="w")
-        self.Main_Widget["Button"]["SelectAll"].grid(row=1, column=3, columnspan=3, padx=(0, 86), pady=(5, 0), sticky="e")
-        self.Main_Widget["Button"]["Download"].grid(row=1, column=4, columnspan=2, padx=(0, 43), pady=(5, 0), sticky="e")
+        self.Main_Widget["Button"]["SelectFolder"].grid(row=1, column=2, padx=(3,0), pady=(5, 0), sticky="w")
+        self.Main_Widget["Button"]["SelectAll"].grid(row=1, column=3, columnspan=3, padx=(0, 80), pady=(5, 0), sticky="e")
+        self.Main_Widget["Button"]["Download"].grid(row=1, column=4, columnspan=2, padx=(0, 40), pady=(5, 0), sticky="e")
         self.Main_Widget["Button"]["StopThread"].grid(row=1, column=5, padx=(3, 0), pady=(5, 0), sticky="e")
         self.Main_Widget["Canvas"].grid(row=2, column=0, columnspan=6, padx=(5,0), pady=(5, 5), sticky="nsew")
         self.Main_Widget["ScrollBar"].grid(row=2, column=6, padx=(0, 0), pady=(0, 5), sticky="ns")

@@ -9,6 +9,8 @@ from Function.Page_ModifyData_Wifi import Page_ModifyData_Wifi
 
 import Function.MyFunction_JsonData as JsonDataFunction
 
+from Class.Class_Button import Button
+
 class Frame_Wifi():
     def __init__(self, root=None, close_callback=None):
         self.close_callback = close_callback
@@ -20,14 +22,15 @@ class Frame_Wifi():
                 "Title": ("Arial", 13, "bold"),
                 "Label": ("Arial", 10),
                 "Log": ("Arial", 10)
-            },
-            "Button": {
-                "relief": "flat",
-                "overrelief": "raised",
-                "cursor": "hand2"
             }
         }
         
+        self.Image_path = {
+            "Button_Edit": "./img/edit.png",
+            "Button_add": "./img/add.png",
+            "Button_Delete": "./img/minus.png"
+        }
+
         self.load_json_data()
         self.Create_widgets()
         self.Load_WifiData()
@@ -46,13 +49,13 @@ class Frame_Wifi():
             self.Top_Widgets["Button"] = {}
             self.Top_Widgets["Label"] = {}
             self.Top_Widgets["Scrollerbar"] = {}
-
+            
             ### Create Widgets.
-            self.Top_Widgets["Title"] = tk.Label(self.Frame["Top"], text="WiFi Parameters & Client Driver Parameters", font=self.Setting["Font"]["Title"], foreground="blue")
-            self.Top_Widgets["Button"]["Edit"] = tk.Button(self.Frame["Top"], image=self.Image["Button_Edit"], command=self.Button_EditData, **self.Setting["Button"])
-            self.Top_Widgets["Button"]["Add"] = tk.Button(self.Frame["Top"], image=self.Image["Button_add"], command=self.Button_AddData, **self.Setting["Button"])
+            self.Top_Widgets["Title"] = tk.Label(self.Frame["Top"], text="Script Parameters", font=self.Setting["Font"]["Title"], foreground="blue")
+            self.Top_Widgets["Button"]["Edit"] = Button(self.Frame["Top"], image_path=self.Image_path["Button_Edit"], size=(30,30), command=self.Button_EditData)
+            self.Top_Widgets["Button"]["Add"] = Button(self.Frame["Top"], image_path=self.Image_path["Button_add"], size=(30,30), command=self.Button_AddData)
             self.Top_Widgets["Label"]["Count"] = tk.Label(self.Frame["Top"], text="Count: 0/0", font=("Arial", 11, "bold"))
-            self.Top_Widgets["Button"]["Delete"] = tk.Button(self.Frame["Top"], image=self.Image["Button_Delete"], command=self.Button_DeleteData, **self.Setting["Button"])
+            self.Top_Widgets["Button"]["Delete"] = Button(self.Frame["Top"], image_path=self.Image_path["Button_Delete"], size=(30,30), command=self.Button_DeleteData)
             
             self.Top_Widgets["TreeView"] = ttk.Treeview(self.Frame["Top"], columns=self.TreeView_Columns, show="headings", selectmode="extended")
             self.Top_Widgets["TreeView"].bind("<ButtonRelease-1>", self.Updating_TreeViewCount)
@@ -108,11 +111,6 @@ class Frame_Wifi():
             for index, (val, item) in enumerate(data):
                 self.Top_Widgets["TreeView"].move(item, '', index)
             self.Top_Widgets["TreeView"].heading(col, command=lambda: sort_by_column(col=col, reverse=not reverse))
-
-        self.Image = {}
-        self.Image["Button_Edit"] = ImageTk.PhotoImage(Image.open("./img/edit.png").resize((30, 30)))
-        self.Image["Button_add"] = ImageTk.PhotoImage(Image.open("./img/add.png").resize((30,30)))
-        self.Image["Button_Delete"] = ImageTk.PhotoImage(Image.open("./img/minus.png").resize((30,30)))
 
         ### Create Frames.
         self.Frame = {}

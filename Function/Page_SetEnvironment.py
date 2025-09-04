@@ -1,7 +1,5 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox
-from PIL import Image, ImageTk
-from tkinter import PhotoImage
 from idlelib.tooltip import Hovertip  
 
 import os
@@ -64,27 +62,27 @@ class Page_SetEnvironment():
 
         ### Create Elements.
         self.Main_Widget["Label"]["Title"] = tk.Label(self.Frame["Main"], text="SETTING", font=self.Setting["Font"]["Title"], foreground="blue")
-        self.Main_Widget["Button"]["Comfirm"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Comfirm"], size=(30,30), command=self.Button_Comfirm)
-        self.Main_Widget["Button"]["Exit"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Exit"], size=(30,30), command=self.Button_Exit)
+        self.Main_Widget["Button"]["Comfirm"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Comfirm"], size=(32,32), command=self.Button_Comfirm)
+        self.Main_Widget["Button"]["Exit"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Exit"], size=(32,32), command=self.Button_Exit)
         
         self.Main_Widget["Label"]["JsonFolderPath"] = tk.Label(self.Frame["Main"], text="Json Folder Path :", font=self.Setting["Font"]["Label"] )
         self.Main_Widget["Label"]["ControllerPCIP"] = tk.Label(self.Frame["Main"], text="Controller PC IP :", font=self.Setting["Font"]["Label"] )
         self.Main_Widget["Entry"]["JsonFolderPath"] = tk.Entry(self.Frame["Main"], state="readonly", **self.Setting["Entry"])
         self.Main_Widget["Entry"]["ControllerPCIP"] = tk.Entry(self.Frame["Main"], state="normal", **self.Setting["Entry"])
-        self.Main_Widget["Button"]["JsonFolderPath"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectFolder"], size=(30,30), command=self.Button_SelectFolder)
+        self.Main_Widget["Button"]["JsonFolderPath"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectFolder"], size=(20,20), command=self.Button_SelectFolder)
 
 
         ### Layout Elements.
         self.Main_Widget["Label"]["Title"].grid(row=0, column=0, padx=(5,3), pady=(5,0), sticky="w")
-        self.Main_Widget["Button"]["Comfirm"].grid(row=0, column=1, padx=(5,5), pady=(7,0), sticky="se")
+        self.Main_Widget["Button"]["Comfirm"].grid(row=0, column=1, padx=(5, 5), pady=(7,0), sticky="se")
         self.Main_Widget["Button"]["Exit"].grid(row=0, column=2, padx=(0,5), pady=(7,0), sticky="se")
 
-        self.Main_Widget["Label"]["JsonFolderPath"].grid(row=1, column=0, padx=(5,5), pady=(5,0), sticky="w")
-        self.Main_Widget["Entry"]["JsonFolderPath"].grid(row=1, column=1, padx=(5,5), pady=(5,0), sticky="ew")
-        self.Main_Widget["Button"]["JsonFolderPath"].grid(row=1, column=2, padx=(0,5), pady=(5,0), sticky="e")  
+        self.Main_Widget["Label"]["JsonFolderPath"].grid(row=1, column=0, padx=(5,5), pady=(13,0), sticky="w")
+        self.Main_Widget["Entry"]["JsonFolderPath"].grid(row=1, column=1, padx=(5,37), pady=(13,0), columnspan=2, sticky="ew")
+        self.Main_Widget["Button"]["JsonFolderPath"].grid(row=1, column=2, padx=(0,5), pady=(13,0), sticky="e")  
 
-        self.Main_Widget["Label"]["ControllerPCIP"].grid(row=2, column=0, padx=(5,5), pady=(5,10), sticky="w")
-        self.Main_Widget["Entry"]["ControllerPCIP"].grid(row=2, column=1, columnspan=2, padx=(5,5), pady=(5,10), sticky="ew")
+        self.Main_Widget["Label"]["ControllerPCIP"].grid(row=2, column=0, padx=(5,5), pady=(5,5), sticky="w")
+        self.Main_Widget["Entry"]["ControllerPCIP"].grid(row=2, column=1, padx=(5,5), pady=(5,5), columnspan=2, sticky="ew")
 
         self.Frame["Main"].grid_columnconfigure(1, weight=1) 
         self.Frame["Main"].grid_rowconfigure(2, weight=1) 

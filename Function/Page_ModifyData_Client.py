@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-from PIL import Image, ImageTk
 from idlelib.tooltip import Hovertip  
 
 import traceback
@@ -9,7 +8,7 @@ import Function.MyFunction_JsonData as JsonDataFunction
 
 from Class.Class_Button import Button
 
-class Page_ModifyData_Client(tk.Frame):
+class Page_ModifyData_Client():
     def __init__(self, root=None, label_title:str=None, default_value:list=None, comfirm_callback=None):
 
         self.load_json_data()

@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-from PIL import Image, ImageTk
 from idlelib.tooltip import Hovertip  
 import traceback
 
@@ -11,7 +10,7 @@ import Function.MyFunction_JsonData as JsonDataFunction
 
 from Class.Class_Button import Button
 
-class Frame_Script:
+class Frame_Script():
     def __init__(self, root=None, close_callback=None):
         self.close_callback = close_callback
         self.root = root

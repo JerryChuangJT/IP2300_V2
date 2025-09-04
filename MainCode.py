@@ -135,13 +135,13 @@ class MainPage():
         self.Frame_FirstLV = {}
         self.Frame_FirstLV["Execution"] = tk.Frame(Notebook["FirstLV"])
 
-        self.Frame_FirstLV["ADB"] = tk.Frame(Notebook["FirstLV"])
-        self.app_adb = Frame_ADB(self.Frame_FirstLV["ADB"])
+        self.Frame_FirstLV["Schedule"] = tk.Frame(Notebook["FirstLV"])
+
 
         self.Frame_FirstLV["Setting"] = tk.Frame(Notebook["FirstLV"])
 
         Notebook["FirstLV"].add(self.Frame_FirstLV["Execution"], text="Execution")
-        Notebook["FirstLV"].add(self.Frame_FirstLV["ADB"], text="ADB")
+        Notebook["FirstLV"].add(self.Frame_FirstLV["Schedule"], text="Schedule")
         Notebook["FirstLV"].add(self.Frame_FirstLV["Setting"], text="Setting")
         Notebook["FirstLV"].pack(padx=5, pady=5, fill=tk.BOTH, expand=True)
 
@@ -149,7 +149,8 @@ class MainPage():
         Notebook["SecondLV"] = ttk.Notebook(self.Frame_FirstLV["Setting"])
         self.Frame_SecondLV = {}
         
-        self.Frame_SecondLV["Schedule"] = tk.Frame(Notebook["SecondLV"])
+        self.Frame_SecondLV["ADB"] = tk.Frame(Notebook["SecondLV"])
+        self.app_adb = Frame_ADB(self.Frame_SecondLV["ADB"])
 
         self.Frame_SecondLV["Client"] = tk.Frame(Notebook["SecondLV"])
         self.app_client = Frame_Client(self.Frame_SecondLV["Client"])
@@ -160,7 +161,7 @@ class MainPage():
         self.Frame_SecondLV["Script"] = tk.Frame(Notebook["SecondLV"])
         self.add_script = Frame_Script(self.Frame_SecondLV["Script"])
 
-        Notebook["SecondLV"].add(self.Frame_SecondLV["Schedule"], text="Schedule")
+        Notebook["SecondLV"].add(self.Frame_SecondLV["ADB"], text="ADB")
         Notebook["SecondLV"].add(self.Frame_SecondLV["Client"], text="Client")
         Notebook["SecondLV"].add(self.Frame_SecondLV["Wifi"], text="Wifi")
         Notebook["SecondLV"].add(self.Frame_SecondLV["Script"], text="Script")

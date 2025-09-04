@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-from PIL import Image, ImageTk
 from idlelib.tooltip import Hovertip  
 import traceback
 import threading
@@ -13,18 +12,18 @@ from Function.MyFunction_Telnet import TelNet
 
 from Class.Class_Button import Button
 
-class Frame_ADB:
+class Frame_ADB():
     def __init__(self, root, close_callback=None):
         self.close_callback = close_callback
         self.root = root   
         
         style = ttk.Style()
-        style.configure("Title.TLabel", font=("Segoe UI", 13, "bold"), foreground="blue")
-        style.configure("Message1.TLabel", font=("Segoe UI", 8), foreground="#717171")
-        style.configure("Message2.TLabel", font=("Segoe UI", 8), foreground="Red")
-        style.configure("Label.TLabel", font=("Segoe UI", 10), foreground="black")
-        style.configure("Count.TLabel", font=("Segoe UI", 11, "bold"), foreground="black")
-        style.configure("Log.TLabel", font=("Segoe UI", 10), foreground="black")
+        style.configure("Title_ADB.TLabel", font=("Segoe UI", 13, "bold"), foreground="blue")
+        style.configure("Message1_ADB.TLabel", font=("Segoe UI", 8), foreground="#717171")
+        style.configure("Message2_ADB.TLabel", font=("Segoe UI", 8), foreground="Red")
+        style.configure("Label_ADB.TLabel", font=("Segoe UI", 10), foreground="black")
+        style.configure("Count_ADB.TLabel", font=("Segoe UI", 11, "bold"), foreground="black")
+        style.configure("Log_ADB.TLabel", font=("Segoe UI", 10), foreground="black")
 
         self.load_json_data()
         self.Create_widgets()
@@ -49,17 +48,17 @@ class Frame_ADB:
             self.Main_Widget["Scrollerbar"] = {}
 
             ### Create Widgets.
-            self.Main_Widget["Title"] = ttk.Label(self.Frame["Main"], text="ADB", style="Title.TLabel")
-            self.Main_Widget["Label"]["Count"] = ttk.Label(self.Frame["Main"], text="Count : 0/0", style="Count.TLabel")
+            self.Main_Widget["Title"] = ttk.Label(self.Frame["Main"], text="ADB", style="Title_ADB.TLabel")
+            self.Main_Widget["Label"]["Count"] = ttk.Label(self.Frame["Main"], text="Count : 0/0", style="Count_ADB.TLabel")
 
-            self.Main_Widget["Label"]["Search"] = ttk.Label(self.Frame["Main"], text="Search : ",  style="Label.TLabel")
+            self.Main_Widget["Label"]["Search"] = ttk.Label(self.Frame["Main"], text="Search : ",  style="Label_ADB.TLabel")
 
             self.search_var = tk.StringVar()
             self.Main_Widget["Entry"]["Search"] = ttk.Entry(self.Frame["Main"], textvariable=self.search_var)
             self.search_var.trace_add("write", self.Search_VarFilter)
 
-            self.Main_Widget["Button"]["Download"] = ttk.Button(self.Frame["Main"], text="Download", style="Custom.TButton", cursor="hand2", command=self.Button_DownloadLog)
-            self.Main_Widget["Button"]["Reload"] = ttk.Button(self.Frame["Main"], text="Reload", style="Custom.TButton", cursor="hand2", command=self.Button_Reload)
+            self.Main_Widget["Button"]["Download"] = Button(self.Frame["Main"], text="Download", command=self.Button_DownloadLog)
+            self.Main_Widget["Button"]["Reload"] = Button(self.Frame["Main"], text="Refresh", command=self.Button_Refresh)
         
             self.Main_Widget["TreeView"] = ttk.Treeview(self.Frame["Main"], columns=self.TreeView_Columns, show="headings", selectmode="extended")
             self.Main_Widget["TreeView"].bind("<ButtonRelease-1>", self.Updating_TreeViewCount)
@@ -71,8 +70,8 @@ class Frame_ADB:
                                                      anchor="w", 
                                                      command=lambda col=self.TreeView_Columns[i]: sort_by_column(col=col, reverse=False))
                 self.Main_Widget["TreeView"].column(self.TreeView_Columns[i], width=50, stretch=True)
-            self.Main_Widget["Label"]["JsonPath"] = ttk.Label(self.Frame["Main"], text=f"{self.Client_JsonPath}", style="Message1.TLabel")
-            self.Main_Widget["Label"]["Message"] = ttk.Label(self.Frame["Main"], text="", style="Message2.TLabel")
+            self.Main_Widget["Label"]["JsonPath"] = ttk.Label(self.Frame["Main"], text=f"{self.Client_JsonPath}", style="Message1_ADB.TLabel")
+            self.Main_Widget["Label"]["Message"] = ttk.Label(self.Frame["Main"], text="", style="Message2_ADB.TLabel")
             
             ### Layout Widgets.
             self.Main_Widget["Title"].grid(row=0, column=0, padx=(5,0), pady=(5,0), sticky="w")
@@ -105,10 +104,6 @@ class Frame_ADB:
                 self.Main_Widget["TreeView"].move(item, '', index)
             self.Main_Widget["TreeView"].heading(col, command=lambda: sort_by_column(col=col, reverse=not reverse))
 
-        self.Image = {}
-        self.Image["Button_Reload"] = ImageTk.PhotoImage(Image.open("./img/edit.png").resize((30, 30)))
-        self.Image["Button_DownloadLog"] = ImageTk.PhotoImage(Image.open("./img/add.png").resize((30,30)))
-
         ### Create Frames.
         self.Frame = {}
         self.Frame["Main"] = tk.Frame(self.root, borderwidth=1, relief="flat", highlightbackground="#a9a7a7", highlightthickness=1)
@@ -127,7 +122,7 @@ class Frame_ADB:
         selected_num = len(self.Main_Widget["TreeView"].selection())
         self.Main_Widget["Label"]["Count"].config(text=f"Count : {selected_num}/{total_num}")
 
-    def Button_Reload(self):
+    def Button_Refresh(self):
         def check_telnet_connection(host:str, port:int=23):
             try:
                 device = TelNet(host, port) 
@@ -276,3 +271,5 @@ if __name__ == "__main__":
     root.resizable(True, True)
     app = Frame_ADB(root)     
     root.mainloop()
+
+

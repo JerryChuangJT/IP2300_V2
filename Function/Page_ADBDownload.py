@@ -27,11 +27,11 @@ class Page_ADBDownloadLog():
         self.root.resizable(True, True)
 
         style = ttk.Style()
-        style.configure("Title.TLabel", font=("Segoe UI", 13, "bold"), foreground="blue")
-        style.configure("Label.TLabel", font=("Segoe UI", 10), foreground="black")
-        style.configure("Count.TLabel", font=("Segoe UI", 11, "bold"), foreground="black")
-        style.configure("Message.TLabel", font=("Segoe UI", 8), foreground="Red")
-        style.configure("TEntry", font=("Segoe UI", 8))
+        style.configure("Title_ADBDownload.TLabel", font=("Segoe UI", 13, "bold"), foreground="blue")
+        style.configure("Label_ADBDownload.TLabel", font=("Segoe UI", 10), foreground="black")
+        style.configure("Count_ADBDownload.TLabel", font=("Segoe UI", 11, "bold"), foreground="black")
+        style.configure("Message_ADBDownload.TLabel", font=("Segoe UI", 8), foreground="Red")
+        style.configure("TEntry_ADBDownload", font=("Segoe UI", 8))
 
         self.Image_path = {
             "Button_SelectFolder": "./img/add_folder.png",
@@ -67,11 +67,11 @@ class Page_ADBDownloadLog():
         self.Main_Widget["Label"] = {}
         self.Main_Widget["Entry"] = {}
 
-        self.Main_Widget["Title"] = ttk.Label(self.Frame["Main"], text="Download Logs from Devices.", style="Title.TLabel")
-        self.Main_Widget["Label"]["Count"] = ttk.Label(self.Frame["Main"], text="Count : 0/0", style="Count.TLabel")
-        self.Main_Widget["Label"]["DownloadPath"] = ttk.Label(self.Frame["Main"], text="Download Path :", style="Label.TLabel")
+        self.Main_Widget["Title"] = ttk.Label(self.Frame["Main"], text="Download Logs from Devices.", style="Title_ADBDownload.TLabel")
+        self.Main_Widget["Label"]["Count"] = ttk.Label(self.Frame["Main"], text="Count : 0/0", style="Count_ADBDownload.TLabel")
+        self.Main_Widget["Label"]["DownloadPath"] = ttk.Label(self.Frame["Main"], text="Download Path :", style="Label_ADBDownload.TLabel")
         self.Main_Widget["Entry"]["DownloadPath"] = ttk.Entry(self.Frame["Main"], width=50, state="readonly", style="TEntry")
-        self.Main_Widget["Button"]["SelectFolder"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectFolder"], size=(25,25), command=self.Button_SelectFolder)
+        self.Main_Widget["Button"]["SelectFolder"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectFolder"], size=(20,20), command=self.Button_SelectFolder)
 
         self.Main_Widget["Button"]["SelectAll"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectAll"], command=self.Button_SelectAll)
         self.Main_Widget["Button"]["Download"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_DownloadLog"], command=self.Button_DownloadLogs)
@@ -79,16 +79,16 @@ class Page_ADBDownloadLog():
         self.Main_Widget["Canvas"] = tk.Canvas(self.Frame["Main"], relief="flat", highlightthickness=1, highlightbackground="#cccccc")
         self.Main_Widget["ScrollBar"] = ttk.Scrollbar(self.Frame["Main"], orient="vertical", command=self.Main_Widget["Canvas"].yview)
         self.Main_Widget["Canvas"].configure(yscrollcommand=self.Main_Widget["ScrollBar"].set)
-        self.Main_Widget["Label"]["Message"] = ttk.Label(self.Frame["Main"], text="Ready", style="Message.TLabel")
+        self.Main_Widget["Label"]["Message"] = ttk.Label(self.Frame["Main"], text="Ready", style="Message_ADBDownload.TLabel")
 
         self.Main_Widget["Title"].grid(row=0, column=0, columnspan=2, padx=5, pady=(10, 0), sticky="w")
-        self.Main_Widget["Label"]["Count"].grid(row=0, column=2, columnspan=4, padx=(0, 0), pady=(10, 0), sticky="se")
+        self.Main_Widget["Label"]["Count"].grid(row=0, column=2, columnspan=5, padx=(0, 5), pady=(10, 0), sticky="se")
         self.Main_Widget["Label"]["DownloadPath"].grid(row=1, column=0, padx=(5, 0), pady=(5, 0), sticky="w")
         self.Main_Widget["Entry"]["DownloadPath"].grid(row=1, column=1, padx=(5, 0), pady=(5, 0), sticky="w")
         self.Main_Widget["Button"]["SelectFolder"].grid(row=1, column=2, padx=(3,0), pady=(5, 0), sticky="w")
-        self.Main_Widget["Button"]["SelectAll"].grid(row=1, column=3, columnspan=3, padx=(0, 80), pady=(5, 0), sticky="e")
-        self.Main_Widget["Button"]["Download"].grid(row=1, column=4, columnspan=2, padx=(0, 40), pady=(5, 0), sticky="e")
-        self.Main_Widget["Button"]["StopThread"].grid(row=1, column=5, padx=(3, 0), pady=(5, 0), sticky="e")
+        self.Main_Widget["Button"]["SelectAll"].grid(row=1, column=3, columnspan=4, padx=(0, 85), pady=(5, 0), sticky="e")
+        self.Main_Widget["Button"]["Download"].grid(row=1, column=4, columnspan=3, padx=(0, 45), pady=(5, 0), sticky="e")
+        self.Main_Widget["Button"]["StopThread"].grid(row=1, column=5, columnspan=2, padx=(3, 5), pady=(5, 0), sticky="e")
         self.Main_Widget["Canvas"].grid(row=2, column=0, columnspan=6, padx=(5,0), pady=(5, 5), sticky="nsew")
         self.Main_Widget["ScrollBar"].grid(row=2, column=6, padx=(0, 0), pady=(0, 5), sticky="ns")
         self.Main_Widget["Label"]["Message"].grid(row=3, column=0, columnspan=7, padx=(0,5), pady=(0, 5), sticky="e")

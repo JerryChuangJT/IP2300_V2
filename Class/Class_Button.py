@@ -1,8 +1,8 @@
-from PIL import Image, ImageTk, ImageEnhance
-import ctypes
 from tkinter import ttk
 import tkinter as tk
-from PIL import ImageDraw
+from PIL import Image, ImageTk, ImageEnhance
+import ctypes
+
 
 def get_system_background_color():
     try:
@@ -23,24 +23,25 @@ def composite_to_background(image_path, size, bg_color):
 class Button(ttk.Button):
     _style_inited = False
 
-    def __init__(self, master, image_path:str, size:tuple=(30,30), **kwargs):
+    def __init__(self, master, image_path:str=None, text:str=None, size:tuple=(30,30), **kwargs):
         if not Button._style_inited:
             style = ttk.Style()
-            style.configure("Icon.Toolbutton", padding=3.5, borderwidth=0, relief="flat")
+            style.configure("Icon_ClassButton.Toolbutton", padding=3.5, borderwidth=0, relief="flat")
             Button._style_inited = True
 
-        bg_color = get_system_background_color()
-        self._images = self.create_hover_images(image_path, size, bg_color, master)
-
-        super().__init__(master, image=self._images['normal'], style="Icon.Toolbutton", cursor="hand2", takefocus=False, **kwargs)
-        # super().__init__(master, image=self._images['normal'], style="TButton", cursor="hand2", takefocus=True, **kwargs)
-        self.bind_hover_effect()
+        if text:
+            super().__init__(master, text=text, cursor="hand2", style="Custom.TButton", takefocus=True, **kwargs)
+        else:
+            bg_color = get_system_background_color()
+            self._images = self.create_hover_images(image_path, size, bg_color, master)
+            super().__init__(master, image=self._images['normal'], style="Icon_ClassButton.Toolbutton", cursor="hand2", takefocus=True, **kwargs)
+            self.bind_hover_effect()
 
     @staticmethod
     def create_hover_images(image_path:str, size:tuple, bg_color:tuple, master)->dict:
         normal_img = composite_to_background(image_path, size, bg_color)
         hover_img = composite_to_background(image_path, size, bg_color)
-        pressed_img = ImageEnhance.Brightness(normal_img).enhance(0.8)
+        pressed_img = ImageEnhance.Brightness(normal_img).enhance(1)
 
         return {'normal': ImageTk.PhotoImage(normal_img, master=master),
                 'hover': ImageTk.PhotoImage(hover_img, master=master),

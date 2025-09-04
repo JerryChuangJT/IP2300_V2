@@ -1,7 +1,5 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox
-from PIL import Image, ImageTk
-from tkinter import PhotoImage
 from idlelib.tooltip import Hovertip  
 
 import traceback
@@ -68,16 +66,16 @@ class Page_SetBackup():
     
         self.Main_Widget["Label"]["BackupFolderPath"] = tk.Label(self.Frame["Main"], text="Backup Folder Path:", font=self.Setting["Font"]["Label"])
         self.Main_Widget["Entry"]["BackupFolderPath"] = tk.Entry(self.Frame["Main"], state="readonly", readonlybackground="light yellow")
-        self.Main_Widget["Button"]["BackupFolderPath"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectFolder"], size=(30,30), command=self.Button_SelectBackupFolder)
+        self.Main_Widget["Button"]["BackupFolderPath"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectFolder"], size=(20,20), command=self.Button_SelectBackupFolder)
         
         ### Layout the Elements.
         self.Main_Widget["Label"]["Title"].grid(row=0, column=0, padx=(5,3), pady=(5,0), sticky="w")
         self.Main_Widget["Button"]["Export"].grid(row=0, column=1, padx=(5,5), pady=(7,0), sticky="se")
         self.Main_Widget["Button"]["Exit"].grid(row=0, column=2, padx=(0,5), pady=(7,0), sticky="se")
     
-        self.Main_Widget["Label"]["BackupFolderPath"].grid(row=1, column=0, padx=(5,5), pady=(5,0), sticky="w")
-        self.Main_Widget["Entry"]["BackupFolderPath"].grid(row=1, column=1, padx=(5,5), pady=(5,0), sticky="ew")
-        self.Main_Widget["Button"]["BackupFolderPath"].grid(row=1, column=2, padx=(0,5), pady=(5,0), sticky="e")  
+        self.Main_Widget["Label"]["BackupFolderPath"].grid(row=1, column=0, padx=(5,5), pady=(13,0), sticky="w")
+        self.Main_Widget["Entry"]["BackupFolderPath"].grid(row=1, column=1, padx=(5,37), pady=(13,0), columnspan=2, sticky="ew")
+        self.Main_Widget["Button"]["BackupFolderPath"].grid(row=1, column=2, padx=(0,5), pady=(13,0), sticky="e")  
 
         self.Frame["Main"].grid_columnconfigure(1, weight=1) 
 

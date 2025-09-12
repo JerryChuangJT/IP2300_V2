@@ -39,8 +39,8 @@ class Frame_Wifi():
         self.Environment_JsonPath = "./Parameter/json_PageSetEnvironment.json"
         self.Environment_JsonData = JsonDataFunction.Get_jsonAllData(self.Environment_JsonPath)
         self.Wifi_JsonPath = self.Environment_JsonData["JsonFilePath"] + "json_Wifi.json"
-        wifi_json_data = JsonDataFunction.Get_jsonAllData(self.Wifi_JsonPath)
-        self.TreeView_Columns = JsonDataFunction.Get_DictKey(wifi_json_data["Wifi"][0])
+        self.TreeView_Columns = ["WifiID", "PingType", "DUTIP", "SSID", "Security", "Password", "BSSID",
+                                  "Driver_Band", "Driver_Standard" ,"Driver_Channel", "Driver_Bandwidth"]
         
     def Create_widgets(self):
         def create_top_widgets():
@@ -183,7 +183,7 @@ class Frame_Wifi():
             app = Page_ModifyData_Wifi(wifiedit_frame,  
                                    label_title="Edit Wifi Item",   
                                    default_value=selected_item_values,
-                                   comfirm_callback=edit_itme_wifi
+                                   confirm_callback=edit_itme_wifi
                                    )
             
         except Exception as e:
@@ -229,7 +229,7 @@ class Frame_Wifi():
             app = Page_ModifyData_Wifi(wifiadd_frame,  
                                     label_title="Add New Wifi Item",   
                                     default_value=selected_item_values,
-                                    comfirm_callback=add_item_wifi
+                                    confirm_callback=add_item_wifi
                                     )
             
         except Exception as e:

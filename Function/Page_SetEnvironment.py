@@ -38,7 +38,7 @@ class Page_SetEnvironment():
 
         self.Image_path = {
             "Button_SelectFolder": "./Img/add_folder.png",
-            "Button_Comfirm": "./Img/check.png",
+            "Button_Confirm": "./Img/check.png",
             "Button_Exit": "./Img/exit.png",
         }
 
@@ -62,7 +62,7 @@ class Page_SetEnvironment():
 
         ### Create Elements.
         self.Main_Widget["Label"]["Title"] = tk.Label(self.Frame["Main"], text="SETTING", font=self.Setting["Font"]["Title"], foreground="blue")
-        self.Main_Widget["Button"]["Comfirm"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Comfirm"], size=(32,32), command=self.Button_Comfirm)
+        self.Main_Widget["Button"]["Confirm"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Confirm"], size=(32,32), command=self.Button_Confirm)
         self.Main_Widget["Button"]["Exit"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Exit"], size=(32,32), command=self.Button_Exit)
         
         self.Main_Widget["Label"]["JsonFolderPath"] = tk.Label(self.Frame["Main"], text="Json Folder Path :", font=self.Setting["Font"]["Label"] )
@@ -74,7 +74,7 @@ class Page_SetEnvironment():
 
         ### Layout Elements.
         self.Main_Widget["Label"]["Title"].grid(row=0, column=0, padx=(5,3), pady=(5,0), sticky="w")
-        self.Main_Widget["Button"]["Comfirm"].grid(row=0, column=1, padx=(5, 5), pady=(7,0), sticky="se")
+        self.Main_Widget["Button"]["Confirm"].grid(row=0, column=1, padx=(5, 5), pady=(7,0), sticky="se")
         self.Main_Widget["Button"]["Exit"].grid(row=0, column=2, padx=(0,5), pady=(7,0), sticky="se")
 
         self.Main_Widget["Label"]["JsonFolderPath"].grid(row=1, column=0, padx=(5,5), pady=(13,0), sticky="w")
@@ -89,7 +89,7 @@ class Page_SetEnvironment():
 
         ### Tooltips
         ToolTip = {
-            "Button_Comfirm": Hovertip(self.Main_Widget["Button"]["Comfirm"], text='Comfirm the setting.', hover_delay=300),
+            "Button_Confirm": Hovertip(self.Main_Widget["Button"]["Confirm"], text='Confirm the setting.', hover_delay=300),
             "Button_Exit": Hovertip(self.Main_Widget["Button"]["Exit"], text='Exit and cancel the setting.', hover_delay=300),
             "Button_SelectFolder": Hovertip(self.Main_Widget["Button"]["JsonFolderPath"], text='Choose json folder path.', hover_delay=300),
         }
@@ -105,7 +105,7 @@ class Page_SetEnvironment():
         )   
     
     #===================================================================================================
-    def Button_Comfirm(self):
+    def Button_Confirm(self):
         ### Check if the folder exists and has content.
         def check_jsonfolder_exists(path:str)-> bool:
             if not path or path.strip() == "":
@@ -148,7 +148,7 @@ class Page_SetEnvironment():
         def check_jsonfile_data(folder_path:str)-> bool:
             client_key_data = ["ClientID", "MAC", "EtherIP", "Comment"]
             wifi_key_data = ["WifiID", "PingType", "DUTIP", "SSID", "Security", "Password", "BSSID", "Driver_Band", "Driver_Standard" ,"Driver_Channel", "Driver_Bandwidth"]
-            script_key_data = ["TestScriptID", "Script", "Parameter1", "Parameter2", "Parameter3", "Parameter4", "Parameter5", "Parameter6"]
+            script_key_data = ["ScriptID", "Type", "Parameter1", "Parameter2", "Parameter3", "Parameter4", "Parameter5", "Parameter6"]
             
             client_alldata:list = JsonDataFunction.Get_jsonAllData(folder_path + "json_Client.json")["Client"]
             wifi_alldata:list = JsonDataFunction.Get_jsonAllData(folder_path + "json_Wifi.json")["Wifi"]
@@ -163,6 +163,7 @@ class Page_SetEnvironment():
                                             f"Missing key '{key_data}'.", 
                                             parent=self.root)
                         return False
+            
             for wifi_data in wifi_alldata:
                 for key_data in wifi_key_data:
                     if key_data not in JsonDataFunction.Get_DictKey(wifi_data):
@@ -178,10 +179,11 @@ class Page_SetEnvironment():
                     if key_data not in JsonDataFunction.Get_DictKey(script_data):
                         messagebox.showerror("Error", 
                                             f"json_Script.json data {script_data} error, Must contain:\n\n"
-                                            "TestSciptID, Script, Parameter1, Parameter2, Parameter3, Parameter4, Parameter5, Parameter6\n\n"
+                                            "TestSciptID, Type, Parameter1, Parameter2, Parameter3, Parameter4, Parameter5, Parameter6\n\n"
                                             f"Missing key '{key_data}'.", 
                                             parent=self.root)
                         return False
+            
             return True
         
         try:
@@ -203,7 +205,7 @@ class Page_SetEnvironment():
                 JsonDataFunction.Update_jsonFileData(
                     file_path=self.JsonPath,
                     key_value="ImportCloseState",
-                    value="Comfirm"
+                    value="Confirm"
                 )   
                 self.Exit_GUI()
 

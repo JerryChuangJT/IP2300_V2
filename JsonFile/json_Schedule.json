@@ -1,46 +1,40 @@
 {
-    "Execution_1":{
-        "Wifi":{
-            "WifiID": "AW1000_5G_11ax_36_20",
-            "Schedule":"1,00:00,1440/2,00:00,1440/3,00:00,1440"
+    "Execution_1": {
+        "Wifi": {
+            "WifiID": "LH1000",
+            "Schedule": "1,00:00,1440/2,00:00,1440"
         },
-        "Script":[
+        "Script": [
             {
-                "ScriptID":"Script_Ping_8.8.8.8",
-                "Scedule":"2,00:00,1440/3,00:00,1440"
+                "ScriptID": "Script_Ping",
+                "Schedule": "1,00:00,1440"
             },
             {
-                "ScriptID":"Script_Ping_10.10.0.201",
-                "Scedule":"2,00:00,1440/3,00:00,1440"
-            },
-            {
-                "ScriptID":"Script_Youtube",
-                "Scedule":"1,00:00,1440/2,00:00,1440/3,00:00,1440"
+                "ScriptID": "Script_Ping_10.10.0.5",
+                "Schedule": "1,00:00,1440/2,00:00,1440"
             }
         ],
-        "Client":[
-            "Jerry_153",
-            "Jerry_158",
-            "IP2300_07",
-            "IP2300_08"
-        ]
+        "Client": []
     },
-    "Execution_2":{
-        "Wifi":{
-            "WifiID": "Jerry_VR_Z3_5G",
-            "Schedule":"4,08:00,480/5,08:00,480/6,08:00,480"
+    "Execution_2": {
+        "Wifi": {
+            "WifiID": "AW1000_5G_11ax_36_20",
+            "Schedule": "1,00:00,1440"
         },
-        "Script":[
+        "Script": [
             {
-                "ScriptID":"Script_Youtube2",
-                "Scedule":"4,08:00,480/5,08:00,480/6,08:00,480"
+                "ScriptID": "Script_Youtube2",
+                "Schedule": "1,00:00,1440"
+            },
+            {
+                "ScriptID": "Script_Ping",
+                "Schedule": "1,00:00,1440/2,00:00,1440/3,00:00,1440"
             }
         ],
-        "Client":[
+        "Client": [
             "IP2300_09",
             "IP2300_11",
-            "IP2300_12",
-            "IP2300_13"
+            "IP2300_12"
         ]
     }
 }

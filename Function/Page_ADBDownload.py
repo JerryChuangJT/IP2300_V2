@@ -90,7 +90,7 @@ class Page_ADBDownloadLog():
         self.Main_Widget["Button"]["Download"].grid(row=1, column=4, columnspan=3, padx=(0, 45), pady=(5, 0), sticky="e")
         self.Main_Widget["Button"]["StopThread"].grid(row=1, column=5, columnspan=2, padx=(3, 5), pady=(5, 0), sticky="e")
         self.Main_Widget["Canvas"].grid(row=2, column=0, columnspan=6, padx=(5,0), pady=(5, 5), sticky="nsew")
-        self.Main_Widget["ScrollBar"].grid(row=2, column=6, padx=(0, 0), pady=(0, 5), sticky="ns")
+        self.Main_Widget["ScrollBar"].grid(row=2, column=6, padx=0, pady=5, sticky="ns")
         self.Main_Widget["Label"]["Message"].grid(row=3, column=0, columnspan=7, padx=(0,5), pady=(0, 5), sticky="e")
         self.Frame["Main"].grid_rowconfigure(2, weight=1)
         self.Frame["Main"].grid_columnconfigure(4, weight=1)

@@ -27,3 +27,15 @@ def Update_jsonFileData(file_path:str, key_value:str, value):
     ### Rewrite New Data into JSON File.
     with open(file_path, "w", encoding="utf-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=4)
+
+def Remove_jsonFileKey(file_path:str, key_value:str):
+    ### Read JSON File.
+    data = Get_jsonAllData(file_path)
+
+    ### Remove Key from JSON File Data.
+    if key_value in data:
+        del data[key_value]
+
+    ### Rewrite New Data into JSON File.
+    with open(file_path, "w", encoding="utf-8") as file:
+        json.dump(data, file, ensure_ascii=False, indent=4)

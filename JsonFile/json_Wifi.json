@@ -11,7 +11,7 @@
             "Driver_Band": "5G",
             "Driver_Standard": "11ax",
             "Driver_Channel": "36",
-            "Driver_Bandwidth": "20"
+            "Driver_Bandwidth": "40"
         },
         {
             "WifiID": "Jerry_VR_Z3_2G",

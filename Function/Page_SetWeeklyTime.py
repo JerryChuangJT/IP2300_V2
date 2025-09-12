@@ -1,5 +1,6 @@
 import tkinter as tk
-import tkinter.ttk as ttk
+import tkinter.ttk as ttkconfirm_callback
+from tkinter import ttk, messagebox
 from idlelib.tooltip import Hovertip  
 
 from Class.Class_Button import Button
@@ -121,7 +122,7 @@ class Frame_SetDay(tk.Frame):
 
         self.Main_Widget["Label"]["Title"] = ttk.Label(self, text=self.Day, style="Title_SetDay.TLabel")
         self.Main_Widget["Label"]["Message"] = ttk.Label(self, text="Time : ", style="Message_SetDay.TLabel")
-        self.Main_Widget["Label"]["Count"] = ttk.Label(self, text="Count : ", style="Count_SetDay.TLabel")
+        self.Main_Widget["Label"]["Count"] = ttk.Label(self, text="Count : 0", style="Count_SetDay.TLabel")
         self.Main_Widget["Button"]["Add"] = Button(self, image_path=self.Image_path["Button_Add"], size=(20,20), command=lambda: self.Button_AddTimeRange())
         self.Main_Widget["Button"]["Scroller"] = Button(self, image_path=self.Image_path["Button_Scroller"], size=(20,20), command=self.Button_UpdateExpand)
 
@@ -267,15 +268,15 @@ class Page_SetTime_SelectedDays(tk.Toplevel):
                 "Day": day
             })
             
-        button_comfirm = Button(self, text="Confirm", command=self.Button_Comfirm)
+        button_confirm = Button(self, text="Confirm", command=self.Button_Confirm)
         button_cancel = Button(self, text="Cancel", command=self.Button_Cancel)
-        button_comfirm.grid(row=4, column=2, padx=5, pady=5, sticky="e")
+        button_confirm.grid(row=4, column=2, padx=5, pady=5, sticky="e")
         button_cancel.grid(row=4, column=3, padx=(0,20), pady=5, sticky="e")
 
         self.grid_columnconfigure(2, weight=1)
 
     ### ----------------------------------------------
-    def Button_Comfirm(self):
+    def Button_Confirm(self):
         selected_days = [ checkbutton["Day"] for checkbutton in self.Checkbuttons if checkbutton["Var"].get() == 1]
         self.DaysSetTime = {
             "Day":selected_days,
@@ -291,8 +292,9 @@ class Page_SetTime_SelectedDays(tk.Toplevel):
         self.destroy()
 
 class Page_SetWeeklyTime():
-    def __init__(self, master, title:str="None", time_data:str="1,00:00,1440", close_callback=None, **kwargs):
+    def __init__(self, master, title:str="None", time_data:str="1,00:00,1440", confirm_callback=None, **kwargs):
         self.ScheduleData:str = ""
+        self.confirm_callback = confirm_callback
 
         self.root = master
         height = 500
@@ -307,7 +309,7 @@ class Page_SetWeeklyTime():
         self.Image_path = {
             "Button_ScrollDown": "./img/arrow_down.png",
             "Button_AddTimeRange": "./img/calendars.png",
-            "Button_Comfirm": "./img/check.png",
+            "Button_Confirm": "./img/check.png",
             "Button_Cancel": "./img/cancel.png",
         }
     
@@ -329,7 +331,7 @@ class Page_SetWeeklyTime():
         self.Main_Widget["ScrollBar"] = ttk.Scrollbar(self.root, orient="vertical", command=self.Main_Widget["Canvas"].yview)
         self.Main_Widget["Canvas"].configure(yscrollcommand=self.Main_Widget["ScrollBar"].set)
         self.Main_Widget["Separator"] = ttk.Separator(self.root, orient='horizontal')
-        self.Main_Widget["Button_Comfirm"] = Button(self.root, text="Comfirm", command=self.Button_Conmfirm)
+        self.Main_Widget["Button_Confirm"] = Button(self.root, text="Confirm", command=self.Button_Conmfirm)
         self.Main_Widget["Button_Cancel"] = Button(self.root, text="Cancel", command=self.Button_Cancel)
 
         self.Main_Widget["Button_AddTimeRange"].grid(row=0, column=0, padx=(0,50), pady=(5,0), sticky="e")
@@ -337,7 +339,7 @@ class Page_SetWeeklyTime():
         self.Main_Widget["Canvas"].grid(row=1, column=0, padx=(5,0), pady=0, sticky="nsew")
         self.Main_Widget["ScrollBar"].grid(row=0, column=1, rowspan=2, padx=(0,5), pady=5, sticky="ns")
         self.Main_Widget["Separator"].grid(row=2, column=0, columnspan=2, padx=5, pady=(10,0), sticky="ew")
-        self.Main_Widget["Button_Comfirm"].grid(row=3, column=0, columnspan=2, padx=(0,120), pady=10, sticky="e")
+        self.Main_Widget["Button_Confirm"].grid(row=3, column=0, columnspan=2, padx=(0,120), pady=10, sticky="e")
         self.Main_Widget["Button_Cancel"].grid(row=3, column=0, columnspan=2, padx=(0,5), pady=10, sticky="e")
 
         self.root.columnconfigure(0, weight=1)
@@ -456,7 +458,12 @@ class Page_SetWeeklyTime():
                     result += f"{day_num},{data[0]},{data[1]}/"
         result = result[:-1] if result else result
         self.ScheduleData = result
-        self.root.destroy()
+
+        if self.ScheduleData == "":
+            messagebox.showwarning("Error", "The time setting is empty.", parent=self.root)
+        else:
+            self.confirm_callback(time_data=self.ScheduleData)
+            self.root.destroy()
 
     def Button_Cancel(self):
         self.root.destroy()
@@ -466,7 +473,7 @@ if __name__ == "__main__":
     app = Page_SetWeeklyTime(root, 
                              title="Wifi", 
                              time_data="1,09:00,240/1,13:00,240/2,10:00,120/3,14:00,180/4,08:30,90/5,12:00,60/6,15:00,300/0,11:00,150",
-                             close_callback=None)
+                             confirm_callback=None)
     root.mainloop()
 
     print(app.ScheduleData)

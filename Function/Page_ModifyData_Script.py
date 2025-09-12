@@ -10,12 +10,12 @@ import Function.MyFunction_JsonData as JsonDataFunction
 from Class.Class_Button import Button
 
 class Page_ModifyData_Script:
-    def __init__(self, root=None, label_title:str=None, default_value:list=None, comfirm_callback=None):
+    def __init__(self, root=None, label_title:str=None, default_value:list=None, confirm_callback=None):
         self.load_json_data()
 
         self.LabelTitle = label_title
-        self.DefaultValue = default_value if default_value is not None else ["TestScriptID_001", "Ping", "Test1", "ipv4", "8.8.8.8", "1200", "60", "10"]
-        self.comfirm_callback = comfirm_callback
+        self.DefaultValue = default_value if default_value is not None else ["ScriptID", "Type", "Test1", "ipv4", "8.8.8.8", "1200", "60", "10"]
+        self.confirm_callback = confirm_callback
 
         ### Initialize the main window.
         width = 750
@@ -58,8 +58,7 @@ class Page_ModifyData_Script:
     def load_json_data(self):
         self.Environment_JsonPath = "./Parameter/json_PageSetEnvironment.json"
         self.Environment_JsonData = JsonDataFunction.Get_jsonAllData(self.Environment_JsonPath)
-        script_json_data = JsonDataFunction.Get_jsonAllData(self.Environment_JsonData["JsonFilePath"] + "./json_Script.json")
-        self.TreeView_Columns = JsonDataFunction.Get_DictKey(script_json_data["Script"][0])
+        self.TreeView_Columns = ["ScriptID", "Type", "Parameter1", "Parameter2", "Parameter3", "Parameter4", "Parameter5", "Parameter6"]
 
     def Create_widgets(self):
         ### Create Frames.
@@ -80,7 +79,7 @@ class Page_ModifyData_Script:
 
         self.Image_path = {
             "Button_SelectFolder": "./Img/add_folder.png",
-            "Button_Comfirm": "./Img/check.png",
+            "Button_Confirm": "./Img/check.png",
             "Button_Cancel": "./Img/cancel.png",
         }
 
@@ -91,9 +90,9 @@ class Page_ModifyData_Script:
         for column_name in self.TreeView_Columns:
             self.Main_Widget["Label"][column_name] = tk.Label(self.Frame["Main"], text=column_name + ":", font=self.Setting["Font"]["Label"])
 
-        self.Main_Widget["Entry"]["TestScriptID"] = tk.Entry(self.Frame["Main"], font=self.Setting["Font"]["Label"])
-        self.Main_Widget["Combobox"]["Script"] = ttk.Combobox(self.Frame["Main"], font=self.Setting["Font"]["Label"])
-        self.Main_Widget["Combobox"]["Script"].bind('<<ComboboxSelected>>', self.Combobox_SelectScriptType)
+        self.Main_Widget["Entry"]["ScriptID"] = tk.Entry(self.Frame["Main"], font=self.Setting["Font"]["Label"])
+        self.Main_Widget["Combobox"]["Type"] = ttk.Combobox(self.Frame["Main"], font=self.Setting["Font"]["Label"])
+        self.Main_Widget["Combobox"]["Type"].bind('<<ComboboxSelected>>', self.Combobox_SelectScriptType)
         self.Main_Widget["Entry"]["Parameter1"] = tk.Entry(self.Frame["Main"], font=self.Setting["Font"]["Label"])
         self.Main_Widget["Combobox"]["Parameter2"] = ttk.Combobox(self.Frame["Main"], values=["ipv4", "ipv6"])
         self.Main_Widget["Entry"]["Parameter3"] = tk.Entry(self.Frame["Main"], font=self.Setting["Font"]["Label"])
@@ -103,7 +102,7 @@ class Page_ModifyData_Script:
 
         self.Main_Widget["Separator"]["Low"] = ttk.Separator(self.Frame["Main"], orient='horizontal')
         self.Main_Widget["Button"]["Select_YoutubeFile"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectFolder"], size=(20,20), command=self.Button_SelectYoutubeFile)
-        self.Main_Widget["Button"]["Comfirm"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Comfirm"], size=(40,40), command=self.Button_Comfirm)
+        self.Main_Widget["Button"]["Confirm"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Confirm"], size=(40,40), command=self.Button_Confirm)
         self.Main_Widget["Button"]["Cancel"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Cancel"], size=(40,40), command=self.Button_Cancel)
 
         ### Layout Elements.
@@ -113,8 +112,8 @@ class Page_ModifyData_Script:
         for num, column_name in enumerate(self.TreeView_Columns, start=2):
             self.Main_Widget["Label"][column_name].grid(row=num, column=0, padx=10, pady=5, sticky="w")
 
-        self.Main_Widget["Entry"]["TestScriptID"].grid(row=2, column=1, padx=(0,10), pady=5, sticky="ew")    
-        self.Main_Widget["Combobox"]["Script"].grid(row=3, column=1, padx=(0,10), pady=5, sticky="ew")
+        self.Main_Widget["Entry"]["ScriptID"].grid(row=2, column=1, padx=(0,10), pady=5, sticky="ew")    
+        self.Main_Widget["Combobox"]["Type"].grid(row=3, column=1, padx=(0,10), pady=5, sticky="ew")
         self.Main_Widget["Entry"]["Parameter1"].grid(row=4, column=1, padx=(0,40), pady=5, sticky="ew")
         self.Main_Widget["Button"]["Select_YoutubeFile"].grid(row=4, column=1, padx=(0,10), pady=5, sticky="e")
         self.Main_Widget["Combobox"]["Parameter2"].grid(row=5, column=1, padx=(0,10), pady=5, sticky="ew")
@@ -123,14 +122,14 @@ class Page_ModifyData_Script:
         self.Main_Widget["Combobox"]["Parameter5"].grid(row=8, column=1, padx=(0,10), pady=5, sticky="ew")
         self.Main_Widget["Entry"]["Parameter6"].grid(row=9, column=1, padx=(0,10), pady=5, sticky="ew")
         self.Main_Widget["Separator"]["Low"].grid(row=len(self.TreeView_Columns)+2, column=0, columnspan=2, padx=5, pady=(10,0), sticky="ew")
-        self.Main_Widget["Button"]["Comfirm"].grid(row=len(self.TreeView_Columns)+3, column=1, columnspan=2, padx=(0,60), pady=(5,5), sticky="e")
+        self.Main_Widget["Button"]["Confirm"].grid(row=len(self.TreeView_Columns)+3, column=1, columnspan=2, padx=(0,60), pady=(5,5), sticky="e")
         self.Main_Widget["Button"]["Cancel"].grid(row=len(self.TreeView_Columns)+3, column=1, padx=(0,5), pady=(5,5), sticky="e")
 
         self.Frame["Main"].grid_columnconfigure(1, weight=1)
 
         Tooltip = {
             "Button_SelectYoutubeFile": Hovertip(self.Main_Widget["Button"]["Select_YoutubeFile"], text='Choose youtubeIRL.txt file path.', hover_delay=300),
-            "Button_Comfirm": Hovertip(self.Main_Widget["Button"]["Comfirm"], text='Confirm the settings.', hover_delay=300),
+            "Button_Confirm": Hovertip(self.Main_Widget["Button"]["Confirm"], text='Confirm the settings.', hover_delay=300),
             "Button_Cancel": Hovertip(self.Main_Widget["Button"]["Cancel"], text='Close and Cancel the settings.', hover_delay=300),
         }
 
@@ -153,8 +152,8 @@ class Page_ModifyData_Script:
     def Set_Widget_Status(self, script_type:str=None):
         try:
             if script_type == "Ping":
-                self.Main_Widget["Entry"]["TestScriptID"].config(state="normal", **self.Setting["Entry"]["Normal"])
-                self.Main_Widget["Combobox"]["Script"].config(state="readonly", values=["Ping", "Youtube"])
+                self.Main_Widget["Entry"]["ScriptID"].config(state="normal", **self.Setting["Entry"]["Normal"])
+                self.Main_Widget["Combobox"]["Type"].config(state="readonly", values=["Ping", "Youtube"])
                 self.Main_Widget["Entry"]["Parameter1"].config(state="normal", **self.Setting["Entry"]["Normal"])
                 self.Main_Widget["Combobox"]["Parameter2"].config(state="readonly", values=["ipv4", "ipv6"])
                 self.Main_Widget["Entry"]["Parameter3"].config(state="normal", **self.Setting["Entry"]["Normal"])
@@ -167,8 +166,8 @@ class Page_ModifyData_Script:
                 self.Main_Widget["Label"]["Parameter6"].config(foreground="black")
 
             elif script_type == "Youtube":
-                self.Main_Widget["Entry"]["TestScriptID"].config(state="normal", **self.Setting["Entry"]["Normal"])
-                self.Main_Widget["Combobox"]["Script"].config(state="readonly", values=["Ping", "Youtube"])
+                self.Main_Widget["Entry"]["ScriptID"].config(state="normal", **self.Setting["Entry"]["Normal"])
+                self.Main_Widget["Combobox"]["Type"].config(state="readonly", values=["Ping", "Youtube"])
                 self.Main_Widget["Entry"]["Parameter1"].config(state="readonly", readonlybackground="light yellow")
                 self.Main_Widget["Combobox"]["Parameter2"].config(state="normal", values=[""])
                 self.Main_Widget["Entry"]["Parameter3"].config(state="normal", **self.Setting["Entry"]["Normal"])
@@ -191,7 +190,7 @@ class Page_ModifyData_Script:
             self.Main_Widget["Entry"]["Parameter6"].config(state="normal")
 
             ### Clear all Entry.
-            self.Main_Widget["Entry"]["TestScriptID"].delete(0, tk.END)
+            self.Main_Widget["Entry"]["ScriptID"].delete(0, tk.END)
             self.Main_Widget["Entry"]["Parameter1"].delete(0, tk.END)
             self.Main_Widget["Entry"]["Parameter3"].delete(0, tk.END)
             self.Main_Widget["Entry"]["Parameter4"].delete(0, tk.END)
@@ -199,8 +198,8 @@ class Page_ModifyData_Script:
 
             # elif list_value[1] == "Ping":
             if list_value[1] == "Ping":
-                self.Main_Widget["Entry"]["TestScriptID"].insert(0, list_value[0])
-                self.Main_Widget["Combobox"]["Script"].set(list_value[1])
+                self.Main_Widget["Entry"]["ScriptID"].insert(0, list_value[0])
+                self.Main_Widget["Combobox"]["Type"].set(list_value[1])
                 self.Main_Widget["Entry"]["Parameter1"].insert(0, list_value[2])
                 self.Main_Widget["Combobox"]["Parameter2"].set(list_value[3])
                 self.Main_Widget["Entry"]["Parameter3"].insert(0, list_value[4])
@@ -210,8 +209,8 @@ class Page_ModifyData_Script:
 
             elif list_value[1] == "Youtube":                
                 ### set the default value.
-                self.Main_Widget["Entry"]["TestScriptID"].insert(0, list_value[0])
-                self.Main_Widget["Combobox"]["Script"].set(list_value[1])
+                self.Main_Widget["Entry"]["ScriptID"].insert(0, list_value[0])
+                self.Main_Widget["Combobox"]["Type"].set(list_value[1])
                 self.Main_Widget["Entry"]["Parameter1"].insert(0, list_value[2])
                 self.Main_Widget["Combobox"]["Parameter2"].set(list_value[3])
                 self.Main_Widget["Entry"]["Parameter3"].insert(0, list_value[4])
@@ -229,8 +228,8 @@ class Page_ModifyData_Script:
     
     #===================================================================================================
     def Combobox_SelectScriptType(self, event=None):
-        testscript_id = self.Main_Widget["Entry"]["TestScriptID"].get()
-        script_type = self.Main_Widget["Combobox"]["Script"].get()
+        testscript_id = self.Main_Widget["Entry"]["ScriptID"].get()
+        script_type = self.Main_Widget["Combobox"]["Type"].get()
         current_working_dir = os.getcwd().replace("\\", "/") + "/"
 
         if script_type == "Ping":
@@ -266,12 +265,12 @@ class Page_ModifyData_Script:
             error_message = traceback.format_exc()
             messagebox.showwarning("Error", error_message, parent=self.root)
 
-    def Button_Comfirm(self):
+    def Button_Confirm(self):
         try:
             ### Get the values from the Entry and Combobox.
             new_script_value = [
-                self.Main_Widget["Entry"]["TestScriptID"].get(),
-                self.Main_Widget["Combobox"]["Script"].get(),
+                self.Main_Widget["Entry"]["ScriptID"].get(),
+                self.Main_Widget["Combobox"]["Type"].get(),
                 self.Main_Widget["Entry"]["Parameter1"].get(),
                 self.Main_Widget["Combobox"]["Parameter2"].get(),
                 self.Main_Widget["Entry"]["Parameter3"].get(),
@@ -293,10 +292,10 @@ class Page_ModifyData_Script:
                     selected_data[key] = str(self.DefaultValue[i])
                 all_script_data.remove(selected_data)
 
-            ### Check if the TestScriptID already exists in the list.
+            ### Check if the ScriptID already exists in the list.
             for script_data in all_script_data:
-                if new_testscript_id == script_data["TestScriptID"]:
-                    messagebox.showerror("Error", f"[TestScriptID] \"{new_testscript_id}\" already exists.", parent=self.root)
+                if new_testscript_id == script_data["ScriptID"]:
+                    messagebox.showerror("Error", f"[ScriptID] \"{new_testscript_id}\" already exists.", parent=self.root)
                     return False
 
             ### Check when script_type == "Ping", Parameter1 should be unique.
@@ -313,8 +312,8 @@ class Page_ModifyData_Script:
             if ""in new_script_value:
                 messagebox.showerror("Error", "All of the fields cannot be empty.", parent=self.root)
                 return False
-            if self.comfirm_callback:
-                self.comfirm_callback(selected_item_value=self.DefaultValue, new_item_value=new_script_value)
+            if self.confirm_callback:
+                self.confirm_callback(selected_item_value=self.DefaultValue, new_item_value=new_script_value)
                 self.root.destroy()
 
         except Exception as e:

@@ -39,8 +39,7 @@ class Frame_Client():
         self.Environment_JsonPath = "./Parameter/json_PageSetEnvironment.json"
         self.Environment_JsonData = JsonDataFunction.Get_jsonAllData(self.Environment_JsonPath)
         self.Client_JsonPath = self.Environment_JsonData["JsonFilePath"] + "json_Client.json"
-        Client_json_data = JsonDataFunction.Get_jsonAllData(self.Client_JsonPath)
-        self.TreeView_Columns = JsonDataFunction.Get_DictKey(Client_json_data["Client"][0])
+        self.TreeView_Columns = ["ClientID", "MAC", "EtherIP", "Comment"]
         self.TreeView_Columns.append("Index")
         
     def Create_widgets(self):
@@ -190,7 +189,7 @@ class Frame_Client():
             app = Page_ModifyData_Client(clientedit_frame,  
                                     label_title="Edit Client Item",   
                                     default_value=selected_item_values,
-                                    comfirm_callback=edit_itme_client
+                                    confirm_callback=edit_itme_client
                                     )
      
         except Exception as e:
@@ -240,7 +239,7 @@ class Frame_Client():
             app = Page_ModifyData_Client(clientadd_frame,  
                                     label_title="Add New Client Item",   
                                     default_value=selected_item_values,
-                                    comfirm_callback=add_item_client
+                                    confirm_callback=add_item_client
                                     )
 
         except Exception as e:

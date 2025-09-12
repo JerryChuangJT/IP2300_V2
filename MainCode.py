@@ -13,6 +13,7 @@ from Function.Frame_ADB import Frame_ADB
 from Function.Frame_Client import Frame_Client
 from Function.Frame_Wifi import Frame_Wifi
 from Function.Frame_Script import Frame_Script
+from Function.Frame_Schedule import Frame_Schedule
 
 import Function.MyFunction_JsonData as JsonDataFunction
 
@@ -130,43 +131,47 @@ class MainPage():
         #-----------------------------------------------------------------------------------
         Notebook = {}
 
-        ### Create the First level of Notebook.
-        Notebook["FirstLV"] = ttk.Notebook(self.root)
-        self.Frame_FirstLV = {}
-        self.Frame_FirstLV["Execution"] = tk.Frame(Notebook["FirstLV"])
+        ### Create the Notebook of MainPage.
+        Notebook["MainPage"] = ttk.Notebook(self.root)
+        self.Frame_MainPage = {}
+        self.Frame_MainPage["Execution"] = tk.Frame(Notebook["MainPage"])
 
-        self.Frame_FirstLV["Schedule"] = tk.Frame(Notebook["FirstLV"])
+        self.Frame_MainPage["Schedule"] = tk.Frame(Notebook["MainPage"])
+        self.app_schedule = Frame_Schedule(self.Frame_MainPage["Schedule"])
 
+        self.Frame_MainPage["ADB"] = tk.Frame(Notebook["MainPage"])
+        self.app_adb = Frame_ADB(self.Frame_MainPage["ADB"])
 
-        self.Frame_FirstLV["Setting"] = tk.Frame(Notebook["FirstLV"])
+        self.Frame_MainPage["Setting"] = tk.Frame(Notebook["MainPage"])
 
-        Notebook["FirstLV"].add(self.Frame_FirstLV["Execution"], text="Execution")
-        Notebook["FirstLV"].add(self.Frame_FirstLV["Schedule"], text="Schedule")
-        Notebook["FirstLV"].add(self.Frame_FirstLV["Setting"], text="Setting")
-        Notebook["FirstLV"].pack(padx=5, pady=5, fill=tk.BOTH, expand=True)
+        Notebook["MainPage"].add(self.Frame_MainPage["Execution"], text="Execution")
+        Notebook["MainPage"].add(self.Frame_MainPage["Schedule"], text="Schedule")
+        Notebook["MainPage"].add(self.Frame_MainPage["ADB"], text="ADB")
+        Notebook["MainPage"].add(self.Frame_MainPage["Setting"], text="Setting")
+        Notebook["MainPage"].pack(padx=5, pady=5, fill=tk.BOTH, expand=True)
 
-        ### Create the Second level of Notebook.
-        Notebook["SecondLV"] = ttk.Notebook(self.Frame_FirstLV["Setting"])
-        self.Frame_SecondLV = {}
+        ### Create the Notebook of SettingPage.
+        Notebook["SettingPage"] = ttk.Notebook(self.Frame_MainPage["Setting"])
+        self.Frame_SettingPage = {}
         
-        self.Frame_SecondLV["ADB"] = tk.Frame(Notebook["SecondLV"])
-        self.app_adb = Frame_ADB(self.Frame_SecondLV["ADB"])
+        # self.Frame_SettingPage["ADB"] = tk.Frame(Notebook["SettingPage"])
+        # self.app_adb = Frame_ADB(self.Frame_SettingPage["ADB"])
 
-        self.Frame_SecondLV["Client"] = tk.Frame(Notebook["SecondLV"])
-        self.app_client = Frame_Client(self.Frame_SecondLV["Client"])
+        self.Frame_SettingPage["Client"] = tk.Frame(Notebook["SettingPage"])
+        self.app_client = Frame_Client(self.Frame_SettingPage["Client"])
 
-        self.Frame_SecondLV["Wifi"] = tk.Frame(Notebook["SecondLV"])
-        self.app_wifi = Frame_Wifi(self.Frame_SecondLV["Wifi"])
+        self.Frame_SettingPage["Wifi"] = tk.Frame(Notebook["SettingPage"])
+        self.app_wifi = Frame_Wifi(self.Frame_SettingPage["Wifi"])
 
-        self.Frame_SecondLV["Script"] = tk.Frame(Notebook["SecondLV"])
-        self.add_script = Frame_Script(self.Frame_SecondLV["Script"])
+        self.Frame_SettingPage["Script"] = tk.Frame(Notebook["SettingPage"])
+        self.add_script = Frame_Script(self.Frame_SettingPage["Script"])
 
-        Notebook["SecondLV"].add(self.Frame_SecondLV["ADB"], text="ADB")
-        Notebook["SecondLV"].add(self.Frame_SecondLV["Client"], text="Client")
-        Notebook["SecondLV"].add(self.Frame_SecondLV["Wifi"], text="Wifi")
-        Notebook["SecondLV"].add(self.Frame_SecondLV["Script"], text="Script")
+        # Notebook["SettingPage"].add(self.Frame_SettingPage["ADB"], text="ADB")
+        Notebook["SettingPage"].add(self.Frame_SettingPage["Client"], text="Client")
+        Notebook["SettingPage"].add(self.Frame_SettingPage["Wifi"], text="Wifi")
+        Notebook["SettingPage"].add(self.Frame_SettingPage["Script"], text="Script")
 
-        Notebook["SecondLV"].pack(padx=0, pady=0, fill=tk.BOTH, expand=True)
+        Notebook["SettingPage"].pack(padx=0, pady=0, fill=tk.BOTH, expand=True)
 
 if __name__ == "__main__":
 

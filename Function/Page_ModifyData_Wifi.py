@@ -9,12 +9,12 @@ import Function.MyFunction_JsonData as JsonDataFunction
 from Class.Class_Button import Button
 
 class Page_ModifyData_Wifi():
-    def __init__(self, root=None, label_title:str=None, default_value:list=None, comfirm_callback=None):
+    def __init__(self, root=None, label_title:str=None, default_value:list=None, confirm_callback=None):
         self.load_json_data()
 
         self.LabelTitle = label_title
         self.DefaultValue = default_value 
-        self.comfirm_callback = comfirm_callback
+        self.confirm_callback = confirm_callback
 
         ### Initialize the main window.
         width = 600
@@ -39,8 +39,8 @@ class Page_ModifyData_Wifi():
     def load_json_data(self):
         self.Environment_JsonPath = "./Parameter/json_PageSetEnvironment.json"
         self.Environment_JsonData = JsonDataFunction.Get_jsonAllData(self.Environment_JsonPath)
-        wifi_json_data = JsonDataFunction.Get_jsonAllData(self.Environment_JsonData["JsonFilePath"] + "./json_Wifi.json")
-        self.TreeView_Columns = JsonDataFunction.Get_DictKey(wifi_json_data["Wifi"][0])
+        self.TreeView_Columns = ["WifiID", "PingType", "DUTIP", "SSID", "Security", "Password", "BSSID",
+                                  "Driver_Band", "Driver_Standard" ,"Driver_Channel", "Driver_Bandwidth"]
     
     def Create_widgets(self):
         ### Create Frames.
@@ -60,7 +60,7 @@ class Page_ModifyData_Wifi():
         self.Main_Widget["Separator"] = {}
 
         self.Image_path = {
-            "Button_Comfirm": "./Img/check.png",
+            "Button_Confirm": "./Img/check.png",
             "Button_Cancel": "./Img/cancel.png",
         }
 
@@ -86,7 +86,7 @@ class Page_ModifyData_Wifi():
         self.Main_Widget["Combobox"]["Driver_Standard"].bind("<<ComboboxSelected>>", self.Click_ComboBox_DriverStandard)
 
         self.Main_Widget["Separator"]["Low"] = ttk.Separator(self.Frame["Main"], orient='horizontal')
-        self.Main_Widget["Button"]["Comfirm"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Comfirm"], size=(40,40), command=self.Button_Comfirm)
+        self.Main_Widget["Button"]["Confirm"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Confirm"], size=(40,40), command=self.Button_Confirm)
         self.Main_Widget["Button"]["Cancel"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Cancel"], size=(40,40), command=self.Button_Cancel)
 
         ### Layout Elements.
@@ -109,13 +109,13 @@ class Page_ModifyData_Wifi():
         self.Main_Widget["Combobox"]["Driver_Bandwidth"].grid(row=12, column=1, padx=(0,10), pady=5, sticky="ew")
 
         self.Main_Widget["Separator"]["Low"].grid(row=len(self.TreeView_Columns)+2, column=0, columnspan=2, padx=5, pady=(10,0), sticky="ew")
-        self.Main_Widget["Button"]["Comfirm"].grid(row=len(self.TreeView_Columns)+3, column=1, columnspan=2, padx=(0,60), pady=(5,5), sticky="e")
+        self.Main_Widget["Button"]["Confirm"].grid(row=len(self.TreeView_Columns)+3, column=1, columnspan=2, padx=(0,60), pady=(5,5), sticky="e")
         self.Main_Widget["Button"]["Cancel"].grid(row=len(self.TreeView_Columns)+3, column=1, padx=(0,5), pady=(5,5), sticky="e")
 
         self.Frame["Main"].grid_columnconfigure(1, weight=1)
 
         Tooltip = {
-            "Button_Comfirm": Hovertip(self.Main_Widget["Button"]["Comfirm"], text='Confirm the settings.', hover_delay=300),
+            "Button_Confirm": Hovertip(self.Main_Widget["Button"]["Confirm"], text='Confirm the settings.', hover_delay=300),
             "Button_Cancel": Hovertip(self.Main_Widget["Button"]["Cancel"], text='Close and Cancel the settings.', hover_delay=300),
         }
 
@@ -151,7 +151,7 @@ class Page_ModifyData_Wifi():
             messagebox.showerror("Error", f"{error_message}", parent=self.root)
 
     #===================================================================================================
-    def Button_Comfirm(self):   
+    def Button_Confirm(self):   
         try:
             ### Get the values from the entries and comboboxes.
             new_wifi_value = [
@@ -192,8 +192,8 @@ class Page_ModifyData_Wifi():
             if "" in new_wifi_value:
                 messagebox.showerror("Error", "All of the fields cannot be empty.", parent=self.root)
                 return False
-            if self.comfirm_callback:
-                self.comfirm_callback(selected_item_value=self.DefaultValue, new_item_value=new_wifi_value)
+            if self.confirm_callback:
+                self.confirm_callback(selected_item_value=self.DefaultValue, new_item_value=new_wifi_value)
                 self.root.destroy()
 
         except Exception as e:

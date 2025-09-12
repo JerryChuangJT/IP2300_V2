@@ -39,8 +39,7 @@ class Frame_Script():
         self.Environment_JsonPath = "./Parameter/json_PageSetEnvironment.json"
         self.Environment_JsonData = JsonDataFunction.Get_jsonAllData(self.Environment_JsonPath)
         self.Script_JsonPath = self.Environment_JsonData["JsonFilePath"] + "json_Script.json"
-        script_json_data = JsonDataFunction.Get_jsonAllData(self.Script_JsonPath)
-        self.TreeView_Columns = JsonDataFunction.Get_DictKey(script_json_data["Script"][0])
+        self.TreeView_Columns = ["ScriptID", "Type", "Parameter1", "Parameter2", "Parameter3", "Parameter4", "Parameter5", "Parameter6"]
 
     def Create_widgets(self):
         def create_top_widgets():
@@ -182,7 +181,7 @@ class Frame_Script():
             app = Page_ModifyData_Script(root=scriptadd_frame,
                                     label_title="Edit Script Item",   
                                     default_value=selected_item_values,
-                                    comfirm_callback=edit_itme_script
+                                    confirm_callback=edit_itme_script
                                     )
         except Exception as e:
             error_message = traceback.format_exc()
@@ -229,7 +228,7 @@ class Frame_Script():
             app = Page_ModifyData_Script(root=scriptadd_frame,
                                     label_title="Add New Script Item",   
                                     default_value=selected_item_values,
-                                    comfirm_callback=add_item_script
+                                    confirm_callback=add_item_script
                                     )
 
         except Exception as e:

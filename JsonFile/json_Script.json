@@ -23,82 +23,12 @@
         {
             "ScriptID": "Script_Youtube",
             "Type": "Youtube",
-            "Parameter1": "D:/Jerry/Project/20250519_AndroidTV/FunctionScript/Controller/Program_V2/JsonFile/youtubeURL.txt",
+            "Parameter1": "D:/Jerry/Project/AndroidTV/FunctionScript/Controller/Program_V2/JsonFile/youtubeURL.txt",
             "Parameter2": "1",
             "Parameter3": "100",
             "Parameter4": "5",
             "Parameter5": "None",
             "Parameter6": "None"
-        },
-        {
-            "ScriptID": "Script_Youtube2",
-            "Type": "Youtube",
-            "Parameter1": "D:/Jerry/Project/AndroidTV/FunctionScript/Controller/V7/JsonFile/youtubeURL.txt",
-            "Parameter2": "1",
-            "Parameter3": "100",
-            "Parameter4": "5",
-            "Parameter5": "None",
-            "Parameter6": "None"
-        },
-        {
-            "ScriptID": "sdfsdf",
-            "Type": "Ping",
-            "Parameter1": "sdfsdf",
-            "Parameter2": "ipv4",
-            "Parameter3": "10.10.0.5",
-            "Parameter4": "1200",
-            "Parameter5": "60",
-            "Parameter6": "10"
-        },
-        {
-            "ScriptID": "tyjtyh",
-            "Type": "Ping",
-            "Parameter1": "rthrthrthhy",
-            "Parameter2": "ipv4",
-            "Parameter3": "10.10.0.5",
-            "Parameter4": "1200",
-            "Parameter5": "60",
-            "Parameter6": "10"
-        },
-        {
-            "ScriptID": "fghnfghfgh",
-            "Type": "Ping",
-            "Parameter1": "fghfghhgf",
-            "Parameter2": "ipv4",
-            "Parameter3": "10.10.0.5",
-            "Parameter4": "1200",
-            "Parameter5": "60",
-            "Parameter6": "10"
-        },
-        {
-            "ScriptID": "fghfgh",
-            "Type": "Ping",
-            "Parameter1": "fghfghfghfghhg",
-            "Parameter2": "ipv4",
-            "Parameter3": "10.10.0.5",
-            "Parameter4": "1200",
-            "Parameter5": "60",
-            "Parameter6": "10"
-        },
-        {
-            "ScriptID": "fjtydjnghmghj,yujkm",
-            "Type": "Ping",
-            "Parameter1": "fj,hgjfghh",
-            "Parameter2": "ipv4",
-            "Parameter3": "10.10.0.5",
-            "Parameter4": "1200",
-            "Parameter5": "60",
-            "Parameter6": "10"
-        },
-        {
-            "ScriptID": "tdhgetr346345654t",
-            "Type": "Ping",
-            "Parameter1": " cvbsdgvcb",
-            "Parameter2": "ipv4",
-            "Parameter3": "10.10.0.5",
-            "Parameter4": "1200",
-            "Parameter5": "60",
-            "Parameter6": "10"
         }
     ]
 }

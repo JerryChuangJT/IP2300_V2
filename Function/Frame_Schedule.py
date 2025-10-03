@@ -223,7 +223,7 @@ class Page_AddClient():
         exist_client_ids = []
         for situation in self.Schedule_JsonData:
             if situation != self.Situation:
-                for client_id in self.Schedule_JsonData[situation]["Client"]:
+                for client_id in self.Schedule_JsonData[situation]["ClientID"]:
                     exist_client_ids.append(client_id)
 
         ### Set CheckButton state as disabled if ClientID exists in other Situation.
@@ -235,7 +235,7 @@ class Page_AddClient():
 
         ### Set CheckButton state as selected if ClientID exists in current Situation.
         for check_button in self.check_buttons:
-            if check_button["ClientID"] in self.Schedule_JsonData[self.Situation]["Client"]:
+            if check_button["ClientID"] in self.Schedule_JsonData[self.Situation]["ClientID"]:
                 check_button["CheckVar"].set(1)
             else:
                 check_button["CheckVar"].set(0)
@@ -291,8 +291,6 @@ class Frame_Schedule():
         self.load_json_data()
         self.Create_Widgets()
         self.Load_ScheduleData()
-        self.Show_SituationData()
-        # self.Update_Count()
 
     def load_json_data(self):
         self.Environment_JsonPath = "./Parameter/json_PageSetEnvironment.json"
@@ -456,7 +454,12 @@ class Frame_Schedule():
             self.Client_Widget["Label"] = {}
             self.Client_Widget["Button"] = {}
 
-            self.Client_Widget["Listbox"] = tk.Listbox(self.Frame["Client"], selectmode=tk.EXTENDED, activestyle="dotbox", font=("Segoe UI", 9))
+            self.Client_Widget["Listbox"] = tk.Listbox(self.Frame["Client"], 
+                                                       selectmode=tk.EXTENDED, 
+                                                       activestyle="dotbox", 
+                                                       selectbackground="#c6def4",
+                                                       selectforeground="black",
+                                                       font=("Segoe UI", 9))
             self.Client_Widget["Scrollbar"] = ttk.Scrollbar(self.Frame["Client"], orient=tk.VERTICAL, command=self.Client_Widget["Listbox"].yview)
             self.Client_Widget["Listbox"].configure(yscrollcommand=self.Client_Widget["Scrollbar"].set)
             self.Client_Widget["Button"]["Add"] = Button(self.Frame["Client"], text="Add", width=10, command=self.Button_Client_Add)
@@ -496,11 +499,10 @@ class Frame_Schedule():
         # Create Situation Canvas.
         self.SituationCanvas = Frame_SituationCanvas(self.Frame["SituationCanvas"])
 
-        self.Title["SetSchedule"].grid(row=0, column=0, padx=5, pady=(5,0), sticky="w")
+        # self.Title["SetSchedule"].grid(row=0, column=0, padx=5, pady=(5,0), sticky="w")
         self.Frame["Situation"].grid(row=1, column=0, rowspan=2, padx=(5,0), pady=5, sticky="nsew")
         self.Frame["Wifi"].grid(row=1, column=1, padx=5, pady=(5,0), sticky="nsew")
         self.Frame["PanedWindow"].grid(row=2, column=1, padx=5, pady=5, sticky="nsew")
-        self.Title["Canvas"].grid(row=0, column=2, padx=5, pady=(5,0), sticky="w")
         self.Frame["SituationCanvas"].grid(row=1, column=2, rowspan=2, padx=(0,5), pady=5, sticky="nsew")
 
         ### Create Script & Client Frame in PanedWindow.
@@ -540,7 +542,7 @@ class Frame_Schedule():
             ScheduleData = JsonDataFunction.Get_jsonAllData(self.Schedule_JsonPath)
             wifi_data:dict = ScheduleData[situation]["Wifi"]
             script_data:list = ScheduleData[situation]["Script"]
-            client_data:list = ScheduleData[situation]["Client"]
+            client_data:list = ScheduleData[situation]["ClientID"]
 
             ### Set Wifi data.
             self.Wifi_Widget["Combobox"].set(wifi_data["WifiID"])
@@ -584,7 +586,7 @@ class Frame_Schedule():
                                             "Schedule": "1,00:00,1440" 
                                         },
                                     "Script": [],
-                                    "Client": []
+                                    "ClientID": []
                                 }
             
             ### Update json file & Update GUI.
@@ -643,6 +645,7 @@ class Frame_Schedule():
             ### Get Selected Situation json data.
             situation_selection = self.Situation_Widget["Listbox"].curselection()
             situation = self.Situation_Widget["Listbox"].get(situation_selection[0])
+            schedule_jsondata[situation]["ClientID"] = []
             selected_situation_jsondata = schedule_jsondata[situation]
 
             ### Update situation in json file & Update GUI.
@@ -770,14 +773,14 @@ class Frame_Schedule():
             situation_jsondata = JsonDataFunction.Get_jsonAllData(self.Schedule_JsonPath)[situation]
 
             ### Get Selected Script ID.
+            ### Update situation script schedule in json data.
             script_selection = self.Script_Widget["TreeView"].selection()
-            script__id = self.Script_Widget["TreeView"].item(script_selection[0])["values"][0]
-
-            ### Update situation script schedule in json file & Update GUI.
-            for script in situation_jsondata["Script"]:
-                if script["ScriptID"] == script__id:
-                    script["Schedule"] = time_data
-                    break
+            for item in script_selection:
+                script_id = self.Script_Widget["TreeView"].item(item)["values"][0]
+                for script in situation_jsondata["Script"]:
+                    if script["ScriptID"] == script_id:
+                        script["Schedule"] = time_data
+                        break
 
             ### Update situation script in json file & Update GUI.
             JsonDataFunction.Update_jsonFileData(self.Schedule_JsonPath, situation, situation_jsondata)
@@ -799,7 +802,7 @@ class Frame_Schedule():
         setschedule_frame.grab_set()
         setschedule_frame.protocol("WM_DELETE_WINDOW", setschedule_frame.destroy)  # Disable the close button
         app = Page_SetWeeklyTime(setschedule_frame, 
-                                title="Wifi", 
+                                title="Script", 
                                 time_data=time_data,
                                 confirm_callback=set_script_schedule)
         
@@ -812,7 +815,7 @@ class Frame_Schedule():
             situation_jsondata = JsonDataFunction.Get_jsonAllData(self.Schedule_JsonPath)[situation]
 
             ### Update situation client in json file & Update GUI.
-            situation_jsondata["Client"] = client_ids
+            situation_jsondata["ClientID"] = client_ids
 
             ### Update situation script in json file & Update GUI.
             JsonDataFunction.Update_jsonFileData(self.Schedule_JsonPath, situation, situation_jsondata)
@@ -851,7 +854,7 @@ class Frame_Schedule():
             ### Remove Selected Item from GUI & JSON.
             for index in reversed(selection):
                 selected_client = self.Client_Widget["Listbox"].get(index)
-                situation_jsondata["Client"].remove(selected_client)
+                situation_jsondata["ClientID"].remove(selected_client)
 
             ### Update situation script in json file & Update GUI.
             JsonDataFunction.Update_jsonFileData(self.Schedule_JsonPath, situation, situation_jsondata)
@@ -869,6 +872,10 @@ class Frame_Schedule():
         self.Situation_Widget["Label"]["Count"].event_generate("<<Update_ScheduleCount>>")
         self.Script_Widget["Label"]["Count"].event_generate("<<Update_ScriptCount>>")
         self.Client_Widget["Label"]["Count"].event_generate("<<Update_ClientCount>>")
+
+    def Reload_JsonData(self):
+        self.load_json_data()
+        self.Load_ScheduleData()
 
 if __name__ == "__main__":
     height = 600

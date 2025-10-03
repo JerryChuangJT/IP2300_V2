@@ -52,7 +52,7 @@ class Frame_Script():
             self.Top_Widgets["Title"] = tk.Label(self.Frame["Top"], text="Script Parameters", font=self.Setting["Font"]["Title"], foreground="blue")
             self.Top_Widgets["Button"]["Edit"] = Button(self.Frame["Top"], image_path=self.Image_path["Button_Edit"], size=(30,30), command=self.Button_EditData)
             self.Top_Widgets["Button"]["Add"] = Button(self.Frame["Top"], image_path=self.Image_path["Button_add"], size=(30,30), command=self.Button_AddData)
-            self.Top_Widgets["Label"]["Count"] = tk.Label(self.Frame["Top"], text="Count: 0/0", font=("Arial", 11, "bold"))
+            self.Top_Widgets["Label"]["Count"] = tk.Label(self.Frame["Top"], text="Total : 0/0", font=("Segoe UI", 9), foreground="#6C6C6C")
             self.Top_Widgets["Button"]["Delete"] = Button(self.Frame["Top"], image_path=self.Image_path["Button_Delete"], size=(30,30), command=self.Button_DeleteData)
             
             self.Top_Widgets["TreeView"] = ttk.Treeview(self.Frame["Top"], columns=self.TreeView_Columns, show="headings", selectmode="extended")
@@ -73,9 +73,9 @@ class Frame_Script():
             self.Top_Widgets["Button"]["Edit"].grid(row=1, column=0, padx=(5,0), pady=(7,0), sticky="w")
             self.Top_Widgets["Button"]["Add"].grid(row=1, column=0, padx=(50,0), pady=(7,0), sticky="w")
             self.Top_Widgets["Button"]["Delete"].grid(row=1, column=0, padx=(95,0), pady=(7,0), sticky="w")
-            self.Top_Widgets["Label"]["Count"].grid(row=1, column=1, columnspan=2, padx=(0,5), pady=(7,0), sticky="se")
-            self.Top_Widgets["TreeView"].grid(row=2, column=0, columnspan=2, padx=(5,0), pady=(5,5), sticky="nsew")
-            self.Top_Widgets["Scrollerbar"]["Vertical"].grid(row=2, column=2, padx=(0,0), pady=(5,5), sticky="ns")
+            self.Top_Widgets["TreeView"].grid(row=2, column=0, columnspan=2, padx=(5,0), pady=(5,0), sticky="nsew")
+            self.Top_Widgets["Scrollerbar"]["Vertical"].grid(row=2, column=2, padx=(0,0), pady=(5,0), sticky="ns")
+            self.Top_Widgets["Label"]["Count"].grid(row=3, column=1, padx=0, pady=5, sticky="e")
 
             self.Frame["Top"].grid_rowconfigure(2, weight=1)  # 讓 TreeView 可以自動調整大小
             self.Frame["Top"].grid_columnconfigure(1, weight=1)
@@ -130,7 +130,7 @@ class Frame_Script():
     def Updating_TreeViewCount(self, event=None):
         total_num = len(self.Top_Widgets["TreeView"].get_children())
         selected_num = len(self.Top_Widgets["TreeView"].selection())
-        self.Top_Widgets["Label"]["Count"].config(text=f"Count : {selected_num}/{total_num}")
+        self.Top_Widgets["Label"]["Count"].config(text=f"Total : {selected_num}/{total_num}")
     
     def Button_EditData(self):
         def edit_itme_script(selected_item_value:list=None, new_item_value:list=None):

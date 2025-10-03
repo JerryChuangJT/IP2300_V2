@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import filedialog, messagebox
+from tkinter import ttk, filedialog, messagebox
 from idlelib.tooltip import Hovertip  
 
 import traceback
@@ -64,7 +64,7 @@ class Page_SetBackup():
         self.Main_Widget["Button"]["Export"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Export"], size=(30,30), command=self.Button_Export)
         self.Main_Widget["Button"]["Exit"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_Exit"], size=(30,30), command=self.Button_Exit)
     
-        self.Main_Widget["Label"]["BackupFolderPath"] = tk.Label(self.Frame["Main"], text="Backup Folder Path:", font=self.Setting["Font"]["Label"])
+        self.Main_Widget["Label"]["BackupFolderPath"] = tk.Label(self.Frame["Main"], text="Backup Folder Path :", font=self.Setting["Font"]["Label"])
         self.Main_Widget["Entry"]["BackupFolderPath"] = tk.Entry(self.Frame["Main"], state="readonly", readonlybackground="light yellow")
         self.Main_Widget["Button"]["BackupFolderPath"] = Button(self.Frame["Main"], image_path=self.Image_path["Button_SelectFolder"], size=(20,20), command=self.Button_SelectBackupFolder)
         

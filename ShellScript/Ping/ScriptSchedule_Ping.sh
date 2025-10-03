@@ -200,7 +200,7 @@ while true; do
             echo "ErrorConsecutiveTime_TimeResponse : $ErrorConsecutiveTime_TimeResponse";
             echo "ErrorConsecutiveTime_PingLost : $ErrorConsecutiveTime_PingLost";
             echo "Result : Wait";
-        } > "/storage/emulated/0/Documents/Log/${PingTestName}_ping_result.log" 2>&1;
+        } > "${LogDir}/${PingTestName}_ping_result.log" 2>&1;
     fi;
     sleep 1;  # Check every second
 done;

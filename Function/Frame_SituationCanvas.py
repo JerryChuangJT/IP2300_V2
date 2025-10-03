@@ -47,9 +47,9 @@ class Frame_SituationCanvas():
         
         ### Create Title & Info & Canvas.
         self.Label_Title = tk.Label(Frame_Main, text=f"{self.Situation}", 
-                           font=("Arial Black", 11, "bold"), 
+                           font=("Arial Black", 14, "bold"), 
                            bg=self.colors['background'], 
-                           fg="#3A3A3A")
+                           fg="#465FEC")
         frame_info = tk.Frame(Frame_Main, bg=self.colors['background'])
         self.Canvas = tk.Canvas(Frame_Main, bg=self.colors['background'], 
                            highlightthickness=1, highlightbackground=self.colors['border'])

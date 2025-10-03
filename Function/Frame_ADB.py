@@ -22,16 +22,16 @@ class Frame_ADB():
         style.configure("Message1_ADB.TLabel", font=("Segoe UI", 8), foreground="#717171")
         style.configure("Message2_ADB.TLabel", font=("Segoe UI", 8), foreground="Red")
         style.configure("Label_ADB.TLabel", font=("Segoe UI", 10), foreground="black")
-        style.configure("Count_ADB.TLabel", font=("Segoe UI", 11, "bold"), foreground="black")
+        style.configure("Count_ADB.TLabel", font=("Segoe UI", 9), foreground="#6C6C6C")
         style.configure("Log_ADB.TLabel", font=("Segoe UI", 10), foreground="black")
+
+        ### self.Thread_StopEvent is used to stop the thread when the window is closed.
+        self.Thread_StopEvent = threading.Event()
 
         self.load_json_data()
         self.Create_widgets()
         JsonDataFunction.Update_jsonFileData(self.ADBDownload_JsonPath, "Client", [])
   
-        ### self.Thread_StopEvent is used to stop the thread when the window is closed.
-        self.Thread_StopEvent = threading.Event()
-
     def load_json_data(self):
         self.ADBDownload_JsonPath = "./Parameter/json_PageADBDownload.json"
         self.Environment_JsonPath = "./Parameter/json_PageSetEnvironment.json"
@@ -49,7 +49,7 @@ class Frame_ADB():
 
             ### Create Widgets.
             self.Main_Widget["Title"] = ttk.Label(self.Frame["Main"], text="ADB", style="Title_ADB.TLabel")
-            self.Main_Widget["Label"]["Count"] = ttk.Label(self.Frame["Main"], text="Count : 0/0", style="Count_ADB.TLabel")
+            
 
             self.Main_Widget["Label"]["Search"] = ttk.Label(self.Frame["Main"], text="Search : ",  style="Label_ADB.TLabel")
 
@@ -70,23 +70,19 @@ class Frame_ADB():
                                                      anchor="w", 
                                                      command=lambda col=self.TreeView_Columns[i]: sort_by_column(col=col, reverse=False))
                 self.Main_Widget["TreeView"].column(self.TreeView_Columns[i], width=50, stretch=True)
-            self.Main_Widget["Label"]["JsonPath"] = ttk.Label(self.Frame["Main"], text=f"{self.Client_JsonPath}", style="Message1_ADB.TLabel")
-            self.Main_Widget["Label"]["Message"] = ttk.Label(self.Frame["Main"], text="", style="Message2_ADB.TLabel")
-            
+            self.Main_Widget["Label"]["Message"] = ttk.Label(self.Frame["Main"], text=f"{self.Client_JsonPath}", style="Message1_ADB.TLabel")
+            self.Main_Widget["Label"]["Count"] = ttk.Label(self.Frame["Main"], text="Total : 0/0", style="Count_ADB.TLabel") 
+
             ### Layout Widgets.
-            self.Main_Widget["Title"].grid(row=0, column=0, padx=(5,0), pady=(5,0), sticky="w")
-            self.Main_Widget["Label"]["Count"].grid(row=0, column=1, columnspan=2, padx=(5,5), pady=(5,0), sticky="e")
-            
-            self.Main_Widget["Button"]["Download"].grid(row=1, column=1, columnspan=2, padx=(5,120), pady=(5,0), sticky="e")
-            self.Main_Widget["Button"]["Reload"].grid(row=1, column=1, columnspan=2, padx=(5,5), pady=(5,0), sticky="e")
-            
+            self.Main_Widget["Title"].grid(row=0, column=0, padx=(5,0), pady=(5,0), sticky="w")            
+            self.Main_Widget["Button"]["Download"].grid(row=1, column=1, padx=(0,120), pady=(5,0), sticky="e")
+            self.Main_Widget["Button"]["Reload"].grid(row=1, column=1, padx=(0,5), pady=(5,0), sticky="e")
             self.Main_Widget["Label"]["Search"].grid(row=1, column=0, padx=(5,0), pady=(5,0), sticky="w")
             self.Main_Widget["Entry"]["Search"].grid(row=1, column=0, padx=(75,0), pady=(5,0), sticky="w")
-            
             self.Main_Widget["TreeView"].grid(row=2, column=0, columnspan=2, padx=(5,0), pady=(5,0), sticky="nsew")
             self.Main_Widget["Scrollerbar"]["Vertical"].grid(row=2, column=2, padx=(0,0), pady=(5,0), sticky="ns")
-            self.Main_Widget["Label"]["JsonPath"].grid(row=3, column=0, columnspan=2, padx=(5,0), pady=(5,5), sticky="w")
-            self.Main_Widget["Label"]["Message"].grid(row=3, column=1, padx=(5,5), pady=(5,5), sticky="e")
+            self.Main_Widget["Label"]["Message"].grid(row=3, column=0, padx=(5,0), pady=5, sticky="w")
+            self.Main_Widget["Label"]["Count"].grid(row=3, column=1, padx=(5,0), pady=5, sticky="e")
 
             self.Frame["Main"].grid_rowconfigure(2, weight=1)  # 讓 TreeView 可以自動調整大小
             self.Frame["Main"].grid_columnconfigure(1, weight=1)
@@ -120,7 +116,7 @@ class Frame_ADB():
     def Updating_TreeViewCount(self, event=None):
         total_num = len(self.Main_Widget["TreeView"].get_children())
         selected_num = len(self.Main_Widget["TreeView"].selection())
-        self.Main_Widget["Label"]["Count"].config(text=f"Count : {selected_num}/{total_num}")
+        self.Main_Widget["Label"]["Count"].config(text=f"Total : {selected_num}/{total_num}")
 
     def Button_Refresh(self):
         def check_telnet_connection(host:str, port:int=23):
@@ -156,12 +152,12 @@ class Frame_ADB():
                 error_message = traceback.format_exc()
                 self.Show_MessageBox("Error", error_message)
 
-        def thread_function():
+        def Thread_Function():
             try:
                 ### Disable the Reload button to prevent multiple clicks.                       
                 self.root.after(0, lambda: self.Main_Widget["Button"]["Reload"].config(state=tk.DISABLED))
                 self.root.after(0, lambda: self.Main_Widget["Button"]["Download"].config(state=tk.DISABLED))    
-                self.root.after(0, self.Main_Widget["Label"]["Message"].config(text=f"Checking Clients Connection ..."))      
+                self.root.after(0, lambda: self.Main_Widget["Label"]["Message"].config(text=f"Checking Clients Connection ...", style="Message2_ADB.TLabel"))      
 
                 ### Execute Thread Pool.
                 ### Check the connection status of each device in [client_jsondata["Client"]].
@@ -169,7 +165,7 @@ class Frame_ADB():
                 with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Check_ClientEtherConnection") as executor:
                     futures = []
                     for client_data in client_jsondata["Client"]:
-                        if self.Thread_StopEvent.is_set():    break
+                        if self.Thread_StopEvent.is_set():  break
                         futures.append(executor.submit(check_telnet_connection, client_data["EtherIP"], 23))
                 
                     ### Get all result from [futures].
@@ -177,14 +173,14 @@ class Frame_ADB():
                     completed_count = 0
                     ether_checkresult = {"PASS":[],"FAIL":[]}
                     for future in as_completed(futures):
-                        if self.Thread_StopEvent.is_set():    break
+                        if self.Thread_StopEvent.is_set():  break
                         thread_respone = future.result()
                         ether_checkresult[thread_respone["Result"]].append(thread_respone["Device"])
                         # ether_checkresult["PASS"].append(thread_respone["Device"])
 
                         completed_count += 1
                         self.root.after(0, lambda completed_count=completed_count, total_count=total_count: 
-                                        self.Main_Widget["Label"]["Message"].config(text=f"Processing  {completed_count} / {total_count}  ..."))
+                                        self.Main_Widget["Label"]["Message"].config(text=f"Processing  {completed_count} / {total_count}  ...", style="Message2_ADB.TLabel"))
 
                 ### Show the connection status in self.Main_Widget["TreeView"].
                 if self.Thread_StopEvent.is_set():  return
@@ -199,7 +195,7 @@ class Frame_ADB():
             finally:
                 self.root.after(0, lambda: self.Main_Widget["Button"]["Reload"].config(state=tk.NORMAL))
                 self.root.after(0, lambda: self.Main_Widget["Button"]["Download"].config(state=tk.NORMAL))
-                self.root.after(0, lambda: self.Main_Widget["Label"]["Message"].config(text=""))
+                self.root.after(0, lambda: self.Main_Widget["Label"]["Message"].config(text=f"{self.Client_JsonPath}", style="Message1_ADB.TLabel"))
         
         #===========================================================================================
         try:
@@ -208,7 +204,7 @@ class Frame_ADB():
                 self.Main_Widget["TreeView"].delete(item)
 
             self.Thread_StopEvent.clear()
-            thread = threading.Thread(target=thread_function, daemon=True)
+            thread = threading.Thread(target=Thread_Function, daemon=True)
             thread.start()
 
         except Exception as e:
@@ -253,12 +249,11 @@ class Frame_ADB():
     ###=======================================================================================
     def ReloadJsonData(self):
         self.load_json_data()
-        self.Main_Widget["Label"]["JsonPath"].config(text=f"{self.Client_JsonPath}")
+        self.Main_Widget["Label"]["Message"].config(text=f"{self.Client_JsonPath}", style="Message1_ADB.TLabel")
 
     def on_close(self):
         if hasattr(self, 'Thread_StopEvent'):
             self.Thread_StopEvent.set()
-            print("設定停止事件")
 
 if __name__ == "__main__":
     width = 800

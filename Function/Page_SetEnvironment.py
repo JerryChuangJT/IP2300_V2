@@ -121,7 +121,7 @@ class Page_SetEnvironment():
             folder_path = folder_path.rstrip("/\\")
             required_files = [
                 "json_Client.json",
-                "json_ManageScript.json", 
+                # "json_ManageScript.json", 
                 "json_Script.json",
                 "json_Wifi.json",
                 "json_Schedule.json",

@@ -100,7 +100,6 @@ class Frame_SetDay(tk.Frame):
             "Update_Expand": tk.BooleanVar(value=True),
         }
 
-       # 使用更清楚的屬性名稱
         self.time_range_frames = []
         self.delete_buttons = []
 
@@ -172,7 +171,7 @@ class Frame_SetDay(tk.Frame):
         self.time_range_frames.append(time_frame)
 
         ### Create Delete Button.
-        delete_button = Button(self, image_path=self.Image_path["Button_Delete"], size=(20,20), command=lambda frame=time_frame, db=None: delete_timeframe(frame))
+        delete_button = Button(self, image_path=self.Image_path["Button_Delete"], size=(20,20), command=lambda frame=time_frame: delete_timeframe(frame))
         self.delete_buttons.append(delete_button)
 
         self.Update_Expand()
@@ -226,6 +225,9 @@ class Frame_SetDay(tk.Frame):
         self.Update_Message()
 
     def Button_UpdateExpand(self):
+        if self.time_range_frames == []:
+            return
+        
         self.Flag["Update_Expand"].set(not self.Flag["Update_Expand"].get())
         self.Update_Expand()
 

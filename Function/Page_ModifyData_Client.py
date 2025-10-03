@@ -69,7 +69,7 @@ class Page_ModifyData_Client():
         self.Main_Widget["Separator"]["Top"] = ttk.Separator(self.Frame["Main"], orient='horizontal')
 
         for column_name in self.TreeView_Columns:
-            self.Main_Widget["Label"][column_name] = tk.Label(self.Frame["Main"], text=column_name + ":", font=self.Setting["Font"]["Label"])
+            self.Main_Widget["Label"][column_name] = tk.Label(self.Frame["Main"], text=column_name + " :", font=self.Setting["Font"]["Label"])
 
         self.Main_Widget["Entry"]["ClinetID"] = tk.Entry(self.Frame["Main"], font=self.Setting["Font"]["Label"])
         self.Main_Widget["Entry"]["MAC"] = tk.Entry(self.Frame["Main"], font=self.Setting["Font"]["Label"])

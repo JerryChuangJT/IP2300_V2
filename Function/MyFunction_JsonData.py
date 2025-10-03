@@ -1,3 +1,4 @@
+import os
 import json
 
 ### Funciton for loading json datas.
@@ -16,8 +17,16 @@ def Get_DictValue(dict_value:dict)->list:
     list_DictValue = list(dict_value.values())
     return list_DictValue
 
+def Create_JsonFile(file_path:str):
+    if not os.path.exists(file_path):
+        with open(file_path, "w", encoding="utf-8") as file:
+            json.dump({}, file, ensure_ascii=False, indent=4)
+
 ### Function for Update JSON File Data.
 def Update_jsonFileData(file_path:str, key_value:str, value):
+    ### Create Json File.
+    Create_JsonFile(file_path)
+            
     ### Read JSON File.
     data = Get_jsonAllData(file_path)
 

@@ -286,6 +286,7 @@ while true; do
         fi;
         start_line=$(($start_line + 1));
     done < "$temp_file";
+    
     rm -f "$temp_file";
     echo "$start_line" > "$startline_file" 2>&1;
     Update_PingRate_File "$pass_count" "$fail_count" "$response_total";

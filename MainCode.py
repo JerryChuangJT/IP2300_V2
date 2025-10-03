@@ -5,6 +5,8 @@ from tkinter import PhotoImage
 import sys
 import os
 import traceback
+import time
+import threading
 
 from Function.Page_SetEnvironment import Page_SetEnvironment 
 from Function.Page_SetBackup import Page_SetBackup
@@ -14,6 +16,8 @@ from Function.Frame_Client import Frame_Client
 from Function.Frame_Wifi import Frame_Wifi
 from Function.Frame_Script import Frame_Script
 from Function.Frame_Schedule import Frame_Schedule
+from Function.Frame_Situation import Frame_Situation
+from Function.Frame_Monitor import Frame_Monitor
 
 import Function.MyFunction_JsonData as JsonDataFunction
 
@@ -37,7 +41,7 @@ class MainPage():
 
         self.Create_MenuBar()
         self.Create_NoteBook()
-    
+
     ###=======================================================================================
     ###=======================================================================================
     ### Create the menu bar for the main window.
@@ -65,10 +69,19 @@ class MainPage():
             self.controllerPCIP = JsonDataFunction.Get_jsonAllData(self.jsonpath_environment)["ControllerPCIP"]
             self.root.title(f"{self.version} MutipleClientsTesting    {self.jsonfolder}   {self.controllerPCIP}")
 
+            ### Page Execution
+            self.app_situation.ReloadJsonData()
+
+            ### Page Schedule
+            self.app_schedule.Reload_JsonData()
+
+            ### Page ADB
             self.app_adb.ReloadJsonData()
+            
+            ### Page Setting
             self.app_client.ReloadJsonData()
             self.app_wifi.ReloadJsonData()
-            self.add_script.ReloadJsonData()
+            self.app_script.ReloadJsonData()
 
         def on_window_close():
             update_title_version()
@@ -112,66 +125,98 @@ class MainPage():
     ###=======================================================================================
     ### Create the notebook.
     def Create_NoteBook(self):
+        def runtest_callback():
+            self.app_monitor.Update_RunTest_Json()
+            self.app_monitor.LoadCreate_ClientStatusFrame()
+            
+            thread_Runtest = threading.Thread(target=self.app_monitor.MainLoop_RunTest, daemon=True)
+            thread_Runtest.start()
+
+            self.Notebook["ExecutionPage"].select(self.Frame_ExecutionPage["Monitor"])
+
+        def stoptest_callback():
+            self.app_situation.Stop_Test()
+
         ### Create a style object
         ### Setting the theme to 'clam' for better border control.
         style = ttk.Style()
         style.theme_use('vista')
         style.map('TNotebook.Tab',
-                 foreground=[('selected', 'black'),        # 選中時：黑色文字
-                           ('active', 'black'),           # 懸停時：黑色文字
-                           ('!active', "#9E9D9D")],       # 未選中：灰色文字
-                 font=[('selected', ('Arial', 10, 'bold')), # 選中時：放大字體 + 粗體
-                      ('!selected', ('Arial', 9))],       # 未選中：正常大小
-                 focuscolor=[('selected', ''),             # 選中時：無焦點色
-                           ('!selected', '')]             # 未選中：無焦點色
+                    foreground=[('selected', 'black'),          # 選中時：黑色文字
+                                ('active', 'black'),            # 懸停時：黑色文字
+                                ('!active', "#9E9D9D")],      # 未選中：灰色文字
+                    font=[('selected', ('Arial', 10, 'bold')),  # 選中時：放大字體 + 粗體
+                        ('!selected', ('Arial', 9))],           # 未選中：正常大小
+                    focuscolor=[('selected', ''),               # 選中時：無焦點色
+                                ('!selected', '')]              # 未選中：無焦點色
                 )
-        style.configure('TNotebook',
-                       background='#f0f0f0')              # 背景顏色改為淺灰
+        style.configure('TNotebook',background='#f0f0f0')     # 背景顏色改為淺灰
 
         #-----------------------------------------------------------------------------------
-        Notebook = {}
+        self.Notebook = {}
 
         ### Create the Notebook of MainPage.
-        Notebook["MainPage"] = ttk.Notebook(self.root)
+        self.Notebook["MainPage"] = ttk.Notebook(self.root)
         self.Frame_MainPage = {}
-        self.Frame_MainPage["Execution"] = tk.Frame(Notebook["MainPage"])
-
-        self.Frame_MainPage["Schedule"] = tk.Frame(Notebook["MainPage"])
+        
+        self.Frame_MainPage["Schedule"] = tk.Frame(self.Notebook["MainPage"])
         self.app_schedule = Frame_Schedule(self.Frame_MainPage["Schedule"])
-
-        self.Frame_MainPage["ADB"] = tk.Frame(Notebook["MainPage"])
+        self.Frame_MainPage["ADB"] = tk.Frame(self.Notebook["MainPage"])
         self.app_adb = Frame_ADB(self.Frame_MainPage["ADB"])
 
-        self.Frame_MainPage["Setting"] = tk.Frame(Notebook["MainPage"])
+        self.Frame_MainPage["Execution"] = tk.Frame(self.Notebook["MainPage"])
+        self.Frame_MainPage["Setting"] = tk.Frame(self.Notebook["MainPage"])
 
-        Notebook["MainPage"].add(self.Frame_MainPage["Execution"], text="Execution")
-        Notebook["MainPage"].add(self.Frame_MainPage["Schedule"], text="Schedule")
-        Notebook["MainPage"].add(self.Frame_MainPage["ADB"], text="ADB")
-        Notebook["MainPage"].add(self.Frame_MainPage["Setting"], text="Setting")
-        Notebook["MainPage"].pack(padx=5, pady=5, fill=tk.BOTH, expand=True)
+        self.Notebook["MainPage"].add(self.Frame_MainPage["Execution"], text="Execution")
+        self.Notebook["MainPage"].add(self.Frame_MainPage["Schedule"], text="Schedule")
+        self.Notebook["MainPage"].add(self.Frame_MainPage["ADB"], text="ADB")
+        self.Notebook["MainPage"].add(self.Frame_MainPage["Setting"], text="Setting")
+        self.Notebook["MainPage"].pack(padx=5, pady=5, fill=tk.BOTH, expand=True)
+
+        ###Create the Notebook of ExecutionPage.
+        self.Notebook["ExecutionPage"] = ttk.Notebook(self.Frame_MainPage["Execution"])
+        self.Frame_ExecutionPage = {}
+
+        self.Frame_ExecutionPage["Situation"] = tk.Frame(self.Notebook["ExecutionPage"])
+        self.app_situation = Frame_Situation(self.Frame_ExecutionPage["Situation"], runtest_callback=runtest_callback, stoptest_callback=stoptest_callback)
+        self.Frame_ExecutionPage["Monitor"] = tk.Frame(self.Notebook["ExecutionPage"])
+        self.app_monitor = Frame_Monitor(self.Frame_ExecutionPage["Monitor"], stoptest_callback=stoptest_callback)
+        self.Frame_ExecutionPage["IPAddress"] = tk.Frame(self.Notebook["ExecutionPage"])
+
+
+        self.Notebook["ExecutionPage"].add(self.Frame_ExecutionPage["Situation"], text="Situation")
+        self.Notebook["ExecutionPage"].add(self.Frame_ExecutionPage["Monitor"], text="Monitor")
+        self.Notebook["ExecutionPage"].add(self.Frame_ExecutionPage["IPAddress"], text="IPAddress")
+        self.Notebook["ExecutionPage"].pack(padx=0, pady=0, fill=tk.BOTH, expand=True)
 
         ### Create the Notebook of SettingPage.
-        Notebook["SettingPage"] = ttk.Notebook(self.Frame_MainPage["Setting"])
+        self.Notebook["SettingPage"] = ttk.Notebook(self.Frame_MainPage["Setting"])
         self.Frame_SettingPage = {}
-        
-        # self.Frame_SettingPage["ADB"] = tk.Frame(Notebook["SettingPage"])
-        # self.app_adb = Frame_ADB(self.Frame_SettingPage["ADB"])
 
-        self.Frame_SettingPage["Client"] = tk.Frame(Notebook["SettingPage"])
+        self.Frame_SettingPage["Client"] = tk.Frame(self.Notebook["SettingPage"])
         self.app_client = Frame_Client(self.Frame_SettingPage["Client"])
-
-        self.Frame_SettingPage["Wifi"] = tk.Frame(Notebook["SettingPage"])
+        self.Frame_SettingPage["Wifi"] = tk.Frame(self.Notebook["SettingPage"])
         self.app_wifi = Frame_Wifi(self.Frame_SettingPage["Wifi"])
+        self.Frame_SettingPage["Script"] = tk.Frame(self.Notebook["SettingPage"])
+        self.app_script = Frame_Script(self.Frame_SettingPage["Script"])
+        
+        self.Notebook["SettingPage"].add(self.Frame_SettingPage["Client"], text="Client")
+        self.Notebook["SettingPage"].add(self.Frame_SettingPage["Wifi"], text="Wifi")
+        self.Notebook["SettingPage"].add(self.Frame_SettingPage["Script"], text="Script")
 
-        self.Frame_SettingPage["Script"] = tk.Frame(Notebook["SettingPage"])
-        self.add_script = Frame_Script(self.Frame_SettingPage["Script"])
+        self.Notebook["SettingPage"].pack(padx=0, pady=0, fill=tk.BOTH, expand=True)
+    
+    ###=======================================================================================
+    ###=======================================================================================
+    def Close_Window(self):
+        try:
+            self.app_adb.on_close()
+            self.root.destroy()
 
-        # Notebook["SettingPage"].add(self.Frame_SettingPage["ADB"], text="ADB")
-        Notebook["SettingPage"].add(self.Frame_SettingPage["Client"], text="Client")
-        Notebook["SettingPage"].add(self.Frame_SettingPage["Wifi"], text="Wifi")
-        Notebook["SettingPage"].add(self.Frame_SettingPage["Script"], text="Script")
+        except Exception as e:
+            error_message = traceback.format_exc()
+            messagebox.showerror("Error", f"{error_message}")
 
-        Notebook["SettingPage"].pack(padx=0, pady=0, fill=tk.BOTH, expand=True)
 
 if __name__ == "__main__":
 
@@ -197,6 +242,8 @@ if __name__ == "__main__":
 
     root.deiconify()
     FrameScript = MainPage(root, version=VERSION) 
+    root.protocol("WM_DELETE_WINDOW", FrameScript.Close_Window)
+    
     root.mainloop()
     
 

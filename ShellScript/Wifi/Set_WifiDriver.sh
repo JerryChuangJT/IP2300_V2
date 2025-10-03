@@ -236,7 +236,7 @@ current_date=$(Get_CurrentDateTime)
     echo "Parameter_Bandwidth : $Parameter_Bandwidth";
 } >> "$log_file" 2>&1;
 
-###-----------------------------------------------------------------------------------
+###===================================================================================
 ### Check Channel or Bnadwidth need to set to "Auto" or not.
 current_date=$(Get_CurrentDateTime)
 if [ "$Parameter_Band" = "Default" ] || [ "$Parameter_Channel" = "Auto" ] || [ "$Parameter_Standard" = "Auto" ] || [ "$Parameter_Bandwidth" = "Auto" ]; then

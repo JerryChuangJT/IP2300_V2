@@ -69,7 +69,7 @@ class Page_ModifyData_Wifi():
         self.Main_Widget["Separator"]["Top"] = ttk.Separator(self.Frame["Main"], orient='horizontal')
 
         for column_name in self.TreeView_Columns:
-            self.Main_Widget["Label"][column_name] = tk.Label(self.Frame["Main"], text=column_name + ":", font=self.Setting["Font"]["Label"])
+            self.Main_Widget["Label"][column_name] = tk.Label(self.Frame["Main"], text=column_name + " :", font=self.Setting["Font"]["Label"])
 
         self.Main_Widget["Entry"]["WifiID"] = tk.Entry(self.Frame["Main"], font=self.Setting["Font"]["Label"])
         self.Main_Widget["Combobox"]["PingType"] = ttk.Combobox(self.Frame["Main"], values=["ipv4", "ipv6"], state="readonly", font=self.Setting["Font"]["Label"])

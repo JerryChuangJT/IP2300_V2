@@ -11,8 +11,8 @@ import Function.MyFunction_JsonData as JsonDataFunction
 from Class.Class_Button import Button
 
 class Frame_Client():
-    def __init__(self, root=None, close_callback=None):
-        self.close_callback = close_callback
+    def __init__(self, root=None, update_shedulechart_callback=None):
+        self.update_shedulechart_callback = update_shedulechart_callback
         self.root = root
 
         ### Initialize settings.
@@ -38,6 +38,7 @@ class Frame_Client():
     def load_json_data(self):
         self.Environment_JsonPath = "./Parameter/json_PageSetEnvironment.json"
         self.Environment_JsonData = JsonDataFunction.Get_jsonAllData(self.Environment_JsonPath)
+        self.Schedule_JsonPath = self.Environment_JsonData["JsonFilePath"] + "json_Schedule.json"
         self.Client_JsonPath = self.Environment_JsonData["JsonFilePath"] + "json_Client.json"
         self.TreeView_Columns = ["ClientID", "MAC", "EtherIP", "Comment"]
         self.TreeView_Columns.append("Index")
@@ -137,6 +138,28 @@ class Frame_Client():
         self.Top_Widgets["Label"]["Count"].config(text=f"Total : {selected_num}/{total_num}")
 
     def Button_EditData(self):
+        def update_newclientid_from_schedule(old_client_id:str, new_client_id:str):
+            try:
+                if old_client_id == new_client_id:  return
+
+                schedule_data = JsonDataFunction.Get_jsonAllData(self.Schedule_JsonPath)
+
+                ### Iterate through each situation and filter out clients to be removed.
+                for situation_name, situation_data in schedule_data.items():
+                    if old_client_id in situation_data["ClientID"]:
+                        situation_data["ClientID"].remove(old_client_id)
+                        situation_data["ClientID"].append(new_client_id)
+                        schedule_data[situation_name] = situation_data
+                        break
+
+                ### Update the JSON file with the modified schedule data.
+                JsonDataFunction.Update_Entire_jsonFileData(self.Schedule_JsonPath, schedule_data)
+
+            except Exception as e:
+                error_message = traceback.format_exc()
+                messagebox.showwarning("Error", error_message, parent=self.root)
+                return
+
         def edit_itme_client(selected_item_value:list=None, new_item_value:list=None):
             try:
                 ### Get original client data list.
@@ -163,6 +186,10 @@ class Frame_Client():
 
                 ### Reload the client data into the TreeView.
                 self.Load_ClientData()
+
+                ### Update the json_Schedule.json if ClientID is changed.
+                update_newclientid_from_schedule(selected_item_value[0], new_item_value[0])
+                self.update_shedulechart_callback()
 
             except Exception as e:
                 error_message = traceback.format_exc()
@@ -248,6 +275,30 @@ class Frame_Client():
             return
 
     def Button_DeleteData(self):
+        def remove_clients_from_schedule(client_ids_to_remove:list):
+            try:
+                schedule_data = JsonDataFunction.Get_jsonAllData(self.Schedule_JsonPath)
+
+                ### Iterate through each situation and filter out clients to be removed.
+                for situation_name, situation_data in schedule_data.items():
+                    original_clients:list = situation_data["ClientID"]
+
+                    filtered_clients = []
+                    for client_id in original_clients:
+                        if client_id not in client_ids_to_remove:
+                            filtered_clients.append(client_id)
+
+                    ### Update the Script list for the situation.
+                    schedule_data[situation_name]["ClientID"] = filtered_clients
+
+                ### Update the JSON file with the modified schedule data.
+                JsonDataFunction.Update_Entire_jsonFileData(self.Schedule_JsonPath, schedule_data)
+
+            except Exception as e:
+                error_message = traceback.format_exc()
+                messagebox.showwarning("Error", error_message, parent=self.root)
+                return
+            
         try:
             ### Get original Client data list.
             all_client_data = JsonDataFunction.Get_jsonAllData(self.Client_JsonPath)["Client"]
@@ -263,6 +314,8 @@ class Frame_Client():
 
             ### Get selected items data.
             ### When Get the data from Treeview, no need to get the "Index" column!! (self.TreeView_Columns[:-1])
+            ### ex: [
+            ###         ]
             list_selected_data = []
             for item in selection:
                 item_values = self.Top_Widgets["TreeView"].item(item)['values']
@@ -280,8 +333,13 @@ class Frame_Client():
             ## Update the JSON file with the modified data.
             JsonDataFunction.Update_jsonFileData(self.Client_JsonPath, "Client", all_client_data)
 
+            ### Remove Selected items from json_Schedule.json.
+            remove_client_ids = [data["ClientID"] for data in list_selected_data]
+            remove_clients_from_schedule(remove_client_ids)
+
             ### Reload the Client data into the TreeView.
             self.Load_ClientData()
+            self.update_shedulechart_callback()
 
         except Exception as e:
             error_message = traceback.format_exc()

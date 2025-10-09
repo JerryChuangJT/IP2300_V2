@@ -1,15 +1,15 @@
 import tkinter as tk
-from tkinter.scrolledtext import ScrolledText
 from tkinter import ttk, messagebox
-from idlelib.tooltip import Hovertip  
 import traceback
 
 import Function.MyFunction_JsonData as JsonDataFunction
 
 from Function.Page_SetWeeklyTime import Page_SetWeeklyTime
-from Function.Frame_SituationCanvas import Frame_SituationCanvas
+from Function.Frame_ScheduleCanvas import Frame_ScheduleCanvas
 
 from Class.Class_Button import Button
+from Class.Class_Tooltip import SmartTooltip
+
 
 class Page_SetSituationName():
     def __init__(self, root, title:str="Add Situation", confirm_callback=None):
@@ -343,9 +343,9 @@ class Frame_Schedule():
             self.Situation_Widget["Label"]["Count"].bind("<<Update_ScheduleCount>>", lambda e: update_situation_count())
 
             Tooltip = {
-                "Button_Add": Hovertip(self.Situation_Widget["Button"]["Add"], "Add a new schedule item.", hover_delay=300),
-                "Button_Delete": Hovertip(self.Situation_Widget["Button"]["Delete"], "Delete the selected schedule item.", hover_delay=300),
-                "Button_Copy": Hovertip(self.Situation_Widget["Button"]["Copy"], "Copy the selected schedule item.", hover_delay=300),
+                "Button_Add": SmartTooltip(self.Situation_Widget["Button"]["Add"], "Add a new schedule item.", hover_delay=300),
+                "Button_Delete": SmartTooltip(self.Situation_Widget["Button"]["Delete"], "Delete the selected schedule item.", hover_delay=300),
+                "Button_Copy": SmartTooltip(self.Situation_Widget["Button"]["Copy"], "Copy the selected schedule item.", hover_delay=300),
             }
 
         def create_widgets_wifi():
@@ -396,7 +396,7 @@ class Frame_Schedule():
             self.Frame["Wifi"].grid_columnconfigure(1, weight=1)
 
             Tooltip = {
-                "Button_SetSchedule": Hovertip(self.Wifi_Widget["Button"]["SetSchedule"], "Set the schedule for the selected Wifi ID.", hover_delay=300),
+                "Button_SetSchedule": SmartTooltip(self.Wifi_Widget["Button"]["SetSchedule"], "Set the schedule for the selected Wifi ID.", hover_delay=300),
             }
 
         def create_widgets_script():
@@ -440,9 +440,9 @@ class Frame_Schedule():
             self.Script_Widget["Label"]["Count"].bind("<<Update_ScriptCount>>", lambda e: update_script_count())
 
             Tooltip = {
-                "Button_Add": Hovertip(self.Script_Widget["Button"]["Add"], "Add a new script schedule.", hover_delay=300),
-                "Button_Delete": Hovertip(self.Script_Widget["Button"]["Delete"], "Delete the selected script schedule.", hover_delay=300),
-                "Button_Edit": Hovertip(self.Script_Widget["Button"]["SetSchedule"], "Edit the selected script schedule.", hover_delay=300),
+                "Button_Add": SmartTooltip(self.Script_Widget["Button"]["Add"], "Add a new script schedule.", hover_delay=300),
+                "Button_Delete": SmartTooltip(self.Script_Widget["Button"]["Delete"], "Delete the selected script schedule.", hover_delay=300),
+                "Button_Edit": SmartTooltip(self.Script_Widget["Button"]["SetSchedule"], "Edit the selected script schedule.", hover_delay=300),
             }
 
         def create_widgets_client():
@@ -477,8 +477,8 @@ class Frame_Schedule():
             self.Client_Widget["Label"]["Count"].bind("<<Update_ClientCount>>", lambda e: update_client_count())
 
             Tooltip = {
-                "Button_Add": Hovertip(self.Client_Widget["Button"]["Add"], "Add a new client.", hover_delay=300),
-                "Button_Delete": Hovertip(self.Client_Widget["Button"]["Delete"], "Delete the selected client.", hover_delay=300),
+                "Button_Add": SmartTooltip(self.Client_Widget["Button"]["Add"], "Add a new client.", hover_delay=300),
+                "Button_Delete": SmartTooltip(self.Client_Widget["Button"]["Delete"], "Delete the selected client.", hover_delay=300),
             }   
 
         ### Main Frame
@@ -497,7 +497,7 @@ class Frame_Schedule():
         self.Frame["PanedWindow"] = tk.PanedWindow(self.Frame["Main"], orient=tk.VERTICAL, sashwidth=5)
         self.Frame["SituationCanvas"] = ttk.Frame(self.Frame["Main"], borderwidth=1, relief="flat", width=1500)
         # Create Situation Canvas.
-        self.SituationCanvas = Frame_SituationCanvas(self.Frame["SituationCanvas"])
+        self.SituationCanvas = Frame_ScheduleCanvas(self.Frame["SituationCanvas"])
 
         # self.Title["SetSchedule"].grid(row=0, column=0, padx=5, pady=(5,0), sticky="w")
         self.Frame["Situation"].grid(row=1, column=0, rowspan=2, padx=(5,0), pady=5, sticky="nsew")

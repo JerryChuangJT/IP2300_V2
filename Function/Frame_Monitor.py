@@ -3,7 +3,6 @@ from tkinter import ttk, messagebox
 from idlelib.tooltip import Hovertip  
 import traceback
 import time
-import logging
 import os
 import json
 import re
@@ -93,6 +92,8 @@ class Frame_ClientStatus():
 
     ### Create self.Img_Element dict.
     def Create_Widgets(self):
+        self.HoverTip = {}
+
         ### Create Wifi Img.
         wifi_id = list(self.ShellScript_Status["Wifi"].keys())[0]
         wifi_img = ImageDisplay(self.root, image_path="./img/wifi.png", size=(40, 40))
@@ -101,7 +102,8 @@ class Frame_ClientStatus():
                         f"Ether IP: {self.ShellScript_Status['EtherIP']}\n"
                         f"WiFi ID: {wifi_id}\n"
                         f"Status: {self.ShellScript_Status['Wifi'][wifi_id]}")
-        Hovertip(wifi_img, tooltip_text, hover_delay=300)
+        self.HoverTip[wifi_id] = Hovertip(wifi_img, tooltip_text, hover_delay=300)
+        
         self.Img_Element["Wifi"][wifi_id] = wifi_img
 
         ### Create Scripts Img.
@@ -121,7 +123,7 @@ class Frame_ClientStatus():
             tooltip_text = (f"Type: {script_type}\n"
                             f"Script ID: {script_id}\n"
                             f"Status: {self.ShellScript_Status['Script'][script_id]}")
-            Hovertip(script_img, tooltip_text, hover_delay=300)
+            self.HoverTip[script_id] = Hovertip(script_img, tooltip_text, hover_delay=300)
             self.Img_Element["Script"][script_id] = script_img
 
     ###===================================================================
@@ -155,7 +157,7 @@ class Frame_ClientStatus():
                                 f"Ether IP: {self.ShellScript_Status['EtherIP']}\n"
                                 f"WiFi ID: {wifi_id}\n"
                                 f"Status: {self.ShellScript_Status['Wifi'][wifi_id]}")
-                Hovertip(self.Img_Element["Wifi"][wifi_id], tooltip_text, hover_delay=300)
+                self.HoverTip[wifi_id].text = tooltip_text
 
                 ### Update Script Tooltip.
                 for script_id in self.ShellScript_Status["Script"]:
@@ -163,7 +165,7 @@ class Frame_ClientStatus():
                     tooltip_text = (f"Type: {script_type}\n"
                                     f"Script ID: {script_id}\n"
                                     f"Status: {self.ShellScript_Status['Script'][script_id]}")
-                    Hovertip(self.Img_Element["Script"][script_id], tooltip_text, hover_delay=300)
+                    self.HoverTip[script_id].text = tooltip_text
 
             except Exception as e:
                 error_message = traceback.format_exc()
@@ -262,16 +264,18 @@ class Frame_Monitor():
         self.Information_Widget["Button"] = {}
         self.Information_Widget["Tooltip"] = {}
 
-        self.Information_Widget["Label"]["Wifi"] = ttk.Label(self.Frame["Information"], text="WiFi Status:", style="Information_Monitor.TLabel")
-        self.Information_Widget["Label"]["Ping"] = ttk.Label(self.Frame["Information"], text="Ping Status:", style="Information_Monitor.TLabel")
-        self.Information_Widget["Label"]["Youtube"] = ttk.Label(self.Frame["Information"], text="Youtube Status:", style="Information_Monitor.TLabel")
+        self.Information_Widget["Label"]["Ether"] = ttk.Label(self.Frame["Information"], text="Ether : 0 \nNormal : 0 \nError : 0", style="Information_Monitor.TLabel")
+        self.Information_Widget["Label"]["Wifi"] = ttk.Label(self.Frame["Information"], text="WiFi : 0 \nNormal : 0 \nError : 0 \nWait : 0", style="Information_Monitor.TLabel")
+        self.Information_Widget["Label"]["Ping"] = ttk.Label(self.Frame["Information"], text="Ping : 0 \nNormal : 0 \nError : 0 \nWait : 0", style="Information_Monitor.TLabel")
+        self.Information_Widget["Label"]["Youtube"] = ttk.Label(self.Frame["Information"], text="Youtube : 0 \nNormal : 0 \nError : 0 \nWait : 0", style="Information_Monitor.TLabel")
         self.Information_Widget["Button"]["Stop"] = Button(self.Frame["Information"], image_path="./img/stop_test.png", size=(45,45), command=self.Button_StopMonitor)
 
-        self.Information_Widget["Label"]["Wifi"].grid(row=0, column=0, padx=5, pady=2, sticky="w")
-        self.Information_Widget["Label"]["Ping"].grid(row=0, column=1, padx=5, pady=2, sticky="w")
-        self.Information_Widget["Label"]["Youtube"].grid(row=0, column=2, padx=5, pady=2, sticky="w")
-        self.Information_Widget["Button"]["Stop"].grid(row=0, column=3, rowspan=2, padx=(0,0), pady=5, sticky="e")
-        self.Frame["Information"].grid_columnconfigure(3, weight=1)
+        self.Information_Widget["Label"]["Ether"].grid(row=0, column=0, padx=(5,0), pady=2, sticky="w")
+        self.Information_Widget["Label"]["Wifi"].grid(row=0, column=1, padx=(5,0), pady=2, sticky="w")
+        self.Information_Widget["Label"]["Ping"].grid(row=0, column=2, padx=(10,0), pady=2, sticky="w")
+        self.Information_Widget["Label"]["Youtube"].grid(row=0, column=3, padx=(10,0), pady=2, sticky="w")
+        self.Information_Widget["Button"]["Stop"].grid(row=0, column=4, rowspan=2, padx=(0,0), pady=5, sticky="e")
+        self.Frame["Information"].grid_columnconfigure(4, weight=1)
 
         self.Information_Widget["Tooltip"] = {
             "Button_Stop": Hovertip(self.Information_Widget["Button"]["Stop"], "Stop Monitoring.", hover_delay=300)
@@ -435,10 +439,18 @@ class Frame_Monitor():
         ### self.Client_Ether_Status 
         ### self.Client_ShellScript_Status
         RunTest_JsonData = JsonDataFunction.Get_jsonAllData(self.RunTest_JsonPath)
+        grid_count = {}
         for k, client_id in enumerate(RunTest_JsonData):
+            ### Get Situation for checking if need to change to set grid_count = 0.
             situation = RunTest_JsonData[client_id]["Situation"]
+            if situation not in list(grid_count.keys()):
+                grid_count[situation] = 0
+            else:
+                grid_count[situation] += 1
+            
+            ### Create Client Status Frame.
             frame =  ttk.LabelFrame(self.Frame_Situation[situation], text=f"{client_id}", padding="5", style='FrameClientNormal_Monitor.TLabelframe')
-            frame.grid(row=k//5, column=k%5, padx=3, pady=5)
+            frame.grid(row=grid_count[situation]//5, column=grid_count[situation]%5, padx=3, pady=5)
             frame_img_status = Frame_ClientStatus(root=frame, client_id=client_id)
 
             self.Frame_ClientID[client_id] = frame
@@ -464,7 +476,8 @@ class Frame_Monitor():
     ### Step3: Upload all shell scripts into Devices.
     ### Stpe4: Execute all shell scripts in Devices.
     ### Step5: Get each client shell script status, and record in [Frame_ClientStatus.ShellScript_Status].
-    ### Step6 : Update each client img status. Execute [Frame_ClientStatus.Update_AllImgStatus()].
+    ### Step6: Update each client img status. Execute [Frame_ClientStatus.Update_AllImgStatus()].
+    ### Step7: Update the Counting of each scripts status number.
     def MainLoop_RunTest(self):
         ### self.Flag["RunTest"] = True before start loop.
         self.Flag["RunTest"] = True
@@ -508,6 +521,10 @@ class Frame_Monitor():
                 ### Step6 : Update each client img status. Execute [Frame_ClientStatus.Update_AllImgStatus()].
                 if self.Flag["RunTest"] == False:  break
                 self.Update_ClientImgStatus()
+
+                ### Step7 : Update the Counting of each scripts status number.
+                if self.Flag["RunTest"] == False:  break
+                self.Update_ScriptStatus_Counting()
 
                 ### Wait for 3 seconds.
                 if self.Flag["RunTest"] == False:  break
@@ -654,6 +671,19 @@ class Frame_Monitor():
     ### Stpe4: Execute all shell scripts in Devices.
     ### Execute all shell scripts in Devices.
     def ThreadPool_ExecuteShellScripts(self):
+        def ether_shellscript_command(Telnet_Device, client_id)->str:
+            controller_ip = self.Environment_JsonData["ControllerPCIP"]
+            ether_script_process = f"/storage/emulated/0/Documents/EtherConnection/Check_EtherConnection.sh {controller_ip}"
+            search_command = f"ps -ef | grep sh"
+            search_result = Telnet_Device.Execute_Command(search_command)
+
+            if ether_script_process in search_result[1]:     
+                return
+            else:
+                ether_command = f"sh /storage/emulated/0/Documents/EtherConnection/Check_EtherConnection.sh {controller_ip} &"
+                Telnet_Device.Execute_Command(ether_command)
+                time.sleep(1)
+
         def wifi_shellscript_command(Telnet_Device, client_id)->str:
             ### Execute Wifi Set Driver shell script.
             driver_band = self.RunTest_JsonData[client_id]["Wifi"]["Driver_Band"]
@@ -749,6 +779,8 @@ class Frame_Monitor():
                 Telnet_Device.Connect_Devcie()
                 time.sleep(1)
                 
+                ether_shellscript_command(Telnet_Device, client_id)
+
                 wifi_shellscript_command(Telnet_Device, client_id)
 
                 ### Exectue Youtube & Ping Script.
@@ -759,6 +791,8 @@ class Frame_Monitor():
 
                     elif script_type == "Youtube":
                         youtube_shellscript_command(Telnet_Device, client_id, script_id)
+
+                Telnet_Device.Disconnect_Device()
 
             except Exception as e:
                 error_message = traceback.format_exc()
@@ -882,7 +916,91 @@ class Frame_Monitor():
             error_message = traceback.format_exc()
             WriteLogFunction.WriteLog(self.LogPath, f"{error_message}")
 
+    ### Step7 : Update the Counting of each scripts status number.
+    def Update_ScriptStatus_Counting(self):
+        def get_script_type(script_id:str)->str:
+            for script_data in self.Script_JsonData["Script"]:
+                if script_data["ScriptID"] == script_id:
+                    return script_data["Type"]
+            return ""
+        
+        try:
+            wifi = {
+                "total": 0,
+                "normal": 0,
+                "error": 0,
+                "not_schedule": 0
+            }
+            ping = {
+                "total": 0,
+                "normal": 0,
+                "error": 0,
+                "not_schedule": 0
+            }
+            youtube = {
+                "total": 0,
+                "normal": 0,
+                "error": 0,
+                "not_schedule": 0
+            }
+            ether = {
+                "total": len(self.Client_Ether_Status),
+                "normal": 0,
+                "error": 0
+            }
+            
+            for client_id, object_status in self.Client_ShellScript_Status.items():
+                ## Count Wifi.
+                wifi_status = list(object_status.ShellScript_Status["Wifi"].values())[0]
+                wifi["total"] += 1
+                if wifi_status == "normal":         
+                    wifi["normal"] += 1
+                elif wifi_status == "error":        
+                    wifi["error"] += 1
+                elif wifi_status == "not_schedule": 
+                    wifi["not_schedule"] += 1
+
+                ### Count Script.
+                for script_id in object_status.ShellScript_Status["Script"]:
+                    script_type = get_script_type(script_id)
+                    script_status = object_status.ShellScript_Status["Script"][script_id]
+                    if script_type == "Ping":
+                        ping["total"] += 1
+                        if script_status == "normal":         
+                            ping["normal"] += 1
+                        elif script_status == "error":        
+                            ping["error"] += 1
+                        elif script_status == "not_schedule": 
+                            ping["not_schedule"] += 1
+                    elif script_type == "Youtube":
+                        youtube["total"] += 1
+                        if script_status == "normal":         
+                            youtube["normal"] += 1
+                        elif script_status == "error":        
+                            youtube["error"] += 1
+                        elif script_status == "not_schedule": 
+                            youtube["not_schedule"] += 1
+
+                ### Count Ether.
+                if self.Client_Ether_Status[client_id] == "normal":
+                    ether["normal"] += 1
+                else:
+                    ether["error"] += 1
+
+            ### Update Status_Widget Label.
+            self.root.after(0, lambda: self.Information_Widget["Label"]["Ether"].config(text=f'Ether : {ether["total"]}\nNormal : {ether["normal"]}\nError : {ether["error"]}'))
+            self.root.after(0, lambda: self.Information_Widget["Label"]["Wifi"].config(text=f'Wifi : {wifi["total"]}\nNormal : {wifi["normal"]}\nError : {wifi["error"]}\nWait : {wifi["not_schedule"]}'))
+            self.root.after(0, lambda: self.Information_Widget["Label"]["Ping"].config(text=f'Ping : {ping["total"]}\nNormal : {ping["normal"]}\nError : {ping["error"]}\nWait : {ping["not_schedule"]}'))
+            self.root.after(0, lambda: self.Information_Widget["Label"]["Youtube"].config(text=f'Youtube : {youtube["total"]}\nNormal : {youtube["normal"]}\nError : {youtube["error"]}\nWait : {youtube["not_schedule"]}'))
+
+        except Exception as e:
+            error_message = traceback.format_exc()
+            WriteLogFunction.WriteLog(self.LogPath, f"{error_message}")
+
     ###===================================================================
+    def ReloadJsonData(self):
+        self.load_json_data()
+
     def Stop_Test(self):
         def kill_allprocess(client_id:str=None, port:int=23):
             client_ip = self.RunTest_JsonData[client_id]["EtherIP"]
@@ -911,6 +1029,11 @@ class Frame_Monitor():
                     Telnet_Device.Execute_Command(ping_stop_command)
                     time.sleep(1)
 
+            ### Stop EtherConnection Scripts.
+            ether_stop_command = f"sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh ether_check"
+            Telnet_Device.Execute_Command(ether_stop_command)
+            time.sleep(1)
+    
             ## Close Connection.
             Telnet_Device.Disconnect_Device()
             return
@@ -931,11 +1054,9 @@ class Frame_Monitor():
                     completed_count += 1
                     self.Show_Message(f"Stop Test. Processing {completed_count}/{total_count} ...", "red")
 
-            ### Remove json_RunTest.json & json_SelectedSituation.json.
+            ### Remove json_RunTest.json.
             if os.path.exists(self.RunTest_JsonPath):
                 os.remove(self.RunTest_JsonPath)
-            if os.path.exists(self.SelectedSituation_JsonPath):
-                os.remove(self.SelectedSituation_JsonPath)
 
             ### Remove all client status frames.
             for situation in self.Frame_Situation:
@@ -944,6 +1065,10 @@ class Frame_Monitor():
             self.Frame_ClientID = {}
             self.Client_Ether_Status = {}
             self.Client_ShellScript_Status = {}
+
+            self.root.after(0, lambda: self.Information_Widget["Label"]["Wifi"].config(text="WiFi : 0 \nNormal : 0 \nError : 0 \nWait : 0"))
+            self.root.after(0, lambda: self.Information_Widget["Label"]["Ping"].config(text="Ping : 0 \nNormal : 0 \nError : 0 \nWait : 0"))
+            self.root.after(0, lambda: self.Information_Widget["Label"]["Youtube"].config(text=f"Youtube : 0 \nNormal : 0 \nError : 0 \nWait : 0"))
 
             self.Show_Message(f"Ready", "gray")
             self.stoptest_callback()

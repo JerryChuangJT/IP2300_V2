@@ -46,6 +46,7 @@ elif [ "$Kill_PrcessType" = "ping" ]; then
 	processes=$(ps -ef | grep "ping -I wlan0 ${parameter2}" | grep -v grep);
 elif [ "$Kill_PrcessType" = "ping_monitor" ]; then
     echo "Stop" > /storage/emulated/0/Documents/Ping/${parameter2}_run_status;
+    processes=$(ps -ef | grep "/storage/emulated/0/Documents/Ping/Monitor_PingResponseLost" | grep -v grep);
 
 ### Related to Wifi Scripts.
 elif [ "$Kill_PrcessType" = "wifi_schedule" ]; then
@@ -69,9 +70,9 @@ elif [ "$Kill_PrcessType" = "youtube" ]; then
 elif [ "$Kill_PrcessType" = "youtube_monitor" ]; then
     echo "Stop" > /storage/emulated/0/Documents/Youtube/monitor_run_status;
 
-# ### Related to Check Ether Connection.
-# elif [ "$Kill_PrcessType" = "ether_connect" ]; then
-#     processes=$(ps -ef | grep '/storage/emulated/0/Documents/EtherConnection/Check_EtherConnection.sh' | grep -v grep);
+### Related to Check Ether Connection.
+elif [ "$Kill_PrcessType" = "ether_check" ]; then
+    processes=$(ps -ef | grep '/storage/emulated/0/Documents/EtherConnection/Check_EtherConnection.sh' | grep -v grep);
 
 fi;
 ###==========================================

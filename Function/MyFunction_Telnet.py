@@ -69,7 +69,7 @@ class TelNet():
     '''
     def Execute_Command(self, command:str)->str:
         ### Retry 2 times if connection fails.
-        max_retries = 2
+        max_retries = 1
         for attempt in range(max_retries):
 
             ### Check connection status, if not connected, try to connect.

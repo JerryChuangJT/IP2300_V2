@@ -11,8 +11,8 @@ import Function.MyFunction_JsonData as JsonDataFunction
 from Class.Class_Button import Button
 
 class Frame_Wifi():
-    def __init__(self, root=None, close_callback=None):
-        self.close_callback = close_callback
+    def __init__(self, root=None, update_shedulechart_callback=None):
+        self.update_shedulechart_callback = update_shedulechart_callback
         self.root = root
         
         ### Initialize settings.
@@ -38,6 +38,7 @@ class Frame_Wifi():
     def load_json_data(self):
         self.Environment_JsonPath = "./Parameter/json_PageSetEnvironment.json"
         self.Environment_JsonData = JsonDataFunction.Get_jsonAllData(self.Environment_JsonPath)
+        self.Schedule_JsonPath = self.Environment_JsonData["JsonFilePath"] + "json_Schedule.json"
         self.Wifi_JsonPath = self.Environment_JsonData["JsonFilePath"] + "json_Wifi.json"
         self.TreeView_Columns = ["WifiID", "PingType", "DUTIP", "SSID", "Security", "Password", "BSSID",
                                   "Driver_Band", "Driver_Standard" ,"Driver_Channel", "Driver_Bandwidth"]
@@ -134,6 +135,26 @@ class Frame_Wifi():
         self.Top_Widgets["Label"]["Count"].config(text=f"Total : {selected_num}/{total_num}")
 
     def Button_EditData(self):
+        def update_newwifiid_from_schedule(old_wifiid:str, new_wifiid:str):
+            try:
+                if old_wifiid == new_wifiid:    return
+                
+                schedule_data = JsonDataFunction.Get_jsonAllData(self.Schedule_JsonPath)
+
+                ### Iterate through each situation of wifi.
+                for situation_name, situation_data in schedule_data.items():
+                    if situation_data["Wifi"]["WifiID"] == old_wifiid:
+                        situation_data["Wifi"]["WifiID"] = new_wifiid
+                        schedule_data[situation_name] = situation_data
+                        
+
+                ### Update the json_Schedule.json file with the modified data.
+                JsonDataFunction.Update_Entire_jsonFileData(self.Schedule_JsonPath, schedule_data)
+
+            except Exception as e:
+                error_message = traceback.format_exc()
+                messagebox.showerror("Error", f"Failed to update Schedule with new WifiID.\n{error_message}", parent=self.root)
+
         def edit_itme_wifi(selected_item_value:list=None, new_item_value:list=None):
             try:
                 ### Get original wifi data list.
@@ -158,6 +179,10 @@ class Frame_Wifi():
 
                 ### Reload the Wifi data into the TreeView.
                 self.Load_WifiData()
+
+                ### Update the json_Schedule.json if WifiID is changed.
+                update_newwifiid_from_schedule(selected_item_value[0], new_item_value[0])
+                self.update_shedulechart_callback()
                 
             except Exception as e:
                 error_message = traceback.format_exc()
@@ -237,6 +262,28 @@ class Frame_Wifi():
             messagebox.showerror("Error", f"{error_message}", parent=self.root)
 
     def Button_DeleteData(self):
+        def check_remove_wifis_in_schedule(list_wifiid_to_remove:list=None)->bool:
+            try:
+                schedule_data = JsonDataFunction.Get_jsonAllData(self.Schedule_JsonPath)
+
+                list_fail_situation = []
+                for situation_name, situation_data in schedule_data.items():
+                    if situation_data["Wifi"]["WifiID"] in list_wifiid_to_remove:
+                        list_fail_situation.append(situation_name)
+
+                if list_fail_situation:
+                    messagebox.showerror("Error", f"The following situations are using the WifiID to be deleted:\n\n" + 
+                                                "\n".join(list_fail_situation) + 
+                                                "\n\nPlease modify or delete these situations first.", 
+                                                parent=self.root)
+                    return True
+                return False
+
+            except Exception as e:
+                error_message = traceback.format_exc()
+                messagebox.showerror("Error", f"Failed to check Schedule for WifiID.\n{error_message}", parent=self.root)
+                return True  # 若發生錯誤，預設回傳 True，避免刪除
+            
         try:
             ### Get original wifi data list.
             all_wifi_data = JsonDataFunction.Get_jsonAllData(self.Wifi_JsonPath)["Wifi"]
@@ -256,6 +303,10 @@ class Frame_Wifi():
                 item_values = self.Top_Widgets["TreeView"].item(item)['values']
                 item_data = {key: str(item_values[i]) for i , key in enumerate(self.TreeView_Columns, start=0)}
                 list_selected_data.append(item_data)
+
+            remove_wifi_ids = [data["WifiID"] for data in list_selected_data]
+            if check_remove_wifis_in_schedule(remove_wifi_ids):
+                return
 
             ### Remove selected items from [all_wifi_data].
             for selected_data in list_selected_data:

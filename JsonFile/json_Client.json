@@ -427,21 +427,15 @@
             "Comment": "None"
         },
         {
-            "ClientID": "IP2300_06",
-            "MAC": "None",
-            "EtherIP": "10.10.0.6",
-            "Comment": "None"
-        },
-        {
-            "ClientID": "Jerry_197",
-            "MAC": "Jerry_197",
-            "EtherIP": "192.168.5.197",
-            "Comment": "None"
-        },
-        {
             "ClientID": "Jerry_103",
             "MAC": "Jerry_103",
             "EtherIP": "192.168.5.103",
+            "Comment": "None"
+        },
+        {
+            "ClientID": "IP2300_06",
+            "MAC": "IP2300_06",
+            "EtherIP": "10.10.0.6",
             "Comment": "None"
         }
     ]

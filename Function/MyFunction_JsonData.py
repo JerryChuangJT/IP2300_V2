@@ -37,6 +37,14 @@ def Update_jsonFileData(file_path:str, key_value:str, value):
     with open(file_path, "w", encoding="utf-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=4)
 
+def Update_Entire_jsonFileData(file_path:str, new_data:dict):
+    ### Create Json File.
+    Create_JsonFile(file_path)
+            
+    ### Rewrite New Data into JSON File.
+    with open(file_path, "w", encoding="utf-8") as file:
+        json.dump(new_data, file, ensure_ascii=False, indent=4)
+        
 def Remove_jsonFileKey(file_path:str, key_value:str):
     ### Read JSON File.
     data = Get_jsonAllData(file_path)

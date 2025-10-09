@@ -11,13 +11,20 @@ import threading
 from Function.Page_SetEnvironment import Page_SetEnvironment 
 from Function.Page_SetBackup import Page_SetBackup
 
+
+from Function.Frame_Situation import Frame_Situation
+from Function.Frame_Monitor import Frame_Monitor
+from Function.Frame_IPAddress import Frame_IPAddress
+
+from Function.Frame_Schedule import Frame_Schedule
 from Function.Frame_ADB import Frame_ADB
+
 from Function.Frame_Client import Frame_Client
 from Function.Frame_Wifi import Frame_Wifi
 from Function.Frame_Script import Frame_Script
-from Function.Frame_Schedule import Frame_Schedule
-from Function.Frame_Situation import Frame_Situation
-from Function.Frame_Monitor import Frame_Monitor
+
+
+
 
 import Function.MyFunction_JsonData as JsonDataFunction
 
@@ -71,6 +78,12 @@ class MainPage():
 
             ### Page Execution
             self.app_situation.ReloadJsonData()
+
+            ### Page Monitor
+            self.app_monitor.ReloadJsonData()
+
+            ### Page IPAddress
+            self.app_ipaddress.ReloadJsonData()
 
             ### Page Schedule
             self.app_schedule.Reload_JsonData()
@@ -135,8 +148,11 @@ class MainPage():
             self.Notebook["ExecutionPage"].select(self.Frame_ExecutionPage["Monitor"])
 
         def stoptest_callback():
-            self.app_situation.Stop_Test()
+            self.app_situation.Execution_Status(False)
 
+        def update_shedulechart_callback():
+            self.app_schedule.Show_SituationData()
+            
         ### Create a style object
         ### Setting the theme to 'clam' for better border control.
         style = ttk.Style()
@@ -178,10 +194,11 @@ class MainPage():
         self.Frame_ExecutionPage = {}
 
         self.Frame_ExecutionPage["Situation"] = tk.Frame(self.Notebook["ExecutionPage"])
-        self.app_situation = Frame_Situation(self.Frame_ExecutionPage["Situation"], runtest_callback=runtest_callback, stoptest_callback=stoptest_callback)
+        self.app_situation = Frame_Situation(self.Frame_ExecutionPage["Situation"], runtest_callback=runtest_callback)
         self.Frame_ExecutionPage["Monitor"] = tk.Frame(self.Notebook["ExecutionPage"])
         self.app_monitor = Frame_Monitor(self.Frame_ExecutionPage["Monitor"], stoptest_callback=stoptest_callback)
         self.Frame_ExecutionPage["IPAddress"] = tk.Frame(self.Notebook["ExecutionPage"])
+        self.app_ipaddress = Frame_IPAddress(self.Frame_ExecutionPage["IPAddress"])
 
 
         self.Notebook["ExecutionPage"].add(self.Frame_ExecutionPage["Situation"], text="Situation")
@@ -194,11 +211,11 @@ class MainPage():
         self.Frame_SettingPage = {}
 
         self.Frame_SettingPage["Client"] = tk.Frame(self.Notebook["SettingPage"])
-        self.app_client = Frame_Client(self.Frame_SettingPage["Client"])
+        self.app_client = Frame_Client(self.Frame_SettingPage["Client"], update_shedulechart_callback)
         self.Frame_SettingPage["Wifi"] = tk.Frame(self.Notebook["SettingPage"])
-        self.app_wifi = Frame_Wifi(self.Frame_SettingPage["Wifi"])
+        self.app_wifi = Frame_Wifi(self.Frame_SettingPage["Wifi"], update_shedulechart_callback)
         self.Frame_SettingPage["Script"] = tk.Frame(self.Notebook["SettingPage"])
-        self.app_script = Frame_Script(self.Frame_SettingPage["Script"])
+        self.app_script = Frame_Script(self.Frame_SettingPage["Script"], update_shedulechart_callback)
         
         self.Notebook["SettingPage"].add(self.Frame_SettingPage["Client"], text="Client")
         self.Notebook["SettingPage"].add(self.Frame_SettingPage["Wifi"], text="Wifi")

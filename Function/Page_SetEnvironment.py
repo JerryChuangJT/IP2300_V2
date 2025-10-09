@@ -121,11 +121,9 @@ class Page_SetEnvironment():
             folder_path = folder_path.rstrip("/\\")
             required_files = [
                 "json_Client.json",
-                # "json_ManageScript.json", 
                 "json_Script.json",
                 "json_Wifi.json",
-                "json_Schedule.json",
-                "youtubeURL.txt"
+                "json_Schedule.json"
             ]
             ### Check each file exists.
             for filename in required_files:
@@ -136,9 +134,7 @@ class Page_SetEnvironment():
                                          "'json_Client.json'\n"
                                          "'json_Script.json'\n"
                                          "'json_Wifi.json'\n"
-                                         "'json_ManageScript.json'\n"
                                          "'json_Schedule.json'\n"
-                                         "'youtubeURL.txt'\n\n" 
                                          f"'{file_path}' is missing.",
                                          parent=self.root)
                     return False

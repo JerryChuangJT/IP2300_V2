@@ -1,20 +1,21 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-from idlelib.tooltip import Hovertip  
 import os
 import traceback
 import threading
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import Function.MyFunction_JsonData as JsonDataFunction
 from Function.MyFunction_Telnet import TelNet
+import Function.MyFunction_WriteLog as WriteLogFunction
 
 from Class.Class_Button import Button
+from Class.Class_Tooltip import SmartTooltip
 
 class Frame_Situation():
-    def __init__(self, root=None, runtest_callback=None, stoptest_callback=None):
+    def __init__(self, root=None, runtest_callback=None):
         self.runtest_callback = runtest_callback
-        self.stoptest_callback = stoptest_callback
         self.root = root
 
         style = ttk.Style()
@@ -29,10 +30,13 @@ class Frame_Situation():
                   foreground=[('selected', 'black')])
 
         ### Selected Situations Set 
-        ### self.Thread_StopEvent is used to stop the thread when the window is closed.
+        ### self.Flag["RunTest"] is used to control the running state.
         self.Selected_Situations = set()
-        self.Thread_StopEvent = threading.Event()
-        
+        self.Flag = {}
+        self.Flag["RunTest"] = False
+
+        self.LogPath = "./Controller_Log/Situation"
+
         self.load_json_data()
         self.Create_Widgets()
         self.Load_SituationData()
@@ -140,8 +144,12 @@ class Frame_Situation():
         self.Main_Widgets["Button"]["Expand"] = Button(self.Frame["Main"], image_path="./img/expand_data.png", size=(30,30), command=self.Button_ExpandData)
         self.Main_Widgets["Button"]["SelecteAll"] = Button(self.Frame["Main"], image_path="./img/selectall.png", size=(30,30), command=self.Button_SelectAll)
         self.Main_Widgets["Button"]["Reload"] = Button(self.Frame["Main"], image_path="./img/reload.png", size=(30,30), command=self.Button_ReloadData)
+        self.Main_Widgets["Button"]["Delete_Script"] = Button(self.Frame["Main"], image_path="./img/delete_scripts.png", size=(30,30), command=self.Button_DeleteScript)
+        self.Main_Widgets["Button"]["Delete_WifiProfile"] = Button(self.Frame["Main"], image_path="./img/delete_wifi.png", size=(30,30), command=self.Button_DeleteWifiProfile)
         self.Main_Widgets["Button"]["Run"] = Button(self.Frame["Main"], image_path="./img/run.png", size=(30,30), command=self.Button_Run)
-        # self.Main_Widgets["Button"]["Stop"] = Button(self.Frame["Main"], image_path="./img/stop.png", size=(30,30), command=self.Button_Stop)
+        self.Main_Widgets["Button"]["StopScript"] = Button(self.Frame["Main"], image_path="./img/stop.png", size=(30,30), command=self.Button_StopScript)
+
+
         self.Main_Widgets["Label"]["Message"] = ttk.Label(self.Frame["Main"], text=f"{self.Schedule_JsonPath}", style="Message1_Situation.TLabel")
         self.Main_Widgets["Label"]["Count"] = ttk.Label(self.Frame["Main"], text="Total : 0/0", style="Count_Situation.TLabel")
 
@@ -150,8 +158,12 @@ class Frame_Situation():
         self.Main_Widgets["Button"]["Expand"].grid(row=1, column=0, padx=(5,0), pady=(5,0), sticky="w")
         self.Main_Widgets["Button"]["SelecteAll"].grid(row=1, column=0, padx=(43,0), pady=(5,0), sticky="w")
         self.Main_Widgets["Button"]["Reload"].grid(row=1, column=0, padx=(85,0), pady=(5,0), sticky="w")
-        self.Main_Widgets["Button"]["Run"].grid(row=1, column=0, padx=(0,40), pady=(5,0), sticky="e")
-        # self.Main_Widgets["Button"]["Stop"].grid(row=1, column=0, padx=(0,0), pady=(5,0), sticky="e")
+        self.Main_Widgets["Button"]["Run"].grid(row=1, column=0, padx=(0,43), pady=(5,0), sticky="e")
+        self.Main_Widgets["Button"]["StopScript"].grid(row=1, column=0, padx=0, pady=(5,0), sticky="e")
+
+        self.Main_Widgets["Button"]["Delete_Script"].grid(row=1, column=0, padx=(0,145), pady=(5,0), sticky="e")
+        self.Main_Widgets["Button"]["Delete_WifiProfile"].grid(row=1, column=0, padx=(0,105), pady=(5,0), sticky="e")
+
         self.Main_Widgets["Treeview"].grid(row=2, column=0, padx=(5,0), pady=(5,0), sticky="nsew")
         self.Main_Widgets["Scrollbar"].grid(row=2, column=1, padx=0, pady=(5,0), sticky="ns")
         self.Main_Widgets["Label"]["Message"].grid(row=3, column=0, padx=(5,0), pady=5, sticky="w")
@@ -161,11 +173,13 @@ class Frame_Situation():
         self.Frame["Main"].grid_columnconfigure(0, weight=1)
 
         Tooltip = {
-            "Button_Expand": Hovertip(self.Main_Widgets["Button"]["Expand"], "Expand/Collapse all situations.", hover_delay=300),
-            "Button_SelecteAll": Hovertip(self.Main_Widgets["Button"]["SelecteAll"], "Select/Deselect all situations.", hover_delay=300),
-            "Button_Reload": Hovertip(self.Main_Widgets["Button"]["Reload"], "Reload the situations.", hover_delay=300),
-            "Button_Run": Hovertip(self.Main_Widgets["Button"]["Run"], "Run the selected situations.", hover_delay=300),
-            # "Button_Stop": Hovertip(self.Main_Widgets["Button"]["Stop"], "Stop the running situations.", hover_delay=300)
+            "Button_Expand": SmartTooltip(self.Main_Widgets["Button"]["Expand"], "Expand/Collapse all situations.", hover_delay=300),
+            "Button_SelecteAll": SmartTooltip(self.Main_Widgets["Button"]["SelecteAll"], "Select/Deselect all situations.", hover_delay=300),
+            "Button_Reload": SmartTooltip(self.Main_Widgets["Button"]["Reload"], "Reload the Situation Datas.", hover_delay=300),
+            "Button_DeleteScript": SmartTooltip(self.Main_Widgets["Button"]["Delete_Script"], "Delete all Scripts in Selected Devices.", hover_delay=300),
+            "Button_DeleteWifiProfile": SmartTooltip(self.Main_Widgets["Button"]["Delete_WifiProfile"], "Delete all Wifi Profile in Selected Devices.", hover_delay=300),
+            "Button_Run": SmartTooltip(self.Main_Widgets["Button"]["Run"], "Run Test in the Selected Situations", hover_delay=300),
+            "Button_StopScript": SmartTooltip(self.Main_Widgets["Button"]["StopScript"], "Kill Processes in Selected Devices.", hover_delay=300)
         }
 
     def Load_SituationData(self):
@@ -174,7 +188,6 @@ class Frame_Situation():
             for item in self.Main_Widgets["Treeview"].get_children():
                 self.Main_Widgets["Treeview"].delete(item)
             self.Selected_Situations.clear()
-
 
             ### Load Situation Data from JSON 
             def load_situation_data():
@@ -258,7 +271,276 @@ class Frame_Situation():
             messagebox.showwarning("Error", error_message, parent=self.root)
             return
 
+    def Button_DeleteScript(self):
+        def get_client_ip(client_id:str=None)->str:
+            for client_data in self.Client_JsonData["Client"]:
+                if client_data["ClientID"] == client_id:
+                        return client_data["EtherIP"]
+            return None
+        
+        def delete_all_scripts(client_ip:str=None, port:int=23):
+            Telnet_Device = TelNet(client_ip, port) 
+            Telnet_Device.Connect_Devcie()
+            time.sleep(1)
+
+            delete_command = "rm -r /storage/emulated/0/Documents/*"
+            Telnet_Device.Execute_Command(delete_command)
+            time.sleep(1)
+            
+            Telnet_Device.Disconnect_Device()
+
+        def ThreadPool_DeleteScript():
+            try:
+                selected_clients = JsonDataFunction.Get_jsonAllData(self.SelectedSituation_JsonPath)["ClientID"]
+                with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Client_DeleteScripts") as executor:
+                    futures = []
+                    for client_id in selected_clients:
+                        futures.append(executor.submit(delete_all_scripts, get_client_ip(client_id), 23))
+
+                    ### Get all result from [futures].
+                    total_futures = len(futures)
+                    count = 0
+                    for future in as_completed(futures):
+                        count += 1
+                        self.Show_Message(text=f"Deleting Scripts. Processing {count}/{total_futures} ...", color="red")
+
+            except Exception as e:
+                error_message = traceback.format_exc()
+                messagebox.showwarning("Error", error_message, parent=self.root)
+                return
+
+        def Thread_Function():
+            try:
+                ### Disable Run & ReloadData Button.        
+                self.Execution_Status(True)
+                if self.Check_Selected_EtherConnection() is False:
+                    self.Execution_Status(False)
+                    return
+                
+                self.Show_Message(text=f"Deleting Scripts ...", color="red")
+                ThreadPool_DeleteScript()
+                self.Execution_Status(False)
+
+            except Exception as e:
+                error_message = traceback.format_exc()
+                messagebox.showwarning("Error", error_message, parent=self.root)
+                return
+
+        ### Reload Json Data.
+        ### Check any situation is selected.
+        self.load_json_data() 
+        if len(self.Selected_Situations) == 0:
+            messagebox.showwarning("Warning", f"No situation selected.\nPlease select at least one situation to run test.", parent=self.root)
+            return
+        
+        ### Make sure to delete scripts in devices.
+        result = messagebox.askyesno("Confirmation", "Are you sure you want to delete all scripts in the selected devices?\n\n" \
+        "The operation will also delete logs in devices. Please download the logs before deleting.", parent=self.root)
+        if result is False:
+            return
+
+        ### Start Thread.
+        thread = threading.Thread(target=Thread_Function, daemon=True)
+        thread.start()  
+
+    def Button_DeleteWifiProfile(self):
+        def get_client_ip(client_id:str=None)->str:
+            for client_data in self.Client_JsonData["Client"]:
+                if client_data["ClientID"] == client_id:
+                        return client_data["EtherIP"]
+            return None
+        
+        def delete_wifi_profile(client_ip:str=None, port:int=23):
+            Telnet_Device = TelNet(client_ip, port) 
+            Telnet_Device.Connect_Devcie()
+            time.sleep(1)
+
+            delete_command = "sh /storage/emulated/0/Documents/Wifi/Delete_AllWifiProfile.sh"
+            Telnet_Device.Execute_Command(delete_command)
+            time.sleep(1)
+            
+            Telnet_Device.Disconnect_Device()
+
+        def ThreadPool_DeleteScript():
+            try:
+                selected_clients = JsonDataFunction.Get_jsonAllData(self.SelectedSituation_JsonPath)["ClientID"]
+                with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Client_DeleteWifiProfile") as executor:
+                    futures = []
+                    for client_id in selected_clients:
+                        futures.append(executor.submit(delete_wifi_profile, get_client_ip(client_id), 23))
+
+                    ### Get all result from [futures].
+                    total_futures = len(futures)
+                    count = 0
+                    for future in as_completed(futures):
+                        count += 1
+                        self.Show_Message(text=f"Deleting Wifi Profile. Processing {count}/{total_futures} ...", color="red")
+
+            except Exception as e:
+                error_message = traceback.format_exc()
+                messagebox.showwarning("Error", error_message, parent=self.root)
+                return
+            
+        def Thread_Function():
+            try:
+                ### Disable Run & ReloadData Button.        
+                self.Execution_Status(True)
+                if self.Check_Selected_EtherConnection() is False:
+                    self.Execution_Status(False)
+                    return
+                
+                self.Show_Message(text=f"Deleting Wifi Profile ...", color="red")
+                ThreadPool_DeleteScript()
+                self.Execution_Status(False)
+
+            except Exception as e:
+                error_message = traceback.format_exc()
+                messagebox.showwarning("Error", error_message, parent=self.root)
+                self.Execution_Status(False)
+                return
+            
+        ### Reload Json Data.
+        ### Check any situation is selected.
+        self.load_json_data() 
+        if len(self.Selected_Situations) == 0:
+            messagebox.showwarning("Warning", f"No situation selected.\nPlease select at least one situation to run test.", parent=self.root)
+            return
+        
+        ### Start Thread.
+        thread = threading.Thread(target=Thread_Function, daemon=True)
+        thread.start()  
+
     def Button_Run(self):
+        def Thread_Function():            
+            try:
+                ### Disable Run & ReloadData Button.        
+                self.Execution_Status(True)
+                if self.Check_Selected_EtherConnection() is False:
+                    self.Execution_Status(False)
+                    return
+                
+                ### Run Test.
+                thread_Runtest = threading.Thread(target=self.runtest_callback, daemon=True)
+                thread_Runtest.start()   
+                len_selected_situations = len(JsonDataFunction.Get_jsonAllData(self.SelectedSituation_JsonPath)["Situation"])
+                len_client_ids = len(JsonDataFunction.Get_jsonAllData(self.SelectedSituation_JsonPath)["ClientID"])
+                self.Show_Message(text=f" Test Running - Situations: {len_selected_situations} / Clients : {len_client_ids}", color="red")
+                
+            except Exception as e:
+                error_message = traceback.format_exc()
+                messagebox.showwarning("Error", error_message, parent=self.root)
+                self.Execution_Status(False)
+                return
+
+        ### Reload Json Data.
+        ### Check any situation is selected.
+        self.load_json_data() 
+        if len(self.Selected_Situations) == 0:
+            messagebox.showwarning("Warning", f"No situation selected.\nPlease select at least one situation to run test.", parent=self.root)
+            return
+
+        ### Start Thread.
+        thread = threading.Thread(target=Thread_Function, daemon=True)
+        thread.start()   
+    
+    def Button_StopScript(self):
+        def get_client_ip(client_id:str=None)->str:
+            for client_data in self.Client_JsonData["Client"]:
+                if client_data["ClientID"] == client_id:
+                        return client_data["EtherIP"]
+            return None
+        
+        def kill_all_process(client_ip:str=None, port:int=23):
+            stop_command = {
+                "wifi_schedule": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh wifi_schedule",
+                "wifi_connect": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh wifi_connect",
+                "wifi_getip": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh wifi_getip",
+                "wifi_ping_script": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh wifi_ping_script",
+                "wifi_ping": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh wifi_ping",
+                "wifi_check_ping": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh wifi_check_ping",
+
+                "ping_schedule": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh ping_schedule",
+                "ping_script": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh ping_script",
+                "ping": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh ping",
+                "ping_monitor": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh ping_monitor",
+
+                "youtube_schedule": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh youtube_schedule",
+                "youtube": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh youtube",
+                "youtube_monitor": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh youtube_monitor",
+
+                "ether_connect": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh ether_check"
+            }
+
+            Telnet_Device = TelNet(client_ip, port) 
+            Telnet_Device.Connect_Devcie()
+            time.sleep(1)
+
+            for command_name, command in stop_command.items():
+                Telnet_Device.Execute_Command(command)
+                time.sleep(0.5)
+
+            Telnet_Device.Disconnect_Device()
+
+        def ThreadPool_KillProcess():
+            try:
+                selected_clients = JsonDataFunction.Get_jsonAllData(self.SelectedSituation_JsonPath)["ClientID"]
+                with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Client_KillProcess") as executor:
+                    futures = []
+                    for client_id in selected_clients:
+                        futures.append(executor.submit(kill_all_process, get_client_ip(client_id), 23))
+
+                    ### Get all result from [futures].
+                    total_futures = len(futures)
+                    count = 0
+                    for future in as_completed(futures):
+                        count += 1
+                        self.Show_Message(text=f"Killing Processes. Processing {count}/{total_futures} ...", color="red")
+
+            except Exception as e:
+                error_message = traceback.format_exc()
+                messagebox.showwarning("Error", error_message, parent=self.root)
+                return
+
+        def Thread_Function():            
+            try:
+                ### Disable Run & ReloadData Button.        
+                self.Execution_Status(True)
+                if self.Check_Selected_EtherConnection() is False:
+                    self.Execution_Status(False)
+                    return
+                
+                self.Show_Message(text=f"Killing Processes ...", color="red")
+                ThreadPool_KillProcess()
+                self.Execution_Status(False)
+
+            except Exception as e:
+                error_message = traceback.format_exc()
+                messagebox.showwarning("Error", error_message, parent=self.root)
+                self.Execution_Status(False)
+                return
+            
+        ### Reload Json Data.
+        ### Check any situation is selected.
+        self.load_json_data() 
+        if len(self.Selected_Situations) == 0:
+            messagebox.showwarning("Warning", f"No situation selected.\nPlease select at least one situation to run test.", parent=self.root)
+            return
+
+        ### Start Thread.
+        thread = threading.Thread(target=Thread_Function, daemon=True)
+        thread.start()  
+    
+    def Show_Message(self, text:str="", color:str="gray"):
+        if color.lower() == "red":
+            style = "Message2_Situation.TLabel"
+        elif color.lower() == "gray":
+            style = "Message1_Situation.TLabel"
+
+        self.root.after(0, lambda: self.Main_Widgets["Label"]["Message"].config(text=text, style=style))
+
+    ### Check Selected Situation and Client Connection.
+    ### Update self.SelectedSituation_JsonPath(json_SelectedSituaion.json) file.
+    def Check_Selected_EtherConnection(self)->bool:
         ### Check Treeview information is correct before running test.
         def check_treeveiw_information()->bool:
             items = self.Main_Widgets["Treeview"].get_children()
@@ -312,101 +594,61 @@ class Frame_Situation():
                         "Result":device.Check_Connection()[0]}
             except Exception as e:
                 error_message = traceback.format_exc()
-                self.Show_MessageBox("Error", error_message)
-
+                messagebox.showwarning("Error", error_message, parent=self.root)
+                return
+                
         def check_connection_result(ether_checkresult:dict)->bool:
             if len(ether_checkresult["FAIL"]) > 0:
                 messagebox.showwarning("Error", f"{len(ether_checkresult['FAIL'])} of device connection fail.\n\n{ether_checkresult['FAIL']}", parent=self.root)   
                 return False
             return True
 
-        def Thread_Function():
-            def get_client_ip(client_id:str=None)->str:
-                for client_data in self.Client_JsonData["Client"]:
-                    if client_data["ClientID"] == client_id:
-                            return client_data["EtherIP"]
-                return None
+        def get_client_ip(client_id:str=None)->str:
+            for client_data in self.Client_JsonData["Client"]:
+                if client_data["ClientID"] == client_id:
+                        return client_data["EtherIP"]
+            return None
+        
+        try:
+            ### Check the TreeView message is correct before running test.
+            self.Show_Message(text=f"Checking Situation Information ...", color="red")
+            if check_treeveiw_information() is False:   
+                return False
             
-            try:
-                ### Disable Run & ReloadData Button.          
-                self.root.after(0, lambda: self.Main_Widgets["Button"]["Reload"].config(state=tk.DISABLED))
-                self.root.after(0, lambda: self.Main_Widgets["Button"]["Run"].config(state=tk.DISABLED))    
+            ### Update Selected Situation to JSON File.
+            update_selected_situation_json()
 
-                ### Check the TreeView message is corrent before running test.
-                self.Show_Message(text=f"Checking Situation Information ...", color="red")
-                if check_treeveiw_information() is False:   
-                    self.Stop_Test()
-                    return
+            ### Execute Thread Pool.
+            ### Check the connection status of each device in self.SelectedSituation_JsonPath["Client"]
+            self.Show_Message(text=f"Checking Clients Connection ...", color="red")
+            client_ids = JsonDataFunction.Get_jsonAllData(self.SelectedSituation_JsonPath)["ClientID"]
+            with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Check_ClientEtherConnection") as executor:
+                futures = []
+                for client_id in client_ids:
+                    if self.Flag["RunTest"] is False:  break
+                    futures.append(executor.submit(check_telnet_connection, get_client_ip(client_id), 23))
 
-                ### Update Selected Situation to JSON File.
-                update_selected_situation_json()
-            
-                ### Execute Thread Pool.
-                ### Check the connection status of each device in self.SelectedSituation_JsonPath["Client"]
-                self.Show_Message(text=f"Checking Clients Connection ...", color="red")
-                client_ids = JsonDataFunction.Get_jsonAllData(self.SelectedSituation_JsonPath)["ClientID"]
-                with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Check_ClientEtherConnection") as executor:
-                    futures = []
-                    for client_id in client_ids:
-                        if self.Thread_StopEvent.is_set():  break
-                        futures.append(executor.submit(check_telnet_connection, get_client_ip(client_id), 23))
+                ### Get all result from [futures].
+                total_count = len(futures)
+                completed_count = 0
+                ether_checkresult = {"PASS":[],"FAIL":[]}
+                for future in as_completed(futures):
+                    if self.Flag["RunTest"] is False:  break
+                    thread_respone = future.result()
+                    ether_checkresult[thread_respone["Result"]].append(thread_respone["Device"])
 
-                    ### Get all result from [futures].
-                    total_count = len(futures)
-                    completed_count = 0
-                    ether_checkresult = {"PASS":[],"FAIL":[]}
-                    for future in as_completed(futures):
-                        if self.Thread_StopEvent.is_set():  break
-                        thread_respone = future.result()
-                        ether_checkresult[thread_respone["Result"]].append(thread_respone["Device"])
+                    completed_count += 1
+                    self.Show_Message(text=f"Check Connection. Processing  {completed_count} / {total_count}  ...", color="red")
 
-                        completed_count += 1
-                        self.Show_Message(text=f"Check Connection. Processing  {completed_count} / {total_count}  ...", color="red")
-                
-                ### Show the connection status in self.Main_Widget["TreeView"].
-                if self.Thread_StopEvent.is_set():  return
-                if check_connection_result(ether_checkresult) is False:  
-                    self.Stop_Test()
-                    return
+            if self.Flag["RunTest"] is False:   return False
+            if check_connection_result(ether_checkresult) is False:     return False
+            return True
 
-                ### Run Test.
-                # self.runtest_callback()
-                thread_Runtest = threading.Thread(target=self.runtest_callback, daemon=True)
-                thread_Runtest.start()   
-                len_selected_situations = len(JsonDataFunction.Get_jsonAllData(self.SelectedSituation_JsonPath)["Situation"])
-                len_client_ids = len(JsonDataFunction.Get_jsonAllData(self.SelectedSituation_JsonPath)["ClientID"])
-                self.Show_Message(text=f" Test Running - Situations: {len_selected_situations} / Clients : {len_client_ids}", color="red")
-                
-            except Exception as e:
-                error_message = traceback.format_exc()
-                messagebox.showwarning("Error", error_message, parent=self.root)
-
-                self.root.after(0, lambda: self.Main_Widgets["Button"]["Reload"].config(state=tk.NORMAL))
-                self.root.after(0, lambda: self.Main_Widgets["Button"]["Run"].config(state=tk.NORMAL))
-                self.Show_Message(text=f"{self.Schedule_JsonPath}", color="gray") 
-
-                return
-
-        ### Reload Json Data.
-        ### Check any situation is selected.
-        self.load_json_data() 
-        if len(self.Selected_Situations) == 0:
-            messagebox.showwarning("Warning", f"No situation selected.\nPlease select at least one situation to run test.", parent=self.root)
-            return
-
-        ### Start Thread.
-        self.Thread_StopEvent.clear()
-        thread = threading.Thread(target=Thread_Function, daemon=True)
-        thread.start()   
-
-    def Show_Message(self, text:str="", color:str="gray"):
-        if color.lower() == "red":
-            style = "Message2_Situation.TLabel"
-        elif color.lower() == "gray":
-            style = "Message1_Situation.TLabel"
-
-        self.root.after(0, lambda: self.Main_Widgets["Label"]["Message"].config(text=text, style=style))
-   
+        except Exception as e:
+            error_message = traceback.format_exc()
+            messagebox.showwarning("Error", error_message, parent=self.root)
+            return False
+        
     ###=============================================================================================
     def ReloadJsonData(self):
         self.load_json_data()
@@ -414,15 +656,58 @@ class Frame_Situation():
         self.Updating_TreeViewCount()
 
     def on_close(self):
-        if hasattr(self, 'Thread_StopEvent'):
-            self.Thread_StopEvent.set()
+        self.Flag["RunTest"] = False
     
-    def Stop_Test(self):
-        self.root.after(0, lambda: self.Main_Widgets["Button"]["Reload"].config(state=tk.NORMAL))
-        self.root.after(0, lambda: self.Main_Widgets["Button"]["Run"].config(state=tk.NORMAL))  
-        self.Show_Message(text=f"{self.Schedule_JsonPath}", color="gray")
+    def TestRun_SetButtonState(self, state:str="normal"):
+        if state.lower() == "normal":
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["StopScript"].config(state=tk.NORMAL))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Run"].config(state=tk.NORMAL))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Reload"].config(state=tk.NORMAL))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Delete_Script"].config(state=tk.NORMAL))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Delete_WifiProfile"].config(state=tk.NORMAL))    
+        elif state.lower() == "disabled":
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["StopScript"].config(state=tk.DISABLED))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Run"].config(state=tk.DISABLED))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Reload"].config(state=tk.DISABLED))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Delete_Script"].config(state=tk.DISABLED))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Delete_WifiProfile"].config(state=tk.DISABLED))
 
+    def TestRun_SetButtonState(self, state:str="normal"):
+        if state.lower() == "normal":
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["StopScript"].config(state=tk.NORMAL))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Run"].config(state=tk.NORMAL))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Reload"].config(state=tk.NORMAL))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Delete_Script"].config(state=tk.NORMAL))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Delete_WifiProfile"].config(state=tk.NORMAL))    
+        elif state.lower() == "disabled":
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["StopScript"].config(state=tk.DISABLED))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Run"].config(state=tk.DISABLED))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Reload"].config(state=tk.DISABLED))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Delete_Script"].config(state=tk.DISABLED))    
+            self.root.after(0, lambda: self.Main_Widgets["Button"]["Delete_WifiProfile"].config(state=tk.DISABLED))
 
+    def Execution_Status(self, status:bool=False):
+        try:
+            if status:
+                self.Flag["RunTest"] = True
+                self.TestRun_SetButtonState(state="disabled")
+
+            else:
+                ### Enable Run & ReloadData Button.
+                self.Flag["RunTest"] = False
+                self.TestRun_SetButtonState(state="normal")
+
+                ### Delete Selected Situation JSON File.
+                if os.path.exists(self.SelectedSituation_JsonPath):
+                    os.remove(self.SelectedSituation_JsonPath)
+
+                ### Show Message.
+                self.Show_Message(text=f"{self.Schedule_JsonPath}", color="gray")
+
+        except Exception as e:
+            error_message = traceback.format_exc()
+            messagebox.showwarning("Error", error_message, parent=self.root)
+            return
 
 if __name__ == "__main__":
     width = 1000

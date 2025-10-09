@@ -14,7 +14,7 @@ class Page_ModifyData_Script:
         self.load_json_data()
 
         self.LabelTitle = label_title
-        self.DefaultValue = default_value if default_value is not None else ["ScriptID", "Type", "Test1", "ipv4", "8.8.8.8", "1200", "60", "10"]
+        self.DefaultValue = default_value if default_value is not None else ["ScriptID_001", "Ping", "Test1", "ipv4", "8.8.8.8", "1200", "60", "10"]
         self.confirm_callback = confirm_callback
 
         ### Initialize the main window.

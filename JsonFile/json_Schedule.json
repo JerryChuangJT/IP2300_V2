@@ -6,20 +6,16 @@
         },
         "Script": [
             {
-                "ScriptID": "Script_Ping",
-                "Schedule": "1,00:00,1440"
-            },
-            {
                 "ScriptID": "Script_Youtube",
-                "Schedule": "1,00:00,1440"
-            },
-            {
-                "ScriptID": "Script_Youtube2",
-                "Schedule": "1,00:00,1440"
+                "Schedule": "1,00:00,1440/2,00:00,1440/3,00:00,1440/4,00:00,1440/5,00:00,1440/6,00:00,1440/0,00:00,1440"
             },
             {
                 "ScriptID": "Script_Ping_10.10.0.5",
-                "Schedule": "1,00:00,1440"
+                "Schedule": "1,00:00,1440/2,00:00,1440/3,00:00,1440/4,00:00,1440/5,00:00,1440/6,00:00,1440/0,00:00,1440"
+            },
+            {
+                "ScriptID": "Script_Ping",
+                "Schedule": "1,00:00,1440/2,00:00,1440/3,00:00,1440/4,00:00,1440/5,00:00,1440/6,00:00,1440/0,00:00,1440"
             }
         ],
         "ClientID": [
@@ -27,7 +23,6 @@
             "IP2300_03",
             "IP2300_04",
             "IP2300_05",
-            "IP2300_06",
             "IP2300_07",
             "IP2300_08",
             "IP2300_18",
@@ -54,8 +49,7 @@
             "IP2300_39",
             "IP2300_40",
             "IP2300_41",
-            "IP2300_42",
-            "Jerry_197"
+            "IP2300_42"
         ]
     },
     "Test": {
@@ -86,7 +80,7 @@
                 "Schedule": "1,00:00,1440"
             },
             {
-                "ScriptID": "Script_Youtube2",
+                "ScriptID": "Script_Youtube",
                 "Schedule": "1,00:00,1440"
             }
         ],
@@ -105,10 +99,6 @@
         },
         "Script": [
             {
-                "ScriptID": "Script_Ping",
-                "Schedule": "1,00:00,1440"
-            },
-            {
                 "ScriptID": "Script_Ping_10.10.0.5",
                 "Schedule": "1,00:00,1440"
             },
@@ -117,7 +107,7 @@
                 "Schedule": "1,00:00,1440"
             },
             {
-                "ScriptID": "Script_Youtube2",
+                "ScriptID": "Script_Ping",
                 "Schedule": "1,00:00,1440"
             }
         ],

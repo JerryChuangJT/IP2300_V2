@@ -3,7 +3,7 @@ import json
 
 import Function.MyFunction_JsonData as JsonDataFunction
 
-class Frame_SituationCanvas():
+class Frame_ScheduleCanvas():
     def __init__(self, root, situation:str="Execution_1"):
         self.root = root        
         self.Situation = situation
@@ -112,11 +112,10 @@ class Frame_SituationCanvas():
         ### Update Info Label
         wifi_count = 1 if situation_data.get('Wifi') else 0
         script_count = len(situation_data.get('Script', []))
-        client_count = len(situation_data.get('Client', []))
+        client_count = len(situation_data.get('ClientID', []))
 
         self.Label_Title.config(text=f"{self.Situation}")
         self.Label_Info.config(text=f"Wifi: {wifi_count} | Scripts: {script_count} | Clients: {client_count}")
-
 
     ### Draw Grid.
     def draw_grid(self, margin_left, margin_top, chart_width, chart_height):
@@ -152,12 +151,6 @@ class Frame_SituationCanvas():
                                     text=['Sun', 'Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat'][day], 
                                     font=("Microsoft JhengHei", 10, "bold"), 
                                     fill=self.colors['text'])
-        
-        # ### Create title label.
-        # self.Canvas.create_text(margin_left + chart_width / 2, margin_top - 45, 
-        #                         text="Time (24-hour)", 
-        #                         font=("Calibri", 12, "bold"), 
-        #                         fill=self.colors['text'])
 
     ### Draw Legend.
     def draw_legend(self, start_x, start_y):
@@ -281,7 +274,6 @@ class Frame_SituationCanvas():
                                             x2, y2, 
                                             fill=self.colors[color_key], 
                                             outline=self.colors[color_key], width=1)
-
 
     def on_canvas_resize(self, event):
         self.Draw_Everything()

@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-from idlelib.tooltip import Hovertip  
 import traceback
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -11,6 +10,7 @@ import Function.MyFunction_JsonData as JsonDataFunction
 from Function.MyFunction_Telnet import TelNet
 
 from Class.Class_Button import Button
+from Class.Class_Tooltip import SmartTooltip
 
 class Frame_ADB():
     def __init__(self, root, close_callback=None):
@@ -40,6 +40,13 @@ class Frame_ADB():
         self.TreeView_Columns = ["ClientID", "MAC", "EtherIP", "Index"]
         
     def Create_widgets(self):
+        def sort_by_column(col:str, reverse:bool):
+            data = [(self.Main_Widget["TreeView"].set(item, col), item) for item in self.Main_Widget["TreeView"].get_children('')]
+            data.sort(reverse=reverse, key=lambda t: t[0])
+            for index, (val, item) in enumerate(data):
+                self.Main_Widget["TreeView"].move(item, '', index)
+            self.Main_Widget["TreeView"].heading(col, command=lambda: sort_by_column(col=col, reverse=not reverse))
+
         def create_main_widgets():
             self.Main_Widget = {}
             self.Main_Widget["Button"] = {}
@@ -89,16 +96,10 @@ class Frame_ADB():
 
             ### Tooltips
             ToolTip = {
-                "Button_Edit": Hovertip(self.Main_Widget["Button"]["Download"], text="Download devices log by ADB command.", hover_delay=300),
-                "Button_Add": Hovertip(self.Main_Widget["Button"]["Reload"], text="Reload Ether connectable devices.", hover_delay=300),
+                "Button_Edit": SmartTooltip(self.Main_Widget["Button"]["Download"], text="Download devices log by ADB command.", hover_delay=300),
+                "Button_Add": SmartTooltip(self.Main_Widget["Button"]["Reload"], text="Reload Ether connectable devices.", hover_delay=300),
             }
 
-        def sort_by_column(col:str, reverse:bool):
-            data = [(self.Main_Widget["TreeView"].set(item, col), item) for item in self.Main_Widget["TreeView"].get_children('')]
-            data.sort(reverse=reverse, key=lambda t: t[0])
-            for index, (val, item) in enumerate(data):
-                self.Main_Widget["TreeView"].move(item, '', index)
-            self.Main_Widget["TreeView"].heading(col, command=lambda: sort_by_column(col=col, reverse=not reverse))
 
         ### Create Frames.
         self.Frame = {}

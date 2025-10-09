@@ -90,6 +90,19 @@
             "Driver_Standard": "11ac",
             "Driver_Channel": "Auto",
             "Driver_Bandwidth": "Auto"
+        },
+        {
+            "WifiID": "AW1000_5G_11ax_36_20wefwedf",
+            "PingType": "ipv4",
+            "DUTIP": "192.168.47.1",
+            "SSID": "TelstraBA76B1-5G",
+            "Security": "wpa2",
+            "Password": "5wserz4hxz",
+            "BSSID": "ec:6c:9a:ba:76:b2",
+            "Driver_Band": "5G",
+            "Driver_Standard": "11ax",
+            "Driver_Channel": "36",
+            "Driver_Bandwidth": "40"
         }
     ]
 }

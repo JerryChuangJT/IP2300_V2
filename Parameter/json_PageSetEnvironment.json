@@ -1,5 +1,5 @@
 {
-    "ControllerPCIP": "192.168.0.1",
+    "ControllerPCIP": "192.168.5.1",
     "JsonFilePath": "D:/Jerry/Project/AndroidTV/FunctionScript/Controller/Program_V2/JsonFile/",
     "ImportCloseState": "Confirm"
 }

@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.font as font
 import json
 
 import Function.MyFunction_JsonData as JsonDataFunction
@@ -176,7 +177,7 @@ class Frame_ScheduleCanvas():
             legend_item_widths.append(item_width)
         
         ### Create Script legend items after Wifi legend.
-        current_x = start_x + 80  
+        current_x = start_x + 80
         for i, (color_key, name) in enumerate(zip(script_colors, script_ids)):
             self.Canvas.create_rectangle(current_x, start_y + ((i//5) * 30) + 6, 
                                          current_x + 20, start_y + ((i//5) * 30) + 10,
@@ -186,7 +187,9 @@ class Frame_ScheduleCanvas():
                                     text=name, anchor='w',
                                     font=("Calibri", 11, "bold"), 
                                     fill=self.colors['text'])
-            current_x += legend_item_widths[i]
+            fnt = font.Font(family="Calibri", size=11, weight="bold")
+            text_width = fnt.measure(name)
+            current_x += text_width + 40
             if (i + 1) % 5 == 0:
                 current_x = start_x + 80          
     
@@ -281,7 +284,11 @@ class Frame_ScheduleCanvas():
     def on_mouse_move(self, event):
         pass
 
+    def ReloadJsonData(self):
+        self.load_json_data()
+        # self.Draw_Everything()
+
 if __name__ == "__main__":
     root = tk.Tk()
-    app = Frame_SituationCanvas(root)
+    app = Frame_ScheduleCanvas(root)
     root.mainloop()

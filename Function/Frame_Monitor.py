@@ -700,7 +700,7 @@ class Frame_Monitor():
             wifi_dutip = self.RunTest_JsonData[client_id]["Wifi"]["DUTIP"]
             schedule = self.RunTest_JsonData[client_id]["Wifi"]["Schedule"]
 
-            wifi_script_process = f"/storage/emulated/0/Documents/Wifi/ScriptSchedule_Wifi.sh {wifi_ssid} {wifi_auth} {wifi_password} {wifi_bssid} {wifi_pingtype} {wifi_dutip} {schedule}"
+            wifi_script_process = f"/storage/emulated/0/Documents/Wifi/ScriptSchedule_Wifi.sh"
             search_command = f"ps -ef | grep sh"
             search_result = Telnet_Device.Execute_Command(search_command)
             
@@ -759,7 +759,7 @@ class Frame_Monitor():
             errorpackets_consecutivetime = self.RunTest_JsonData[client_id]["Script"][script_id]["Parameter4"]
             schedule = self.RunTest_JsonData[client_id]["Script"][script_id]["Schedule"]
 
-            youtube_script_process = f"/storage/emulated/0/Documents/Youtube/ScriptSchedule_Youtube.sh {youtube_list} {youtube_playtime} {eroorpackets_threshold} {errorpackets_consecutivetime} {schedule}"
+            youtube_script_process = f"/storage/emulated/0/Documents/Youtube/ScriptSchedule_Youtube.sh"
             search_command = f"ps -ef | grep sh"
             search_result = Telnet_Device.Execute_Command(search_command)
 

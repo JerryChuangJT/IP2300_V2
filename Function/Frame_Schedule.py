@@ -391,9 +391,10 @@ class Frame_Schedule():
 
             self.Wifi_Widget["Label"]["WifiID"].grid(row=0, column=0, padx=(5,0), pady=(5,0), sticky="w")
             self.Wifi_Widget["Combobox"].grid(row=0, column=1, padx=5, pady=(5,0), sticky="we")
-            self.Wifi_Widget["Label"]["Schedule"].grid(row=1, column=0, columnspan=2, padx=5, pady=(5,0), sticky="w")
-            self.Wifi_Widget["Button"]["SetSchedule"].grid(row=2, column=0, columnspan=2, padx=5, pady=5, sticky="w")
+            self.Wifi_Widget["Label"]["Schedule"].grid(row=1, column=0, columnspan=2, padx=(5,0), pady=(5,0), sticky="w")
+            self.Wifi_Widget["Button"]["SetSchedule"].grid(row=2, column=0, columnspan=2, padx=5, pady=5, sticky="sw")
             self.Frame["Wifi"].grid_columnconfigure(1, weight=1)
+            self.Frame["Wifi"].grid_rowconfigure(2, weight=1)
 
             Tooltip = {
                 "Button_SetSchedule": SmartTooltip(self.Wifi_Widget["Button"]["SetSchedule"], "Set the schedule for the selected Wifi ID.", hover_delay=300),
@@ -483,36 +484,38 @@ class Frame_Schedule():
 
         ### Main Frame
         self.Frame = {}
+        self.Frame["PanedWindow"] = {}
         self.Frame["Main"] = tk.Frame(self.root, borderwidth=1, relief="flat", highlightbackground="#a9a7a7", highlightthickness=1)
         self.Frame["Main"].grid(row=0, column=0, padx=5, pady=5, sticky="nsew")  
         self.root.grid_rowconfigure(0, weight=1)
         self.root.grid_columnconfigure(0, weight=1)
 
+        ###------------------------------------------------------------------------------
         ### Create Each Frames ( Situation & Wifi & PanedWindow & Canvas ).
-        self.Title = {}
-        self.Title["SetSchedule"] = ttk.Label(self.Frame["Main"], text="Schedule Setting", style="Title_Schedule.TLabel")
         self.Frame["Situation"] = ttk.LabelFrame(self.Frame["Main"], text="Situation", borderwidth=1, relief="flat", style="FrameTitle_Schedule.TLabelframe")
-        self.Frame["Wifi"] = ttk.LabelFrame(self.Frame["Main"],  text="Wifi", borderwidth=1, relief="flat", style="FrameTitle_Schedule.TLabelframe", width=300)
-        self.Title["Canvas"] = ttk.Label(self.Frame["Main"], text="Situation Chart", style="Title_Schedule.TLabel")
-        self.Frame["PanedWindow"] = tk.PanedWindow(self.Frame["Main"], orient=tk.VERTICAL, sashwidth=5)
-        self.Frame["SituationCanvas"] = ttk.Frame(self.Frame["Main"], borderwidth=1, relief="flat", width=1500)
-        # Create Situation Canvas.
-        self.SituationCanvas = Frame_ScheduleCanvas(self.Frame["SituationCanvas"])
+        self.Frame["PanedWindow"]["DataCanvas"] = tk.PanedWindow(self.Frame["Main"], orient=tk.HORIZONTAL, sashwidth=5)
 
-        # self.Title["SetSchedule"].grid(row=0, column=0, padx=5, pady=(5,0), sticky="w")
-        self.Frame["Situation"].grid(row=1, column=0, rowspan=2, padx=(5,0), pady=5, sticky="nsew")
-        self.Frame["Wifi"].grid(row=1, column=1, padx=5, pady=(5,0), sticky="nsew")
-        self.Frame["PanedWindow"].grid(row=2, column=1, padx=5, pady=5, sticky="nsew")
-        self.Frame["SituationCanvas"].grid(row=1, column=2, rowspan=2, padx=(0,5), pady=5, sticky="nsew")
+        self.Frame["Situation"].grid(row=0, column=0, padx=(5,0), pady=5, sticky="nsew")
+        self.Frame["PanedWindow"]["DataCanvas"].grid(row=0, column=1, padx=(5,5), pady=5, sticky="nsew")
 
-        ### Create Script & Client Frame in PanedWindow.
-        self.Frame["Script"] = ttk.LabelFrame(self.Frame["PanedWindow"],  text="Script", borderwidth=1, relief="flat", style="FrameTitle_Schedule.TLabelframe")
-        self.Frame["Client"] = ttk.LabelFrame(self.Frame["PanedWindow"],  text="Client", borderwidth=1, relief="flat", style="FrameTitle_Schedule.TLabelframe")
-        self.Frame["PanedWindow"].add(self.Frame["Script"], minsize=150)
-        self.Frame["PanedWindow"].add(self.Frame["Client"], minsize=150)
+        self.Frame["Main"].grid_rowconfigure(0, weight=1)  
+        self.Frame["Main"].grid_columnconfigure(1, weight=1)
 
-        self.Frame["Main"].grid_rowconfigure(2, weight=1)  
-        self.Frame["Main"].grid_columnconfigure(2, weight=1)
+        ### Create Wifi & Script & Client Frame in PanedWindow.
+        self.Frame["PanedWindow"]["Data"] = tk.PanedWindow(self.Frame["Main"], orient=tk.VERTICAL, sashwidth=5)
+        self.Frame["Wifi"] = ttk.LabelFrame(self.Frame["PanedWindow"]["Data"],  text="Wifi", borderwidth=1, relief="flat", style="FrameTitle_Schedule.TLabelframe", width=300)
+        self.Frame["Script"] = ttk.LabelFrame(self.Frame["PanedWindow"]["Data"],  text="Script", borderwidth=1, relief="flat", style="FrameTitle_Schedule.TLabelframe")
+        self.Frame["Client"] = ttk.LabelFrame(self.Frame["PanedWindow"]["Data"],  text="Client", borderwidth=1, relief="flat", style="FrameTitle_Schedule.TLabelframe")
+        self.Frame["PanedWindow"]["Data"].add(self.Frame["Wifi"], minsize=100)
+        self.Frame["PanedWindow"]["Data"].add(self.Frame["Script"], minsize=150)
+        self.Frame["PanedWindow"]["Data"].add(self.Frame["Client"], minsize=150)
+
+        ### Create Situation Canvas.
+        self.Frame["ScheduleCanvas"] = ttk.Frame(self.Frame["PanedWindow"]["DataCanvas"], borderwidth=1, relief="flat", width=1500)
+        self.ScheduleCanvas = Frame_ScheduleCanvas(self.Frame["ScheduleCanvas"])
+
+        self.Frame["PanedWindow"]["DataCanvas"].add(self.Frame["PanedWindow"]["Data"], minsize=150)
+        self.Frame["PanedWindow"]["DataCanvas"].add(self.Frame["ScheduleCanvas"], minsize=300)
 
         create_widgets_situation()
         create_widgets_wifi()
@@ -564,7 +567,7 @@ class Frame_Schedule():
             ### Update Count.
             ### Update Canvas.
             self.Update_Count()
-            self.SituationCanvas.Draw_Everything(situation=situation)
+            self.ScheduleCanvas.Draw_Everything(situation=situation)
 
         except Exception as e:
             error_message = traceback.format_exc()
@@ -875,7 +878,9 @@ class Frame_Schedule():
 
     def Reload_JsonData(self):
         self.load_json_data()
+        self.ScheduleCanvas.ReloadJsonData()
         self.Load_ScheduleData()
+        
 
 if __name__ == "__main__":
     height = 600

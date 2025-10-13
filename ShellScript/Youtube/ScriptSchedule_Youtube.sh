@@ -144,6 +144,7 @@ while true; do
     ### Execute or stop the ping command based on the schedule
     if [ "$CheckSchedule" -eq 1 ]; then
         if [ "$ExecuteCMD_Flag" -eq 0 ]; then
+            sleep 60;
             {   
                 echo "[$(Get_CurrentDateTime)] Execute the scripts.";
                 echo "[$(Get_CurrentDateTime)] sh /storage/emulated/0/Documents/Youtube/Youtube.sh $list_YoutubeURL $PlayVideo_Interval_Time &"

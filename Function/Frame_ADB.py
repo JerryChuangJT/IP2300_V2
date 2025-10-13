@@ -81,15 +81,15 @@ class Frame_ADB():
             self.Main_Widget["Label"]["Count"] = ttk.Label(self.Frame["Main"], text="Total : 0/0", style="Count_ADB.TLabel") 
 
             ### Layout Widgets.
-            self.Main_Widget["Title"].grid(row=0, column=0, padx=(5,0), pady=(5,0), sticky="w")            
-            self.Main_Widget["Button"]["Download"].grid(row=1, column=1, padx=(0,120), pady=(5,0), sticky="e")
-            self.Main_Widget["Button"]["Reload"].grid(row=1, column=1, padx=(0,5), pady=(5,0), sticky="e")
+            self.Main_Widget["Title"].grid(row=0, column=0, padx=(5,0), pady=(5,0), sticky="w")  
             self.Main_Widget["Label"]["Search"].grid(row=1, column=0, padx=(5,0), pady=(5,0), sticky="w")
-            self.Main_Widget["Entry"]["Search"].grid(row=1, column=0, padx=(75,0), pady=(5,0), sticky="w")
-            self.Main_Widget["TreeView"].grid(row=2, column=0, columnspan=2, padx=(5,0), pady=(5,0), sticky="nsew")
-            self.Main_Widget["Scrollerbar"]["Vertical"].grid(row=2, column=2, padx=(0,0), pady=(5,0), sticky="ns")
-            self.Main_Widget["Label"]["Message"].grid(row=3, column=0, padx=(5,0), pady=5, sticky="w")
-            self.Main_Widget["Label"]["Count"].grid(row=3, column=1, padx=(5,0), pady=5, sticky="e")
+            self.Main_Widget["Entry"]["Search"].grid(row=1, column=1, padx=(5,0), pady=(5,0), sticky="w")          
+            self.Main_Widget["Button"]["Download"].grid(row=1, column=2, padx=(0,0), pady=(5,0), sticky="e")
+            self.Main_Widget["Button"]["Reload"].grid(row=1, column=3, padx=(5,0), pady=(5,0), sticky="e")
+            self.Main_Widget["TreeView"].grid(row=2, column=0, columnspan=4, padx=(5,0), pady=(5,0), sticky="nsew")
+            self.Main_Widget["Scrollerbar"]["Vertical"].grid(row=2, column=4, padx=(0,0), pady=(5,0), sticky="ns")
+            self.Main_Widget["Label"]["Message"].grid(row=3, column=0, columnspan=4, padx=(5,0), pady=5, sticky="w")
+            self.Main_Widget["Label"]["Count"].grid(row=3, column=0, columnspan=4, padx=(5,0), pady=5, sticky="e")
 
             self.Frame["Main"].grid_rowconfigure(2, weight=1)  # 讓 TreeView 可以自動調整大小
             self.Frame["Main"].grid_columnconfigure(1, weight=1)

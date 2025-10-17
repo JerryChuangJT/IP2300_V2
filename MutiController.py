@@ -43,8 +43,13 @@ class MainPage():
         self.root.geometry(f"{width}x{height}")
         self.root.minsize(width, height)
         self.root.resizable(True,True)
-        # icon = PhotoImage(file="./img/television.png")
-        # self.root.iconphoto(True, icon)
+
+        self.LogPath_dic = {
+            "Monitor_Step": "D:/JerryTest/Controller_Log/Monitor",
+            "ScriptResult": "D:/JerryTest/Controller_Log/ScriptResult",
+            "ScriptStop": "D:/JerryTest/Controller_Log/ScriptStop",
+            "CheckProcess": "D:/JerryTest/Controller_Log/CheckProcess"
+        }
 
         self.Create_MenuBar()
         self.Create_NoteBook()
@@ -194,9 +199,9 @@ class MainPage():
         self.Frame_ExecutionPage = {}
 
         self.Frame_ExecutionPage["Situation"] = tk.Frame(self.Notebook["ExecutionPage"])
-        self.app_situation = Frame_Situation(self.Frame_ExecutionPage["Situation"], runtest_callback=runtest_callback)
+        self.app_situation = Frame_Situation(self.Frame_ExecutionPage["Situation"], self.LogPath_dic, runtest_callback)
         self.Frame_ExecutionPage["Monitor"] = tk.Frame(self.Notebook["ExecutionPage"])
-        self.app_monitor = Frame_Monitor(self.Frame_ExecutionPage["Monitor"], stoptest_callback=stoptest_callback)
+        self.app_monitor = Frame_Monitor(self.Frame_ExecutionPage["Monitor"], self.LogPath_dic, stoptest_callback)
         self.Frame_ExecutionPage["IPAddress"] = tk.Frame(self.Notebook["ExecutionPage"])
         self.app_ipaddress = Frame_IPAddress(self.Frame_ExecutionPage["IPAddress"])
 

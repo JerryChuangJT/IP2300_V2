@@ -49,11 +49,19 @@ class ImageDisplay(ttk.Label):
         ### 正常狀態圖片
         normal_img = composite_to_background(self.image_path, self.size, self.bg_color)
         
+        # ### 禁用狀態圖片 - 降低亮度和對比度，增加灰度效果
+        # disabled_img = composite_to_background("./img/fail.png", self.size, self.bg_color)
+        # disabled_img = ImageEnhance.Brightness(disabled_img).enhance(0.6)  # 降低亮度
+        # disabled_img = ImageEnhance.Contrast(disabled_img).enhance(0.6)    # 降低對比度
+
         ### 禁用狀態圖片 - 降低亮度和對比度，增加灰度效果
-        # disabled_img = normal_img.copy()
-        disabled_img = composite_to_background("./img/fail.png", self.size, self.bg_color)
-        disabled_img = ImageEnhance.Brightness(disabled_img).enhance(4.0)  # 降低亮度
-        disabled_img = ImageEnhance.Contrast(disabled_img).enhance(0.1)     # 降低對比度
+        disabled_img = normal_img.copy()
+        disabled_img = ImageEnhance.Brightness(disabled_img).enhance(0.6)  # 降低亮度
+        disabled_img = ImageEnhance.Contrast(disabled_img).enhance(0.6)    # 降低對比度
+        r, g, b, a = disabled_img.split()
+        gray = Image.merge('RGB', (r, g, b)).convert('L')
+        gray_img = Image.merge('RGBA', (gray, gray, gray, a))  # 保持原始 Alpha
+        disabled_img = Image.blend(disabled_img, gray_img, 0.7)
 
         ### 未在Schedule狀態
         not_schedule_img = composite_to_background("./img/notschedule.png", self.size, self.bg_color)

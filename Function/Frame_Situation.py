@@ -14,7 +14,7 @@ from Class.Class_Button import Button
 from Class.Class_Tooltip import SmartTooltip
 
 class Frame_Situation():
-    def __init__(self, root=None, runtest_callback=None):
+    def __init__(self, root=None, logpath_dic:dict=None, runtest_callback=None):
         self.runtest_callback = runtest_callback
         self.root = root
 
@@ -35,7 +35,9 @@ class Frame_Situation():
         self.Flag = {}
         self.Flag["RunTest"] = False
 
-        self.LogPath = "./Controller_Log/Situation"
+        self.LogPath = logpath_dic["Monitor_Step"]
+        self.LogPath_ScriptStop = logpath_dic["ScriptStop"] 
+        
 
         self.load_json_data()
         self.Create_Widgets()
@@ -278,13 +280,16 @@ class Frame_Situation():
                         return client_data["EtherIP"]
             return None
         
-        def delete_all_scripts(client_ip:str=None, port:int=23):
+        def delete_all_scripts(client_id:str=None, port:int=23):
+            client_ip = get_client_ip(client_id)
             Telnet_Device = TelNet(client_ip, port) 
             Telnet_Device.Connect_Devcie()
             time.sleep(1)
 
             delete_command = "rm -r /storage/emulated/0/Documents/*"
-            Telnet_Device.Execute_Command(delete_command)
+            result = Telnet_Device.Execute_Command(delete_command)
+            if result[0].lower() == "fail":
+                    self.DeleteScriptFail_clients.add(client_id)
             time.sleep(1)
             
             Telnet_Device.Disconnect_Device()
@@ -295,7 +300,7 @@ class Frame_Situation():
                 with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Client_DeleteScripts") as executor:
                     futures = []
                     for client_id in selected_clients:
-                        futures.append(executor.submit(delete_all_scripts, get_client_ip(client_id), 23))
+                        futures.append(executor.submit(delete_all_scripts, client_id, 23))
 
                     ### Get all result from [futures].
                     total_futures = len(futures)
@@ -318,8 +323,13 @@ class Frame_Situation():
                     return
                 
                 self.Show_Message(text=f"Deleting Scripts ...", color="red")
+
+                self.DeleteScriptFail_clients = set()
                 ThreadPool_DeleteScript()
                 self.Execution_Status(False)
+                if self.DeleteScriptFail_clients:
+                    error_message = f"{len(self.DeleteScriptFail_clients)} clients stop script failed:\n" + ", ".join(self.DeleteScriptFail_clients)
+                    messagebox.showwarning("Error", error_message, parent=self.root)
 
             except Exception as e:
                 error_message = traceback.format_exc()
@@ -350,13 +360,16 @@ class Frame_Situation():
                         return client_data["EtherIP"]
             return None
         
-        def delete_wifi_profile(client_ip:str=None, port:int=23):
+        def delete_wifi_profile(client_id:str=None, port:int=23):
+            client_ip = get_client_ip(client_id)
             Telnet_Device = TelNet(client_ip, port) 
             Telnet_Device.Connect_Devcie()
             time.sleep(1)
 
             delete_command = "sh /storage/emulated/0/Documents/Wifi/Delete_AllWifiProfile.sh"
-            Telnet_Device.Execute_Command(delete_command)
+            result = Telnet_Device.Execute_Command(delete_command)
+            if result[0].lower() == "fail":
+                self.DeleteWifiFail_clients.add(client_id)
             time.sleep(1)
             
             Telnet_Device.Disconnect_Device()
@@ -367,7 +380,7 @@ class Frame_Situation():
                 with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Client_DeleteWifiProfile") as executor:
                     futures = []
                     for client_id in selected_clients:
-                        futures.append(executor.submit(delete_wifi_profile, get_client_ip(client_id), 23))
+                        futures.append(executor.submit(delete_wifi_profile, client_id, 23))
 
                     ### Get all result from [futures].
                     total_futures = len(futures)
@@ -390,8 +403,13 @@ class Frame_Situation():
                     return
                 
                 self.Show_Message(text=f"Deleting Wifi Profile ...", color="red")
+
+                self.DeleteWifiFail_clients = set()
                 ThreadPool_DeleteScript()
                 self.Execution_Status(False)
+                if self.DeleteWifiFail_clients:
+                    error_message = f"{len(self.DeleteWifiFail_clients)} clients delete wifi profile failed:\n" + ", ".join(self.DeleteWifiFail_clients)
+                    messagebox.showwarning("Error", error_message, parent=self.root)
 
             except Exception as e:
                 error_message = traceback.format_exc()
@@ -450,7 +468,8 @@ class Frame_Situation():
                         return client_data["EtherIP"]
             return None
         
-        def kill_all_process(client_ip:str=None, port:int=23):
+        def kill_all_process(client_id:str=None, port:int=23):
+            client_ip = get_client_ip(client_id)
             stop_command = {
                 "wifi_schedule": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh wifi_schedule",
                 "wifi_connect": "sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh wifi_connect",
@@ -476,18 +495,22 @@ class Frame_Situation():
             time.sleep(1)
 
             for command_name, command in stop_command.items():
-                Telnet_Device.Execute_Command(command)
+                result = Telnet_Device.Execute_Command(command)
+                WriteLogFunction.WriteLog(self.LogPath_ScriptStop, f"{client_ip} Kill Process Log:{result}")
+                if result[0].lower() == "fail":
+                    self.StopScriptFail_clients.add(client_id)
                 time.sleep(0.5)
 
             Telnet_Device.Disconnect_Device()
 
         def ThreadPool_KillProcess():
             try:
+                WriteLogFunction.WriteLog(self.LogPath_ScriptStop, f"---------------------------------------------------------------------------")
                 selected_clients = JsonDataFunction.Get_jsonAllData(self.SelectedSituation_JsonPath)["ClientID"]
                 with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Client_KillProcess") as executor:
                     futures = []
                     for client_id in selected_clients:
-                        futures.append(executor.submit(kill_all_process, get_client_ip(client_id), 23))
+                        futures.append(executor.submit(kill_all_process, client_id, 23))
 
                     ### Get all result from [futures].
                     total_futures = len(futures)
@@ -510,8 +533,13 @@ class Frame_Situation():
                     return
                 
                 self.Show_Message(text=f"Killing Processes ...", color="red")
+
+                self.StopScriptFail_clients = set()
                 ThreadPool_KillProcess()
                 self.Execution_Status(False)
+                if self.StopScriptFail_clients:
+                    error_message = f"{len(self.StopScriptFail_clients)} clients stop script failed:\n" + ", ".join(self.StopScriptFail_clients)
+                    messagebox.showwarning("Error", error_message, parent=self.root)
 
             except Exception as e:
                 error_message = traceback.format_exc()
@@ -590,8 +618,12 @@ class Frame_Situation():
         def check_telnet_connection(host:str, port:int=23):
             try:
                 device = TelNet(host, port) 
+                # return {"Device":host,
+                #         "Result": "PASS"}
                 return {"Device":host,
                         "Result":device.Check_Connection()[0]}
+            
+
             except Exception as e:
                 error_message = traceback.format_exc()
                 messagebox.showwarning("Error", error_message, parent=self.root)

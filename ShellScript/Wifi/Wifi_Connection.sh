@@ -177,7 +177,7 @@ while true; do
         if [ "$wifi_run_status" != "Start" ]; then
             cat "$wifi_count_file" >> "$LogFile_WifiCount" 2>&1;
             echo "[$(Get_CurrentDateTime)] Test Stop" >> "$LogFile_CommandRecord" 2>&1;
-            return 0;
+            exit 0;
         fi;
 
         ### Check wifi_connect_status != "Pass"

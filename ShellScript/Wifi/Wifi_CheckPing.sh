@@ -8,31 +8,26 @@
 # Function :
 #       1. Check Wifi Script to run at the specified time.
 #       2. Execute Wifi Connection, Get IP, Ping Script and Check Ping Script.  
-#       3. [Log] Wifi_ScheduleLog.log
-#                - Record the schedule and execution status.
-#       4. [Log] Wifi_Connection_result.log
+#       3. [Log] Wifi_Connection_result.log
 #                - Record the connection result.
 #                - Set Result as Wait.
-#       5. [Log] Wifi_IP_result.log 
-#                - Record the IP result.
-#                - Set Result as Wait.
-#       6. [Log] Wifi_Ping_rate.log
+#       4. [Log] Wifi_Ping_rate.log
 #                - Record the ping rate result.
-#       7. [Log] Wifi_Ping.log
+#       5. [Log] Wifi_Ping.log
 #                - Record the ping result.
-#       8. [Log] Wifi_Ping_addtime.log
+#       6. [Log] Wifi_Ping_addtime.log
 #                - Record the ping result with add time.
-#       9. [Log] Wifi_Ping_failsummary.log
+#       7. [Log] Wifi_Ping_failsummary.log
 #                - Record the ping error summary.
-#       10. [Log] Wifi_Ping_rate.log
+#       8. [Log] Wifi_Ping_rate.log
 #                - Record the ping rate result.
-#       11. [temp] wifi_ping_temp_file
+#       9. [temp] wifi_ping_temp_file
 #                - Temporary file for ping log analysis.
-#       12. [temp] wifi_ping_run_status
+#       10. [temp] wifi_ping_run_status
 #                - File for execute status.
-#       13. [temp] wifi_ping_start_line
+#       11. [temp] wifi_ping_start_line
 #                - File for start line of ping log analysis.
-#       14. [temp] wifi_ping_rate
+#       12. [temp] wifi_ping_rate
 #                - File for ping rate result.
 
 #-----------------------------------------------------------------------------------
@@ -113,7 +108,8 @@ Update_PingRate_File() {
         PassCount=$new_PassCount;
         FailCount=$new_FailCount;
         ResponseTotal=$new_ResponseTotal;
-        if [ $(($PassCount + $FailCount)) -eq 0 ]; then
+        # if [ $(($PassCount + $FailCount)) -eq 0 ]; then
+        if [ "$PassCount" -eq 0 ]; then
             ResponseAverage=0
         else
             ResponseAverage=$(echo "scale=1; $ResponseTotal / $PassCount" | bc);
@@ -129,7 +125,8 @@ Update_PingRate_File() {
         PassCount=$(($PassCount + $new_PassCount))
         FailCount=$(($FailCount + $new_FailCount))
         ResponseTotal=$(echo "scale=1; $ResponseTotal + $new_ResponseTotal" | bc)
-        if [ $(($PassCount + $FailCount)) -eq 0 ]; then
+        # if [ $(($PassCount + $FailCount)) -eq 0 ]; then
+        if [ "$PassCount" -eq 0 ]; then
             ResponseAverage=0
         else
             ResponseAverage=$(echo "scale=1; $ResponseTotal / $PassCount" | bc)
@@ -204,6 +201,8 @@ while true; do
 
     ### Check Execute Status.
     execute_status=$(cat "$excecutestatus_file" 2>/dev/null);
+    echo "Execute Status: $execute_status";
+
     if [ "$execute_status" != "Start" ]; then
 
         ### Write message in MonitorLog_FailSummary.
@@ -219,11 +218,13 @@ while true; do
         ### Copy message to MonitorLog_PingRate.
         cat "$pingrate_file" >> "$MonitorLog_PingRate" 2>&1;
         echo "----------------------------------------------------------------------" >> "$MonitorLog_PingRate" 2>&1;
-        return 0;
+        rm -f "$temp_file" 2>/dev/null;
+        exit 0;
     fi
 
     ### Get Start Line.
     ### Copy Ping Log & Analysis the Log.
+    rm -f "$temp_file";
     start_line=$(Get_StartLine "$startline_file");
     tail -n +$start_line "$PingResult_File" > "$temp_file";
     while IFS= read -r line || [[ -n "$line" ]]; do
@@ -246,8 +247,8 @@ while true; do
                     } >> $MonitorLog_FailSummary 2>&1;
                 fi
                 ping_error_count=0;
-                time=$(echo "$line" | awk -F 'time=' '{print $2}' | awk '{print $1}');
-                time_float=$(printf "%.1f" "$time");
+                # time=$(echo "$line" | awk -F 'time=' '{print $2}' | awk '{print $1}');
+                # time_float=$(printf "%.1f" "$time");
                 pass_count=$((pass_count + 1));
             fi;
 
@@ -285,10 +286,10 @@ while true; do
             fi;
         fi;
         start_line=$(($start_line + 1));
-    done < "$temp_file";
-    
-    rm -f "$temp_file";
+    done < "$temp_file";    
     echo "$start_line" > "$startline_file" 2>&1;
+    echo "Next Start Line: $start_line";
+    echo "Pass Count: $pass_count, Fail Count: $fail_count, Response Total: $response_total";
     Update_PingRate_File "$pass_count" "$fail_count" "$response_total";
     sleep 1;
 done;

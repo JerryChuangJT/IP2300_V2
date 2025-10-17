@@ -74,7 +74,7 @@ while true; do
     for i in $(seq 1 3); do
         getip_run_status=$(cat "$getip_run_status_file")
         if [ "$getip_run_status" != "Start" ]; then
-            return 0;
+            exit 0;
         fi;
         sleep 1;
     done;

@@ -75,6 +75,7 @@ class TelNet():
             ### Check connection status, if not connected, try to connect.
             if self.connection_Status == False:
                 self.Connect_Devcie()
+                continue
 
             ### If connected, try to send command and read response.
             if self.connection_Status:

@@ -200,7 +200,7 @@ class Frame_ClientStatus():
             messagebox.showwarning("Error", error_message, parent=self.root)
 
 class Frame_Monitor():
-    def __init__(self, root, stoptest_callback=None):
+    def __init__(self, root, logpath_dic:dict, stoptest_callback=None):
         self.stoptest_callback = stoptest_callback
         self.root = root
 
@@ -213,13 +213,17 @@ class Frame_Monitor():
         style.configure("Message1_Monitor.TLabel", font=("Segoe UI", 8), foreground="#717171")
         style.configure("Message2_Monitor.TLabel", font=("Segoe UI", 8), foreground="Red")
 
-        self.Create_Widgets()
-        self.LogPath = "./Controller_Log/Monitor"
+
+        self.LogPath_Monitor = logpath_dic["Monitor_Step"]
+        self.LogPath_ScriptResult = logpath_dic["Monitor_Step"]
+        self.LogPath_ScriptStop = logpath_dic["Monitor_Step"] 
+        self.LogPath_CheckProcess = logpath_dic["CheckProcess"]
 
         self.Flag = {}
         self.Flag["RunTest"] = False
 
         self.load_json_data()
+        self.Create_Widgets()
 
     def load_json_data(self):
         ### Environment Json Data.
@@ -311,7 +315,7 @@ class Frame_Monitor():
             # messagebox.showinfo("Info", "No test is running.", parent=self.root)
             return
         else:
-            WriteLogFunction.WriteLog(self.LogPath, "[Stop Test]")
+            WriteLogFunction.WriteLog(self.LogPath_Monitor, "[Stop Test]")
             self.Show_Message("Stopping test, wait for it ...", "red")
             self.Flag["RunTest"] = False
 
@@ -484,15 +488,15 @@ class Frame_Monitor():
         while True:
             try:
                 ### Get json_RuntTest.json data.
-                WriteLogFunction.WriteLog(self.LogPath, "[Start Test] Loading json_RunTest.json.")
+                WriteLogFunction.WriteLog(self.LogPath_Monitor, "[Start Test] Loading json_RunTest.json.")
                 self.RunTest_JsonData = JsonDataFunction.Get_jsonAllData(self.RunTest_JsonPath)
 
                 ### Step1: Check each client ether status, and update self.Client_Ether_Status.
                 if self.Flag["RunTest"] == False:  break
-                WriteLogFunction.WriteLog(self.LogPath, "Checking each client ether connection status...")
+                WriteLogFunction.WriteLog(self.LogPath_Monitor, "Checking each client ether connection status...")
                 self.Show_Message("Checking each client ether connection status...", "gray")
                 self.ThreadPool_Check_EtherConnection()
-                WriteLogFunction.WriteLog(self.LogPath, f"  self.Client_Ether_Status: \n{str(json.dumps(self.Client_Ether_Status, indent = 4))}")
+                WriteLogFunction.WriteLog(self.LogPath_Monitor, f"  self.Client_Ether_Status: \n{str(json.dumps(self.Client_Ether_Status, indent = 4))}")
 
                 ### Step2: Update each client LabelFrame style according to self.Client_Ether_Status.
                 if self.Flag["RunTest"] == False:  break
@@ -500,23 +504,23 @@ class Frame_Monitor():
 
                 ### Step3: Upload all shell scripts into Devices.
                 if self.Flag["RunTest"] == False:  break
-                WriteLogFunction.WriteLog(self.LogPath, "Checking all shell scripts in devices...")
+                WriteLogFunction.WriteLog(self.LogPath_Monitor, "Checking all shell scripts in devices...")
                 self.Show_Message("Checking all shell scripts in devices...", "gray")
                 self.ThreadPool_UploadShellScripts()
 
                 ### Stpe4: Execute all shell scripts in Devices.
                 if self.Flag["RunTest"] == False:  break
-                WriteLogFunction.WriteLog(self.LogPath, "Executing all shell scripts in devices...")
+                WriteLogFunction.WriteLog(self.LogPath_Monitor, "Executing all shell scripts in devices...")
                 self.Show_Message("Executing all shell scripts in devices...", "gray")
                 self.ThreadPool_ExecuteShellScripts()
                 
                 ### Step5: Get each client shell script status, and record in [Frame_ClientStatus.ShellScript_Status].
                 if self.Flag["RunTest"] == False:  break
-                WriteLogFunction.WriteLog(self.LogPath, "Getting each client shell script status...")
+                WriteLogFunction.WriteLog(self.LogPath_Monitor, "Getting each client shell script status...")
                 self.Show_Message("Getting each client shell script status...", "gray")
                 self.ThreadPool_GetShellScriptStatus()
                 client_shellscript_result = {client_id: self.Client_ShellScript_Status[client_id].ShellScript_Status for client_id in self.Client_ShellScript_Status}
-                WriteLogFunction.WriteLog(self.LogPath, f"  client_shellscript_result: \n{str(json.dumps(client_shellscript_result, indent = 4))}")
+                WriteLogFunction.WriteLog(self.LogPath_Monitor, f"  client_shellscript_result: \n{str(json.dumps(client_shellscript_result, indent = 4))}")
 
                 ### Step6 : Update each client img status. Execute [Frame_ClientStatus.Update_AllImgStatus()].
                 if self.Flag["RunTest"] == False:  break
@@ -555,7 +559,7 @@ class Frame_Monitor():
             
             except Exception as e:
                 error_message = traceback.format_exc()
-                WriteLogFunction.WriteLog(self.LogPath, f"[Error - {client_id}] {error_message}")
+                WriteLogFunction.WriteLog(self.LogPath_Monitor, f"[Error - {client_id}] {error_message}")
                 return {"ClientID":client_id,
                         "Result":"FAIL"}
         try:
@@ -577,7 +581,7 @@ class Frame_Monitor():
 
         except Exception as e:
             error_message = traceback.format_exc()
-            WriteLogFunction.WriteLog(self.LogPath, f"{error_message}")
+            WriteLogFunction.WriteLog(self.LogPath_Monitor, f"{error_message}")
     
     ### Step2: Update each client LabelFrame style according to self.Client_Ether_Status.
     ### Get self.Client_Ether_Status.
@@ -592,7 +596,7 @@ class Frame_Monitor():
 
         except Exception as e:
             error_message = traceback.format_exc()
-            WriteLogFunction.WriteLog(self.LogPath, f"{error_message}")
+            WriteLogFunction.WriteLog(self.LogPath_Monitor, f"{error_message}")
     
     ### Step3: Upload all shell scripts into Devices.
     ### Upload all shell scripts into Devices.
@@ -631,27 +635,28 @@ class Frame_Monitor():
                 result = MyFunction.Run_Subprocess(adb_connect_command)
                 time.sleep(1)
 
-                ### Upload EtherConnection shell scripts to device.
-                check_remote_scriptfile(Telnet_Device, client_ip, local_storage="./ShellScript/EtherConnection/", remote_storage="/storage/emulated/0/Documents/EtherConnection/")
+                if result[0].lower() == "pass":
+                    ### Upload EtherConnection shell scripts to device.
+                    check_remote_scriptfile(Telnet_Device, client_ip, local_storage="./ShellScript/EtherConnection/", remote_storage="/storage/emulated/0/Documents/EtherConnection/")
 
-                ### Upload Wifi shell scripts to device.
-                check_remote_scriptfile(Telnet_Device, client_ip, local_storage="./ShellScript/Wifi/", remote_storage="/storage/emulated/0/Documents/Wifi/")
+                    ### Upload Wifi shell scripts to device.
+                    check_remote_scriptfile(Telnet_Device, client_ip, local_storage="./ShellScript/Wifi/", remote_storage="/storage/emulated/0/Documents/Wifi/")
 
-                ### Upload Ping shell scripts to device.
-                check_remote_scriptfile(Telnet_Device, client_ip, local_storage="./ShellScript/Ping/", remote_storage="/storage/emulated/0/Documents/Ping/")
+                    ### Upload Ping shell scripts to device.
+                    check_remote_scriptfile(Telnet_Device, client_ip, local_storage="./ShellScript/Ping/", remote_storage="/storage/emulated/0/Documents/Ping/")
 
-                ### Upload Youtube shell scripts to device.
-                check_remote_scriptfile(Telnet_Device, client_ip, local_storage="./ShellScript/Youtube/", remote_storage="/storage/emulated/0/Documents/Youtube/")
+                    ### Upload Youtube shell scripts to device.
+                    check_remote_scriptfile(Telnet_Device, client_ip, local_storage="./ShellScript/Youtube/", remote_storage="/storage/emulated/0/Documents/Youtube/")
 
-                ### Upload KillProcess shell scripts to device.
-                check_remote_scriptfile(Telnet_Device, client_ip, local_storage="./ShellScript/KillProcess/", remote_storage="/storage/emulated/0/Documents/KillProcess/")
+                    ### Upload KillProcess shell scripts to device.
+                    check_remote_scriptfile(Telnet_Device, client_ip, local_storage="./ShellScript/KillProcess/", remote_storage="/storage/emulated/0/Documents/KillProcess/")
 
                 ### Close Connection.
                 Telnet_Device.Disconnect_Device()
 
             except Exception as e:
                 error_message = traceback.format_exc()
-                WriteLogFunction.WriteLog(self.LogPath, f"[Error - {client_id}] {error_message}")
+                WriteLogFunction.WriteLog(self.LogPath_Monitor, f"[Error - {client_id}] {error_message}")
 
         try:
             with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Upload_ClientShellScripts") as executor:
@@ -666,25 +671,22 @@ class Frame_Monitor():
         
         except:
             error_message = traceback.format_exc()
-            WriteLogFunction.WriteLog(self.LogPath, f"{error_message}")
+            WriteLogFunction.WriteLog(self.LogPath_Monitor, f"{error_message}")
 
     ### Stpe4: Execute all shell scripts in Devices.
     ### Execute all shell scripts in Devices.
     def ThreadPool_ExecuteShellScripts(self):
-        def ether_shellscript_command(Telnet_Device, client_id)->str:
+        def ether_shellscript_command(Telnet_Device, client_id, search_process_result:list)->str:
             controller_ip = self.Environment_JsonData["ControllerPCIP"]
             ether_script_process = f"/storage/emulated/0/Documents/EtherConnection/Check_EtherConnection.sh {controller_ip}"
-            search_command = f"ps -ef | grep sh"
-            search_result = Telnet_Device.Execute_Command(search_command)
-
-            if ether_script_process in search_result[1]:     
+            if ether_script_process in search_process_result[1]:   
                 return
             else:
                 ether_command = f"sh /storage/emulated/0/Documents/EtherConnection/Check_EtherConnection.sh {controller_ip} &"
                 Telnet_Device.Execute_Command(ether_command)
                 time.sleep(1)
 
-        def wifi_shellscript_command(Telnet_Device, client_id)->str:
+        def wifi_shellscript_command(Telnet_Device, client_id, search_process_result:list)->str:
             ### Execute Wifi Set Driver shell script.
             driver_band = self.RunTest_JsonData[client_id]["Wifi"]["Driver_Band"]
             driver_standard = self.RunTest_JsonData[client_id]["Wifi"]["Driver_Standard"]
@@ -700,11 +702,8 @@ class Frame_Monitor():
             wifi_dutip = self.RunTest_JsonData[client_id]["Wifi"]["DUTIP"]
             schedule = self.RunTest_JsonData[client_id]["Wifi"]["Schedule"]
 
-            wifi_script_process = f"/storage/emulated/0/Documents/Wifi/ScriptSchedule_Wifi.sh"
-            search_command = f"ps -ef | grep sh"
-            search_result = Telnet_Device.Execute_Command(search_command)
-            
-            if wifi_script_process in search_result[1]:     
+            wifi_script_process = f"/storage/emulated/0/Documents/Wifi/ScriptSchedule_Wifi.sh"            
+            if wifi_script_process in search_process_result[1]:   
                 return
             else:
                 wifi_delete_command = f"sh /storage/emulated/0/Documents/Wifi/Delete_AllWiFiProfile.sh"
@@ -717,7 +716,7 @@ class Frame_Monitor():
                 time.sleep(10)
                 Telnet_Device.Execute_Command(wifi_connect_command)
         
-        def ping_shellscript_command(Telnet_Device, client_id, script_id)->str:
+        def ping_shellscript_command(Telnet_Device, client_id, script_id, search_process_result:list)->str:
             ping_name = self.RunTest_JsonData[client_id]["Script"][script_id]["Parameter1"]
             ping_type = self.RunTest_JsonData[client_id]["Script"][script_id]["Parameter2"]
             ping_destination = self.RunTest_JsonData[client_id]["Script"][script_id]["Parameter3"]
@@ -727,17 +726,15 @@ class Frame_Monitor():
             schedule = self.RunTest_JsonData[client_id]["Script"][script_id]["Schedule"]
 
             ping_script_process = f"/storage/emulated/0/Documents/Ping/ScriptSchedule_Ping.sh {ping_name} {ping_type} {ping_destination} {errorresponse_threshold} {errorresponse_consecutivetime} {pinglost_consecutivetime} {schedule}"
-            search_command = f"ps -ef | grep sh"
-            search_result = Telnet_Device.Execute_Command(search_command)
-
-            if ping_script_process in search_result[1]:
+            if ping_script_process in search_process_result[1]:
                 return
             else:
                 ping_command = f"sh /storage/emulated/0/Documents/Ping/ScriptSchedule_Ping.sh {ping_name} {ping_type} {ping_destination} {errorresponse_threshold} {errorresponse_consecutivetime} {pinglost_consecutivetime} {schedule} &"
+                
                 Telnet_Device.Execute_Command(ping_command)
                 time.sleep(1)
 
-        def youtube_shellscript_command(Telnet_Device, client_id, script_id)->str:
+        def youtube_shellscript_command(Telnet_Device, client_id, script_id, search_process_result:list)->str:
             def get_youtube_liststr(path_txtfile:str)->str:
                 list_url = []
                 with open(path_txtfile, "r") as file:
@@ -760,10 +757,8 @@ class Frame_Monitor():
             schedule = self.RunTest_JsonData[client_id]["Script"][script_id]["Schedule"]
 
             youtube_script_process = f"/storage/emulated/0/Documents/Youtube/ScriptSchedule_Youtube.sh"
-            search_command = f"ps -ef | grep sh"
-            search_result = Telnet_Device.Execute_Command(search_command)
 
-            if youtube_script_process in search_result[1]:
+            if youtube_script_process in search_process_result[1]:
                 return
             else:
                 youtube_command = f"sh /storage/emulated/0/Documents/Youtube/ScriptSchedule_Youtube.sh {youtube_list} {youtube_playtime} {eroorpackets_threshold} {errorpackets_consecutivetime} {schedule} &"
@@ -779,27 +774,28 @@ class Frame_Monitor():
                 Telnet_Device.Connect_Devcie()
                 time.sleep(1)
                 
-                ether_shellscript_command(Telnet_Device, client_id)
+                ### Get All Process.
+                search_process_command = f"ps -ef | grep sh"
+                search_process_result = Telnet_Device.Execute_Command(search_process_command)
+                WriteLogFunction.WriteLog(self.LogPath_CheckProcess, f"[{client_id}] Current Process:\n{search_process_result[1]}")
 
-                wifi_shellscript_command(Telnet_Device, client_id)
-
-                ### Exectue Youtube & Ping Script.
-                for script_id in self.RunTest_JsonData[client_id]["Script"]:              
-                    script_type = self.RunTest_JsonData[client_id]["Script"][script_id]["Type"]
-                    if script_type == "Ping":
-                        ping_shellscript_command(Telnet_Device, client_id, script_id)
-
-                    elif script_type == "Youtube":
-                        youtube_shellscript_command(Telnet_Device, client_id, script_id)
+                if search_process_result[0].lower() == "pass":
+                    ether_shellscript_command(Telnet_Device, client_id, search_process_result)
+                    wifi_shellscript_command(Telnet_Device, client_id, search_process_result)
+                    for script_id in self.RunTest_JsonData[client_id]["Script"]:              
+                        script_type = self.RunTest_JsonData[client_id]["Script"][script_id]["Type"]
+                        if script_type == "Ping":
+                            ping_shellscript_command(Telnet_Device, client_id, script_id, search_process_result)
+                        elif script_type == "Youtube":
+                            youtube_shellscript_command(Telnet_Device, client_id, script_id, search_process_result)
 
                 Telnet_Device.Disconnect_Device()
 
             except Exception as e:
                 error_message = traceback.format_exc()
-                WriteLogFunction.WriteLog(self.LogPath, f"[Error - {client_id}]{error_message}")
+                WriteLogFunction.WriteLog(self.LogPath_Monitor, f"[Error - {client_id}]{error_message}")
                 return
-            
-            
+                  
         try:
             with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Execute_ClientShellScripts") as executor:
                 futures = []
@@ -812,7 +808,7 @@ class Frame_Monitor():
         
         except Exception as e:
             error_message = traceback.format_exc()
-            WriteLogFunction.WriteLog(self.LogPath, f"{error_message}")
+            WriteLogFunction.WriteLog(self.LogPath_Monitor, f"{error_message}")
 
     ### Step5: Get each client shell script status, and record in [Frame_ClientStatus.ShellScript_Status].
     def ThreadPool_GetShellScriptStatus(self):
@@ -829,7 +825,20 @@ class Frame_Monitor():
             result_log = Telnet_Device.Execute_Command(result_command)[1]
             result_search = re.search(r"Result\s*:\s*(\w+)", result_log)
             result = result_search.group(1) if result_search else "Fail"
+            if result == "Fail":
+                WriteLogFunction.WriteLog(self.LogPath_ScriptResult, f"{client_id} Wifi Fail Log:\n[{result_log}]")
 
+            ### Check if the result is empty.
+            if result == "Fail" and result_log.split("\n")[-1] == ":/ #":
+                obvious_status = self.Client_ShellScript_Status[client_id].ShellScript_Status["Wifi"][wifi_id]
+                if obvious_status == "normal":
+                    result = "Pass"
+                elif obvious_status == "error":
+                    result = "Fail"
+                elif obvious_status == "not_schedule":
+                    result = "Wait"
+
+            ### Update Wifi Status.
             if result.lower() == "pass":    self.Client_ShellScript_Status[client_id].ShellScript_Status["Wifi"][wifi_id] = "normal"
             elif result.lower() == "wait":  self.Client_ShellScript_Status[client_id].ShellScript_Status["Wifi"][wifi_id] = "not_schedule"
             else:   self.Client_ShellScript_Status[client_id].ShellScript_Status["Wifi"][wifi_id] = "error"
@@ -847,6 +856,8 @@ class Frame_Monitor():
             result_log = Telnet_Device.Execute_Command(result_command)[1]
             result_search = re.search(r"Result\s*:\s*(\w+)", result_log)
             result = result_search.group(1) if result_search else "Fail"
+            if result == "Fail":
+                WriteLogFunction.WriteLog(self.LogPath_ScriptResult, f"{client_id} Ping Fail Log:\n{result_log}")
 
             if result.lower() == "pass":    self.Client_ShellScript_Status[client_id].ShellScript_Status["Script"][script_id] = "normal"
             elif result.lower() == "wait":  self.Client_ShellScript_Status[client_id].ShellScript_Status["Script"][script_id] = "not_schedule"
@@ -863,6 +874,8 @@ class Frame_Monitor():
             result_log = Telnet_Device.Execute_Command(result_command)[1]
             result_search = re.search(r"Result\s*:\s*(\w+)", result_log)
             result = result_search.group(1) if result_search else "Fail"
+            if result == "Fail":
+                WriteLogFunction.WriteLog(self.LogPath_ScriptResult, f"{client_id} Youtube Fail Log:\n{result_log}")
 
             if result.lower() == "pass":    self.Client_ShellScript_Status[client_id].ShellScript_Status["Script"][script_id] = "normal"
             elif result.lower() == "wait":  self.Client_ShellScript_Status[client_id].ShellScript_Status["Script"][script_id] = "not_schedule"
@@ -891,7 +904,7 @@ class Frame_Monitor():
             
             except Exception as e:
                 error_message = traceback.format_exc()
-                WriteLogFunction.WriteLog(self.LogPath, f"[Error - {client_id}] {error_message}")
+                WriteLogFunction.WriteLog(self.LogPath_Monitor, f"[Error - {client_id}] {error_message}")
 
         try:
             with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Execute_ClientShellScripts") as executor:
@@ -904,7 +917,7 @@ class Frame_Monitor():
 
         except Exception as e:
             error_message = traceback.format_exc()
-            WriteLogFunction.WriteLog(self.LogPath, f"{error_message}")
+            WriteLogFunction.WriteLog(self.LogPath_Monitor, f"{error_message}")
 
     ### Step6 : Update each client img status. Execute [Frame_ClientStatus.Update_AllImgStatus()].
     def Update_ClientImgStatus(self):
@@ -914,7 +927,7 @@ class Frame_Monitor():
 
         except Exception as e:
             error_message = traceback.format_exc()
-            WriteLogFunction.WriteLog(self.LogPath, f"{error_message}")
+            WriteLogFunction.WriteLog(self.LogPath_Monitor, f"{error_message}")
 
     ### Step7 : Update the Counting of each scripts status number.
     def Update_ScriptStatus_Counting(self):
@@ -995,7 +1008,7 @@ class Frame_Monitor():
 
         except Exception as e:
             error_message = traceback.format_exc()
-            WriteLogFunction.WriteLog(self.LogPath, f"{error_message}")
+            WriteLogFunction.WriteLog(self.LogPath_Monitor, f"{error_message}")
 
     ###===================================================================
     def ReloadJsonData(self):
@@ -1009,15 +1022,22 @@ class Frame_Monitor():
             Telnet_Device = TelNet(client_ip, port) 
             Telnet_Device.Connect_Devcie()
             time.sleep(1)
+            
 
             ### Stop Wifi Scripts.
             wifi_stop_command = f"sh /storage/emulated/0/Documents/Wifi/StopScript_Wifi.sh"
-            Telnet_Device.Execute_Command(wifi_stop_command)
+            result = Telnet_Device.Execute_Command(wifi_stop_command)
+            if result[0].lower() == "fail":
+                self.StopScriptFail_clients.add(client_id)
+            WriteLogFunction.WriteLog(self.LogPath_ScriptStop, f"{client_ip} Wifi Test Stop Log:{result}")
             time.sleep(1)
             
             ### Stop Youtube Scripts.
-            youtube_stop_command = f"sh /storage/emulated/0/Documents/Youtube/StopScript_Youtube.sh"
-            Telnet_Device.Execute_Command(youtube_stop_command)
+            result = youtube_stop_command = f"sh /storage/emulated/0/Documents/Youtube/StopScript_Youtube.sh"
+            result = Telnet_Device.Execute_Command(youtube_stop_command)
+            if result[0].lower() == "fail":
+                self.StopScriptFail_clients.add(client_id)
+            WriteLogFunction.WriteLog(self.LogPath_ScriptStop, f"{client_ip} Youtube Test Stop Log:{result}")
             time.sleep(1)
             
             ### Stop Ping Scripts.
@@ -1026,12 +1046,18 @@ class Frame_Monitor():
                 if script_type == "Ping":
                     ping_name = self.RunTest_JsonData[client_id]["Script"][script_id]["Parameter1"]
                     ping_stop_command = f"sh /storage/emulated/0/Documents/Ping/StopScript_Ping.sh {ping_name}"
-                    Telnet_Device.Execute_Command(ping_stop_command)
+                    result = Telnet_Device.Execute_Command(ping_stop_command)
+                    if result[0].lower() == "fail":
+                        self.StopScriptFail_clients.add(client_id)
+                    WriteLogFunction.WriteLog(self.LogPath_ScriptStop, f"{client_ip} Ping Test Stop Log:{result}")
                     time.sleep(1)
 
             ### Stop EtherConnection Scripts.
             ether_stop_command = f"sh /storage/emulated/0/Documents/KillProcess/KillProcess.sh ether_check"
-            Telnet_Device.Execute_Command(ether_stop_command)
+            result = Telnet_Device.Execute_Command(ether_stop_command)
+            if result[0].lower() == "fail":
+                self.StopScriptFail_clients.add(client_id)
+            WriteLogFunction.WriteLog(self.LogPath_ScriptStop, f"{client_ip} Ether Test Stop Log:{result}")
             time.sleep(1)
     
             ## Close Connection.
@@ -1041,6 +1067,8 @@ class Frame_Monitor():
         try:
             ### Get json_RuntTest.json data.
             ### Stop all shell scripts in each device.
+            self.StopScriptFail_clients = set()
+            WriteLogFunction.WriteLog(self.LogPath_ScriptStop, f"---------------------------------------------------------------------------")
             self.RunTest_JsonData = JsonDataFunction.Get_jsonAllData(self.RunTest_JsonPath)
             with ThreadPoolExecutor(max_workers=64, thread_name_prefix="Stop_ClientShellScripts") as executor:
                 futures = []
@@ -1066,17 +1094,22 @@ class Frame_Monitor():
             self.Client_Ether_Status = {}
             self.Client_ShellScript_Status = {}
 
+            self.root.after(0, lambda: self.Information_Widget["Label"]["Ether"].config(text="Ether : 0 \nNormal : 0 \nError : 0"))
             self.root.after(0, lambda: self.Information_Widget["Label"]["Wifi"].config(text="WiFi : 0 \nNormal : 0 \nError : 0 \nWait : 0"))
             self.root.after(0, lambda: self.Information_Widget["Label"]["Ping"].config(text="Ping : 0 \nNormal : 0 \nError : 0 \nWait : 0"))
             self.root.after(0, lambda: self.Information_Widget["Label"]["Youtube"].config(text=f"Youtube : 0 \nNormal : 0 \nError : 0 \nWait : 0"))
 
             self.Show_Message(f"Ready", "gray")
             self.stoptest_callback()
+            if self.StopScriptFail_clients:
+                error_message = f"{len(self.StopScriptFail_clients)} clients stop script failed:\n" + ", ".join(self.StopScriptFail_clients)
+                messagebox.showwarning("Error", error_message, parent=self.root)
+
 
         except Exception as e:
             error_message = traceback.format_exc()
             messagebox.showwarning("Error", error_message, parent=self.root)
-            WriteLogFunction.WriteLog(self.LogPath, f"{error_message}")
+            WriteLogFunction.WriteLog(self.LogPath_Monitor, f"{error_message}")
 
 if __name__ == "__main__":
     width = 800

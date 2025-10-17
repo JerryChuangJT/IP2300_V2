@@ -174,8 +174,8 @@ while true; do
         if [ "$ExecuteCMD_Flag" -eq 0 ]; then
             {   
                 echo "[$(Get_CurrentDateTime)] Execute the scripts.";
-                echo "[$(Get_CurrentDateTime)] sh /storage/emulated/0/Documents/Wifi/Connect_Wifi.sh '$Wifi_SSID' '$Wifi_Auth' '$Wifi_Password' '$Wifi_BSSID' &"
-                echo "[$(Get_CurrentDateTime)] sh /storage/emulated/0/Documents/Wifi/Get_Wifi_IP.sh &"
+                echo "[$(Get_CurrentDateTime)] sh /storage/emulated/0/Documents/Wifi/Wifi_Connection.sh '$Wifi_SSID' '$Wifi_Auth' '$Wifi_Password' '$Wifi_BSSID' &"
+                echo "[$(Get_CurrentDateTime)] sh /storage/emulated/0/Documents/Wifi/Wifi_GetIP.sh &"
                 echo "[$(Get_CurrentDateTime)] sh /storage/emulated/0/Documents/Wifi/Wifi_PingScript.sh '$PingType' '$DUTIP' &"
                 echo "[$(Get_CurrentDateTime)] sh /storage/emulated/0/Documents/Wifi/Wifi_CheckPing.sh &"
             } >> "$ScheduleLogFile" 2>&1
